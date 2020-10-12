@@ -1,22 +1,20 @@
-# คำแนะนำ #
-ระบบเว็บบอร์ดดิสคัส! ต้นกำเนิดมาจากประเทศจีน ได้พัฒนาด้วยภาษา PHP, MySQL และถูกนำมาแปลเป็นภาษาไทย โดยคนไทยที่มีใจรักในระบบเว็บบอร์ดนี้ ปัจจุบันได้เดินทางมาถึงเวอร์ชัน X3.4 เป็นที่เรียบร้อยแล้ว (และเวอร์ชัน Discuz! X3.5 กำลังอยู่ในระหว่างพัฒนา ซึ่งมีลูกเล่นเยอะอย่างที่คาดไม่ถึงแน่นอน อดใจรอกันได้เลย)
+# Hướng dẫn #
+Hệ thống diễn đàn! xuất xứ từ Trung Quốc. Nó được phát triển với PHP, MySQL và được dịch sang tiếng Việt bởi những người Việt có tâm huyết với hệ thống diễn đàn này Phiên bản X3.4 hiện đã có sẵn (và phiên bản Discuz! X3.5 đang được phát triển. Trong đó có nhiều tính năng mà chắc chắn là bất ngờ chỉ cần kiên nhẫn chờ đợi)
 
-## การใช้งาน
-* ดาวน์โหลดไฟล์ Discuz! ภาษาไทย ได้ที่ลิงก์นี้ https://github.com/jaideejung007/discuzth/archive/master.zip
-* หรือดาวน์โหลดได้จากเมนู Releases ได้ที่ลิงก์นี้ https://github.com/jaideejung007/discuzth/releases
+## Sử dụng
+* Tải xuống Discuz! Tiếng Thái tại liên kết này. https://github.com/levanhau03/discuzvn/
+* Hoặc bạn có thể tải xuống từ menu Phát hành tại liên kết này. https://github.com/levanhau03/discuzvn/releases
 
-## การติดตั้ง
-* อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์ upload โดยใช้โปรแกรม FTP เช่น FileZilla เป็นต้น
-* เปิดเบราว์เซอร์เพื่อทำการติดตั้ง Discuz! X3.4 หรือ X3.5 โดยไปที่ https://โดเมนของคุณ/install/ เพื่อเริ่มต้นขั้นตอนการติดตั้ง แล้วทำตามหน้าจอที่ปรากฏ
+## Cài đặt
+* Tải lên tất cả các tệp trong thư mục tải lên bằng chương trình FTP như FileZilla, v.v.
+* Mở trình duyệt để cài đặt Discuz! X3.4 hoặc X3.5 bằng cách truy cập https: // your domain / install / để bắt đầu quá trình cài đặt. Và làm theo các màn hình xuất hiện.
 
-## ทีมพัฒนา (ต้นฉบับภาษาจีน) 
+## Nhóm phát triển (bản gốc tiếng Trung)
 * forked from [Discuz!](https://gitee.com/ComsenzDiscuz) / [DiscuzX](https://gitee.com/ComsenzDiscuz/DiscuzX) 
 
-## ทีมพัฒนา (ภาษาไทย) 
-* [jaideejung007](https://github.com/jaideejung007/)
+## Nhóm phát triển (tiếng Việt)
+* [levanhau03](https://github.com/levanhau03/)
 
-## เว็บไซต์ที่เกี่ยวข้อง 
-* เว็บไซต์ดิสคัส! ภาษาจีน : https://www.discuz.net/
-* เว็บไซต์ดิสคัส! ภาษาจีน (2): https://www.dismall.com/
-* เว็บไซต์ดิสคัส! ภาษาไทยอย่างเป็นทางการ: Soon...
-* เว็บไซต์ดิสคัส! ภาษาไทยสำหรับทดสอบ: https://beta.1080ip.com
+## Trang web liên quan
+* Trang web thảo luận! Tiếng Trung: https://www.discuz.net/
+* Trang web thảo luận! Tiếng Trung (2): https://www.dismall.com/
