@@ -1327,13 +1327,14 @@ $lang = array
 	'setting_home_privacy_default_feed_newthread' => 'Đăng một chủ đề mới',
 	'setting_home_privacy_default_feed_newreply' => 'Trả lời chủ đề',
 
-	'setting_home_hotuser' => 'Recommended members',
-	'setting_home_hotuser_comment' => 'Add Format:<br />Please enter a user names, one name per line.<br>Example:<br>admin<br>webmaster<br/>these users will be randomly displayed in the "Webmaster Email" column.',
-	'setting_home_hotuser_defaultuser' => 'Default users',
-	'setting_home_hotuser_defaultuser_comment' => 'Add Format:<br />Please enter user names, one name per line.<br>Example:<br>admin<br>webmaster<br>These users will be automatically added to new users as friends and send a greeting.
-							Note: Large number of default friends may increase the server loading.',
-	'setting_home_hotuser_defaultpoke' => 'Default greeting content',
-	'setting_home_hotuser_defaultpoke_comment' => 'Automatic greeting content sent to new friends, not more than 25 characters.',
+	'setting_home_hotuser' => 'Thành viên được đề xuất',
+	'setting_home_hotuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, một tên trên mỗi dòng.<br>Ví dụ:<br>admin<br>webmaster<br/>những người dùng này sẽ được hiển thị ngẫu nhiên trong cột "Email quản trị trang web".',
+	'setting_home_hotuser_defaultuser' => 'Người dùng mặc định',
+	'setting_home_hotuser_defaultuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, mỗi tên một dòng.
+<br>Ví dụ:<br>admin<br>webmaster<br>Những người dùng này sẽ tự động được thêm vào người dùng mới với tư cách là bạn bè và gửi lời chào.
+							Lưu ý: Số lượng lớn bạn bè mặc định có thể làm tăng tải máy chủ.',
+	'setting_home_hotuser_defaultpoke' => 'Nội dung lời chào mặc định',
+	'setting_home_hotuser_defaultpoke_comment' => 'Nội dung lời chào tự động gửi đến bạn mới, không quá 25 ký tự.',
 
 	'setting_domain' => 'Domain settings',
 	'setting_domain_base' => 'Basic settings',
