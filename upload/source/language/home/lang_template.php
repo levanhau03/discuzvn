@@ -96,8 +96,8 @@ $lang = array (
 	'accept_invitation' => 'Chấp nhận',
 	'and_play_together' => ', và cùng chơi',
 	'become_friend' => '<p>Trở thành bạn bè, bạn có thể thảo luận về chủ đề, cập nhật tin tức của nhau, bạn cũng có thể cùng nhau chơi nhiều trò chơi thú vị $userapp[appname] ……</p>
-						<p>您也可以方便快捷地发布自己的日志、上传图片、记录生活点滴与好友分享</p>
-						<p>还等什么呢？赶快加入我们吧</p>',
+						<p>Bạn cũng có thể dễ dàng và nhanh chóng xuất bản nhật ký của riêng mình, tải lên hình ảnh, ghi lại những khoảnh khắc cuộc sống và chia sẻ với bạn bè</p>
+						<p>Bạn còn chờ gì nữa? Nhanh tay tham gia</p>',
 	'friend_information' => '<p>Có $space[friends] bạn, $space[albums] album, $space[doings] tâm trạng, $space[blogs] nhật ký, $space[threads] chủ đề</p>',
 	'invite_friend' => 'Mời bạn bè',
 	'invite_friends' => 'Mời bạn bè',
@@ -154,10 +154,10 @@ $lang = array (
 	'comprehensive_overview_message' => 'Đây là thông tin tổng hợp tình hình diễn đàn(cần 2 ngày sau mới có hiệu lực).',
 	'info_interactive' => 'Thông tin tương tác',
 	'interactive_help_message' => '<li>Ghi chú: Cập nhập lượng truy cập người dùng . Một người sử dụng truy cập nhiều lần, chỉ tính một lần</li>
-  									<li>{$_G[setting][navs][2][navname]}：指的是每天发布主题、投票、活动、悬赏、辩论、商品和主题回帖的总数量 </li>
-									<li>群组：指的是每天创建{$_G[setting][navs][3][navname]}、{$_G[setting][navs][3][navname]}主题、{$_G[setting][navs][3][navname]}回帖的总数量 </li>
-									<li>家园：指的是每天发布记录、日志、图片、话题、投票、活动、分享和互相评论的总数量 </li>
-									<li>互动：指的是每天用户之间互相留言、打招呼和的{$_G[setting][navs][4][navname]}相应的表态互动总数量 </li>',
+  									<li>{$_G[setting][navs][2][navname]}: Đề cập đến tổng số chủ đề, phiếu bầu, sự kiện, phần thưởng, cuộc tranh luận, sản phẩm và câu trả lời chủ đề được xuất bản hàng ngày</li>
+									<li>Nhóm: Đề cập đến việc tạo chủ đề {$_G[setting][navs][3][navname]}, {$_G[setting][navs][3][navname]}, {$_G[setting][navs][3][navname]} tổng số câu trả lời </li>
+									<li>Quê hương: đề cập đến tổng số bản ghi đăng, nhật ký, hình ảnh, chủ đề, cuộc thăm dò, hoạt động, chia sẻ và bình luận lẫn nhau mỗi ngày</li>
+									<li>Tương tác: đề cập đến tổng số tương tác giữa những người dùng để lại tin nhắn, chào hỏi nhau và {$_G[setting][navs][4][navname]} tương ứng mỗi ngày</li>',
 	'member_interactive' => 'Tương tác',
 	'show' => 'Xem',
 	'home' => 'Trang chủ',
@@ -1230,7 +1230,7 @@ $lang = array (
 	'copy_invite_manage' => 'Mời liên kết (Quản lý đặc biệt)',
 	'credit_recharge' => 'Nạp tiền điểm',
 	'delete_log_message' => '<p>Bạn có chắc chắn muốn xóa ?</p>
-							<p>删除该邀请记录后,您的好友将不能通过<br/>原邀请记录链接注册成为您的好友 </p>',
+							<p>Sau khi xóa bản ghi lời mời, bạn bè của bạn sẽ không thể đăng ký làm bạn bè của bạn thông qua liên kết của bản ghi lời mời ban đầu</p>',
 	'friend_email_address' => 'Email bạn bè',
 	'friend_get' => 'Bạn bè nhận được ',
 	'friend_invite_link' => 'Liên kết lời mời bạn bè của tôi',
@@ -1547,11 +1547,11 @@ $lang = array (
 	'usergroup_expired' => 'Nhóm người sử dụng hiện tại của bạn đã hết hạn, hãy chọn để tiếp tục mua hoặc chuyển sang các nhóm người dùng khác',
 	'freeze_pw_tips' => 'Tài khoản hiện tại của bạn đang bị tạm khóa do có những rủi ro bảo mật, xin vui lòng thay đổi mật khẩu để tiếp tục sử dụng.',
 	'freeze_email_tips' => 'Đã quá lâu bạn không đăng nhập, vậy nên tài khoản của bạn bị tạm khóa. Bấm vào <a href="home.php?mod=spacecp&ac=profile&op=password&resend=1" class="xi2">đây</a> để kích hoạt lại.',
-	'freeze_admincp_tips' => '您当前的帐号已经被冻结，必须在本页面填写申诉理由，并经管理中心审核通过后才能解除冻结状态',
+	'freeze_admincp_tips' => 'Tài khoản hiện tại của bạn đã bị đóng băng, bạn phải điền lý do kháng nghị trên trang này và có thể gỡ bỏ tài khoản này sau khi trung tâm quản lý phê duyệt',
 	'freeze_reason' => 'Khiếu nại',
 	'freeze_reason_comment' => 'Nếu bạn không thể xác minh qua email, vui lòng điền vào những căn cứ để khiếu nại.',
-	'freeze_reason_admincp_comment' => '如果您认为您的账号不应被冻结，请填写申诉理由',
-	'freeze_remark' => '审核结果',
-	'freeze_remark_comment' => '您已提交 $space[freezemodsubmittimes] 次审核，最后一次审核操作由 $space[freezemodadmin] 于 $space[freezemoddate] 做出',
+	'freeze_reason_admincp_comment' => 'Nếu bạn cho rằng tài khoản của mình không nên bị đóng băng, vui lòng điền vào lý do kháng nghị',
+	'freeze_remark' => 'Kết quả kiểm toán',
+	'freeze_remark_comment' => 'Bạn đã gửi $space[freezemodsubmittimes] để được xem xét và hoạt động đánh giá cuối cùng được thực hiện bởi $space[freezemodadmin] trên $space[freezemoddate]',
 );
 ?>
