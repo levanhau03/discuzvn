@@ -422,7 +422,7 @@ CSS 写作注意事项：
 		.pn:active { background-position: 0 -23px; }
 		.ie6 .pn { overflow-x: visible; width: 0; }
 
-		.pn em, .pn span, .pn strong { padding: 0 10px; line-height: 21px; }
+		.pn em, .pn span, .pn strong { padding: 0 0px; line-height: 21px; }
 			.pn em, .pn strong  { font-weight: 700; }
 		.ie7 .pn em, .ie7 .pn span, .ie7 .pn strong { padding: 0 5px; line-height: 18px; }
 
