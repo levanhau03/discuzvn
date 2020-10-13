@@ -17,8 +17,8 @@ $lang = array
 	'connect_bind_desc' => 'Ràng buộc tài khoản QQ của bạn để nhận phần thưởng tương ứng',
 	'connect_bind_view' => '<strong>Thực hiện theo các hướng dẫn để tham gia vào nhiệm vụ này:</strong>
 		<ul>
-		<li>1. <a href="connect.php?mod=config" target="_blank">新窗口打开 QQ 帐号绑定的页面</a></li>
-		<li>2. 在新打开的页面中，点击“QQ帐号绑定”按钮，填写您的 QQ 账号和密码即可完成绑定</li>
+		<li>1. <a href="connect.php?mod=config" target="_blank">Một cửa sổ mới mở ra trang liên kết với tài khoản QQ</a></li>
+		<li>2. Trong trang mới mở, nhấp vào nút "Ràng buộc tài khoản QQ", điền vào tài khoản QQ và mật khẩu của bạn để hoàn thành việc ràng buộc</li>
 		</ul>',
 );
 
