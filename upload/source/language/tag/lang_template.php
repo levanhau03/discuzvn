@@ -27,7 +27,7 @@ $lang = array (
 	'related_blog' => 'Blog liên quan',
 	'related_thread' => 'Bài viết liên quan',
 	'replies' => 'Trả lời/Xem',
-	'price' => '售价',
+	'price' => 'Giá',
 );
 
 ?>
