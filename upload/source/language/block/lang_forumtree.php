@@ -16,7 +16,7 @@ $lang = array
 	'forumtree_name' => 'Cấu trúc cây diễn đàn',
 	'forumtree_desc' => 'Hiển thị danh sách diễn đàn trong một cây thư mục',
 	'forumtree_fids' => 'Id diễn đàn',
-	'forumtree_fids_comment' => 'Chọn diễn đàn để hiển thị, để trống nếu muốn hiển thị tất cả diễn đàn',//'设置允许显示的版块，留空为显示所有版块',
+	'forumtree_fids_comment' => 'Chọn diễn đàn để hiển thị, để trống nếu muốn hiển thị tất cả diễn đàn',
 );
 
 ?>
