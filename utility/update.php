@@ -47,7 +47,7 @@ if($_GET['from']) {
 		$version = $dbreturnurlparamarr['version'];
 		$release = $dbreturnurlparamarr['release'];
 		if(!$operation || !$version || !$release) {
-			show_msg('请求的参数不正确');
+			show_msg('Tham số được yêu cầu không chính xác');
 		}
 		$time = $_G['timestamp'];
 		dheader('Location: '.$_G['siteurl'].basename($refererarr['path']).'?action=upgrade&operation='.$operation.'&version='.$version.'&release='.$release.'&ungetfrom='.$time.'&ungetfrommd5='.md5($time.$_G['config']['security']['authkey']));
@@ -58,17 +58,17 @@ $lockfile = DISCUZ_ROOT.'./data/update.lock';
 if($_GET['lock']){
     @touch($lockfile);
     @unlink(DISCUZ_ROOT.'./install/update.php');
-    show_msg('<span id="finalmsg">恭喜，数据库结构升级完成！</span>');
+    show_msg('<span id="finalmsg">Xin chúc mừng, việc nâng cấp cấu trúc cơ sở dữ liệu đã hoàn tất!</span>');
 }
 if(file_exists($lockfile) && !$_GET['from']) {
-	show_msg('请您先登录服务器ftp，手工删除 ./data/update.lock 文件，再次运行本文件进行升级。');
+	show_msg('Vui lòng đăng nhập vào máy chủ ftp trước, xóa thủ công tệp ./data/update.lock và chạy lại tệp này để nâng cấp.');
 }
 
 $devmode = file_exists(DISCUZ_ROOT.'./install/data/install_dev.sql');
 $sqlfile = DISCUZ_ROOT.($devmode ? './install/data/install_dev.sql' : './install/data/install.sql');
 
 if(!file_exists($sqlfile)) {
-	show_msg('SQL文件 '.$sqlfile.' 不存在');
+	show_msg('Tệp SQL '.$sqlfile.' không tồn tại');
 }
 $first_to_2_5 = !C::t('common_setting')->skey_exists('strongpw');
 $first_to_3_0 = !C::t('common_setting')->skey_exists('antitheft');
@@ -94,7 +94,7 @@ if($_POST['delsubmit']) {
 		}
 	}
 
-	show_msg('删除表和字段操作完成了', $theurl.'?step=style');
+	show_msg('Xóa bảng và thao tác trường hoàn tất', $theurl.'?step=style');
 }
 
 function waitingdb($curstep, $sqlarray) {
@@ -103,7 +103,7 @@ function waitingdb($curstep, $sqlarray) {
 		$sqlurl .= '&sql[]='.md5($sql);
 		$sendsql .= '<img width="1" height="1" src="'.$theurl.'?step='.$curstep.'&waitingdb=1&sqlid='.$key.'">';
 	}
-	show_msg("优化数据表", $theurl.'?step=waitingdb&nextstep='.$curstep.$sqlurl.'&sendsql='.base64_encode($sendsql), 5000, 1);
+	show_msg("Tối ưu hóa bảng dữ liệu", $theurl.'?step=waitingdb&nextstep='.$curstep.$sqlurl.'&sendsql='.base64_encode($sendsql), 5000, 1);
 }
 if(empty($_GET['step'])) $_GET['step'] = 'start';
 
@@ -116,31 +116,31 @@ if($_GET['step'] == 'start') {
 		C::t('common_setting')->update('bbclosed', 1);
 		require_once libfile('function/cache');
 		updatecache('setting');
-		show_msg('您的站点未关闭，正在关闭，请稍后...', $theurl.'?step=start', 5000);
+		show_msg('Trang web của bạn chưa đóng, nó đang đóng, vui lòng đợi...', $theurl.'?step=start', 5000);
 	}
 	if(version_compare($version, '1.5.2') <= 0) {
-		show_msg('请先升级 UCenter 到 1.6.0 以上版本。<br>如果使用为Discuz! X自带UCenter，请先下载 UCenter 1.6.0, 在 utilities 目录下找到对应的升级程序，复制或上传到 Discuz! X 的 uc_server 目录下，运行该程序进行升级');
+		show_msg('Vui lòng nâng cấp UCenter lên phiên bản 1.6.0 trở lên trước.<br>Nếu bạn sử dụng Discuz! X với UCenter, trước tiên hãy tải UCenter 1.6.0 xuống, tìm chương trình nâng cấp tương ứng trong thư mục tiện ích, sao chép hoặc tải nó lên thư mục uc_server của Discuz! X và chạy chương trình để nâng cấp');
 	} else {
-		show_msg('说明：<br>本升级程序会参照最新的SQL文件，对数据库进行同步升级。<br>
-			请确保当前目录下 ./data/install.sql 文件为最新版本。<br><br>
-			升级完成后会关闭所有插件以确保正常运行，请站长逐个开启每一个插件检测是否兼容新版本。<br><br>
-			<a href="'.$theurl.'?step=prepare'.($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '').'">准备完毕，升级开始</a>');
+		show_msg('Miêu tả:<br>Chương trình nâng cấp này sẽ tham chiếu đến tệp SQL mới nhất để đồng bộ hóa nâng cấp cơ sở dữ liệu.<br>
+			Hãy đảm bảo rằng tệp ./data/install.sql trong thư mục hiện tại là phiên bản mới nhất.<br><br>
+			Sau khi hoàn tất nâng cấp, tất cả các plugin sẽ bị đóng để đảm bảo hoạt động bình thường. Vui lòng mở từng plugin một để kiểm tra xem nó có tương thích với phiên bản mới hay không.<br><br>
+			<a href="'.$theurl.'?step=prepare'.($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '').'">Chuẩn bị xong, nâng cấp bắt đầu</a>');
 	}
 } elseif ($_GET['step'] == 'waitingdb') {
 	$query = DB::fetch_all("SHOW FULL PROCESSLIST");
 	foreach($query as $row) {
 		if(in_array(md5($row['Info']), $_GET['sql'])) {
-			$list .= '[时长]:'.$row['Time'].'秒 [状态]:<b>'.$row['State'].'</b>[信息]:'.$row['Info'].'<br><br>';
+			$list .= '[Thời hạn]:'.$row['Time'].'giây [Trạng thái]:<b>'.$row['State'].'</b>[Thông tin]:'.$row['Info'].'<br><br>';
 		}
 	}
 	if(empty($list) && empty($_GET['sendsql'])) {
-		$msg = '准备进入下一步操作，请稍后...';
+		$msg = 'Sẵn sàng để chuyển sang bước tiếp theo, vui lòng đợi...';
 		$notice = '';
 		$url = "?step=$_GET[nextstep]";
 		$time = 5;
 	} else {
-		$msg = '正在升级数据，请稍后...';
-		$notice = '<br><br><b>以下是正在执行的数据库升级语句:</b><br>'.$list.base64_decode($_GET['sendsql']);
+		$msg = 'Đang nâng cấp dữ liệu, vui lòng đợi...';
+		$notice = '<br><br><b>Sau đây là câu lệnh nâng cấp cơ sở dữ liệu đang được thực thi:</b><br>'.$list.base64_decode($_GET['sendsql']);
 		$sqlurl = implode('&sql[]=', $_GET['sql']);
 		$url = "?step=waitingdb&nextstep=$_GET[nextstep]&sql[]=".$sqlurl;
 		$time = 20;
@@ -151,7 +151,7 @@ if($_GET['step'] == 'start') {
 		C::t('forum_groupinvite')->truncate();
 	}
 	if(DB::fetch_first("SHOW COLUMNS FROM ".DB::table('forum_activityapply')." LIKE 'contact'")) {
-		$query = DB::query("UPDATE ".DB::table('forum_activityapply')." SET message=CONCAT_WS(' 联系方式:', message, contact) WHERE contact<>''");
+		$query = DB::query("UPDATE ".DB::table('forum_activityapply')." SET message=CONCAT_WS(' Chi tiết liên hệ:', message, contact) WHERE contact<>''");
 		DB::query("ALTER TABLE ".DB::table('forum_activityapply')." DROP contact");
 	}
 	if($row = DB::fetch_first("SHOW COLUMNS FROM ".DB::table('forum_postcomment')." LIKE 'authorid'")) {
@@ -229,7 +229,7 @@ if($_GET['step'] == 'start') {
 		DB::query('ALTER TABLE '.DB::table('common_template_block').' DROP PRIMARY KEY');
 	}
 
-	show_msg('准备完毕，进入下一步数据库结构升级', $theurl.'?step=sql');
+	show_msg('Sẵn sàng, chuyển sang bước tiếp theo của nâng cấp cấu trúc cơ sở dữ liệu', $theurl.'?step=sql');
 } elseif ($_GET['step'] == 'sql') {
 
 	$sql = implode('', file($sqlfile));
@@ -237,13 +237,13 @@ if($_GET['step'] == 'start') {
 	$newtables = empty($matches[1])?array():$matches[1];
 	$newsqls = empty($matches[0])?array():$matches[0];
 	if(empty($newtables) || empty($newsqls)) {
-		show_msg('SQL文件内容为空，请确认');
+		show_msg('Nội dung của tệp SQL trống, vui lòng xác nhận');
 	}
 
 	$i = empty($_GET['i'])?0:intval($_GET['i']);
 	$count_i = count($newtables);
 	if($i>=$count_i) {
-		show_msg('数据库结构升级完毕，进入下一步数据升级操作', $theurl.'?step=data');
+		show_msg('Sau khi cấu trúc cơ sở dữ liệu được nâng cấp, hãy nhập thao tác nâng cấp dữ liệu tiếp theo', $theurl.'?step=data');
 	}
 	$newtable = $newtables[$i];
 
@@ -270,9 +270,9 @@ if($_GET['step'] == 'start') {
 		$usql = str_replace("CREATE TABLE pre_", 'CREATE TABLE '.$config['tablepre'], $usql);
 
 		if(!DB::query($usql, 'SILENT')) {
-			show_msg('添加表 '.DB::table($newtable).' 出错,请手工执行以下SQL语句后,再重新运行本升级程序:<br><br>'.dhtmlspecialchars($usql));
+			show_msg('Thêm bảng '.DB::table($newtable).' Nếu lỗi xảy ra, vui lòng thực thi câu lệnh SQL sau theo cách thủ công, sau đó chạy lại chương trình nâng cấp:<br><br>'.dhtmlspecialchars($usql));
 		} else {
-			$msg = '添加表 '.DB::table($newtable).' 完成';
+			$msg = 'Thêm bảng '.DB::table($newtable).' thực hiện';
 		}
 	} else {
 		$value = DB::fetch($query);
@@ -286,9 +286,9 @@ if($_GET['step'] == 'start') {
 					if(!empty($oldcols[$key])) {
 						$usql = "RENAME TABLE ".DB::table($newtable)." TO ".DB::table($newtable.'_bak');
 						if(!DB::query($usql, 'SILENT')) {
-							show_msg('升级表 '.DB::table($newtable).' 出错,请手工执行以下升级语句后,再重新运行本升级程序:<br><br><b>升级SQL语句</b>:<div style=\"position:absolute;font-size:11px;font-family:verdana,arial;background:#EBEBEB;padding:0.5em;\">'.dhtmlspecialchars($usql)."</div><br><b>Error</b>: ".DB::error()."<br><b>Errno.</b>: ".DB::errno());
+							show_msg('Nâng cấp bảng '.DB::table($newtable).' Nếu xảy ra lỗi, vui lòng thực hiện câu lệnh nâng cấp sau theo cách thủ công, sau đó chạy lại chương trình nâng cấp:<br><br><b>Nâng cấp câu lệnh SQL</b>:<div style=\"position:absolute;font-size:11px;font-family:verdana,arial;background:#EBEBEB;padding:0.5em;\">'.dhtmlspecialchars($usql)."</div><br><b>Error</b>: ".DB::error()."<br><b>Errno.</b>: ".DB::errno());
 						} else {
-							$msg = '表改名 '.DB::table($newtable).' 完成！';
+							$msg = 'Bảng được đổi tên thành '.DB::table($newtable).' hoàn thành!';
 							show_msg($msg, $theurl.'?step=sql&i='.$_GET['i']);
 						}
 					}
@@ -334,12 +334,12 @@ if($_GET['step'] == 'start') {
 		if(!empty($updates)) {
 			$usql = "ALTER TABLE ".DB::table($newtable)." ".implode(', ', $updates);
 			if(!DB::query($usql, 'SILENT')) {
-				show_msg('升级表 '.DB::table($newtable).' 出错,请手工执行以下升级语句后,再重新运行本升级程序:<br><br><b>升级SQL语句</b>:<div style=\"position:absolute;font-size:11px;font-family:verdana,arial;background:#EBEBEB;padding:0.5em;\">'.dhtmlspecialchars($usql)."</div><br><b>Error</b>: ".DB::error()."<br><b>Errno.</b>: ".DB::errno());
+				show_msg('Nâng cấp bảng '.DB::table($newtable).' Nếu xảy ra lỗi, vui lòng thực hiện câu lệnh nâng cấp sau theo cách thủ công, sau đó chạy lại chương trình nâng cấp:<br><br><b>Nâng cấp câu lệnh SQL</b>:<div style=\"position:absolute;font-size:11px;font-family:verdana,arial;background:#EBEBEB;padding:0.5em;\">'.dhtmlspecialchars($usql)."</div><br><b>Error</b>: ".DB::error()."<br><b>Errno.</b>: ".DB::errno());
 			} else {
-				$msg = '升级表 '.DB::table($newtable).' 完成！';
+				$msg = 'Nâng cấp bảng '.DB::table($newtable).' hoàn tất!';
 			}
 		} else {
-			$msg = '检查表 '.DB::table($newtable).' 完成，不需升级，跳过';
+			$msg = 'Kiểm tra bảng '.DB::table($newtable).' đã hoàn thành, không cần nâng cấp, bỏ qua';
 		}
 	}
 
@@ -365,9 +365,9 @@ if($_GET['step'] == 'start') {
 		if($i==0) {
 			$value = DB::fetch_first('SELECT * FROM '.DB::table('common_member_profile_setting')." WHERE fieldid = 'realname'");
 			if(!empty($value)) {
-				show_msg("实名功能升级完毕", "$theurl?step=data&op=$nextop");
+				show_msg("Đã hoàn thành nâng cấp chức năng tên thật", "$theurl?step=data&op=$nextop");
 			}
-			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('realname', '1', '0', '1', '真实姓名', '', '0', '0', '0', '0', '1', 'text', '0', '', '', '0', '0')");
+			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('realname', '1', '0', '1', 'Tên thật', '', '0', '0', '0', '0', '1', 'text', '0', '', '', '0', '0')");
 		}
 		$t = DB::result_first('SELECT uid FROM '.DB::table('common_member')." ORDER BY uid DESC LIMIT 1");
 		$names = $uids = array();
@@ -382,35 +382,35 @@ if($_GET['step'] == 'start') {
 		}
 
 		if($n>0) {
-			show_msg("实名功能升级中[$n/$t]", "$theurl?step=data&op=realname&i=$n");
+			show_msg("Chức năng tên thật đang được nâng cấp[$n/$t]", "$theurl?step=data&op=realname&i=$n");
 		} else {
-			show_msg("实名功能升级完毕", "$theurl?step=data&op=$nextop");
+			show_msg("Đã hoàn thành nâng cấp chức năng tên thật", "$theurl?step=data&op=$nextop");
 		}
 
 	} elseif($_GET['op'] == 'profile') {
 		$nextop = 'setting';
 		$value = DB::result_first('SELECT count(*) FROM '.DB::table('common_member_profile_setting')." WHERE fieldid = 'birthdist'");
 		if(!$value) {
-			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('birthdist', 1, 0, 0, '出生县', '出生行政区/县', 0, 0, 0, 0, 0, 0, 0, 'select', 0, '', '')");
-			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('birthcommunity', 1, 0, 0, '出生小区', '', 0, 0, 0, 0, 0, 0, 0, 'select', 0, '', '')");
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='出生地' WHERE fieldid = 'birthcity'");
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='居住地' WHERE fieldid = 'residecity'");
+			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('birthdist', 1, 0, 0, 'Quận sinh', 'Quận / Hạt nơi sinh', 0, 0, 0, 0, 0, 0, 0, 'select', 0, '', '')");
+			DB::query("INSERT INTO ".DB::table('common_member_profile_setting')." VALUES ('birthcommunity', 1, 0, 0, 'Cộng đồng sinh', '', 0, 0, 0, 0, 0, 0, 0, 'select', 0, '', '')");
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Nơi sinh' WHERE fieldid = 'birthcity'");
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Nơi cư trú' WHERE fieldid = 'residecity'");
 		}
 		$count = DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_district')." WHERE `level`='1' AND `usetype`>'0'");
 		if(!$count) {
 			DB::query("UPDATE ".DB::table('common_district')." SET `usetype`='3' WHERE `level` = '1'");
 		}
 		$profile = DB::fetch_first('SELECT * FROM '.DB::table('common_member_profile_setting')." WHERE fieldid = 'birthday'");
-		if($profile['title'] == '出生日期') {
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='生日' WHERE fieldid = 'birthday'");
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='证件类型' WHERE fieldid = 'idcardtype'");
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='支付宝' WHERE fieldid = 'alipay'");
+		if($profile['title'] == 'Ngày sinh') {
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Sinh nhật' WHERE fieldid = 'birthday'");
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Loại chứng chỉ' WHERE fieldid = 'idcardtype'");
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Alipay' WHERE fieldid = 'alipay'");
 			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='ICQ' WHERE fieldid = 'icq'");
 			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='QQ' WHERE fieldid = 'qq'");
 			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='MSN' WHERE fieldid = 'msn'");
-			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='阿里旺旺' WHERE fieldid = 'taobao'");
+			DB::query("UPDATE ".DB::table('common_member_profile_setting')." SET title='Taobao' WHERE fieldid = 'taobao'");
 		}
-		show_msg("用户栏目升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp cột người dùng", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'setting') {
 		$nextop = 'admingroup';
 		$settings = $newsettings = array();
@@ -551,7 +551,7 @@ if($_GET['step'] == 'start') {
 				array (
 				  'available' => 1,
 				  'displayorder' => 0,
-				  'title' => '基本资料',
+				  'title' => 'Thông tin cơ bản',
 				  'field' =>
 				  array (
 					'realname' => 'realname',
@@ -575,7 +575,7 @@ if($_GET['step'] == 'start') {
 				),
 				'contact' =>
 				array (
-				  'title' => '联系方式',
+				  'title' => 'Chi tiết liên hệ',
 				  'available' => '1',
 				  'displayorder' => '1',
 				  'field' =>
@@ -593,7 +593,7 @@ if($_GET['step'] == 'start') {
 				array (
 				  'available' => 1,
 				  'displayorder' => 2,
-				  'title' => '教育情况',
+				  'title' => 'Tình trạng giáo dục',
 				  'field' =>
 				  array (
 					'graduateschool' => 'graduateschool',
@@ -604,7 +604,7 @@ if($_GET['step'] == 'start') {
 				array (
 				  'available' => 1,
 				  'displayorder' => 3,
-				  'title' => '工作情况',
+				  'title' => 'Điều kiện làm việc',
 				  'field' =>
 				  array (
 					'occupation' => 'occupation',
@@ -615,7 +615,7 @@ if($_GET['step'] == 'start') {
 				),
 				'info' =>
 				array (
-				  'title' => '个人信息',
+				  'title' => 'Thông tin cá nhân',
 				  'available' => '1',
 				  'displayorder' => '4',
 				  'field' =>
