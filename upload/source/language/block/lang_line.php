@@ -14,7 +14,7 @@ if(!defined('IN_DISCUZ')) {
 $lang = array
 (
 	'line_style' => 'Đường kẻ ngang dòng',
-	'line_style_line' => 'Dòng nhìn thấy rõ',//'实线',
-	'line_style_dash' => 'Dòng không nhìn thấy rõ',//'虚线',
+	'line_style_line' => 'Dòng nhìn thấy rõ',
+	'line_style_dash' => 'Dòng không nhìn thấy rõ',
 );
 ?>
