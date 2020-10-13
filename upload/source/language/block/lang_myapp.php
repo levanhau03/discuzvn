@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'myapp_titlelength' => 'Tiêu đề chiều dài',//'名称长度',
-	'myapp_startrow' => 'Hàng đầu tiên',//'起始位置',
+	'myapp_titlelength' => 'Tiêu đề chiều dài',
+	'myapp_startrow' => 'Hàng đầu tiên',
 );
 ?>
