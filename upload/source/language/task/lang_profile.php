@@ -18,10 +18,10 @@ $lang = array
 
 	'profile_view' => '<strong>Bạn cũng cần hoàn thành các mục dữ liệu cá nhân sau:</strong><br>
 		<span style="color:red;">{profiles}</span><br><br>
-		<strong>请按照以下的说明来完成本任务：</strong>
+		<strong>Vui lòng làm theo hướng dẫn bên dưới để hoàn thành tác vụ này:</strong>
 		<ul>
-		<li><a href="home.php?mod=spacecp&ac=profile" target="_blank" class="xi2">点击这里打开个人资料设置页面</a></li>
-		<li>在新打开的设置页面中，将上述个人资料补充完整</li>
+		<li><a href="home.php?mod=spacecp&ac=profile" target="_blank" class="xi2">Nhấp vào đây để mở trang cài đặt hồ sơ</a></li>
+		<li>Trong trang cài đặt mới mở, điền đầy đủ thông tin cá nhân ở trên</li>
 		</ul>',
 );
 
