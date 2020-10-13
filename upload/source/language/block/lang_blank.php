@@ -13,6 +13,6 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'blank_content' => 'Đoạn HTML ',//'HTML代码',
+	'blank_content' => 'Đoạn HTML ',
 );
 ?>
