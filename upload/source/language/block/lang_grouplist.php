@@ -22,7 +22,7 @@ $lang = array
 	'grouplist_titlelength' => 'Chiều dài tiêu đề',
 	'grouplist_titlelength' => 'Chiều dài tiêu đề',
 	'grouplist_summarylength' => 'Mô tả danh mục nhóm',
-	'grouplist_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả',//'设置群组介绍最大长度',
+	'grouplist_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả',
 	'grouplist_orderby' => 'Sắp xếp',
 	'grouplist_orderby_comment' => 'Thiết lập sắp xếp các nhóm',
 	'grouplist_orderby_dateline' => 'Ngày tạo',
@@ -32,8 +32,8 @@ $lang = array
 	'grouplist_orderby_level' => 'Cấp độ',
 	'grouplist_orderby_membernum' => 'Thành viên',
 	'grouplist_orderby_activity' => 'Sôi nổi',
-	'grouplist_orderby_commoncredits' => 'Điểm',//'按共同积分倒序',
-	'grouplist_orderby_displayorder' => 'Sắp xếp theo mặc định',//'按默认顺序'
+	'grouplist_orderby_commoncredits' => 'Điểm',
+	'grouplist_orderby_displayorder' => 'Sắp xếp theo mặc định',
 );
 
 ?>
