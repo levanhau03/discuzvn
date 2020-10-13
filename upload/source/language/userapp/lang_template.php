@@ -40,10 +40,10 @@ $lang = array (
 	'save_settings' => 'Lưu Cài đặt',
 	'use_assistant' => 'Sử dụng các trợ lý',
 	'user_assistant_message' => '<ol><li>Bạn được tự do để kéo và thả <img src="{IMGDIR}/drag.gif" /> Các ứng dụng được sắp xếp theo thứ tự;</li>
-								<li>排列越上面的应用在菜单中显示的越靠前；</li>
-								<li>您可以管理您已经添加的应用，可以设置某个应用的权限、移除某个应用；</li>
-								<li>如果您要管理您的空间、日志、相册等隐私，请到您的空间隐私设置；</li>
-								<li>默认应用只能进行相关设置与移除，但移除后仍然会显示在您的右侧菜单中。</li></ol>',
+								<li>Sắp xếp càng cao thì hiển thị trong menu càng cao;</li>
+								<li>Bạn có thể quản lý các ứng dụng bạn đã thêm, đặt quyền của một ứng dụng và xóa một ứng dụng;</li>
+								<li>Nếu bạn muốn quản lý quyền riêng tư của không gian, nhật ký, album, v.v., vui lòng chuyển đến cài đặt bảo mật không gian của bạn;</li>
+								<li>Ứng dụng mặc định chỉ có thể được đặt và gỡ bỏ, nhưng nó sẽ vẫn hiển thị trong menu bên phải của bạn sau khi gỡ bỏ.</li></ol>',
 	'open' => 'Mở rộng',
 	'recommend_unit' => 'Đề nghị',
 	'myapp' => 'Ứng dụng của tôi',
