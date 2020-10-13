@@ -17,8 +17,8 @@ $lang = array
 	'connect_bind_desc' => 'แค่เชื่อมต่อกับบัญชี QQ ของคุณกับเว็บไซต์ของเรา',
 	'connect_bind_view' => '<strong>Follow the instructions to participate in the task:</strong>
 		<ul>
-		<li>1. <a href="connect.php?mod=config" target="_blank">Open the page for binding QQ account in a new window</a></li>
-		<li>2. When the new page opened, click the "Bind QQ account" button, and fill in your QQ account number and password to complete the binding</li>
+		<li>1. <a href="connect.php?mod=config" target="_blank">新窗口打开 QQ 帐号绑定的页面</a></li>
+		<li>2. 在新打开的页面中，点击“QQ帐号绑定”按钮，填写您的 QQ 账号和密码即可完成绑定</li>
 		</ul>',
 );
 

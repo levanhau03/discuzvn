@@ -69,7 +69,7 @@ function block_pushitem(bid, itemid) {
 }
 
 function block_delete_item(bid, itemid, itemtype, itemfrom, from) {
-	var msg = itemtype==1 ? 'คุณแน่ใจหรือว่าต้องการลบข้อมูลนี้?' : 'คุณแน่ใจหรือว่าจะไม่ลบข้อมูลนี้?';
+	var msg = itemtype==1 ? 'Bạn có chắc chắn muốn xóa dữ liệu này?' : 'Bạn có chắc chắn muốn chặn dữ liệu này?';
 	if(confirm(msg)) {
 		var url = 'portal.php?mod=portalcp&ac=block&op=remove&bid='+bid+'&itemid='+itemid;
 		if(itemfrom=='ajax') {
@@ -143,7 +143,7 @@ function recommenditem_check() {
 		document.forms['recommendform'].action = document.forms['recommendform'].action+'&bid='+sel.value;
 		return true;
 	} else {
-		alert("กรุณาเลือกโมดูล!");
+		alert("Vui lòng chọn một mô-đun!");
 		return false;
 	}
 }
@@ -155,7 +155,7 @@ function recommenditem_byblock(bid, id, idtype) {
 		ajaxinnerhtml(olditemeditarea, editarea.innerHTML);
 		if(!$('recommendback')) {
 			var back = document.createElement('div');
-			back.innerHTML = '<em id="recommendback" onclick="recommenditem_back()" class="cur1">&nbsp;&nbsp;&laquo;กลับ</em>';
+			back.innerHTML = '<em id="recommendback" onclick="recommenditem_back()" class="cur1">&nbsp;&nbsp;&laquo;Trở về</em>';
 			var return_mods = $('return_mods') || $('return_recommend') || $('return_');
 			if(return_mods) {
 				return_mods.parentNode.appendChild(back.childNodes[0]);
@@ -223,10 +223,10 @@ function blockSetCacheTime(timer) {
 function toggleSettingShow() {
 	if(!$('tbody_setting').style.display) {
 		$('tbody_setting').style.display = 'none';
-		$('a_setting_show').innerHTML = 'ขยายการตั้งค่า';
+		$('a_setting_show').innerHTML = 'Mở rộng cài đặt';
 	} else {
 		$('tbody_setting').style.display = '';
-		$('a_setting_show').innerHTML = 'ซ่อนการตั้งค่า';
+		$('a_setting_show').innerHTML = 'Thu gọn cài đặt';
 	}
 	doane();
 }
@@ -234,16 +234,16 @@ function switchSetting() {
 	var checked = $('isblank').checked;
 	if(checked) {
 		$('tbody_setting').style.display = 'none';
-		$('a_setting_show').innerHTML = 'ขยายการตั้งค่า';
+		$('a_setting_show').innerHTML = 'Mở rộng cài đặt';
 	} else {
 		$('tbody_setting').style.display = '';
-		$('a_setting_show').innerHTML = 'ซ่อนการตั้งค่า';
+		$('a_setting_show').innerHTML = 'Thu gọn cài đặt';
 	}
 }
 
 function checkblockname(form) {
 	if(!(trim(form.name.value) > '')) {
-		showDialog('ID โมดูลไม่ควรเว้นค่าว่างไว้', 'error', null, function(){form.name.focus();});
+		showDialog('ID mô-đun không thể để trống', 'error', null, function(){form.name.focus();});
 		return false;
 	}
 	if(form.summary && form.summary.value) {
@@ -251,7 +251,7 @@ function checkblockname(form) {
 		if(tag) {
 			showBlockSummary();
 			form.summary.focus();
-			showDialog('เนื้อหาแบบกำหนดเองเกิดข้อผิดพลาด โค้ด HTML: '+tag+' แท็กไม่ตรงกัน', 'error', null, function(){form.summary.select();});
+			showDialog('Lỗi nội dung tùy chỉnh, mã HTML:'+tag+' nhãn không khớp', 'error', null, function(){form.summary.select();});
 			return false;
 		}
 	}
@@ -287,7 +287,7 @@ function blockCheckTag(summary, returnValue) {
 				if(returnValue) {
 					return tag;
 				} else {
-					showDialog('โค้ด HTML: '+tag+' แท็กไม่ตรงกัน', 'error', null, fn, true, fn);
+					showDialog('Mã HTML：'+tag+' nhãn không khớp', 'error', null, fn, true, fn);
 					return false;
 				}
 			}
@@ -312,7 +312,7 @@ function hideBlockSummary() {
 
 function blockconver(ele,bid) {
 	if(ele && bid) {
-		if(confirm('คุณแน่ใจหรือว่าต้องการแปลงประเภทของโมดูลจาก '+ele.options[0].innerHTML+' เป็น '+ele.options[ele.selectedIndex].innerHTML)) {
+		if(confirm('Bạn có chắc chắn muốn chuyển đổi loại mô-đun từ '+ele.options[0].innerHTML+' thành '+ele.options[ele.selectedIndex].innerHTML)) {
 			ajaxget('portal.php?mod=portalcp&ac=block&op=convert&bid='+bid+'&toblockclass='+ele.value,'blockshow');
 		} else {
 			ele.selectedIndex = 0;
@@ -327,23 +327,34 @@ function blockFavorite(bid){
 }
 
 function strLenCalc(obj, checklen, maxlen) {
-	var v = obj.value, charlen = 0, maxlen = !maxlen ? 200 : maxlen, curlen = maxlen, len = strlen(v);
-	if(curlen >= len) {
-		$(checklen).innerHTML = curlen - len;
+	var v = obj.value, charlen = 0, maxlen = !maxlen ? 200 : maxlen, curlen = 0, len = strlen(v);
+	for(var i = 0; i < v.length; i++) {
+		if(v.charCodeAt(i) < 0 || v.charCodeAt(i) > 255) {
+			curlen += 2;
+		} else {
+			curlen += 1;
+		}
+	}
+	checklen = $(checklen);
+	if(checklen.style.display == 'none') checklen.style.display = '';
+	if(curlen <= maxlen) {
+		checklen.innerHTML = 'Đã nhập <b>'+(curlen)+'</b> ký tự';
+		return true;
 	} else {
-		obj.value = obj.value.substr(v, maxlen);
+		checklen.innerHTML = 'Vượt quá <b style="color:red">'+(curlen - maxlen)+'</b> ký tự';
+		return false;
 	}
 }
 
 function check_itemdata_lentgh(form) {
 	if(form.title && (!strLenCalc(form.title, "titlechk", form.title.getAttribute('_maxlength')) || !form.title.value)) {
 		form.title.focus();
-		showDialog('ชื่อเรื่องไม่ถูกต้อง', 'error', null, function(){form.title.select();});
+		showDialog('Độ dài tiêu đề không chính xác', 'error', null, function(){form.title.select();});
 		return false;
 	}
 	if(form.summary && !strLenCalc(form.summary, "summarychk", form.summary.getAttribute('_maxlength'))) {
 		form.summary.focus();
-		showDialog('รายละเอียดไม่ถูกต้อง', 'error', null, function(){form.summary.select();});
+		showDialog('Độ dài hồ sơ không chính xác', 'error', null, function(){form.summary.select();});
 		return false;
 	}
 	return true;

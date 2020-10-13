@@ -92,7 +92,7 @@ var specialThread = {
 				var postUrl = API_URL + "module=pollvote&version=4&pollsubmit=yes";
 				TOOLS.dpost(postUrl, $('#voteform').serialize(),
 					function (re) {
-						TOOLS.showTips("โหวตเรียบร้อยแล้ว", true);
+						TOOLS.showTips("投票成功", true);
 						setTimeout(function () {
 							location.reload();
 						}, 300);

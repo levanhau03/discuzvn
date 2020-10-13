@@ -19,11 +19,11 @@ function previewFormSubmit() {
 	saveAllThread();
 
 	if (!selectedTopicId) {
-		alert('Please push headline information');
+		alert('请推送头条信息');
 		return false;
 	}
 	if (selectedNormalIds.length < 1) {
-		alert('Please push a message to the list at least regional');
+		alert('请至少推送一条信息到列表区域');
 		return false;
 	}
 
@@ -65,13 +65,13 @@ function ajaxChangeSearch() {
 }
 
 function ajaxGetSearchResultThreads() {
-	cloudj('#search_result').html('<tr><td colspan="3">Loading...</td></tr>');
+	cloudj('#search_result').html('<tr><td colspan="3">加载中...</td></tr>');
 	qqgroupajaxpost('search_form', 'search_result', 'search_result', null, null, function() {initSelect(); return false});
 	return false;
 }
 
 function ajaxGetPageResultThreads(page, mpurl) {
-	cloudj('#search_result').html('<tr><td colspan="3">Loading...</td></tr>');
+	cloudj('#search_result').html('<tr><td colspan="3">加载中...</td></tr>');
 	if (typeof page == 'undefined' || page === null) {
 		page = 1;
 	}
@@ -164,7 +164,7 @@ function addMiniportalList(tid) {
 		return false;
 	}
 	if (selectedNormalIds.length >= 5) {
-		alert('Push message has reached 5, in the right to cancel a number and try again.');
+		alert('推送帖子已达到5条，请在右侧取消一些再重试。');
 		return false;
 	}
 	if (tid == selectedTopicId) {
@@ -299,14 +299,14 @@ function removeNormalThreadRecall(displayorder, inNormalEditor) {
 		if (inNormalEditor) {
 			saveAllThread();
 		}
-		firstThreadLi.html('<div class="tips">Click on the left <img src="static/image/admincp/cloud/qun_op_list.png" align="absmiddle" /> Push information to the list</div>');
+		firstThreadLi.html('<div class="tips">点击左侧 <img src="static/image/admincp/cloud/qun_op_list.png" align="absmiddle" /> 将信息推送到列表</div>');
 		firstThreadLi.show();
 	}
 }
 
 function ajaxUploadQQGroupImage() {
 	cloudj('#uploadImageResult').parent().show();
-	cloudj('#uploadImageResult').text('Picture upload, please wait...');
+	cloudj('#uploadImageResult').text('图片上传中，请稍后...');
 	qqgroupajaxpost('uploadImage', 'uploadImageResult', 'uploadImageResult', null, null, 'uploadRecall()');
 }
 
@@ -345,7 +345,7 @@ function qqgroupajaxpost(formid, showid, waitid, showidclass, submitbtn, recall)
 			s = ajaxResponse;
 		}
 		if (!s) {
-			s = 'Internal error and can not display this content';
+			s = '内部错误，无法显示此内容';
 		}
 
 		if(s != '' && s.indexOf('ajaxerror') != -1) {

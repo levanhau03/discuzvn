@@ -369,7 +369,7 @@ function checkmaxperhour($type) {
 
 function checkpost($subject, $message, $special = 0) {
 	global $_G;
-/*jaideejung007*/	if(dstrlen($subject) > 255) {
+	if(dstrlen($subject) > 80) {
 		return 'post_subject_toolong';
 	}
 	if(!$_G['group']['disablepostctrl'] && !$special) {

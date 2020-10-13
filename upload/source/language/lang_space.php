@@ -101,13 +101,13 @@ $lang = array(
 	'block3' => 'กำหนดโมดูล 3',
 	'block4' => 'กำหนดโมดูล 4',
 	'block5' => 'กำหนดโมดูล 5',
-	'blockdata' => array('personalinfo' => 'ข้อมูลส่วนตัว', 'profile' => 'รูปโปรไฟล์', 'doing' => 'ทักทาย', 'feed' => 'อัปเดต',
-				'blog' => 'บล็อก', 'stickblog' => 'ปักหมุดบล็อก', 'album' => 'อัลบั้ม', 'friend' => 'เพื่อน',
-				'visitor' => 'ผู้เข้าชมล่าสุด', 'wall' => 'ฝากข้อความ', 'share' => 'แชร์',
-				'thread' => 'กระทู้', 'group'=>$_G[setting][navs][3][navname],'music'=>'กล่องเพลง',
-				'statistic' => 'สถิติ','myapp' => 'แอพลิเคชัน',
-				'block1'=>'โมดูฟรี 1', 'block2'=>'โมดูฟรี 2', 'block3'=>'โมดูฟรี 3',
-				'block4'=>'โมดูฟรี 4','block5'=>'โมดูฟรี 5'),
+	'blockdata' => array('personalinfo' => '个人资料', 'profile' => '头像', 'doing' => '记录', 'feed' => '动态',
+				'blog' => '日志', 'stickblog' => '置顶日志', 'album' => '相册', 'friend' => '好友',
+				'visitor' => '最近访客', 'wall' => '留言板', 'share' => '分享',
+				'thread' => '主题', 'group'=>$_G[setting][navs][3][navname],'music'=>'音乐盒',
+				'statistic' => '统计信息','myapp' => '应用',
+				'block1'=>'自由模块1', 'block2'=>'自由模块2', 'block3'=>'自由模块3',
+				'block4'=>'自由模块4','block5'=>'自由模块5'),
 
 	'block_title' => '<div class="blocktitle title"><span>{bname}</span>{more}</div>',
 	'blog_li' => '<dl class="bbda cl"><dt><a href="home.php?mod=space&uid={uid}&do=blog&id={blogid}" target="_blank">{subject}</a><span class="xg2 xw0"> {date}</span></dt>',
@@ -124,8 +124,8 @@ $lang = array(
 							<input type="hidden" name="refer" value="home.php?mod=space&uid={uid}" />
 							<input type="hidden" name="id" value="{uid}" />
 							<input type="hidden" name="idtype" value="uid" />
-							<input type="hidden" name="commentsubmit" value="true" />' : ($_G['connectguest'] ? '<div class="pt hm">คุณสามารถ <a href="member.php?mod=connect" class="xi2">เชื่อมโยงไปยังบัญชีของคุณ</a> หรือ <a href="member.php?mod=connect&ac=bind" class="xi2">ผูกบัญชีการใช้งาน</a> เพื่อให้สามารถแสดงความคิดเห็นได้</div>' : '<div class="pt hm">คุณจำเป็นจะต้อง <a href="member.php?mod=logging&action=login" onclick="showWindow(\'login\', this.href)" class="xi2">ลงชื่อเข้าสู่ระบบ</a> | <a href="member.php?mod='.$_G['setting']['regname'].'" class="xi2">'.$_G['setting']['reglinkname'].'</a></div>')).'
-							<p class="ptn"><button '.($_G['uid'] ? 'type="submit"' : 'type="button" onclick="showWindow(\'login\', \'member.php?mod=logging&action=login&guestmessage=yes\')"').' name="commentsubmit_btn" value="true" id="commentsubmit_btn" class="pn"><strong>ฝากข้อความ</strong></button></p>
+							<input type="hidden" name="commentsubmit" value="true" />' : ($_G['connectguest'] ? '<div class="pt hm">您需要 <a href="member.php?mod=connect" class="xi2">完善帐号信息</a> 或 <a href="member.php?mod=connect&ac=bind" class="xi2">绑定已有帐号</a> 后才可以回帖</div>' : '<div class="pt hm">你需要登录后才可以留言 <a href="member.php?mod=logging&action=login" onclick="showWindow(\'login\', this.href)" class="xi2">登录</a> | <a href="member.php?mod='.$_G['setting']['regname'].'" class="xi2">'.$_G['setting']['reglinkname'].'</a></div>')).'
+							<p class="ptn"><button '.($_G['uid'] ? 'type="submit"' : 'type="button" onclick="showWindow(\'login\', \'member.php?mod=logging&action=login&guestmessage=yes\')"').' name="commentsubmit_btn" value="true" id="commentsubmit_btn" class="pn"><strong>留言</strong></button></p>
 							<input type="hidden" name="handlekey" value="commentwall_{uid}" />
 							<span id="return_commentwall_{uid}"></span>
 							<input type="hidden" name="formhash" value="{FORMHASH}" />

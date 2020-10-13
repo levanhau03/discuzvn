@@ -50,7 +50,7 @@ $lang = array(
 
 	'friend_subject' => '<a href="{url}" target="_blank">{username} ส่งคำขอเพิ่มคุณเป็นเพื่อน</a>',
 	'friend_request_note' => ' ป.ล.:{note}',
-	'comment_friend' =>'<a href="\\2" target="_blank">\\1 ส่งข้อความถึงคุณ</a>',
+	'comment_friend' => '<a href="\\2" target="_blank">\\1 ส่งข้อความถึงคุณ</a>',
 	'photo_comment' => '<a href="\\2" target="_blank">\\1 แสดงความคิดเห็นเกี่ยวกับรูปภาพของคุณ</a>',
 	'blog_comment' => '<a href="\\2" target="_blank">\\1 แสดงความคิดเห็นเกี่ยวกับบล็อกของคุณ</a>',
 	'poll_comment' => '<a href="\\2" target="_blank">\\1 แสดงความคิดเห็นเกี่ยวกับโพลของคุณ</a>',
@@ -69,22 +69,22 @@ $lang = array(
 	'event_comment_reply' => '\\1 ตอบกลับความคิดเห็นในกิจกรรมของคุณ',
 
 	'mail_my' => 'แจ้งเตือนการโต้ตอบระหว่างฉันและเพื่อน',
-  	'mail_system' => 'แจ้งเตือนจากระบบ',
+	'mail_system' => 'แจ้งเตือนจากระบบ',
 
 	'invite_subject' => '{username} เชิญคุณเข้าร่วมและเป็นเพื่อนใน {sitename}',
 	'invite_massage' => '<table border="0">
 		<tr>
 		<td valign="top">{avatar}</td>
 		<td valign="top">
-		<h3>สวัสดี ฉันชื่อ {username} ขอเชิญชวนคุณเข้าร่วมและเป็นเพื่อนกับฉันใน {sitename}</h3><br>
-		 ได้โปรดเข้าร่วมและเป็นเพื่อนกับฉับ คุณสามารถติดตามความเคลื่อนไหว อ่านบล็อก ดูรูปภาพ แลกเปลี่ยนความรู้/ประสบการณ์ใหม่ๆ และติดต่อกับฉันได้ตลอดเวลา<br>
+		<h3>Hi，我是{username}，邀请您也加入{sitename}并成为我的好友</h3><br>
+		请加入到我的好友中，您就可以了解我的近况，与我一起交流，随时与我保持联系。<br>
 		<br>
-		หากคุณยินดียอมรับอินไวท์:<br>{saymsg}
+		邀请附言：<br>{saymsg}
 		<br><br>
-		<strong>กรุณาคลิกที่ลิงก์ด้านล่างนี้ เพื่อยอมรับอินไวท์:</strong><br>
+		<strong>请您点击以下链接，接受好友邀请：</strong><br>
 		<a href="{inviteurl}">{inviteurl}</a><br>
 		<br>
-		<strong>ถ้าคุณเป็นสมาชิกของ {sitename} อยู่แล้ว โปรดคลิกที่ลิงก์ด้านล่างเพื่อเข้าเยี่ยมชมโปรไฟล์ของฉัน:</strong><br>
+		<strong>如果您拥有{sitename}上面的账号，请点击以下链接查看我的个人主页：</strong><br>
 		<a href="{siteurl}home.php?mod=space&uid={uid}">{siteurl}home.php?mod=space&uid={uid}</a><br>
 		</td></tr></table>',
 
@@ -93,15 +93,15 @@ $lang = array(
 		<tr>
 		<td valign="top">{avatar}</td>
 		<td valign="top">
-		<h3>สวัสดี ฉันชื่อ {username}  ที่ {sitename} มี {appname} ให้ร่วมสนุก ฉันอยากจะเชิญชวนคุณมาร่วมสนุกด้วยกัน</h3><br>
+		<h3>Hi，我是{username}，在{sitename}上玩 {appname}，邀请您也加入一起玩</h3><br>
 		<br>
-		หากคุณยินดียอมรับอินไวท์:<br>
+		邀请附言：<br>
 		{saymsg}
 		<br><br>
-		<strong>โปรดคลิกที่ลิงก์ด้านล่าง เพื่อยอมรับอินไวท์และร่วมสนุกกับ {appname} ด้วยกัน:</strong><br>
+		<strong>请您点击以下链接，接受好友邀请一起玩{appname}：</strong><br>
 		<a href="{inviteurl}">{inviteurl}</a><br>
 		<br>
-		<strong>ถ้าคุณเป็นสมาชิกของ {sitename} อยู่แล้ว โปรดคลิกที่ลิงก์ด้านล่างเพื่อเข้าเยี่ยมชมโปรไฟล์ของฉัน:</strong><br>
+		<strong>如果您拥有{sitename}上面的账号，请点击以下链接查看我的个人主页：</strong><br>
 		<a href="{siteurl}home.php?mod=space&uid={uid}">{siteurl}home.php?mod=space&uid={uid}</a><br>
 		</td></tr></table>',
 
@@ -331,8 +331,8 @@ $lang = array(
 	'spacecp_message_prompt' => '(สนับสนุนตั้งแต่ {msg} ตัวอักษร จนถึงสูงสุด 1000 ตัวอักษร)',
 	'card_update_doing' => ' <a class="xi2" href="###">[อัปเดตข้อความทักทาย]</a>',
 	'email_acitve_message' => '<img src="{imgdir}/mail_inactive.png" alt="ยังไม่ได้ยืนยัน" class="vm" /> <span class="xi1">อีเมล ({newemail}) ของคุณยังไม่ได้ยืนยัน...</span><br />
-								ระบบได้ส่งการยืนยันไปยังอีเมลที่คุณใช้ลงทะเบียนแล้ว โปรดตรวจสอบเพื่อยืนยันและเปิดใช้งาน<br>
-								ถ้าคุณไม่ได้รับ คุณสามารถเปลี่ยนอีเมลใหม่ หรือ<a href="home.php?mod=spacecp&ac=profile&op=password&resend=1" class="xi2">คลิกที่นี่เพื่อขอรับการยืนยันอีกครั้ง</a>',
+								系统已经向该邮箱发送了一封验证激活邮件，请查收邮件，进行验证激活。<br>
+								如果没有收到验证邮件，您可以更换一个邮箱，或者<a href="home.php?mod=spacecp&ac=profile&op=password&resend=1" class="xi2">重新接收验证邮件</a>',
 	'qq_set_status' => 'ฉันกำหนดค่าสถานะ QQ ของฉันเป็นออนไลน์',
 	'qq_dialog' => 'เริ่มการแชทด้วย QQ',
 

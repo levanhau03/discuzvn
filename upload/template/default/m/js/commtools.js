@@ -128,7 +128,7 @@ var TOOLS = {
 			return false;
 		}
 
-		var title = opts.title || 'คำแนะนำ';
+		var title = opts.title || '提示信息';
 		var content = opts.content || '';
 
 		var btnOk = opts.okValue || false;
@@ -301,7 +301,7 @@ var TOOLS = {
 	showLoading: function (display, waiting, autoClose) {
 		var display = display || 'block';
 		var autoClose = autoClose || false;
-		waiting = waiting || 'กำลังโหลด...';
+		waiting = waiting || '正在加载...';
 		if (display == 'block') {
 			TOOLS.dialog({id: 'loading', content: waiting, noMask: true, autoClose: autoClose});
 		} else {
@@ -400,7 +400,7 @@ var TOOLS = {
 		} else if (power > 5) {
 			power = 4;
 		}
-		var unit = ["", "สิบ", "ร้อย", "พัน", "หมื่น"];
+		var unit = ["", "十", "百", "千", "万"];
 		var v = count / Math.pow(10, power);
 		if (fixed == undefined) {
 			fixed = 0;
@@ -551,11 +551,11 @@ var TOOLS = {
 				var sys_error = data.error || '';
 				if (sys_error !== '') {
 					if (typeof errorfunc === 'function') {
-						var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : 'เว็บไซต์';
+						var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : '微社区';
 						if (sys_error === 'mobile_is_closed') {
-							TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />เว็บไซต์นี้ยังไม่เปิดใช้งานในโหมดมือถือ');
+							TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />该社区未启用手机版');
 						} else {
-							TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />พบข้อผิดพลาดการเชื่อมต่อ (ERR01)');
+							TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />接口错误(ERR01)');
 						}
 					} else {
 						return;
@@ -589,8 +589,8 @@ var TOOLS = {
 					}
 				}
 				if (typeof errorfunc === 'function') {
-					var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : 'เว็บไซต์';
-					TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />พบข้อผิดพลาดการเชื่อมต่อ (ERR02)');
+					var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : '微社区';
+					TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />接口错误(ERR02)');
 					TOOLS.hideLoading();
 				}
 			}
@@ -647,8 +647,8 @@ var TOOLS = {
 					try {
 						re = jQuery.parseJSON(re);
 					} catch (e) {
-						var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : 'เว็บไซต์';
-						TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />พบข้อผิดพลาดการเชื่อมต่อ (ERR03)');
+						var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : '微社区';
+						TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />接口错误(ERR03)');
 						TOOLS.hideLoading();
 						return;
 					}
@@ -679,8 +679,8 @@ var TOOLS = {
 							try {
 								re = jQuery.parseJSON(re);
 							} catch (e) {
-								var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : 'เว็บไซต์';
-								TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />พบข้อผิดพลาดการเชื่อมต่อ (ERR04)');
+								var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : '微社区';
+								TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />接口错误(ERR04)');
 								TOOLS.hideLoading();
 								return;
 							}
@@ -737,8 +737,8 @@ var TOOLS = {
 						if (matches != null) {
 							TOOLS.checkInfo.load();
 						} else {
-							var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : 'เว็บไซต์';
-							TOOLS.showError('.warp', 'คุณไม่สามารถเข้าถึง ' + siteName + ' ได้<br /><br />พบข้อผิดพลาดการเชื่อมต่อ (ERR05)');
+							var siteName = typeof SITE_INFO.siteName !== 'undefined' ? SITE_INFO.siteName : '微社区';
+							TOOLS.showError('.warp', '您请求的' + siteName + '无法访问<br /><br />接口错误(ERR05)');
 							TOOLS.hideLoading();
 						}
 					}
@@ -915,11 +915,11 @@ var TOOLS = {
 				var opts = {
 					'id': param['id'],
 					'content': TOOLS.stripCode(param['content']),
-					'okValue': 'ตกลง',
+					'okValue': '确定',
 					'ok': param['ok'] ? function () {
 						TOOLS.customFuncs.run(event, param['ok']);
 					} : null,
-					'cancelValue': 'ยกเลิก',
+					'cancelValue': '取消',
 					'cancel': param['cancel'] ? function () {
 						TOOLS.customFuncs.run(event, param['cancel']);
 					} : null,
@@ -1010,7 +1010,7 @@ var TOOLS = {
 		var msg = '';
 		if (jQuery.os.ios) {
 			if (jQuery.os.version.toString() < '6.0') {
-				msg = 'ระบบโทรศัพท์ไม่รองรับการอัปโหลดภาพ กรุณาอัปเดตเป็น iOS6 หรือสูงกว่า';
+				msg = '手机系统不支持图片上传，请升级到iOS6以上';
 			}
 		}
 		if (msg) {

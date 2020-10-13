@@ -19,6 +19,7 @@ function show_msg($error_no, $error_msg = 'ok', $success = 1, $quit = TRUE) {
 		$str = "<root>\n";
 		$str .= "\t<error errorCode=\"$error_code\" errorMessage=\"$error_msg\" />\n";
 		$str .= "</root>";
+		send_mime_type_header();
 		echo $str;
 		exit;
 	} else {
@@ -235,6 +236,7 @@ function show_env_result(&$env_items, &$dirfile_items, &$func_items) {
 		$str .= "\t</FileDirs>\n";
 		$str .= "\t<error errorCode=\"$error_code\" errorMessage=\"\" />\n";
 		$str .= "</root>";
+		send_mime_type_header();
 		echo $str;
 		exit;
 
@@ -741,13 +743,45 @@ function fsocketopen($hostname, $port = 80, &$errno, &$errstr, $timeout = 15) {
 	return $fp;
 }
 
-function dfopen($url, $limit = 0, $post = '', $cookie = '', $bysocket = FALSE, $ip = '', $timeout = 15, $block = TRUE) {
+function dfopen($url, $limit = 0, $post = '', $cookie = '', $bysocket = FALSE, $ip = '', $timeout = 15, $block = TRUE, $encodetype  = 'URLENCODE', $allowcurl = TRUE) {
 	$return = '';
 	$matches = parse_url($url);
 	$scheme = $matches['scheme'];
 	$host = $matches['host'];
 	$path = $matches['path'] ? $matches['path'].(isset($matches['query']) && $matches['query'] ? '?'.$matches['query'] : '') : '/';
 	$port = !empty($matches['port']) ? $matches['port'] : ($matches['scheme'] == 'https' ? 443 : 80);
+
+	if(function_exists('curl_init') && function_exists('curl_exec') && $allowcurl) {
+		$ch = curl_init();
+		$ip && curl_setopt($ch, CURLOPT_HTTPHEADER, array("Host: ".$host));
+		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+		curl_setopt($ch, CURLOPT_URL, $scheme.'://'.($ip ? $ip : $host).':'.$port.$path);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		if($post) {
+			curl_setopt($ch, CURLOPT_POST, 1);
+			if($encodetype == 'URLENCODE') {
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			} else {
+				parse_str($post, $postarray);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $postarray);
+			}
+		}
+		if($cookie) {
+			curl_setopt($ch, CURLOPT_COOKIE, $cookie);
+		}
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		$data = curl_exec($ch);
+		$status = curl_getinfo($ch);
+		$errno = curl_errno($ch);
+		curl_close($ch);
+		if($errno || $status['http_code'] != 200) {
+			return;
+		} else {
+			return !$limit ? $data : substr($data, 0, $limit);
+		}
+	}
 
 	if($post) {
 		$out = "POST $path HTTP/1.0\r\n";
@@ -773,13 +807,17 @@ function dfopen($url, $limit = 0, $post = '', $cookie = '', $bysocket = FALSE, $
 	}
 
 	$fpflag = 0;
-	if(!$fp = @fsocketopen(($scheme == 'https' ? 'ssl' : $scheme).'://'.($scheme == 'https' ? $host : ($ip ? $ip : $host)), $port, $errno, $errstr, $timeout)) {
+	if(!$fp = @fsocketopen(($scheme == 'https' ? 'ssl://' : '').($scheme == 'https' ? $host : ($ip ? $ip : $host)), $port, $errno, $errstr, $timeout)) {
 		$context = array(
 			'http' => array(
 				'method' => $post ? 'POST' : 'GET',
 				'header' => $header,
 				'content' => $post,
 				'timeout' => $timeout,
+			),
+			'ssl' => array(
+				'verify_peer' => false,
+				'verify_peer_name' => false,
 			),
 		);
 		$context = stream_context_create($context);
@@ -1078,4 +1116,8 @@ function dhtmlspecialchars($string, $flags = null) {
 		}
 	}
 	return $string;
+}
+
+function send_mime_type_header($type = 'application/xml') {
+	header("Content-Type: ".$type);
 }

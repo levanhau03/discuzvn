@@ -3,7 +3,7 @@ var index = {
 	dropDown: false,
 	dropUp: false,
 	ucenterurl: '',
-	titleNames: {'thread': 'กระทู้ของฉัน', 'reply': 'ความเห็นของฉัน'},
+	titleNames: {'thread': '我的话题', 'reply': '我的回复'},
 	backToTop: function (offset) {
 		if (document.body.scrollTop <= 0 || offset.y > 2) {
 			$('#backToTopBtn').hide();

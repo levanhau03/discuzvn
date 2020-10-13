@@ -60,9 +60,9 @@ function replyComment(formhash, tId, pId, author, extra, iscomment, ttype, tpare
 			jQuery('#message').val(localStorage.getItem(storageKey));
 
 			if (pId == null || pId == 0) {
-				jQuery('#message').attr('placeholder', 'เขียนอะไรบางอย่างดีมั้ย~');
+				jQuery('#message').attr('placeholder', '说两句吧~');
 			} else {
-				jQuery('#message').attr('placeholder', "ความเห็น: " + author.replace(/(^\s*)|(\s*$)/g, ''));
+				jQuery('#message').attr('placeholder', "回复:" + author.replace(/(^\s*)|(\s*$)/g, ''));
 				TOOLS.dget(API_URL + "module=sendreply&tid=" + tId + "&repquote=" + pId + "&version=3", null,
 					function (json) {
 						noticeTrim = json.Variables.noticetrimstr;
@@ -105,7 +105,7 @@ function replyComment(formhash, tId, pId, author, extra, iscomment, ttype, tpare
 				var contentLen = TOOLS.mb_strlen(TOOLS.trim(content));
 
 				if (contentLen == 0) {
-					TOOLS.dialog({content: 'กรุณาเขียนความเห็น', autoClose: true});
+					TOOLS.dialog({content: '请输入回复内容', autoClose: true});
 					return;
 				}
 				jQuery('input[name="mobiletype"]').val(5);
@@ -143,7 +143,7 @@ function replyComment(formhash, tId, pId, author, extra, iscomment, ttype, tpare
 				localStorage.removeItem(storageKey);
 				var postMessage = jQuery('#message').val();
 				jQuery('#message').val('');
-				TOOLS.showTips("แสดงความเห็นแล้ว", true);
+				TOOLS.showTips("回复成功", true);
 				TOOLS.setcookie('refreshindex', '1', 86400);
 				var showactivity = typeof isshow == 'undefined' ? 0 : isshow;
 
@@ -226,10 +226,10 @@ function replyComment(formhash, tId, pId, author, extra, iscomment, ttype, tpare
 		}
 
 		TOOLS.dpost(reqUrl, postParams, callbackFunc.success, callbackFunc.error);
-		TOOLS.showLoading(null, 'กำลังส่ง');
+		TOOLS.showLoading(null, '正在发送');
 	};
 }
 
 function postAppend(tid, uid, username, avatar, message) {
-	jQuery('.topicBox[tid=' + tid + '] .topicList ul').append('<li><img src="' + avatar + '" onerror="javascript:this.src=\'../cdn/discuz/images/personImg.jpg\'" class="sImg db fl" width="25" height="25" alt="รูปโปรไฟล์"><a href="javascript:;" class="sW fl"><span>' + username + '：</span>' + message + '</a></li>');
+	jQuery('.topicBox[tid=' + tid + '] .topicList ul').append('<li><img src="' + avatar + '" onerror="javascript:this.src=\'../cdn/discuz/images/personImg.jpg\'" class="sImg db fl" width="25" height="25" alt="头像"><a href="javascript:;" class="sW fl"><span>' + username + '：</span>' + message + '</a></li>');
 }

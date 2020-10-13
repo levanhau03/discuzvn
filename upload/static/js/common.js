@@ -203,7 +203,7 @@ function getcookie(name, nounescape) {
 
 function Ajax(recvType, waitId) {
 	var aj = new Object();
-	aj.loading = 'กรุณารอสักครู่...';
+	aj.loading = 'Vui lòng chờ...';
 	aj.recvType = recvType ? recvType : 'XML';
 	aj.waitId = waitId ? $(waitId) : null;
 	aj.resultHandle = null;
@@ -532,7 +532,7 @@ function showPreview(val, id) {
 
 function showloading(display, waiting) {
 	var display = display ? display : 'block';
-	var waiting = waiting ? waiting : 'รอสักครู่...';
+	var waiting = waiting ? waiting : 'Đang tải...';
 	$('ajaxwaitid').innerHTML = waiting;
 	$('ajaxwaitid').style.display = display;
 }
@@ -1081,7 +1081,7 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 	var menuid = 'fwin_dialog';
 	var menuObj = $(menuid);
 	var showconfirm = 1;
-	confirmtxtdefault = 'ตกลง';
+	confirmtxtdefault = 'OK';
 	closetime = isUndefined(closetime) ? '' : closetime;
 	closefunc = function () {
 		if(typeof func == 'function') func();
@@ -1094,12 +1094,12 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 	}
 	locationtime = isUndefined(locationtime) ? '' : locationtime;
 	if(locationtime) {
-		leftmsg = locationtime + ' วินาทีจะไปยังหน้าเว็บใหม่';
+		leftmsg = locationtime + ' giây nữa sẽ chuyển trang';
 		showDialogST = setTimeout(closefunc, locationtime * 1000);
 		showconfirm = 0;
 	}
 	confirmtxt = confirmtxt ? confirmtxt : confirmtxtdefault;
-	canceltxt = canceltxt ? canceltxt : 'ยกเลิก';
+	canceltxt = canceltxt ? canceltxt : 'Hủy';
 
 	if(menuObj) hideMenu('fwin_dialog', 'dialog');
 	menuObj = document.createElement('div');
@@ -1112,8 +1112,8 @@ function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, 
 		hidedom = '<style type="text/css">object{visibility:hidden;}</style>';
 	}
 	var s = hidedom + '<table cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c"><h3 class="flb"><em>';
-	s += t ? t : 'ข้อแนะนำ';
-	s += '</em><span><a href="javascript:;" id="fwin_dialog_close" class="flbc" onclick="hideMenu(\'' + menuid + '\', \'dialog\')" title="ปิด">ปิด</a></span></h3>';
+	s += t ? t : 'Tin nhắn';
+	s += '</em><span><a href="javascript:;" id="fwin_dialog_close" class="flbc" onclick="hideMenu(\'' + menuid + '\', \'dialog\')" title="Đóng">Đóng</a></span></h3>';
 	if(mode == 'info') {
 		s += msg ? msg : '';
 	} else {
@@ -1173,7 +1173,7 @@ function showWindow(k, url, mode, cache, menuv) {
 			ajaxpost(url, 'fwin_content_' + k, '', '', '', function() {initMenu();show();});
 		}
 		if(parseInt(BROWSER.ie) != 6) {
-			loadingst = setTimeout(function() {showDialog('', 'info', '<img src="' + IMGDIR + '/loading.gif"> กำลังโหลด..')}, 500);
+			loadingst = setTimeout(function() {showDialog('', 'info', '<img src="' + IMGDIR + '/loading.gif"> Vui lòng chờ...')}, 500);
 		}
 	};
 	var initMenu = function() {
@@ -1231,7 +1231,7 @@ function showError(msg) {
 	var p = /<script[^\>]*?>([^\x00]*?)<\/script>/ig;
 	msg = msg.replace(p, '');
 	if(msg !== '') {
-		showDialog(msg, 'alert', 'ผิดพลาด', null, true, null, '', '', '', 3);
+		showDialog(msg, 'alert', 'Thông báo lỗi', null, true, null, '', '', '', 3);
 	}
 }
 
@@ -1605,10 +1605,10 @@ function setCopy(text, msg) {
 				showPrompt(null, null, '<span>' + msg + '</span>', 1500);
 			}
 		} else {
-			showDialog('<div class="c"><div style="width: 200px; text-align: center;">การคัดลอกไม่สำเร็จ กรุณาเลือก "อนุญาตให้เข้าถึง"</div></div>', 'alert');
+			showDialog('<div class="c"><div style="width: 200px; text-align: center;">Sao chép thất bại, vui lòng chọn "Cho phép truy cập"</div></div>', 'alert');
 		}
 	} else {
-		var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">คลิกที่นี่เพื่อคัดลอกไปยังคลิปบอร์ด</div>' +
+		var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">Nhấn vào đây để sao chép vào clipboard</div>' +
 		AC_FL_RunContent('id', 'clipboardswf', 'name', 'clipboardswf', 'devicefont', 'false', 'width', '200', 'height', '40', 'src', STATICURL + 'image/common/clipboard.swf', 'menu', 'false',  'allowScriptAccess', 'sameDomain', 'swLiveConnect', 'true', 'wmode', 'transparent', 'style' , 'margin-top:-20px') + '</div>';
 		showDialog(msg, 'info');
 		CLIPBOARDSWFDATA = text;
@@ -1641,20 +1641,20 @@ function initSearchmenu(searchform, cloudSearchUrl) {
 	var tclass = searchtxt.className;
 	searchtxt.className = tclass + ' xg1';
 	if (!!("placeholder" in document.createElement("input"))) {
-		if(searchtxt.value == 'กรุณากรอกข้อความที่คุณต้องการค้นหา') {
+		if(searchtxt.value == 'Nhập nội dung tìm kiếm') {
 			searchtxt.value = '';
 		}
-		searchtxt.placeholder = 'กรุณากรอกข้อความที่คุณต้องการค้นหา';
+		searchtxt.placeholder = 'Nhập nội dung tìm kiếm';
 	} else {
 		searchtxt.onfocus = function () {
-			if(searchtxt.value == 'กรุณากรอกข้อความที่คุณต้องการค้นหา') {
+			if(searchtxt.value == 'Nhập nội dung tìm kiếm') {
 				searchtxt.value = '';
 				searchtxt.className = tclass;
 			}
 		};
 		searchtxt.onblur = function () {
 			if(searchtxt.value == '' ) {
-				searchtxt.value = 'กรุณากรอกข้อความที่คุณต้องการค้นหา';
+				searchtxt.value = 'Nhập nội dung tìm kiếm';
 				searchtxt.className = tclass + ' xg1';
 			}
 		};
@@ -1696,7 +1696,7 @@ function initSearchmenu(searchform, cloudSearchUrl) {
 }
 
 function searchFocus(obj) {
-	if(obj.value == 'กรุณากรอกข้อความที่คุณต้องการค้นหา') {
+	if(obj.value == 'Nhập nội dung tìm kiếm') {
 		obj.value = '';
 	}
 	if($('cloudsearchquery') != null) {
@@ -1781,10 +1781,15 @@ function navShow(id) {
 
 function strLenCalc(obj, checklen, maxlen) {
 	var v = obj.value, charlen = 0, maxlen = !maxlen ? 200 : maxlen, curlen = maxlen, len = strlen(v);
+	for(var i = 0; i < v.length; i++) {
+		if(v.charCodeAt(i) < 0 || v.charCodeAt(i) > 255) {
+			curlen -= charset == 'utf-8' ? 2 : 1;
+		}
+	}
 	if(curlen >= len) {
 		$(checklen).innerHTML = curlen - len;
 	} else {
-		obj.value = obj.value.substr(v, maxlen);
+		obj.value = mb_cutstr(v, maxlen, 0);
 	}
 }
 
@@ -1812,7 +1817,7 @@ function noticeTitle() {
 
 function noticeTitleFlash() {
 	if(NOTICETITLE.flashNumber < 5 || NOTICETITLE.flashNumber > 4 && !NOTICETITLE['State']) {
-		document.title = (NOTICETITLE['State'] ? '' : '(ใหม่)') + NOTICETITLE['oldTitle'];
+		document.title = (NOTICETITLE['State'] ? '[　　　]' : '[Nhắc nhở]') + NOTICETITLE['oldTitle'];
 		NOTICETITLE['State'] = !NOTICETITLE['State'];
 	}
 	NOTICETITLE.flashNumber = NOTICETITLE.flashNumber < NOTICETITLE.sleep ? ++NOTICETITLE.flashNumber : 0;
@@ -1869,7 +1874,7 @@ function addFavorite(url, title) {
 		try {
 			window.sidebar.addPanel(title, url, '');
         	} catch (e) {
-			showDialog("กดปุ่ม Ctrl+D เพื่อเพิ่มลงในบุ๊คมาร์ก", 'notice');
+			showDialog("Nhấn Ctrl + D để thêm vào Fav", 'notice');
 		}
 	}
 }
@@ -1879,7 +1884,7 @@ function setHomepage(sURL) {
 		document.body.style.behavior = 'url(#default#homepage)';
 		document.body.setHomePage(sURL);
 	} else {
-		showDialog("เบราว์เซอร์ที่คุณใช้ไม่ใช่ IE ไม่สามารถใช้ฟังก์ชันนี้ได้ กรุณาตั้งหน้าแรกด้วยตัวเอง", 'notice');
+		showDialog("Trình duyệt không phải IE", 'notice');
 		doane();
 	}
 }
@@ -1935,10 +1940,10 @@ function toggleBlind(dom) {
 	if(dom) {
 		if(loadUserdata('is_blindman')) {
 			saveUserdata('is_blindman', '');
-			dom.title = 'เปิดโหมดผู้พิการทางสายตา';
+			dom.title = 'Bật chế độ mù màu';
 		} else {
 			saveUserdata('is_blindman', '1');
-			dom.title = 'ปิดโหมดผู้พิการทางสายตา';
+			dom.title = 'Đóng chế độ mù màu';
 		}
 	}
 }
@@ -1947,9 +1952,9 @@ function checkBlind() {
 	var dom = $('switchblind');
 	if(dom) {
 		if(loadUserdata('is_blindman')) {
-			dom.title = 'เปิดโหมดผู้พิการทางสายตา';
+			dom.title = 'Đóng chế độ mù màu';
 		} else {
-			dom.title = 'ปิดโหมดผู้พิการทางสายตา';
+			dom.title = 'Bật chế độ mù màu';
 		}
 	}
 }

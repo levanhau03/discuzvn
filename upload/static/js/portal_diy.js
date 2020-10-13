@@ -9,22 +9,22 @@ var drag = new Drag();
 drag.extend({
 	'getBlocksTimer' : '',
 	'blocks' : [],
-	'blockDefaultClass' : [{'key':'เลือกรูปแบบ','value':''},{'key':'ไม่มีเส้นขอบและไม่มีขอบ','value':'cl_block_bm'},{'key':'รูปแบบที่ 1','value':'xbs_1'},{'key':'รูปแบบที่ 2','value':'xbs xbs_2'},{'key':'รูปแบบที่ 3','value':'xbs xbs_3'},{'key':'รูปแบบที่ 4','value':'xbs xbs_4'},{'key':'รูปแบบที่ 5','value':'xbs xbs_5'},{'key':'รูปแบบที่ 6','value':'xbs xbs_6'},{'key':'รูปแบบที่ 7','value':'xbs xbs_7'}],
-	'frameDefaultClass' : [{'key':'เลือกรูปแบบ','value':''},{'key':'ไม่มีเส้นขอบและไม่มีขอบ','value':'cl_frame_bm'},{'key':'กรอบเส้นขอบ','value':'xfs xfs_nbd'},{'key':'รูปแบบที่ 1','value':'xfs xfs_1'},{'key':'รูปแบบที่ 2','value':'xfs xfs_2'},{'key':'รูปแบบที่ 3','value':'xfs xfs_3'},{'key':'รูปแบบที่ 4','value':'xfs xfs_4'},{'key':'รูปแบบที่ 5','value':'xfs xfs_5'}],
+	'blockDefaultClass' : [{'key':'Chọn kiểu','value':''},{'key':'No border and no margin','value':'cl_block_bm'},{'key':'Style 1','value':'xbs_1'},{'key':'Style 2','value':'xbs xbs_2'},{'key':'Style 3','value':'xbs xbs_3'},{'key':'Style 4','value':'xbs xbs_4'},{'key':'Style 5','value':'xbs xbs_5'},{'key':'Style 6','value':'xbs xbs_6'},{'key':'Style 7','value':'xbs xbs_7'}],
+	'frameDefaultClass' : [{'key':'Chọn kiểu','value':''},{'key':'No border and no margin','value':'cl_frame_bm'},{'key':'Borderless frame','value':'xfs xfs_nbd'},{'key':'Style 1','value':'xfs xfs_1'},{'key':'Style 2','value':'xfs xfs_2'},{'key':'Style 3','value':'xfs xfs_3'},{'key':'Style 4','value':'xfs xfs_4'},{'key':'Style 5','value':'xfs xfs_5'}],
 	setDefalutMenu : function () {
-		this.addMenu('default','ชื่อ','drag.openTitleEdit(event)');
-		this.addMenu('default','รูปแบบ','drag.openStyleEdit(event)');
-		this.addMenu('default', 'ลบ', 'drag.removeBlock(event)');
-		this.addMenu('block', 'แก้ไข', 'drag.openBlockEdit(event)');
-		this.addMenu('block', 'ข้อมูล', 'drag.openBlockEdit(event,"data")');
-		this.addMenu('block', 'อัปเดต', 'drag.blockForceUpdate(event)');
-		this.addMenu('frame', 'ส่งออก', 'drag.frameExport(event)');
-		this.addMenu('tab', 'ส่งออก', 'drag.frameExport(event)');
+		this.addMenu('default','Tiêu đề','drag.openTitleEdit(event)');
+		this.addMenu('default','Phong cách','drag.openStyleEdit(event)');
+		this.addMenu('default', 'Xóa', 'drag.removeBlock(event)');
+		this.addMenu('block', 'Các thuộc tính', 'drag.openBlockEdit(event)');
+		this.addMenu('block', 'Dữ liệu', 'drag.openBlockEdit(event,"data")');
+		this.addMenu('block', 'Cập nhật', 'drag.blockForceUpdate(event)');
+		this.addMenu('frame', 'Xuất khẩu', 'drag.frameExport(event)');
+		this.addMenu('tab', 'Xuất khẩu', 'drag.frameExport(event)');
 	},
 	setSampleMenu : function () {
-		this.addMenu('block', 'คุณสมบัติ', 'drag.openBlockEdit(event)');
-		this.addMenu('block', 'ข้อมูล', 'drag.openBlockEdit(event,"data")');
-		this.addMenu('block', 'อัปเดต', 'drag.blockForceUpdate(event)');
+		this.addMenu('block', 'Các thuộc tính', 'drag.openBlockEdit(event)');
+		this.addMenu('block', 'Dữ liệu', 'drag.openBlockEdit(event,"data")');
+		this.addMenu('block', 'Cập nhật', 'drag.blockForceUpdate(event)');
 	},
 	openBlockEdit : function (e,op) {
 		e = Util.event(e);
@@ -138,12 +138,12 @@ drag.extend({
 			key = k+'px';
 			bigarr.push({'key':key,'value':key});
 		}
-		var repeatarr = [{'key':'วางต่อทั้งหมด','value':'repeat'},{'key':'ไม่ต้องวางต่อ','value':'no-repeat'},{'key':'วางต่อเฉพาะแนวนอน','value':'repeat-x'},{'key':'วางต่อเฉพาะแนวตั้ง','value':'repeat-y'}];
-		var stylearr = [{'key':'ไม่มีรูปแบบ','value':'none'},{'key':'เส้นทึบ','value':'solid'},{'key':'จุด','value':'dotted'},{'key':'เส้นประ','value':'dashed'}];
+		var repeatarr = [{'key':'Lặp lại','value':'repeat'},{'key':'Không lặp lại','value':'no-repeat'},{'key':'Lặp theo chiều ngang','value':'repeat-x'},{'key':'Lặp theo chiều dọc','value':'repeat-y'}];
+		var stylearr = [{'key':'Không có','value':'none'},{'key':'Đường liền nét','value':'solid'},{'key':'Đường chấm chấm','value':'dotted'},{'key':'Nét đứt','value':'dashed'}];
 		var table = '<table class="tfm">';
-		table += '<tr><th>ฟอนต์</th><td><input type="text" id="fontsize" class="px p_fre vm" value="'+fontsize+'" size="2" />px <input type="text" id="fontcolor" class="px p_fre vm" value="'+fontcolor+'" size="2" />';
+		table += '<tr><th>Phông chữ</th><td><input type="text" id="fontsize" class="px p_fre vm" value="'+fontsize+'" size="2" />px <input type="text" id="fontcolor" class="px p_fre vm" value="'+fontcolor+'" size="2" />';
 		table += getColorPalette(id+'_fontPalette', 'fontcolor' ,fontcolor)+'</td></tr>';
-		table += '<tr><th>ลิงก์</th><td><input type="text" id="linkfontsize" class="px p_fre vm" value="'+linkfontsize+'" size="2" />px <input type="text" id="linkcolor" class="px p_fre vm" value="'+linkcolor+'" size="2" />';
+		table += '<tr><th>Liên kết</th><td><input type="text" id="linkfontsize" class="px p_fre vm" value="'+linkfontsize+'" size="2" />px <input type="text" id="linkcolor" class="px p_fre vm" value="'+linkcolor+'" size="2" />';
 		table += getColorPalette(id+'_linkPalette', 'linkcolor' ,linkcolor)+'</td></tr>';
 
 		var ulclass = 'borderul', opchecked = '';
@@ -152,27 +152,27 @@ drag.extend({
 			opchecked = ' checked="checked"';
 		}
 
-		table += '<tr><th>เส้นขอบ</th><td><ul id="borderul" class="'+ulclass+'">';
-		table += '<li><label>บน</label><select class="ps vm" id="bdtwidth" ><option value="">ขนาด</option>'+this.getOption(widtharr,bdtwidth)+'</select>';
-		table += ' <select class="ps vm" id="bdtstyle" ><option value="">รูปแบบ</option>'+this.getOption(stylearr,bdtstyle)+'</select>';
-		table += ' สี<input type="text" id="bdtcolor" class="px p_fre vm" value="'+bdtcolor+'" size="7" />';
+		table += '<tr><th>Frame</th><td><ul id="borderul" class="'+ulclass+'">';
+		table += '<li><label>上</label><select class="ps vm" id="bdtwidth" ><option value="">Kích thước</option>'+this.getOption(widtharr,bdtwidth)+'</select>';
+		table += ' <select class="ps vm" id="bdtstyle" ><option value="">Phong cách</option>'+this.getOption(stylearr,bdtstyle)+'</select>';
+		table += ' Màu <input type="text" id="bdtcolor" class="px p_fre vm" value="'+bdtcolor+'" size="7" />';
 		table += getColorPalette(id+'_bdtPalette', 'bdtcolor' ,bdtcolor)+'</li>';
 
-		table += '<li class="bordera mtn"><label>ขวา</label><select class="ps vm" id="bdrwidth" ><option value="">ขนาด</option>'+this.getOption(widtharr,bdrwidth)+'</select>';
-		table += ' <select class="ps vm" id="bdrstyle" ><option value="">รูปแบบ</option>'+this.getOption(stylearr,bdrstyle)+'</select>';
-		table += ' สี<input type="text" id="bdrcolor" class="px p_fre vm" value="'+bdrcolor+'" size="7" />';
+		table += '<li class="bordera mtn"><label>右</label><select class="ps vm" id="bdrwidth" ><option value="">Kích thước</option>'+this.getOption(widtharr,bdrwidth)+'</select>';
+		table += ' <select class="ps vm" id="bdrstyle" ><option value="">Phong cách</option>'+this.getOption(stylearr,bdrstyle)+'</select>';
+		table += ' Màu <input type="text" id="bdrcolor" class="px p_fre vm" value="'+bdrcolor+'" size="7" />';
 		table += getColorPalette(id+'_bdrPalette', 'bdrcolor' ,bdrcolor)+'</li>';
 
-		table += '<li class="bordera mtn"><label>ล่าง</label><select class="ps vm" id="bdbwidth" ><option value="">ขนาด</option>'+this.getOption(widtharr,bdbwidth)+'</select>';
-		table += ' <select class="ps vm" id="bdbstyle" ><option value="">รูปแบบ</option>'+this.getOption(stylearr,bdbstyle)+'</select>';
-		table += ' สี<input type="text" id="bdbcolor" class="px p_fre vm" value="'+bdbcolor+'" size="7" />';
+		table += '<li class="bordera mtn"><label>下</label><select class="ps vm" id="bdbwidth" ><option value="">Kích thước</option>'+this.getOption(widtharr,bdbwidth)+'</select>';
+		table += ' <select class="ps vm" id="bdbstyle" ><option value="">Phong cách</option>'+this.getOption(stylearr,bdbstyle)+'</select>';
+		table += ' Màu <input type="text" id="bdbcolor" class="px p_fre vm" value="'+bdbcolor+'" size="7" />';
 		table += getColorPalette(id+'_bdbPalette', 'bdbcolor' ,bdbcolor)+'</li>';
 
-		table += '<li class="bordera mtn"><label>ซ้าย</label><select class="ps vm" id="bdlwidth" ><option value="">ขนาด</option>'+this.getOption(widtharr,bdlwidth)+'</select>';
-		table += ' <select class="ps vm" id="bdlstyle" ><option value="">รูปแบบ</option>'+this.getOption(stylearr,bdlstyle)+'</select>';
-		table += ' สี<input type="text" id="bdlcolor" class="px p_fre vm" value="'+bdlcolor+'" size="7" />';
+		table += '<li class="bordera mtn"><label>左</label><select class="ps vm" id="bdlwidth" ><option value="">Kích thước</option>'+this.getOption(widtharr,bdlwidth)+'</select>';
+		table += ' <select class="ps vm" id="bdlstyle" ><option value="">Phong cách</option>'+this.getOption(stylearr,bdlstyle)+'</select>';
+		table += ' Màu <input type="text" id="bdlcolor" class="px p_fre vm" value="'+bdlcolor+'" size="7" />';
 		table += getColorPalette(id+'_bdlPalette', 'bdlcolor' ,bdlcolor)+'</li>';
-		table += '</ul><p class="ptm"><label><input id="borderop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'borderul\').className = $(\'borderul\').className == \'borderul\' ? \'borderula\' : \'borderul\'">ตั้งค่า</label></p></td></tr>';
+		table += '</ul><p class="ptm"><label><input id="borderop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'borderul\').className = $(\'borderul\').className == \'borderul\' ? \'borderula\' : \'borderul\'">Đặt riêng</label></p></td></tr>';
 
 		bigarr = [];
 		for (k=-20;k<31;k++) {
@@ -186,11 +186,11 @@ drag.extend({
 			opchecked = ' checked="checked"';
 		}
 
-		table += '<tr><th>ระยะขอบภายนอก</th><td><div id="margindiv" class="'+ulclass+'"><span><label>บน</label> <input type="text" id="margint" class="px p_fre vm" value="'+margint+'" size="1"/>px </span>';
-		table += '<span class="bordera"><label>ขวา</label> <input type="text" id="marginr" class="px p_fre vm" value="'+marginr+'" size="1" />px </span>';
-		table += '<span class="bordera"><label>ล่าง</label> <input type="text" id="marginb" class="px p_fre vm" value="'+marginb+'" size="1" />px </span>';
-		table += '<span class="bordera"><label>ซ้าย</label> <input type="text" id="marginl" class="px p_fre vm" value="'+marginl+'" size="1" />px</span>';
-		table += '</div><p class="ptm"><label><input id="marginop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'margindiv\').className = $(\'margindiv\').className == \'borderul\' ? \'borderula\' : \'borderul\'">ตั้งค่า</label></p></td></tr>';
+		table += '<tr><th>Margin</th><td><div id="margindiv" class="'+ulclass+'"><span><label>Lên</label> <input type="text" id="margint" class="px p_fre vm" value="'+margint+'" size="1"/>px </span>';
+		table += '<span class="bordera"><label>Phải</label> <input type="text" id="marginr" class="px p_fre vm" value="'+marginr+'" size="1" />px </span>';
+		table += '<span class="bordera"><label>Xuống</label> <input type="text" id="marginb" class="px p_fre vm" value="'+marginb+'" size="1" />px </span>';
+		table += '<span class="bordera"><label>Trái</label> <input type="text" id="marginl" class="px p_fre vm" value="'+marginl+'" size="1" />px</span>';
+		table += '</div><p class="ptm"><label><input id="marginop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'margindiv\').className = $(\'margindiv\').className == \'borderul\' ? \'borderula\' : \'borderul\'">Đặt riêng</label></p></td></tr>';
 
 		if (objType == 1) {
 
@@ -200,25 +200,25 @@ drag.extend({
 				opchecked = ' checked="checked"';
 			}
 
-			table += '<tr><th>ระยะขอบภายใน</th><td><div id="cmargindiv" class="'+ulclass+'"><span><label>บน</label> <input class="px p_fre" id="cmargint" value="'+cmargint+'" size="1" />px </span>';
-			table += '<span class="bordera"><label>ขวา</label> <input class="px p_fre" id="cmarginr" value="'+cmarginr+'" size="1" />px </span>';
-			table += '<span class="bordera"><label>ล่าง</label> <input class="px p_fre" id="cmarginb" value="'+cmarginb+'" size="1" />px </span>';
-			table += '<span class="bordera"><label>ซ้าย</label> <input class="px p_fre" id="cmarginl" value="'+cmarginl+'" size="1" />px </span>';
-			table += '</div><p class="ptm"><label><input id="cmarginop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'cmargindiv\').className = $(\'cmargindiv\').className == \'borderul\' ? \'borderula\' : \'borderul\'"> ตั้งค่า</label></p></td></tr>';
+			table += '<tr><th>Padding</th><td><div id="cmargindiv" class="'+ulclass+'"><span><label>Lên</label> <input class="px p_fre" id="cmargint" value="'+cmargint+'" size="1" />px </span>';
+			table += '<span class="bordera"><label>Phải</label> <input class="px p_fre" id="cmarginr" value="'+cmarginr+'" size="1" />px </span>';
+			table += '<span class="bordera"><label>Xuống</label> <input class="px p_fre" id="cmarginb" value="'+cmarginb+'" size="1" />px </span>';
+			table += '<span class="bordera"><label>Trái</label> <input class="px p_fre" id="cmarginl" value="'+cmarginl+'" size="1" />px </span>';
+			table += '</div><p class="ptm"><label><input id="cmarginop" type="checkbox" value="1" class="pc"'+opchecked+' onclick="$(\'cmargindiv\').className = $(\'cmargindiv\').className == \'borderul\' ? \'borderula\' : \'borderul\'"> Đặt riêng</label></p></td></tr>';
 		}
-		table += '<tr><th>สีพื้นหลัง</th><td><input type="text" id="bgcolor" class="px p_fre vm" value="'+bgcolor+'" size="4" />';
+		table += '<tr><th>Màu nền</th><td><input type="text" id="bgcolor" class="px p_fre vm" value="'+bgcolor+'" size="4" />';
 		table += getColorPalette(id+'_bgcPalette', 'bgcolor' ,bgcolor)+'</td></tr>';
-		table += '<tr><th>ภาพพื้นหลัง</th><td><input type="text" id="bgimage" class="px p_fre vm" value="'+bgimage+'" size="25" /> <select class="ps vm" id="bgrepeat" >'+this.getOption(repeatarr,bgrepeat)+'</select></td></tr>';
+		table += '<tr><th>Ảnh nền</th><td><input type="text" id="bgimage" class="px p_fre vm" value="'+bgimage+'" size="25" /> <select class="ps vm" id="bgrepeat" >'+this.getOption(repeatarr,bgrepeat)+'</select></td></tr>';
 		var classarr = objType == 1 ? this.blockDefaultClass : this.frameDefaultClass;
-		table += '<tr><th>ระบุ class</th><td><input type="text" id="diyClassName" class="px p_fre" value="'+diyClassName+'" size="8" /> <select class="ps vm" id="bgrepeat" onchange="$(\'diyClassName\').value=this.value;" >'+this.getOption(classarr, diyClassName)+'</select></td></tr>';
+		table += '<tr><th>Chỉ định lớp</th><td><input type="text" id="diyClassName" class="px p_fre" value="'+diyClassName+'" size="8" /> <select class="ps vm" id="bgrepeat" onchange="$(\'diyClassName\').value=this.value;" >'+this.getOption(classarr, diyClassName)+'</select></td></tr>';
 		table += '</table>';
 
-		var wname = objType ? 'โมดูล' : 'เฟรม';
+		var wname = objType ? 'Mô-đun' : 'Khung';
 		html = '<div class="c diywin" style="width:450px;position:relative;">'+table+'</div>';
-		var h = '<h3 class="flb"><em>แก้ไขรูปแบบ'+wname+'</em><span><a href="javascript:;" class="flbc" onclick="drag.closeStyleEdit(\''+id+'\');return false;" title="ปิด">\n\
-			ปิด</a></span></h3>';
+		var h = '<h3 class="flb"><em>Chỉnh sửa kiểu '+wname+'</em><span><a href="javascript:;" class="flbc" onclick="drag.closeStyleEdit(\''+id+'\');return false;" title="Đóng">\n\
+			Đóng</a></span></h3>';
 		var f = '<p class="o pns"><button onclick="drag.saveStyle(\''+id+'\');drag.closeStyleEdit(\''+id+'\');" class="pn pnc" value="true">\n\
-			<strong>ตกลง</strong></button><button onclick="drag.closeStyleEdit(\''+id+'\')" class="pn" value="true"><strong>ยกเลิก</strong></button></p>';
+			<strong>Ok</strong></button><button onclick="drag.closeStyleEdit(\''+id+'\')" class="pn" value="true"><strong>Hủy bỏ</strong></button></p>';
 		this.removeMenu(e);
 		showWindow('eleStyle',h + html + f, 'html', 0);
 	},
@@ -334,8 +334,8 @@ drag.extend({
 			fid = e;
 		}
 		var obj = this.getObjByName(fid);
-		var titlename = obj instanceof Block ? 'โมดูล' : 'เฟรม';
-		var repeatarr = [{'key':'วางต่อทั้งหมด','value':'repeat'},{'key':'ไม่ต้องวางต่อ','value':'no-repeat'},{'key':'วางต่อเฉพาะแนวนอน','value':'repeat-x'},{'key':'วางต่อเฉพาะแนวตั้ง','value':'repeat-y'}];
+		var titlename = obj instanceof Block ? 'Mô-đun' : 'Khung';
+		var repeatarr = [{'key':'Lặp lại','value':'repeat'},{'key':'Không lặp lại','value':'no-repeat'},{'key':'Lặp theo chiều ngang','value':'repeat-x'},{'key':'Lặp theo chiều dọc','value':'repeat-y'}];
 
 		var len = obj.titles.length;
 		var bgimage = obj.titles.style && obj.titles.style['background-image'] ? obj.titles.style['background-image'] : '';
@@ -345,23 +345,23 @@ drag.extend({
 		var bgrepeat = obj.titles.style && obj.titles.style['background-repeat'] ? obj.titles.style['background-repeat'] : '';
 
 		var common = '<table class="tfm">';
-		common += '<tr><th>ภาพพื้นหลัง:</th><td><input type="text" id="titleBgImage" class="px p_fre" value="'+bgimage+'" /> <select class="ps vm" id="titleBgRepeat" >'+this.getOption(repeatarr,bgrepeat)+'</select></td></tr>';
-		common += '<tr><th>สีพื้นหลัง:</th><td><input type="text" id="titleBgColor" class="px p_fre" value="'+bgcolor+'" size="7" />';
+		common += '<tr><th>Ảnh nền:</th><td><input type="text" id="titleBgImage" class="px p_fre" value="'+bgimage+'" /> <select class="ps vm" id="titleBgRepeat" >'+this.getOption(repeatarr,bgrepeat)+'</select></td></tr>';
+		common += '<tr><th>Màu nền:</th><td><input type="text" id="titleBgColor" class="px p_fre" value="'+bgcolor+'" size="7" />';
 		common += getColorPalette(fid+'bgPalette_0', 'titleBgColor' ,bgcolor)+'</td></tr>';
 		if (obj instanceof Tab) {
-			var switchArr = [{'key':'คลิก','value':'click'},{'key':'เมาส์โอเวอร์','value':'mouseover'}];
+			var switchArr = [{'key':'Nhấp vào','value':'click'},{'key':'Trượt qua','value':'mouseover'}];
 			var switchType = obj.titles['switchType'] ? obj.titles['switchType'][0] : 'click';
-			common += '<tr><th>เปลี่ยน:</th><td><select class="ps" id="switchType" >'+this.getOption(switchArr,switchType)+'</select></td></tr>';
+			common += '<tr><th>Loại chuyển đổi:</th><td><select class="ps" id="switchType" >'+this.getOption(switchArr,switchType)+'</select></td></tr>';
 		}
 		common += '</table><hr class="l">';
 		var li = '';
-		li += '<div id="titleInput_0"><table class="tfm"><tr><th>ชื่อ'+titlename+':</th><td><input type="text" id="titleText_0" class="px p_fre" value="`title`" /></td></tr>';
-		li += '<tr><th>ลิงก์:</th><td><input type="text" id="titleLink_0" class="px p_fre" value="`link`" /></td></tr>';
-		li += '<tr><th>รูปภาพ:</th><td><input type="text" id="titleSrc_0" class="px p_fre" value="`src`" /></td></tr>';
-		li += '<tr><th>ตำแหน่ง:</th><td><select id="titleFloat_0" class="ps vm"><option value="" `left`>ซ้าย</option><option value="right" `right`>ขวา</option></select>';
-		li += '&nbsp;&nbsp;ห่างจากขอบ: <input type="text" id="titleMargin_0" class="px p_fre vm" value="`margin`" size="2" />px</td></tr>';
-		li += '<tr><th>ฟอนต์:</th><td><select class="ps vm" id="titleSize_0" ><option value="">ขนาด</option>`size`</select>';
-		li += '&nbsp;&nbsp;สี: <input type="text" id="titleColor_0" class="px p_fre vm" value="`color`" size="4" />';
+		li += '<div id="titleInput_0"><table class="tfm"><tr><th>Tiêu đề '+titlename+':</th><td><input type="text" id="titleText_0" class="px p_fre" value="`title`" /></td></tr>';
+		li += '<tr><th>Liên kết:</th><td><input type="text" id="titleLink_0" class="px p_fre" value="`link`" /></td></tr>';
+		li += '<tr><th>Ảnh:</th><td><input type="text" id="titleSrc_0" class="px p_fre" value="`src`" /></td></tr>';
+		li += '<tr><th>Địa điểm:</th><td><select id="titleFloat_0" class="ps vm"><option value="" `left`>Trái</option><option value="right" `right`>Phải</option></select>';
+		li += '&nbsp;&nbsp;Margin: <input type="text" id="titleMargin_0" class="px p_fre vm" value="`margin`" size="2" />px</td></tr>';
+		li += '<tr><th>Phông chữ:</th><td><select class="ps vm" id="titleSize_0" ><option value="">Kích thước</option>`size`</select>';
+		li += '&nbsp;&nbsp;Màu sắc: <input type="text" id="titleColor_0" class="px p_fre vm" value="`color`" size="4" />';
 		li += getColorPalette(fid+'Palette_0', 'titleColor_0' ,'`color`');
 		li += '</td></tr><tr><td colspan="2"><hr class="l"></td></tr></table></div>';
 		var html = '';
@@ -382,11 +382,11 @@ drag.extend({
 		}
 
 		var c = len + 1;
-			html = '<div class="c diywin" style="width:450px;height:400px; overflow:auto;"><table cellspacing="0" cellpadding="0" class="tfm pns"><tr><th></th><td><button type="button" id="addTitleInput" class="pn" onclick="drag.addTitleInput('+c+');"><em>เพิ่มชื่อเรื่องใหม่</em></button></td></tr></table><div id="titleEdit">'+html+common+'</div></div>';
-		var h = '<h3 class="flb"><em>แก้ไขชื่อ'+titlename+'</em><span><a href="javascript:;" class="flbc" onclick="drag.closeTitleEdit(\''+fid+'\');return false;" title="ปิด">\n\
-			ปิด</a></span></h3>';
+			html = '<div class="c diywin" style="width:450px;height:400px; overflow:auto;"><table cellspacing="0" cellpadding="0" class="tfm pns"><tr><th></th><td><button type="button" id="addTitleInput" class="pn" onclick="drag.addTitleInput('+c+');"><em>Thêm tiêu đề mới</em></button></td></tr></table><div id="titleEdit">'+html+common+'</div></div>';
+		var h = '<h3 class="flb"><em>Chỉnh sửa tiêu đề '+titlename+'</em><span><a href="javascript:;" class="flbc" onclick="drag.closeTitleEdit(\''+fid+'\');return false;" title="Đóng">\n\
+			Đóng</a></span></h3>';
 		var f = '<p class="o pns"><button onclick="drag.saveTitleEdit(\''+fid+'\');drag.closeTitleEdit(\''+fid+'\');" class="pn pnc" value="true">\n\
-			<strong>ตกลง</strong></button><button onclick="drag.closeTitleEdit(\''+fid+'\')" class="pn" value="true"><strong>ยกเลิก</strong></button></p>';
+			<strong>Ok</strong></button><button onclick="drag.closeTitleEdit(\''+fid+'\')" class="pn" value="true"><strong>Hủy bỏ</strong></button></p>';
 		this.removeMenu(e);
 		showWindow('frameTitle',h + html + f, 'html', 0);
 	},
@@ -562,7 +562,7 @@ drag.extend({
 		if ($(id) == null) return false;
 		var obj = this.getObjByName(id);
 		if (!flag) {
-			if (!confirm('คุณแน่ใจหรือไม่ว่าคุณต้องการลบ หลังจากที่คุณลบแล้วจะไม่สามารถกู้คืนได้')) return false;
+			if (!confirm('Bạn có chắc chắn muốn xóa, nó sẽ không thể phục hồi sau khi xóa')) return false;
 		}
 		if (obj instanceof Block) {
 			this.delBlock(id);
@@ -655,13 +655,13 @@ drag.extend({
 		var height = Util.getFinallyStyle(bcontent, 'height');
 		bcontent.style.lineHeight = height == 'auto' ? '' : (height == '0px' ? '20px' : height);
 		var boldcontent = bcontent.innerHTML;
-		bcontent.innerHTML = '<center>กำลังโหลดเนื้อหา...</center>';
+		bcontent.innerHTML = '<center>Đang tải nội dung...</center>';
 		var x = new Ajax();
 		x.get('portal.php?mod=portalcp&ac=block&op=getblock&forceupdate=1&inajax=1&bid='+bid+'&tpl='+document.diyform.template.value, function(s) {
 			if(s.indexOf('errorhandle_') != -1) {
 				bcontent.innerHTML = boldcontent;
 				runslideshow();
-				showDialog('ขออภัย คุณไม่มีสิทธิ์ในการเพิ่ม หรือแก้ไขโมดูล', 'alert');
+				showDialog('Xin lỗi, bạn không có quyền thêm hoặc chỉnh sửa các mô-đun', 'alert');
 				doane();
 			} else {
 				var obj = document.createElement('div');
@@ -678,7 +678,7 @@ drag.extend({
 	frameExport : function (e) {
 		var flag = true;
 		if (drag.isChange) {
-			flag = confirm('คุณได้ทำการปรับเปลี่ยน กรุณาบันทึกหลังจากการส่งออก มิฉะนั้นข้อมูลที่ส่งออกจะไม่รวมถึงการเปลี่ยนแปลงที่ทำปัจจุบันของคุณ');
+			flag = confirm('Bạn đã thực hiện các thay đổi, vui lòng lưu và sau đó xuất, nếu không, dữ liệu đã xuất sẽ không bao gồm các thay đổi bạn đã thực hiện lần này.');
 		}
 		if (flag) {
 			if ( typeof e == 'object') {
@@ -708,7 +708,7 @@ drag.extend({
 	},
 	endBlockForceUpdateBatch : function () {
 		if($('allupdate')) {
-			$('allupdate').innerHTML = 'อัปเดตล่าสุดเสร็จสมบูรณ์';
+			$('allupdate').innerHTML = 'Các hoạt động đã được hoàn thành.';
 			$('fwin_dialog_submit').style.display = '';
 			$('fwin_dialog_cancel').style.display = 'none';
 		}
@@ -721,7 +721,7 @@ drag.extend({
 		if (this.blocks.length > 0) {
 			var cur = this.blocksLen - this.blocks.length;
 			if($('allupdate')) {
-				$('allupdate').innerHTML = 'รวม <span style="color:blue">'+this.blocksLen+'</span> โมดูล อัปเดต <span style="color:red">'+cur+'</span> โมดูล เสร็จสมบูรณ์ <span style="color:red">'+(parseInt(cur / this.blocksLen * 100)) + '%</span>';
+				$('allupdate').innerHTML = 'Tổng cộng <span style="color:blue">'+this.blocksLen+'</span> mô đun, cập nhật <span style="color:red">'+cur+'</span> đã hoàn thành<span style="color:red">'+(parseInt(cur / this.blocksLen * 100)) + '%</span>';
 				var bid = 'portal_block_'+this.blocks.pop();
 				this.blockForceUpdate(bid,true);
 			}
@@ -735,7 +735,7 @@ drag.extend({
 			this.blocks = this.allBlocks;
 		}
 		this.blocksLen = this.blocks.length;
-		showDialog('<div id="allupdate" style="width:350px;line-height:28px;">เริ่มทำการอัปเดต...</div>','confirm','อัปเดตข้อมูลโมดูล', '', true, 'drag.endBlockForceUpdateBatch()');
+		showDialog('<div id="allupdate" style="width:350px;line-height:28px;">Bắt đầu cập nhật...</div>','confirm','Cập nhật dữ liệu mô-đun', '', true, 'drag.endBlockForceUpdateBatch()');
 		var wait = function() {
 			if($('fwin_dialog_submit')) {
 				$('fwin_dialog_submit').style.display = 'none';
@@ -749,7 +749,7 @@ drag.extend({
 		doane();
 	},
 	clearAll : function () {
-		if (confirm('คุณแน่ใจหรือไม่ว่าคุณต้องการเคลียร์ข้อมูล DIY การกระทำนี้จะไม่สามารถกู้คืนได้ในภายหลัง')) {
+		if (confirm('Bạn có chắc chắn muốn xóa dữ liệu DIY trên trang, sau khi xóa nó sẽ không thể phục hồi được')) {
 			for (var i in this.data) {
 				for (var j in this.data[i]) {
 					if (typeof(this.data[i][j]) == 'object' && this.data[i][j].name.indexOf('_temp')<0) {
@@ -764,7 +764,7 @@ drag.extend({
 		doane();
 	},
 	createObj : function (e,objType,contentType) {
-		if (objType == 'block' && !this.checkHasFrame()) {alert("แจ้งเตือน: ยังไม่มีเฟรม กรุณาเพิ่มเฟรมก่อน");spaceDiy.getdiy('frame');return false;}
+		if (objType == 'block' && !this.checkHasFrame()) {alert("Mẹo: Không tìm thấy khung, vui lòng thêm khung trước.");spaceDiy.getdiy('frame');return false;}
 		e = Util.event(e);
 		if(e.which != 1 ) {return false;}
 		var html = '',offWidth = 0;
@@ -809,7 +809,7 @@ drag.extend({
 		var className = [this.frameClass,this.moveableObject].join(' ');
 		className = className + ' cl frame-' + type;
 		var str = '<div id="'+id+'" class="'+className+'">';
-		str += '<div id="'+id+'_title" class="'+this.titleClass+' '+this.frameTitleClass+'"><span class="'+this.titleTextClass+'">'+type+'เฟรม</span></div>';
+		str += '<div id="'+id+'_title" class="'+this.titleClass+' '+this.frameTitleClass+'"><span class="'+this.titleTextClass+'">'+type+'Khung</span></div>';
 		var cols = type.split('-');
 		var clsl='',clsc='',clsr='';
 		clsl = ' frame-'+type+'-l';
@@ -835,7 +835,7 @@ drag.extend({
 		className = className + ' cl';
 		var titleClassName = [this.tabTitleClass, this.titleClass, this.moveableColumn, 'cl'].join(' ');
 		var str = '<div id="'+id+'" class="'+className+'">';
-		str += '<div id="'+id+'_title" class="'+titleClassName+'"><span class="'+this.titleTextClass+'">ชื่อแท็บ[tab]</span></div>';
+		str += '<div id="'+id+'_title" class="'+titleClassName+'"><span class="'+this.titleTextClass+'">thẻ tab</span></div>';
 		str += '<div id="'+id+'_content" class="'+this.tabContentClass+'"></div>';
 		str += '</div>';
 		return str;
@@ -852,7 +852,7 @@ drag.extend({
 		} else {
 			if (!this.isChange) {
 				window.onbeforeunload = function() {
-					return 'ข้อมูลของคุณถูกแก้ไข ถ้าคุณออกจากการทำงานจะไม่สามารถบันทึกการเปลี่ยนแปลงของคุณ';
+					return 'Dữ liệu của bạn đã được sửa đổi. Thoát sẽ không lưu các thay đổi của bạn.';
 				};
 			}
 			this.isChange = true;
@@ -866,7 +866,7 @@ drag.extend({
 	},
 	goonDIY : function () {
 		if ($('prefile').value == '1') {
-			showDialog('<div style="line-height:28px;">กดปุ่มดำเนินการต่อจะเปิด DIY และ ข้อมูลชั่วคราว<br />กดปุ่มลบจะลบข้อมูลชั่วคราว</div>','confirm','แน่ใจหรือว่าต้องการดำเนินการกับ DIY และ ข้อมูลชั่วคราว?', function(){location.replace(location.href+'&preview=yes');}, true, 'spaceDiy.cancelDIY()', '', 'ดำเนินต่อ', 'ลบ');
+			showDialog('<div style="line-height:28px;">Nhấn nút Tiếp tục để mở dữ liệu tạm thời và DIY,<br />Nhấn nút xóa sẽ xóa dữ liệu tạm thời.</div>','confirm','Bạn có muốn tiếp tục DIY của dữ liệu tạm thời?', function(){location.replace(location.href+'&preview=yes');}, true, 'spaceDiy.cancelDIY()', '', 'Tiếp tục', 'Xóa');
 		} else if (location.search.indexOf('preview=yes') > -1) {
 			spaceDiy.enablePreviewButton();
 		} else {
@@ -891,8 +891,8 @@ spaceDiy.extend({
 					} else {
 						schecked = ' checked';
 					}
-					showDialog('<form name="selectsave" action="" method="get"><label><input type="radio" value="0" name="savemod"'+schecked+' />นำไปใช้กับทุกหน้า</label>\n\
-					<label><input type="radio" value="1" name="savemod"'+dchecked+' />นำไปใช้กับหน้านี้เท่านั้น</label></form>','notice', '', spaceDiy.save);
+					showDialog('<form name="selectsave" action="" method="get"><label><input type="radio" value="0" name="savemod"'+schecked+' />Áp dụng cho tất cả các trang như vậy</label>\n\
+					<label><input type="radio" value="1" name="savemod"'+dchecked+' />Chỉ áp dụng cho trang này</label></form>','notice', '', spaceDiy.save);
 					return false;
 				}
 				if (document.selectsave) {
@@ -956,14 +956,14 @@ spaceDiy.extend({
 	cancel : function () {
 		saveUserdata('diy_advance_mode', '');
 		if (drag.isClearClose) {
-			showDialog('<div style="line-height:28px;">คุณต้องการเก็บข้อมูลชั่วคราว?<br />กดปุ่ม ตกลง จะเก็บข้อมูลชั่วคราว กดปุ่ม ยกเลิก จะลบข้อมูลชั่วคราว</div>','confirm','เก็บข้อมูลชั่วคราว', function(){location.href = spaceDiy.cancelDiyUrl();}, true, function(){window.onunload=function(){spaceDiy.cancelDIY()};location.href = spaceDiy.cancelDiyUrl();});
+			showDialog('<div style="line-height:28px;">Bạn có muốn giữ dữ liệu tạm thời?<br />Nhấn nút OK sẽ giữ lại dữ liệu tạm thời và nhấn nút Hủy sẽ xóa dữ liệu tạm thời.</div>','confirm','Giữ dữ liệu tạm thời', function(){location.href = spaceDiy.cancelDiyUrl();}, true, function(){window.onunload=function(){spaceDiy.cancelDIY()};location.href = spaceDiy.cancelDiyUrl();});
 		} else {
 			location.href = this.cancelDiyUrl();
 		}
 
 	},
 	recover : function() {
-		if (confirm('คุณแน่ใจว่าต้องการคืนค่าไปเป็นรูปแบบก่อนหน้าของผลลัพธ์บันทึกไว้?')) {
+		if (confirm('Bạn có chắc chắn muốn quay lại kết quả đã lưu trong phiên bản trước không?')) {
 			drag.clearClose();
 			document.diyform.recover.value = '1';
 			document.diyform.gobackurl.value = location.href.replace(/(\?diy=yes)|(\&diy=yes)/,'').replace(/[\?|\&]preview=yes/,'');

@@ -15,7 +15,7 @@ var login = {
 			login.formhash = data.Variables.formhash;
 			login.login = data.Variables.member_uid;
 			if(login.login > 0){
-				TOOLS.showTips('เข้าสู่ระบบเรียบร้อยแล้ว', true);
+				TOOLS.showTips('登录成功', true);
 				setTimeout(function(){
 					if (TOOLS.getQuery('referer')) {
 						TOOLS.openNewPage(unescape(TOOLS.getQuery('referer')));
@@ -43,16 +43,16 @@ var login = {
 		});
 
 		secure.checkDzVersion();
-		
+
 		if (TOOLS.getQuery('loginErr')) {
 			var loginErr = TOOLS.getQuery('loginErr');
 			if (loginErr == 1001) {
-				TOOLS.showTips('บัญชีนี้ยังไม่ได้เชื่อมต่อกับ QQ ไม่สามารถเข้าสู่ระบบได้', true);
+				TOOLS.showTips('此QQ帐号尚未绑定，无法登录', true);
 			}else if (loginErr == 2001) {
-				TOOLS.showTips('บัญชีนี้ยังไม่ได้เชื่อมต่อไว้<br />กรุณาลงทะเบียนและเข้าสู่ระบบเพื่อดำเนินการเชื่อมต่อบัญชีใหม่', true);
+				TOOLS.showTips('此微信尚未绑定过账号<br />请用您已注册的账号登录完成绑定', true);
 			}
 		}
-		
+
 		if (TOOLS.getQuery('loginUrl')) {
 			TOOLS.dajax('GET', unescape(TOOLS.getQuery('loginUrl')), null, function (r) {
 				login.loginSuccess();
@@ -89,7 +89,7 @@ var login = {
 		var url = API_URL + "version=4&module=login";
 		TOOLS.dget(url, null, function (data) {
 			TOOLS.dpost(login.loginUrl, login.postParams + login.extraPost + login.extraAuth, login.callbackFunc.success, login.callbackFunc.error, 'application/x-www-form-urlencoded');
-			TOOLS.showLoading(null, 'กำลังเข้าสู่ระบบ');
+			TOOLS.showLoading(null, '正在登录');
 		}, null, 'text/plain', false, false);
 	},
 	logoutRequest: function (call) {
@@ -97,7 +97,7 @@ var login = {
 	},
 	loginSuccess: function () {
 		TOOLS.hideLoading();
-		TOOLS.showTips('เข้าสู่ระบบเรียบร้อยแล้ว', true);
+		TOOLS.showTips('登录成功', true);
 		if ($('#referer').val() != '') {
 			TOOLS.openNewPage($('#referer').val());
 		} else {
@@ -126,7 +126,7 @@ var login = {
 		}
 	},
 	bindEvent: function () {
-		$('#registerBtn').on('click', function () { 
+		$('#registerBtn').on('click', function () {
 			TOOLS.openNewPage(DOMAIN + 'member.php?mod=' + login.regname + '&mobile=2');
 		});
 		$('.qqLogin').on('click', function () {

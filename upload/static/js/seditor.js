@@ -40,24 +40,24 @@ function seditor_menu(seditorkey, tag) {
 				curatli = 0;
 				atsubmitid = ctrlid + '_submit';
 				setTimeout(function() {atFilter('', 'at_list','atListSet');$('atkeyword').focus();}, 100);
-				str = 'กรอกชื่อเพื่อน:<br /><input type="text" id="atkeyword" style="width:240px" value="" class="px" onkeydown="atFilter(this.value, \'at_list\',\'atListSet\',event);" /><div class="p_pop" id="at_list" style="width:250px;"><ul><li>@เพื่อน สามารถแจ้งเตือนให้เพื่อนเข้าไปดูโพสต์ได้</li></ul></div>';
+				str = 'Vui lòng nhập tên người dùng của bạn:<br /><input type="text" id="atkeyword" style="width:240px" value="" class="px" onkeydown="atFilter(this.value, \'at_list\',\'atListSet\',event);" /><div class="p_pop" id="at_list" style="width:250px;"><ul><li>@Bạn, có thể nhắc anh ấy đọc bài</li></ul></div>';
 				submitstr = 'seditor_insertunit(\'' + seditorkey + '\', \'@\' + $(\'atkeyword\').value.replace(/<\\/?b>/g, \'\')+\' \'); hideMenu();';
 				break;
 			case 'url':
-				str = 'กรุณาใส่ลิงก์ URL:<br /><input type="text" id="' + ctrlid + '_param_1" sautocomplete="off" style="width: 98%" value="" class="px" />' +
-					'<br />กรุณาใส่ข้อความลิงก์:<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />';
+				str = 'Vui lòng nhập một địa chỉ liên kết:<br /><input type="text" id="' + ctrlid + '_param_1" sautocomplete="off" style="width: 98%" value="" class="px" />' +
+					'<br />Vui lòng nhập văn bản liên kết:<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />';
 				submitstr = "$('" + ctrlid + "_param_2').value !== '' ? seditor_insertunit('" + seditorkey + "', '[url='+seditor_squarestrip($('" + ctrlid + "_param_1').value)+']'+$('" + ctrlid + "_param_2').value, '[/url]', null, 1) : seditor_insertunit('" + seditorkey + "', '[url]'+$('" + ctrlid + "_param_1').value, '[/url]', null, 1);hideMenu();";
 				break;
 			case 'code':
 			case 'quote':
-				var tagl = {'quote' : 'ใส่ข้อมูลหรือเนื้อหาอ้างอิงที่ต้องการแทรก', 'code' : 'ใส่โค้ดหรือรหัสที่ต้องการแทรก'};
+				var tagl = {'quote' : 'Vui lòng nhập một tham chiếu để chèn', 'code' : 'Vui lòng nhập mã để chèn'};
 					str = tagl[tag] + ':<br /><textarea id="' + ctrlid + '_param_1" style="width: 98%" cols="50" rows="5" class="txtarea"></textarea>';
 				submitstr = "seditor_insertunit('" + seditorkey + "', '[" + tag + "]'+$('" + ctrlid + "_param_1').value, '[/" + tag + "]', null, 1);hideMenu();";
 				break;
 			case 'img':
-				str = 'กรุณาใส่ที่อยู่ของรูปภาพ:<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" onchange="loadimgsize(this.value, \'' + seditorkey + '\',\'' + tag + '\')" />' +
-					'<p class="mtm">ความกว้าง: <input type="text" id="' + ctrlid + '_param_2" style="width: 15%" value="" class="px" /> &nbsp;' +
-					'ความสูง: <input type="text" id="' + ctrlid + '_param_3" style="width: 15%" value="" class="px" /></p>';
+				str = 'Vui lòng nhập một địa chỉ hình ảnh:<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" onchange="loadimgsize(this.value, \'' + seditorkey + '\',\'' + tag + '\')" />' +
+					'<p class="mtm">Rộng (tùy chọn): <input type="text" id="' + ctrlid + '_param_2" style="width: 15%" value="" class="px" /> &nbsp;' +
+					'Cao (tùy chọn): <input type="text" id="' + ctrlid + '_param_3" style="width: 15%" value="" class="px" /></p>';
 				submitstr = "seditor_insertunit('" + seditorkey + "', '[img' + ($('" + ctrlid + "_param_2').value !== '' && $('" + ctrlid + "_param_3').value !== '' ? '='+$('" + ctrlid + "_param_2').value+','+$('" + ctrlid + "_param_3').value : '')+']'+seditor_squarestrip($('" + ctrlid + "_param_1').value), '[/img]', null, 1);hideMenu();";
 				break;
 		}
@@ -67,7 +67,7 @@ function seditor_menu(seditorkey, tag) {
 		menu.className = 'p_pof upf';
 		menu.style.width = '270px';
 		$('append_parent').appendChild(menu);
-		menu.innerHTML = '<span class="y"><a onclick="hideMenu()" class="flbc" href="javascript:;">ปิด</a></span><div class="p_opt cl"><form onsubmit="' + submitstr + ';return false;" autocomplete="off"><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>ตกลง</strong></button><button type="button" onClick="hideMenu()" class="pn"><em>ยกเลิก</em></button></div></form></div>';
+		menu.innerHTML = '<span class="y"><a onclick="hideMenu()" class="flbc" href="javascript:;">Đóng</a></span><div class="p_opt cl"><form onsubmit="' + submitstr + ';return false;" autocomplete="off"><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>Gửi</strong></button><button type="button" onClick="hideMenu()" class="pn"><em>Hủy bỏ</em></button></div></form></div>';
 	}
 	showMenu({'ctrlid':ctrlid,'evt':'click','duration':3,'cache':0,'drag':1});
 }

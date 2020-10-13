@@ -170,11 +170,11 @@
 						this.selectUser[userName] = userName;
 					}
 					this.selectNumber++;
-					spanObj.innerHTML= '<a href="javascript:;" class="x" onclick="'+this.handleKey+'.delSelUser(\''+(spanObj.id)+'\');">ลบ</a><em class="z" title="' + userName + '">' + userName + '</em><input type="hidden" name="users[]" value="'+userName+'" uid="uid'+uid+'" />';
+					spanObj.innerHTML= '<a href="javascript:;" class="x" onclick="'+this.handleKey+'.delSelUser(\''+(spanObj.id)+'\');">Xóa</a><em class="z" title="' + userName + '">' + userName + '</em><input type="hidden" name="users[]" value="'+userName+'" uid="uid'+uid+'" />';
 					this.handleObj.parentNode.insertBefore(spanObj, this.handleObj);
 					this.showObj.style.display = 'none';
 				} else {
-					alert('สมาชิกนี้ '+userName+' มีอยู่แล้ว');
+					alert('Đã tồn tại '+userName);
 				}
 			}
 		},
@@ -284,7 +284,7 @@
 				var select = false;
 				if(typeof this.selectUser[uid] == 'undefined') {
 					if(this.maxSelectNumber && this.selectNumber >= this.maxSelectNumber) {
-			            alert('เลือกเพื่อนได้สูงสุด '+this.maxSelectNumber+' คน');
+			            alert('Chỉ cho phép tối đa '+this.maxSelectNumber+' người dùng');
 			            return false;
 			        }
 					this.selectUser[uid] = this.dataSource[uid];

@@ -104,7 +104,7 @@ var index = {
 		index.realFirstLoad = (index.realFirstLoad - 1 <= 0) ? 0 : 1;
 
 		if (SITE_INFO.closed) {
-			TOOLS.dialog({content: "เว็บไซต์ปิดใช้งานชั่วคราว", noMask: true, autoClose: 1});
+			TOOLS.dialog({content: "站点已关闭", noMask: true, autoClose: 1});
 			return;
 		}
 
@@ -121,7 +121,7 @@ var index = {
 		}
 
 		if (data.Variables.forum.password == 1 && !data.Variables.forum.threadcount) {
-			TOOLS.dialog({content: "หน้าเว็บนี้มีการตั้งรหัสผ่านไว้จะไม่สามารถเข้าถึงส่วนนี้ได้", noMask: true});
+			TOOLS.dialog({content: "当前版块为加密版块，无法通过微社区访问", noMask: true});
 			return;
 		}
 
@@ -171,7 +171,7 @@ var index = {
 				if (data.Variables.forum_threadlist.length && 0 < data.Variables.topTopicCount && data.Variables.topTopicCount < 20) {
 					var top_bar = [
 						{
-							'name': 'โพสต์ยอดนิยม',
+							'name': '置顶帖',
 							'html': template.render('TopList', data),
 							'more': '?a=toplist&fid=' + index.fid
 						}
@@ -409,11 +409,6 @@ var index = {
 		});
 
 		$(pageId + ' .incoRBtn').on('click', function (event) {
-			//if (data.Variables.member_uid != "0") {
-			//	replyComment(data.Variables.formhash, $(this).attr("tid"));
-			//} else {
-			//	FUNCS.replyCommentPage($(this).attr("tid"), 'index');
-			//}
 			replyComment(data.Variables.formhash, $(this).attr("tid"));
 			event.stopPropagation();
 		});

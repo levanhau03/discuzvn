@@ -4,7 +4,7 @@ var index = {
 	dropUp: false,
 	ucenterurl: '',
 	formhash: '',
-	titleName: 'ข้อความส่วนตัวของฉัน',
+	titleName: '我的私信',
 	backToTop: function (offset) {
 		if (document.body.scrollTop <= 0 || offset.y > 2) {
 			$('#backToTopBtn').hide();
@@ -148,7 +148,7 @@ var index = {
 				index.loadPage(url, index.renderMyPage);
 			}, 500);
 		} else {
-			TOOLS.showTips('ส่งข้อความไม่สำเร็จ กรุณาส่งใหม่ภายหลัง', true);
+			TOOLS.showTips('无法发送, 请稍后重新发送', true);
 		}
 	},
 	loadPage: function (url, callBack) {

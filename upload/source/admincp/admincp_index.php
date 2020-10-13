@@ -230,7 +230,7 @@ if(isfounder()) {
 	}
 }
 
-showtableheader('&#xE15;&#xE23;&#xE27;&#xE08;&#xE2A;&#xE2D;&#xE1A;&#xE2A;&#xE20;&#xE32;&#xE1E;&#xE41;&#xE27;&#xE14;&#xE25;&#xE49;&#xE2D;&#xE21;&#xE01;&#xE32;&#xE23;&#xE17;&#xE33;&#xE07;&#xE32;&#xE19;', 'fixpadding');
+showtableheader('&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x68C0;&#x6D4B;', 'fixpadding');
 $env_ok = true;
 $now_ver_gd = function_exists('gd_info')? gd_info() : false;
 $now_ver = array('PHP' => constant('PHP_VERSION'), 'MySQL' => helper_dbtool::dbversion(), 'gethostbyname' => function_exists('gethostbyname'), 'file_get_contents' => function_exists('file_get_contents'), 'xml_parser_create' => function_exists('xml_parser_create'),
@@ -287,7 +287,7 @@ showtablerow('', array(), array(
 showtablefooter();
 showformfooter();
 
-showtableheader('&#xE1C;&#xE39;&#xE49;&#xE2A;&#xE19;&#xE31;&#xE1A;&#xE2A;&#xE19;&#xE38;&#xE19;&#xE42;&#xE04;&#xE23;&#xE07;&#xE01;&#xE32;&#xE23; Discuz! &#xE42;&#xE2D;&#xE40;&#xE1E;&#xE19;&#xE0B;&#xE2D;&#xE23;&#xE4C;&#xE2A;', 'fixpadding');
+showtableheader('Discuz! &#x5F00;&#x6E90;&#x8D21;&#x732E;&#x8005;', 'fixpadding');
 showtablerow('', array('', 'class="td21" style="text-align:right;"'),
 	'<a href="https://gitee.com/ComsenzDiscuz/DiscuzX/contributors?ref=master" class="lightlink2 smallfont" target="_blank">Click Here To See Them</a>'
 );
@@ -315,9 +315,9 @@ foreach ($newversion['newversion']['downlist'] as $key => $value){
 
 showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight smallfont"'), array(
 	cplang('home_check_newversion'),
-    ($newversion['newversion']['release'] ? ($newversion['newversion']['release'] != DISCUZ_RELEASE ? '<b style="color:red;">' : '').'Discuz! '.$newversion['newversion']['version'].' R'.$newversion['newversion']['release'].' '.strtoupper(CHARSET).' '.($newversion['newversion']['release'] != DISCUZ_RELEASE ? '</b>' : '') : '<a href="https://www.dismall.com/thread-73-1-1.html" target="_blank">&#xE40;&#xE0B;&#xE34;&#xE23;&#xE4C;&#xE1F;&#xE40;&#xE27;&#xE2D;&#xE23;&#xE4C;&#xE02;&#xE2D;&#xE07;&#xE04;&#xE38;&#xE13;&#xE15;&#xE23;&#xE27;&#xE08;&#xE44;&#xE21;&#xE48;&#xE1E;&#xE1A;&#xE40;&#xE27;&#xE2D;&#xE23;&#xE4C;&#xE0A;&#xE31;&#xE19;&#xE43;&#xE2B;&#xE21;&#xE48; &#xE01;&#xE23;&#xE38;&#xE13;&#xE32;&#xE04;&#xE25;&#xE34;&#xE01;&#xE17;&#xE35;&#xE48;&#xE19;&#xE35;&#xE48;&#xE40;&#xE1E;&#xE37;&#xE48;&#xE2D;&#xE14;&#xE39;&#xE40;&#xE27;&#xE2D;&#xE23;&#xE4C;&#xE0A;&#xE31;&#xE19;&#xE43;&#xE2B;&#xE21;&#xE48;</a>').
+    ($newversion['newversion']['release'] ? ($newversion['newversion']['release'] != DISCUZ_RELEASE ? '<b style="color:red;">' : '').'Discuz! '.$newversion['newversion']['version'].' R'.$newversion['newversion']['release'].' '.strtoupper(CHARSET).' '.($newversion['newversion']['release'] != DISCUZ_RELEASE ? '</b>' : '') : '<a href="https://www.dismall.com/thread-73-1-1.html" target="_blank">&#20320;&#30340;&#26381;&#21153;&#22120;&#26080;&#27861;&#26816;&#27979;&#26032;&#29256;&#65292;&#35831;&#28857;&#20987;&#26597;&#30475;&#26032;&#29256;</a>').
 	  ' <a href="'.ADMINSCRIPT.'?action=index&checknewversion&formhash='.$_G['formhash'].'">[ &#x5237;&#x65B0; ]</a>&nbsp;&nbsp;<br><br>'.
-    (!empty($downlist) ? implode('&#x3001;', $downlist).($newversion['newversion']['qqqun'] ? '<span class="bold">&nbsp;&nbsp;|&nbsp;&nbsp;&#3585;&#3621;&#3640;&#3656;&#3617; QQ:'.$newversion['newversion']['qqqun'].'</span>' : '') : '<span class="bold"><a href="https://gitee.com/3dming/DiscuzL/attach_files" target="_blank">&#3604;&#3634;&#3623;&#3609;&#3660;&#3650;&#3627;&#3621;&#3604;&#3652;&#3615;&#3621;&#3660;&#3621;&#3656;&#3634;&#3626;&#3640;&#3604; (&#3616;&#3634;&#3625;&#3634;&#3592;&#3637;&#3609;)</a> | <a href="https://github.com/jaideejung007/discuzth" class="lightlink2" target="_blank">&#3604;&#3634;&#3623;&#3609;&#3660;&#3650;&#3627;&#3621;&#3604;&#3652;&#3615;&#3621;&#3660;&#3621;&#3656;&#3634;&#3626;&#3640;&#3604; (&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;)</a> | &#3585;&#3621;&#3640;&#3656;&#3617; QQ:73'.'21'.'03'.'690</span>')
+    (!empty($downlist) ? implode('&#x3001;', $downlist).($newversion['newversion']['qqqun'] ? '<span class="bold">&nbsp;&nbsp;|&nbsp;&nbsp;QQ&#x7FA4;&#xFF1A;'.$newversion['newversion']['qqqun'].'</span>' : '') : '<span class="bold"><a href="https://gitee.com/3dming/DiscuzL/attach_files" target="_blank">&#x6700;&#x65B0;&#x7248;&#x6253;&#x5305;&#x4E0B;&#x8F7D;</a> | QQ&#x7FA4;&#xFF1A;73'.'21'.'03'.'690</span>')
 ));
 
 showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight smallfont"'), array(
@@ -350,7 +350,7 @@ showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight smallf
 ));
 showtablefooter();
 
-showtableheader('&#xE02;&#xE48;&#xE32;&#xE27;&#xE2A;&#xE32;&#xE23; Discuz! &#xE25;&#xE48;&#xE32;&#xE2A;&#xE38;&#xE14;', 'fixpadding left" style="width : 48%; margin-left: 2%; clear: none;', '', '3');
+showtableheader('Discuz! &#x52A8;&#x6001;', 'fixpadding left" style="width : 48%; margin-left: 2%; clear: none;', '', '3');
 if(!empty($newversion['news'])){
     $newversion['news'] = dhtmlspecialchars($newversion['news']);
     foreach ($newversion['news'] as $v){
@@ -428,19 +428,14 @@ showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight team"'
 	<a href="http://www.discuz.net/home.php?mod=space&uid=177" class="lightlink2 smallfont" target="_blank">Stoneage</a>
 	<a href="http://www.discuz.net/home.php?mod=space&uid=7155" class="lightlink2 smallfont" target="_blank">Gregry</a>'
 ));
-/*jaideejung007*/ showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight"'), array(
-/*jaideejung007*/	'&#3648;&#3623;&#3629;&#3619;&#3660;&#3594;&#3633;&#3609;&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;',
-/*jaideejung007*/	'<a href="https://github.com/jaideejung007/discuzth" class="lightlink2" target="_blank">Discuz! &#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;</a>, Rev: '.DISCUZ_TH_REVISION
-/*jaideejung007*/));
 showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight"'), array(
 	cplang('home_dev_links'),
-	'<a href="https://www.dismall.com/" class="lightlink2" target="_blank">&#xE40;&#xE27;&#xE47;&#xE1A;&#xE1A;&#xE2D;&#xE23;&#xE4C;&#xE14;&#xE41;&#xE2D;&#xE1B;&#xE1E;&#xE25;&#xE34;&#xE40;&#xE04;&#xE0A;&#xE31;&#xE19; Discuz!</a>,
+	'<a href="https://www.dismall.com/" class="lightlink2" target="_blank">Discuz! &#24212;&#29992;&#x8BA8;&#x8BBA;&#x533A;</a>,
 	<a href="http://www.comsenz.com" class="lightlink2" target="_blank">&#x516C;&#x53F8;&#x7F51;&#x7AD9;</a>,
 	<a href="http://www.discuz.net/redirect.php?service" class="lightlink2" target="_blank">&#x8D2D;&#x4E70;&#x6388;&#x6743;</a>,
 	<a href="http://www.discuz.net/" class="lightlink2" target="_blank">&#x8BA8;&#x8BBA;&#x533A;</a>,
-	<a href="'.ADMINSCRIPT.'?action=cloudaddons" class="lightlink2" target="_blank">Discuz! App Store</a>,
-	<a href="https://gitee.com/ComsenzDiscuz/DiscuzX" class="lightlink2" target="_blank">Discuz! X Git</a>,
-<!--jaideejung007-->	<a href="https://github.com/jaideejung007/discuzth" class="lightlink2" target="_blank">Discuz! Thai Official Repositories</a>
+	<a href="'.ADMINSCRIPT.'?action=cloudaddons" class="lightlink2" target="_blank">Discuz! &#24212;&#29992;&#20013;&#24515;</a>,
+	<a href="https://gitee.com/ComsenzDiscuz/DiscuzX" class="lightlink2" target="_blank">Discuz! X Git</a>
 '));
 showtablefooter();
 

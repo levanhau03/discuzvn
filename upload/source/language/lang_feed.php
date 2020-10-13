@@ -65,45 +65,45 @@ $lang = array
 	'magicuse_thunder_announce_body' => 'สวัสดี ฉันอยากจะชวนเพื่อนๆไปเยี่ยมชมโปรไฟล์ของฉัน<br /><a href="home.php?mod=space&uid={uid}" target="_blank">คลิกที่นี่เพื่อเข้าเยี่ยมโปรไฟล์ของฉัน</a>',
 
 
-	'feed_thread_title' =>			'{actor} ตั้งกระทู้ใหม่',
-	'feed_thread_message' =>		'<b>{subject}</b><br />{message}',
+	'feed_thread_title' => '{actor} ตั้งกระทู้ใหม่',
+	'feed_thread_message' => '<b>{subject}</b><br />{message}',
 
-	'feed_reply_title' =>			'{actor} ตอบกระทู้ {subject} ของ {author} ',
-	'feed_reply_title_anonymous' =>		'{actor} ตอบกระทู้ {subject}',
-	'feed_reply_message' =>			'',
+	'feed_reply_title' => '{actor} ตอบกระทู้ {subject} ของ {author} ',
+	'feed_reply_title_anonymous' => '{actor} ตอบกระทู้ {subject}',
+	'feed_reply_message' => '',
 
-	'feed_thread_poll_title' =>		'{actor} สร้างโพลสำรวจใหม่',
-	'feed_thread_poll_message' =>		'<b>{subject}</b><br />{message}',
+	'feed_thread_poll_title' => '{actor} สร้างโพลสำรวจใหม่',
+	'feed_thread_poll_message' => '<b>{subject}</b><br />{message}',
 
-	'feed_thread_votepoll_title' =>		'{actor} เข้าร่วมโหวตโพลสำรวจ {subject}',
-	'feed_thread_votepoll_message' =>	'',
+	'feed_thread_votepoll_title' => '{actor} เข้าร่วมโหวตโพลสำรวจ {subject}',
+	'feed_thread_votepoll_message' => '',
 
-	'feed_thread_goods_title' =>		'{actor} ขายสินค้าใหม่',
-	'feed_thread_goods_message_1' =>	'<b>{itemname}</b><br />ราคา {itemprice} บาท เพิ่มเติม {itemcredit}{creditunit}',
-	'feed_thread_goods_message_2' =>	'<b>{itemname}</b><br />ราคา {itemprice} บาท',
-	'feed_thread_goods_message_3' =>	'<b>{itemname}</b><br />ราคา {itemcredit}{creditunit}',
+	'feed_thread_goods_title' => '{actor} ขายสินค้าใหม่',
+	'feed_thread_goods_message_1' => '<b>{itemname}</b><br />ราคา {itemprice} บาท เพิ่มเติม {itemcredit}{creditunit}',
+	'feed_thread_goods_message_2' => '<b>{itemname}</b><br />ราคา {itemprice} บาท',
+	'feed_thread_goods_message_3' => '<b>{itemname}</b><br />ราคา {itemcredit}{creditunit}',
 
-	'feed_thread_reward_title' =>		'{actor} แจกรางวัลใหม่',
-	'feed_thread_reward_message' =>		'<b>{subject}</b><br />รางวัล {rewardprice}{extcredits}',
+	'feed_thread_reward_title' => '{actor} แจกรางวัลใหม่',
+	'feed_thread_reward_message' => '<b>{subject}</b><br />รางวัล {rewardprice}{extcredits}',
 
-	'feed_reply_reward_title' =>		'{actor} ตอบคำถาม {subject} ถูกต้อง และรับรางวัล',
-	'feed_reply_reward_message' =>		'',
+	'feed_reply_reward_title' => '{actor} ตอบคำถาม {subject} ถูกต้อง และรับรางวัล',
+	'feed_reply_reward_message' => '',
 
-	'feed_thread_activity_title' =>		'{actor} จัดกิจกรรมใหม่',
-	'feed_thread_activity_message' =>	'<b>{subject}</b><br />เริ่มเวลา: {starttimefrom}<br />สถานที่จัดกิจกรรม: {activityplace}<br />{message}',
+	'feed_thread_activity_title' => '{actor} จัดกิจกรรมใหม่',
+	'feed_thread_activity_message' => '<b>{subject}</b><br />เริ่มเวลา: {starttimefrom}<br />สถานที่จัดกิจกรรม: {activityplace}<br />{message}',
 
-	'feed_reply_activity_title' =>		'{actor} สมัครเข้าร่วมกิจกรรม {subject}',
-	'feed_reply_activity_message' =>	'',
+	'feed_reply_activity_title' => '{actor} สมัครเข้าร่วมกิจกรรม {subject}',
+	'feed_reply_activity_message' => '',
 
-	'feed_thread_debate_title' =>		'{actor} เปิดประเด็นโต้วาทีใหม่',
-	'feed_thread_debate_message' =>		'<b>{subject}</b><br />เห็นด้วย: {affirmpoint}<br />ไม่เห็นด้วย: {negapoint}<br />{message}',
+	'feed_thread_debate_title' => '{actor} เปิดประเด็นโต้วาทีใหม่',
+	'feed_thread_debate_message' => '<b>{subject}</b><br />เห็นด้วย: {affirmpoint}<br />ไม่เห็นด้วย: {negapoint}<br />{message}',
 
-	'feed_thread_debatevote_title_1' =>	'{actor} เข้าร่วมโต้วาทีเห็นด้วยใน {subject}',
-	'feed_thread_debatevote_title_2' =>	'{actor} เข้าร่วมโต้วาทีไม่เห็นด้วยใน {subject}',
-	'feed_thread_debatevote_title_3' =>	'{actor} เข้าร่วมโต้วาทีเป็นกลางใน {subject}',
-	'feed_thread_debatevote_message_1' =>	'',
-	'feed_thread_debatevote_message_2' =>	'',
-	'feed_thread_debatevote_message_3' =>	'',
+	'feed_thread_debatevote_title_1' => '{actor} เข้าร่วมโต้วาทีเห็นด้วยใน {subject}',
+	'feed_thread_debatevote_title_2' => '{actor} เข้าร่วมโต้วาทีไม่เห็นด้วยใน {subject}',
+	'feed_thread_debatevote_title_3' => '{actor} เข้าร่วมโต้วาทีเป็นกลางใน {subject}',
+	'feed_thread_debatevote_message_1' => '',
+	'feed_thread_debatevote_message_2' => '',
+	'feed_thread_debatevote_message_3' => '',
 
 );
 

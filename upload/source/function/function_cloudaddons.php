@@ -61,11 +61,11 @@ function cloudaddons_check() {
 	if(!function_exists('gzuncompress')) {
 		cpmsg('cloudaddons_check_gzuncompress_error', '', 'error');
 	}
-	
+
 	if(!function_exists('curl_init') || !function_exists('curl_exec')) {
 		cpmsg('cloudaddons_check_curl_error', '', 'error');
 	}
-	
+
 	foreach(array('download', 'addonmd5') as $path) {
 		$tmpdir = DISCUZ_ROOT.'./data/'.$path.'/'.random(5);
 		$tmpfile = $tmpdir.'/index.html';
@@ -117,7 +117,7 @@ function cloudaddons_removelog($rid) {
 function cloudaddons_validator($addonid) {
 	$array = cloudaddons_getmd5($addonid);
 	if(cloudaddons_open('&mod=app&ac=validator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') {
-/*jaideejung007*/		/*cpmsg('cloudaddons_genuine_message', '', 'error', array('addonid' => $addonid));*/
+		cpmsg('cloudaddons_genuine_message', '', 'error', array('addonid' => $addonid));
 	}
 }
 
@@ -397,16 +397,16 @@ function cloudaddons_clear($type, $id) {
 		$filedeleted = false;
 		while($f = $d->read()) {
 			if(preg_match('/^discuz\_'.$dirs[$type][0].'\_'.$id.'(\_\w+)?\.xml$/', $f)) {
-/*jaideejung007*/				/*@unlink($entrydir.'/'.$f);*/
+				@unlink($entrydir.'/'.$f);
 				if($type == 'plugin' && !$filedeleted) {
-/*jaideejung007*/					/*@unlink($entrydir.'/'.$f);*/
+					@unlink($entrydir.'/'.$f);
 					$importtxt = @implode('', file($entrydir.'/'.$f));
 					$pluginarray = getimportdata('Discuz! Plugin');
 					if($pluginarray['installfile']) {
-/*jaideejung007*/						/*@unlink($entrydir.'/'.$pluginarray['installfile']);*/
+						@unlink($entrydir.'/'.$pluginarray['installfile']);
 					}
 					if($pluginarray['upgradefile']) {
-/*jaideejung007*/						/*@unlink($entrydir.'/'.$pluginarray['upgradefile']);*/
+						@unlink($entrydir.'/'.$pluginarray['upgradefile']);
 					}
 					$filedeleted = true;
 				}

@@ -63,11 +63,11 @@ function initEditor() {
 		if(buttons[i].id.indexOf(editorid + '_') != -1) {
 			buttons[i].href = 'javascript:;';
 			if(buttons[i].id.substr(buttons[i].id.indexOf('_') + 1) == 'fullswitcher') {
-				buttons[i].innerHTML = !editorisfull ? 'จอใหญ่' : 'ขนาดปกติ';
-				buttons[i].onmouseover = function(e) {setEditorTip(editorisfull ? 'กลับสู่ขนาดปกติ' : 'ขยายขนาดเต็มหน้าจอ');};
+				buttons[i].innerHTML = !editorisfull ? 'Toàn màn hình' : 'Quay lại';
+				buttons[i].onmouseover = function(e) {setEditorTip(editorisfull ? 'Khôi phục kích thước trình chỉnh sửa' : 'Chỉnh sửa toàn màn hình');};
 				buttons[i].onclick = function(e) {editorfull();doane();}
 			} else if(buttons[i].id.substr(buttons[i].id.indexOf('_') + 1) == 'simple') {
-				buttons[i].innerHTML = !simplodemode ? 'โหมดปกติ' : 'โหมดขั้นสูง';
+				buttons[i].innerHTML = !simplodemode ? 'Thường được sử dụng' : 'Cao cấp';
 				buttons[i].onclick = function(e) {editorsimple();doane();}
 			} else {
 				_attachEvent(buttons[i], 'mouseover', function(e) {setEditorTip(BROWSER.ie ? window.event.srcElement.title : e.target.title);});
@@ -96,7 +96,7 @@ function initEditor() {
 	}
 	if($(editorid + '_fullswitcher') && BROWSER.ie && BROWSER.ie < 7) {
 		$(editorid + '_fullswitcher').onclick = function () {
-			showDialog('เบราว์เซอร์ของคุณไม่สนับสนุนคุณลักษณะนี้ กรุณาเปลี่ยนหรืออัปเกรดเบราว์เซอร์ใหม่', 'notice', 'กรุณาตรวจสอบ');
+			showDialog('Trình duyệt của bạn không hỗ trợ tính năng này. Vui lòng nâng cấp phiên bản trình duyệt của bạn', 'notice', 'Lời khuyên thân thiện');
 		};
 		$(editorid + '_fullswitcher').className = 'xg1';
 	}
@@ -144,7 +144,7 @@ function initesbar() {
 
 function savedataTime() {
 	if(!autosave) {
-		$(editorid + '_svdsecond').innerHTML = '<a title="คลิกที่นี่ เพื่อเปิดการบันทึกเนื้อหาแบบร่างโดยอัตโนมัติ" href="javascript:;" onclick="setAutosave()">เปิดบันทึกอัตโนมัติ</a> ';
+		$(editorid + '_svdsecond').innerHTML = '<a title="Nhấn vào đây để bật tự động lưu" href="javascript:;" onclick="setAutosave()">Bật tự động</a> ';
 		return;
 	}
 	if(!savedatac) {
@@ -155,15 +155,15 @@ function savedataTime() {
 		var m = d.getMinutes();
 		h = h < 10 ? '0' + h : h;
 		m = m < 10 ? '0' + m : m;
-		setEditorTip('บันทึกล่าสุดเมื่อ ' + h + ':' + m + ' น.');
+		setEditorTip('Dữ liệu đã được lưu lại ' + h + ':' + m + '');
 	}
-	$(editorid + '_svdsecond').innerHTML = '<a title="คลิกที่นี่ เพื่อปิดการบันทึกเนื้อหาแบบร่างโดยอัตโนมัติ" href="javascript:;" onclick="setAutosave()">บันทึกเมื่อ ' + savedatac + ' วินาทีที่แล้ว</a> ';
+	$(editorid + '_svdsecond').innerHTML = '<a title="Nhấp vào đóng tự động lưu" href="javascript:;" onclick="setAutosave()">Lưu trong '+ savedatac +' giây!</a> ';
 	savedatac -= 10;
 }
 
 function setAutosave() {
 	autosave = !autosave;
-	setEditorTip(autosave ? 'เปิดบันทึกอัตโนมัติ' : 'ปิดบันทึกอัตโนมัติ');
+	setEditorTip(autosave ? 'Lưu dữ liệu tự động được bật' : 'Tự động lưu dữ liệu đã tắt');
 	setcookie('editorautosave_' + editorid, autosave ? 1 : -1, 2592000);
 	savedataTime();
 }
@@ -319,14 +319,14 @@ function editorfull(op) {
 		editorisfull = 0;
 		editorcontrolpos();
 	}
-	$(editorid + '_fullswitcher').innerHTML = editorisfull ? 'จอเล็ก' : 'จอใหญ่';
+	$(editorid + '_fullswitcher').innerHTML = editorisfull ? 'Quay lại' : 'Toàn màn hình';
 	initesbar();
 }
 
 function editorsimple() {
 	if($(editorid + '_body').className == 'edt') {
 		v = 'none';
-		$(editorid + '_simple').innerHTML = 'โหมดขั้นสูง';
+		$(editorid + '_simple').innerHTML = 'Cao cấp';
 		$(editorid + '_body').className = 'edt simpleedt';
 		$(editorid + '_adv_s1').className = 'b2r';
 		$(editorid + '_adv_s2').className = 'b2r nbl';
@@ -337,7 +337,7 @@ function editorsimple() {
 		simplodemode = 1;
 	} else {
 		v = '';
-		$(editorid + '_simple').innerHTML = 'โหมดปกติ';
+		$(editorid + '_simple').innerHTML = 'Thường được sử dụng';
 		$(editorid + '_body').className = 'edt';
 		$(editorid + '_adv_s1').className = 'b1r';
 		$(editorid + '_adv_s2').className = 'b2r nbr nbl';
@@ -487,7 +487,7 @@ function checkFocus() {
 
 function checklength(theform) {
 	var message = wysiwyg ? html2bbcode(getEditorContents()) : (!theform.parseurloff.checked ? parseurl(theform.message.value) : theform.message.value);
-	showDialog('จำนวนข้อความตอนนี้: ' + mb_strlen(message) + ' ไบต์ ' + (postmaxchars != 0 ? 'กำหนดไว้ที่: ' + postminchars + ' ถึง ' + postmaxchars + ' ไบต์' : ''), 'notice', 'นับจำนวนข้อความ');
+	showDialog('Chiều dài hiện tại: ' + mb_strlen(message) + ' Byte，' + (postmaxchars != 0 ? 'Giới hạn hệ thống: ' + postminchars + ' đến ' + postmaxchars + ' byte.' : ''), 'notice', 'Đếm từ');
 }
 
 function setUnselectable(obj) {
@@ -804,7 +804,7 @@ function discuzcode(cmd, arg) {
 		} else {
 			insertText(opentag + closetag, opentag.length, closetag.length);
 
-			while(listvalue = prompt('กรอกข้อความลงในรายการ\r\nปล่อยว่างไว้หรือคลิกยกเลิก เพื่อออกจากรายการนี้', '')) {
+			while(listvalue = prompt('Nhập một mục danh sách.\r\nLàm trống hoặc bấm hủy để hoàn thành danh sách.', '')) {
 				if(BROWSER.opera > 8) {
 					listvalue = '\n' + '[*]' + listvalue;
 					insertText(listvalue, strlen(listvalue) + 1, 0);
@@ -838,18 +838,18 @@ function discuzcode(cmd, arg) {
 		}
 	} else if(cmd == 'rst') {
 		loadData();
-		setEditorTip('ข้อมูลที่ถูกกู้คืน');
+		setEditorTip('Dữ liệu đã được khôi phục');
 	} else if(cmd == 'svd') {
 		saveData();
-		setEditorTip('ข้อมูลที่บันทึกไว้');
+		setEditorTip('Dữ liệu được lưu');
 	} else if(cmd == 'chck') {
 		checklength(editorform);
 	} else if(cmd == 'tpr') {
-		if(confirm('คุณแน่ใจว่าจะลบข้อความที่ถูกบันทึกไว้ออกทั้งหมด?')) {
+		if(confirm('Bạn có chắc chắn muốn xóa tất cả mọi thứ?')) {
 			clearContent();
 		}
 	} else if(cmd == 'downremoteimg') {
-		showDialog('<div id="remotedowninfo"><p class="mbn">กำลังดาวน์โหลดไฟล์แนบระยะไกล กรุณารอสักครู่……</p><p><img src="' + STATICURL + 'image/common/uploading.gif" alt="" /></p></div>', 'notice', '', null, 1);
+		showDialog('<div id="remotedowninfo"><p class="mbn">Đang tải xuống tệp đính kèm từ xa, vui lòng đợi...</p><p><img src="' + STATICURL + 'image/common/uploading.gif" alt="" /></p></div>', 'notice', '', null, 1);
 		var message = wysiwyg ? html2bbcode(getEditorContents()) : (!editorform.parseurloff.checked ? parseurl(editorform.message.value) : editorform.message.value);
 		var oldValidate = editorform.onsubmit;
 		var oldAction = editorform.action;
@@ -919,7 +919,7 @@ function setContext(cmd) {
 	} else if(fs == null) {
 		fs = '';
 	}
-	fs = fs && cmd != 'clear' ? fs : 'ฟอนต์';
+	fs = fs && cmd != 'clear' ? fs : 'Phông';
 	if(fs != $(editorid + '_font').fontstate) {
 		thingy = fs.indexOf(',') > 0 ? fs.substr(0, fs.indexOf(',')) : fs;
 		$(editorid + '_font').innerHTML = thingy;
@@ -936,7 +936,7 @@ function setContext(cmd) {
 			}
 		}
 	} catch(e) {
-		ss = 'ขนาด';
+		ss = 'Cỡ';
 	}
 
 	if(ss != $(editorid + '_size').sizestate) {
@@ -981,7 +981,7 @@ function formatFontsize(csssize) {
 		case '24pt': return 6;
 		case '48px':
 		case '36pt': return 7;
-		default: return 'ขนาด';
+		default: return 'Cỡ';
 	}
 }
 
@@ -1032,8 +1032,8 @@ function showEditorMenu(tag, params) {
 	} else {
 		switch(tag) {
 			case 'url':
-				str = 'ใส่ที่อยู่ของลิงก์ (URL):<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" />'+
-					(selection ? '' : '<br />ใส่ข้อความแทนลิงก์ (Anchor):<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />');
+				str = 'Vui lòng nhập một địa chỉ liên kết:<br /><input type="text" id="' + ctrlid + '_param_1" style="width: 98%" value="" class="px" />'+
+					(selection ? '' : '<br />Vui lòng nhập văn bản liên kết:<br /><input type="text" id="' + ctrlid + '_param_2" style="width: 98%" value="" class="px" />');
 				break;
 			case 'forecolor':
 				showColorBox(ctrlid, 1);
@@ -1048,7 +1048,7 @@ function showEditorMenu(tag, params) {
 				showHrBox(ctrlid, 'postbg');
 				break;
 			case 'password':
-				str = '<p class="pbn">กรุณาใส่รหัสผ่านกระทู้: <input type="text" id="' + ctrlid + '_param_1" size="10" value="" class="px" /></p>';
+				str = '<p class="pbn">Vui lòng nhập mật khẩu bài viết: <input type="text" id="' + ctrlid + '_param_1" size="10" value="" class="px" /></p>';
 				break;
 			case 'code':
 				if(wysiwyg) {
@@ -1065,48 +1065,48 @@ function showEditorMenu(tag, params) {
 				if(selection) {
 					return insertText((opentag + selection + closetag), strlen(opentag), strlen(closetag), true, sel);
 				}
-				var lang = {'quote' : 'ใส่ข้อความสำหรับการอ้างอิง', 'code' : 'ใส่โค้ดหรือข้อความเพื่อแทรก', 'hide' : 'ใส่ข้อมูลหรือเนื้อหาเพื่อซ่อนไว้', 'free' : 'ถ้ามีการกำหนดราคาของเนื้อหา กรุณาใส่ข้อความหรือเนื้อหาในแท็กฟรี(free)'};
+				var lang = {'quote' : 'Vui lòng nhập một tham chiếu để chèn', 'code' : 'Vui lòng nhập mã để chèn', 'hide' : 'Vui lòng nhập nội dung của tin nhắn sẽ được ẩn', 'free' : 'Nếu bạn đặt giá bài, vui lòng nhập thông tin hiển thị tự do trước khi mua'};
 				str += lang[tag] + ':<br /><textarea id="' + ctrlid + '_param_1" style="width: 98%" cols="50" rows="5" class="txtarea"></textarea>' +
-					(tag == 'hide' ? '<br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_1" class="pc" checked="checked" />แสดงเนื้อหาเมื่อสมาชิกตอบกลับกระทู้</label><br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_2" class="pc" />แสดงเนื้อหาเมื่อมี</label> <input type="text" size="3" id="' + ctrlid + '_param_2" class="px pxs" /> เครดิตขึ้นไป<br /><br /><label>ระยะเวลาซ่อนเนื้อหา:</label> <input type="text" size="3" id="' + ctrlid + '_param_3" class="px pxs" /> วัน <br />เมื่อครบเวลาที่กำหนด เนื้อหาดังกล่าวจะมองเห็นได้ทุกคน' : '');
+					(tag == 'hide' ? '<br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_1" class="pc" checked="checked" />Chỉ hiển thị khi người xem trả lời bài đăng này</label><br /><label><input type="radio" name="' + ctrlid + '_radio" id="' + ctrlid + '_radio_2" class="pc" />Chỉ khi điểm người xem cao hơn</label> <input type="text" size="3" id="' + ctrlid + '_param_2" class="px pxs" /> Chỉ hiển thị khi<br /><br /><label>Ngày hợp lệ:</label> <input type="text" size="3" id="' + ctrlid + '_param_3" class="px pxs" /> <br />Thẻ sẽ tự động hết hạn khi ngày đăng lớn hơn số ngày này' : '');
 				break;
 			case 'tbl':
-				str = '<p class="pbn">แถว: <input type="text" id="' + ctrlid + '_param_1" size="2" value="2" class="px" /> &nbsp; คอลัมน์: <input type="text" id="' + ctrlid + '_param_2" size="2" value="2" class="px" /></p><p class="pbn">กว้าง: <input type="text" id="' + ctrlid + '_param_3" size="2" value="" class="px" /> &nbsp; สีพื้นหลัง: <input type="text" id="' + ctrlid + '_param_4" size="2" class="px" onclick="showColorBox(this.id, 2)" /></p><p class="xg2 pbn" style="cursor:pointer" onclick="showDialog($(\'tbltips_msg\').innerHTML, \'notice\', \'คำแนะนำ\', null, 0)"><img id="tbltips" title="คำแนะนำ" class="vm" src="' + IMGDIR + '/info_small.gif"> เคล็ดลับ การสร้างตาราง</p>';
-				str += '<div id="tbltips_msg" style="display: none"> “[tr=สี]” กำหนดสีพื้นหลัง<br /> “[td=ความกว้าง]” กำหนดความกว้างของคอลัมน์<br /> “[td=ระยะของคอลัมน์,ระยะของแถว,ความกว้าง]” กำหนดระยะของแถว<br /><br />ตัวอย่างการเขียนตารางอย่างรวดเร็ว:<div class=\'xs0\' style=\'margin:0 5px\'>[table]<br />Name:|Discuz!<br />Version:|X1<br />[/table]</div>ใช้ “|” แยกแต่ละคอลัมน์ ตารางถ้ามี “|” ใช้ “\\|” แทน และปิดด้วย “\\n”</div>';
+				str = '<p class="pbn">Hàng bảng: <input type="text" id="' + ctrlid + '_param_1" size="2" value="2" class="px" /> &nbsp; Số cột trong bảng: <input type="text" id="' + ctrlid + '_param_2" size="2" value="2" class="px" /></p><p class="pbn">Chiều rộng bảng: <input type="text" id="' + ctrlid + '_param_3" size="2" value="" class="px" /> &nbsp; Màu nền: <input type="text" id="' + ctrlid + '_param_4" size="2" class="px" onclick="showColorBox(this.id, 2)" /></p><p class="xg2 pbn" style="cursor:pointer" onclick="showDialog($(\'tbltips_msg\').innerHTML, \'notice\', \'Mẹo\', null, 0)"><img id="tbltips" title="Mẹo" class="vm" src="' + IMGDIR + '/info_small.gif"> Mẹo viết mẫu nhanh</p>';
+				str += '<div id="tbltips_msg" style="display: none">“[tr=Màu]” Xác định nền hàng<br />“[td=Chiều rộng]” Xác định chiều rộng cột<br />“[td=Cột,Hàng,Rộng]” Xác định khoảng cách hàng và cột<br /><br />Ví dụ viết nhanh：<div class=\'xs0\' style=\'margin:0 5px\'>[table]<br />Name:|Discuz!<br />Version:|X1<br />[/table]</div>Tách mỗi cột bằng "|". Nếu có "|" trong bảng, thay vào đó, hãy sử dụng "\\|" và sử dụng "\\n" để ngắt dòng.</div>';
 				break;
 			case 'aud':
-				str = '<p class="pbn">ใส่ที่อยู่ของไฟล์เพลง:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="xg2 pbn">สนับสนุนไฟล์ wma mp3 ra rm และรูปแบบเพลงจากเว็บไซต์อื่น ๆ <br />ตัวอย่าง: http://server/audio.wma</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ tệp nhạc:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="xg2 pbn">Hỗ trợ wma mp3 ra rm và các định dạng nhạc khác<br />Ví dụ: http://server/audio.wma</p>';
 				break;
 			case 'vid':
-				str = '<p class="pbn">ใส่ที่อยู่ไฟล์วิดีโอ:</p><p class="pbn"><input type="text" value="" id="' + ctrlid + '_param_1" style="width: 220px;" class="px" /></p><p class="pbn">กว้าง: <input id="' + ctrlid + '_param_2" size="5" value="500" class="px" /> &nbsp; สูง: <input id="' + ctrlid + '_param_3" size="5" value="375" class="px" /></p><p class="xg2 pbn">สามารถใส่ลิงก์วิดีโอได้โดยตรง<br />สนับสนุนไฟล์ wmv avi rmvb mov swf flv และรูปแบบวิดีโอจากเว็บไซต์อื่นๆ<br />ตัวอย่าง: http://server/movie.wmv</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ video:</p><p class="pbn"><input type="text" value="" id="' + ctrlid + '_param_1" style="width: 220px;" class="px" /></p><p class="pbn">Rộng: <input id="' + ctrlid + '_param_2" size="5" value="500" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_3" size="5" value="375" class="px" /></p><p class="xg2 pbn">URL video hỗ trợ các trạm video như Youku, Tudou, 56 và 6<br />Hỗ trợ wmv avi rmvb Mov swf flv và các định dạng video khác<br />Ví dụ: http://server/movie.wmv</p>';
 				break;
 			case 'fls':
-				str = '<p class="pbn">ใส่ที่อยู่ไฟล์ Flash:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="pbn">กว้าง: <input id="' + ctrlid + '_param_2" size="5" value="" class="px" /> &nbsp; สูง: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /></p><p class="xg2 pbn">สนับสนุนไฟล์ swf flv และรูปแบบไฟล์ Flash จากเว็บไซต์อื่นๆ<br />ตัวอย่าง: http://server/flash.swf</p>';
+				str = '<p class="pbn">Vui lòng nhập địa chỉ tệp Flash:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p><p class="pbn">Rộng: <input id="' + ctrlid + '_param_2" size="5" value="" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /></p><p class="xg2 pbn">Hỗ trợ các URL Flash như swf flv<br />Ví dụ: http://server/flash.swf</p>';
 				break;
 			case 'beginning':
-				str = '<p class="pbn">ใส่ที่อยู่ไฟล์แฟลชหรือรูปภาพ:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p>';
-				str += '<p class="pbn">เมื่อคลิกแล้วให้ลิงก์ไปที่:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_2" class="px" value="" style="width: 220px;" /></p>';
-				str += '<p class="pbn">กว้าง: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /> &nbsp; สูง: <input id="' + ctrlid + '_param_4" size="5" value="" class="px" /></p>';
-				str += '<p class="pbn">ระยะเวลาที่แสดง: <input id="' + ctrlid + '_param_8" size="5" value="" class="px" /> วินาที</p>';
-				str += '<p class="pbn">ลักษณะการเปิดตัวและปิดตัว: </p><p class="pbn"><input id="' + ctrlid + '_param_7" type="radio" name="effect" checked />ไม่มี &nbsp; <input id="' + ctrlid + '_param_5" type="radio" name="effect" />ค่อยๆชัดขึ้นและค่อยๆจางหายไป &nbsp; <input id="' + ctrlid + '_param_6" type="radio" name="effect" />เลื่อนลงมาและเลื่อนกลับขึ้นไป</p>';
-				str += '<p class="xg2 pbn">สนับสนุนไฟล์ swf flv jpg gif png จากเว็บไซต์อื่นๆ<br />ขนาดที่รองรับ: กว้าง 400~1024 สูง 300~640<br />ตัวอย่าง: http://server/flash.swf</p>';
+				str = '<p class="pbn">Vui lòng nhập hình ảnh động mở Flash hoặc địa chỉ hình ảnh:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_1" class="px" value="" style="width: 220px;" /></p>';
+				str += '<p class="pbn">Nhấp vào địa chỉ liên kết:</p><p class="pbn"><input type="text" id="' + ctrlid + '_param_2" class="px" value="" style="width: 220px;" /></p>';
+				str += '<p class="pbn">Rộng: <input id="' + ctrlid + '_param_3" size="5" value="" class="px" /> &nbsp; Cao: <input id="' + ctrlid + '_param_4" size="5" value="" class="px" /></p>';
+				str += '<p class="pbn">Dwell seconds: <input id="' + ctrlid + '_param_8" size="5" value="" class="px" /></p>';
+				str += '<p class="pbn">Đang tải, hiệu ứng biến mất: </p><p class="pbn"><input id="' + ctrlid + '_param_7" type="radio" name="effect" checked />Không &nbsp; <input id="' + ctrlid + '_param_5" type="radio" name="effect" />fade in and fade out &nbsp; <input id="' + ctrlid + '_param_6" type="radio" name="effect" />Mở và đóng</p>';
+				str += '<p class="xg2 pbn">Hỗ trợ swf flv jpg gif png URL<br />Phạm vi chiều cao rộng: 400~1024 rộng 300~640<br />Ví dụ: http://server/flash.swf</p>';
 				break;
 			case 'pasteword':
-				stitle = 'วางเนื้อหาจาก Word';
-				str = '<p class="px" style="height:300px"><iframe id="' + ctrlid + '_param_1" frameborder="0" style="width:100%;height:100%" onload="this.contentWindow.document.body.style.width=\'550px\';this.contentWindow.document.body.contentEditable=true;this.contentWindow.document.body.focus();this.onload=null"></iframe></p><p class="xg2 pbn">สามารถใช้คีย์ลัด (Ctrl+V) เพื่อวางเนื้อหาที่คัดลอกมาจาก Word ได้</p>';
+				stitle = 'Dán nội dung từ Word';
+				str = '<p class="px" style="height:300px"><iframe id="' + ctrlid + '_param_1" frameborder="0" style="width:100%;height:100%" onload="this.contentWindow.document.body.style.width=\'550px\';this.contentWindow.document.body.contentEditable=true;this.contentWindow.document.body.focus();this.onload=null"></iframe></p><p class="xg2 pbn">Vui lòng sử dụng phím tắt (Ctrl + V) để dán nội dung của tệp Word ở trên</p>';
 				menuwidth = 600;
 				menupos = '00';
 				menutype = 'win';
 				break;
 			case 'index':
-				stitle = 'สร้างสารบัญโพสต์';
+				stitle = 'Tạo thư mục bài';
 				str = '<p class="pbn">[index]<br />\n\
-					[#<span class="xi1">หมายเลขหน้า</span>]<span class="xi1">ชื่อเรื่อง</span> &nbsp;&nbsp;<span class="xg1">จะข้ามไปยังหน้าที่ระบุ</span><br />\n\
-					<span class="xi1">*</span>[#<span class="xi1">tid,pid</span>]<span class="xi1">ชื่อเรื่อง</span> &nbsp;&nbsp;<span class="xg1">จะข้ามไปยังโพสต์ระบุ</span><br />\n\
+					[#<span class="xi1">Số trang</span>]<span class="xi1">Tiêu đề</span> &nbsp;&nbsp;<span class="xg1">Chuyển đến trang được chỉ định</span><br />\n\
+					<span class="xi1">*</span>[#<span class="xi1">tid,pid</span>]<span class="xi1">Tiêu đề</span> &nbsp;&nbsp;<span class="xg1">Chuyển đến bài viết được chỉ định</span><br />\n\
 					[/index]<br />\n\
 					<br />\n\
-					<span class="xi1">หมายเลขหน้า</span> &nbsp;&nbsp;<span class="xg1">[page] หมายเลขหน้าปัจจุบันของโพสต์</span><br />\n\
-					<span class="xi1">tid,pid</span> &nbsp;&nbsp;<span class="xg1">TID และ PID ของกระทู้</span><br />\n\
-					<span class="xi1">*</span> &nbsp;&nbsp;<span class="xg1">เพิ่มการเยื้องบรรทัด</span></p>';
+					<span class="xi1">Số trang</span> &nbsp;&nbsp;<span class="xg1">Số trang với [page] sau khi phân trang bài hiện tại</span><br />\n\
+					<span class="xi1">tid,pid</span> &nbsp;&nbsp;<span class="xg1">TID và PID của bài</span><br />\n\
+					<span class="xi1">*</span> &nbsp;&nbsp;<span class="xg1">Thêm dòng thụt lề</span></p>';
 				break;
 			default:
 				for(i in EXTRAFUNC['showEditorMenu']) {
@@ -1125,7 +1125,7 @@ function showEditorMenu(tag, params) {
 					var promptlang = custombbcodes[tag]['prompt'].split("\t");
 					for(var i = 1; i <= params; i++) {
 						if(i != params || !haveSel) {
-							str += (promptlang[i - 1] ? promptlang[i - 1] : 'กรอกโค้ด ' + i + ' :') + '<br /><input type="text" id="' + ctrlid + '_param_' + i + '" style="width: 98%" value="" class="px" />' + (i < params ? '<br />' : '');
+							str += (promptlang[i - 1] ? promptlang[i - 1] : 'Vui lòng nhập tham số ' + i + ':') + '<br /><input type="text" id="' + ctrlid + '_param_' + i + '" style="width: 98%" value="" class="px" />' + (i < params ? '<br />' : '');
 						}
 					}
 				}
@@ -1140,11 +1140,11 @@ function showEditorMenu(tag, params) {
 		if(menupos == '00') {
 			menu.className = 'fwinmask';
 			s = '<table width="100%" cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c">'
-				+ '<h3 class="flb"><em>' + stitle + '</em><span><a onclick="hideMenu(\'\', \'win\');return false;" class="flbc" href="javascript:;">ปิด</a></span></h3><div class="c">' + str + '</div>'
-				+ '<p class="o pns"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>ตกลง</strong></button></p>'
+				+ '<h3 class="flb"><em>' + stitle + '</em><span><a onclick="hideMenu(\'\', \'win\');return false;" class="flbc" href="javascript:;">Đóng</a></span></h3><div class="c">' + str + '</div>'
+				+ '<p class="o pns"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>Gửi</strong></button></p>'
 				+ '</td><td class="m_r"></td></tr><tr><td class="b_l"></td><td class="b_c"></td><td class="b_r"></td></tr></table>';
 		} else {
-			s = '<div class="p_opt cl"><span class="y" style="margin:-10px -10px 0 0"><a onclick="hideMenu();return false;" class="flbc" href="javascript:;">ปิด</a></span><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>ตกลง</strong></button></div></div>';
+			s = '<div class="p_opt cl"><span class="y" style="margin:-10px -10px 0 0"><a onclick="hideMenu();return false;" class="flbc" href="javascript:;">Đóng</a></span><div>' + str + '</div><div class="pns mtn"><button type="submit" id="' + ctrlid + '_submit" class="pn pnc"><strong>Gửi</strong></button></div></div>';
 		}
 		menu.innerHTML = s;
 		$(editorid + '_editortoolbar').appendChild(menu);

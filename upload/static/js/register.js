@@ -5,7 +5,7 @@
 	$Id: register.js 33433 2013-06-13 07:36:25Z nemohou $
 */
 
-var lastusername = '', lastpassword = '', lastemail = '', lastinvitecode = '', stmp = new Array(), modifypwd = false, profileTips = 'ถ้าจำเป็นต้องเปลี่ยนรหัสผ่านของคุณ กรุณาเว้นค่านี้ไว้';
+var lastusername = '', lastpassword = '', lastemail = '', lastinvitecode = '', stmp = new Array(), modifypwd = false, profileTips = 'Nếu bạn không cần thay đổi mật khẩu, hãy để trống ở đây';
 
 function errormessage(id, msg) {
 	if($(id)) {
@@ -71,9 +71,9 @@ function checkPwdComplexity(firstObj, secondObj, modify) {
 	modifypwd = modify || false;
 	firstObj.onblur = function () {
 		if(firstObj.value == '') {
-			var pwmsg = !modifypwd ? 'กรุณากรอกรหัสผ่าน' : profileTips;
+			var pwmsg = !modifypwd ? 'Vui lòng điền mật khẩu' : profileTips;
 			if(pwlength > 0) {
-				pwmsg += ', ความยาวต่ำสุด '+pwlength+' ตัวอักษร';
+				pwmsg += ', Độ dài tối thiểu là '+pwlength+' ký tự';
 			}
 			errormessage(firstObj.id, pwmsg);
 		}else{
@@ -83,14 +83,14 @@ function checkPwdComplexity(firstObj, secondObj, modify) {
 	};
 	firstObj.onkeyup = function () {
 		if(pwlength == 0 || $(firstObj.id).value.length >= pwlength) {
-			var passlevels = new Array('','คาดเดาได้ง่าย','คาดเดาได้ปานกลาง','คาดเดาได้ยาก');
+			var passlevels = new Array('','Yếu','Vừa','Mạnh');
 			var passlevel = checkstrongpw(firstObj.id);
-			errormessage(firstObj.id, '<span class="passlevel passlevel'+passlevel+'">ความยากของรหัสผ่าน: '+passlevels[passlevel]+'</span>');
+			errormessage(firstObj.id, '<span class="passlevel passlevel'+passlevel+'">Mật khẩu mạnh:'+passlevels[passlevel]+'</span>');
 		}
 	};
 	secondObj.onblur = function () {
 		if(secondObj.value == '') {
-			errormessage(secondObj.id, !modifypwd ? 'กรุณากรอกรหัสผ่านอีกครั้ง' : profileTips);
+			errormessage(secondObj.id, !modifypwd ? 'Vui lòng nhập lại mật khẩu' : profileTips);
 		}
 		checkpassword(firstObj.id, secondObj.id);
 	};
@@ -109,7 +109,7 @@ function addMailEvent(mailObj) {
 	};
 	mailObj.onblur = function () {
 		if(mailObj.value == '') {
-			errormessage(mailObj.id, 'กรุณากรอกอีเมล');
+			errormessage(mailObj.id, 'Vui lòng nhập địa chỉ email của bạn');
 		}
 		emailMenuOp(3, null, mailObj.id);
 	};
@@ -144,7 +144,7 @@ function showbirthday(){
 	var el = $('birthday');
 	var birthday = el.value;
 	el.length=0;
-	el.options.add(new Option('วันนี้', ''));
+	el.options.add(new Option('Ngày', ''));
 	for(var i=0;i<28;i++){
 		el.options.add(new Option(i+1, i+1));
 	}
@@ -273,12 +273,12 @@ function checkusername(id) {
 		lastusername = username;
 	}
 	if(username.match(/<|>|"|\(|\)|'/ig)) {
-		errormessage(id, 'ชื่อผู้ใช้มีตัวอักษรที่ไม่อนุญาตให้ใช้งาน');
+		errormessage(id, 'Tên người dùng chứa các ký tự nhạy cảm');
 		return;
 	}
 	var unlen = username.replace(/[^\x00-\xff]/g, "**").length;
 	if(unlen < 3 || unlen > 15) {
-		errormessage(id, unlen < 3 ? 'ชื่อผู้ใช้สั้นเกินไป อย่างน้อย 3 ตัวอักษร' : 'ชื่อผู้ใช้ยาวเกินไป สูงสุด 15 ตัวอักษร');
+		errormessage(id, unlen < 3 ? 'Tên người dùng phải có ít nhất 3 ký tự' : 'Tên người dùng phải có 15 ký tự trở xuống');
 		return;
 	}
 	var x = new Ajax();
@@ -294,7 +294,7 @@ function checkpassword(id1, id2) {
 	}
 	if(pwlength > 0) {
 		if($(id1).value.length < pwlength) {
-			errormessage(id1, 'รหัสผ่านสั้นเกินไป ควรไม่น้อยกว่า '+pwlength+' ตัวอักษร');
+			errormessage(id1, 'Mật khẩu quá ngắn và phải có ít nhất '+pwlength+' ký tự');
 			return;
 		}
 	}
@@ -304,33 +304,33 @@ function checkpassword(id1, id2) {
 		for(var i in strongpw) {
 			if(strongpw[i] === 1 && !$(id1).value.match(/\d+/g)) {
 				strongpw_error = true;
-				strongpw_str[j] = 'เฉพาะตัวเลขเท่านั้น';
+				strongpw_str[j] = 'Số';
 				j++;
 			}
 			if(strongpw[i] === 2 && !$(id1).value.match(/[a-z]+/g)) {
 				strongpw_error = true;
-				strongpw_str[j] = 'ตัวอักษรพิมพ์เล็ก';
+				strongpw_str[j] = 'Chữ thường';
 				j++;
 			}
 			if(strongpw[i] === 3 && !$(id1).value.match(/[A-Z]+/g)) {
 				strongpw_error = true;
-				strongpw_str[j] = 'ตัวอักษรพิมพ์ใหญ่';
+				strongpw_str[j] = 'Chữ in hoa';
 				j++;
 			}
 			if(strongpw[i] === 4 && !$(id1).value.match(/[^A-Za-z0-9]+/g)) {
 				strongpw_error = true;
-				strongpw_str[j] = 'สัญลักษณ์พิเศษ';
+				strongpw_str[j] = 'Ký tự đặc biệt';
 				j++;
 			}
 		}
 		if(strongpw_error) {
-			errormessage(id1, 'รหัสผ่านที่กรอกสามารถคาดเดาได้ง่าย รหัสผ่านที่ดีจะต้องประกอบด้วย '+strongpw_str.join('，'));
+			errormessage(id1, 'Mật khẩu quá yếu, mật khẩu phải bao gồm '+strongpw_str.join('，'));
 			return;
 		}
 	}
 	errormessage(id2);
 	if($(id1).value != $(id2).value) {
-		errormessage(id2, 'รหัสผ่านทั้งสองช่องไม่ตรงกัน');
+		errormessage(id2, 'Mật khẩu được nhập hai lần không nhất quán');
 	} else {
 		errormessage(id2, !modifypwd ? 'succeed' : '');
 	}
@@ -345,7 +345,7 @@ function checkemail(id) {
 		lastemail = email;
 	}
 	if(email.match(/<|"/ig)) {
-		errormessage(id, 'อีเมลที่คุณใช้มีตัวอักษรหรือคำที่ห้ามใช้');
+		errormessage(id, 'Email chứa các ký tự nhạy cảm');
 		return;
 	}
 	var x = new Ajax();
@@ -364,7 +364,7 @@ function checkinvite() {
 		lastinvitecode = invitecode;
 	}
 	if(invitecode.match(/<|"/ig)) {
-		errormessage('invitecode', 'โค้ดเชิญชวนที่คุณใช้มีตัวอักษรหรือคำที่ห้ามใช้');
+		errormessage('invitecode', 'Mã thư mời chứa các ký tự nhạy cảm');
 		return;
 	}
 	var x = new Ajax();

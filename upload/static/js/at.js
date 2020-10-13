@@ -61,7 +61,7 @@ function extrafunc_atListMenu(tag, op) {
 		}
 		curatli = 0;
 		setTimeout(function() {atFilter('', 'at_list','atListSet');$('atkeyword').focus();}, 100);
-		return 'กรอกชื่อผู้ใช้:<br /><input type="text" id="atkeyword" style="width:240px" value="" class="px" onkeydown="atEnter(event, \'atListSet\')" onkeyup="atFilter(this.value, \'at_list\',\'atListSet\',event, true);" /><div class="p_pop" id="at_list" style="width:250px;"><ul><li>@เพื่อน เพื่อแจ้งเตือนให้ดูโพสต์นี้</li></ul></div>';
+		return 'Vui lòng nhập tên người bạn:<br /><input type="text" id="atkeyword" style="width:240px" value="" class="px" onkeydown="atEnter(event, \'atListSet\')" onkeyup="atFilter(this.value, \'at_list\',\'atListSet\',event, true);" /><div class="p_pop" id="at_list" style="width:250px;"><ul><li>@Fiend, bạn có thể nhắc anh ấy đọc bài</li></ul></div>';
 	} else {
 		if($('atkeyword').value) {
 			str = '@' + $('atkeyword').value + (wysiwyg ? '&nbsp;' : ' ');
@@ -88,7 +88,7 @@ function atMenu(x, y) {
 	$('at_menu').style.left = x + 'px';
 	$('at_menu').style.top = y + 'px';
 	$('at_menu').style.display = '';
-	$('at_menu').innerHTML = '<img src="' + IMGDIR + '/loading.gif" class="vm"> กรุณารอสักครู่... ';
+	$('at_menu').innerHTML = '<img src="' + IMGDIR + '/loading.gif" class="vm"> Xin vui lòng chờ... ';
 }
 
 function atSearch(kw, call) {
@@ -158,7 +158,7 @@ function atFilter(kw, id, call, e, nae) {
 				var atclass = i == curatli ? ' class="a"' : '';
 				newlist += '<li><a href="javascript:;" id="atli_'+i+'"'+atclass+' onclick="'+call+'(this.innerText)">' + atResult[i] + '</a></li>';
 			}
-			$(id).innerHTML = '<ul>' + newlist + '<li class="xg1">@เพื่อน เพื่อแจ้งเตือนให้ดูโพสต์นี้</li></ul>';
+			$(id).innerHTML = '<ul>' + newlist + '<li class="xg1">@Fiend, bạn có thể nhắc anh ấy đọc bài</li></ul>';
 		} else {
 			$(id).style.visibility = 'hidden';
 		}

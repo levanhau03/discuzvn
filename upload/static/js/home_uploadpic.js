@@ -75,18 +75,18 @@ function insertAttach(id) {
 		return;
 	}
 	if(extensions != '' && (re.exec(extensions) == null || ext == '')) {
-		alert('ขออภัย นามสกุลของรูปภาพไม่รองรับการอัปโหลดครั้งนี้');
+		alert('Xin lỗi, tải lên hình ảnh với tiện ích mở rộng này không được hỗ trợ');
 		return;
 	}
 	attachexts[id] = inArray(ext, ['gif', 'jpg', 'jpeg', 'png']) ? 2 : 1;
 
 	var inhtml = '<table cellspacing="0" cellpadding="0" class="up_row"><tr>';
 	if(typeof no_insert=='undefined') {
-		localfile += '&nbsp;<a href="javascript:;" class="xi2" title="คลิกที่นี่เพื่อแทรกเนื้อหาในตำแหน่งเคอร์เซอร์ปัจจุบัน" onclick="insertAttachimgTag(' + id + ');return false;">[แทรก]</a>';
+		localfile += '&nbsp;<a href="javascript:;" class="xi2" title="Nhấn vào đây để chèn vị trí con trỏ hiện tại trong nội dung" onclick="insertAttachimgTag(' + id + ');return false;">[Chèn]</a>';
 	}
 	inhtml += '<td><strong>' + localfile +'</strong>';
-	inhtml += '</td><td class="d">คำอธิบายรูปภาพ<br/><textarea name="pic_title" cols="40" rows="2" class="pt"></textarea>';
-	inhtml += '</td><td class="o"><span id="showmsg' + id + '"><a href="javascript:;" onclick="delAttach(' + id + ');return false;" class="xi2">[ลบ]</a></span>';
+	inhtml += '</td><td class="d">Mô tả hình ảnh<br/><textarea name="pic_title" cols="40" rows="2" class="pt"></textarea>';
+	inhtml += '</td><td class="o"><span id="showmsg' + id + '"><a href="javascript:;" onclick="delAttach(' + id + ');return false;" class="xi2">[Xóa]</a></span>';
 	inhtml += '</td></tr></table>';
 
 	$('localfile_' + id).innerHTML = inhtml;
@@ -149,7 +149,7 @@ function upload() {
 	if(nowUid>0) {
 		var upobj = $('showmsg'+nowid);
 		if(uploadStat==1) {
-			upobj.innerHTML = 'อัปโหลดเสร็จเรียบร้อยแล้ว';
+			upobj.innerHTML = 'Đã tải lên thành công';
 			successState = true;
 			var InputNode;
 			try {
@@ -165,12 +165,12 @@ function upload() {
 
 		} else {
 			upobj.style.color = "#f00";
-			upobj.innerHTML = 'อัปโหลดล้มเหลว '+uploadStat;
+			upobj.innerHTML = 'Tải lên thất bại '+uploadStat;
 		}
 	}
 
 	if($('showmsg'+nid) != null) {
-		$('showmsg'+nid).innerHTML = 'กำลังอัปโหลด กรุณารอสักครู่ หากมีปัญหาให้(<a href="javascript:;" onclick="forms[nowUid].submit();">ลองใหม่</a>)';
+		$('showmsg'+nid).innerHTML = 'Đang tải lên, vui lòng đợi(<a href="javascript:;" onclick="forms[nowUid].submit();">Thử lại</a>)';
 		$('albumid_'+nid).value = albumid;
 		forms[nowUid].submit();
 	} else if(nowUid+1 == forms.length) {

@@ -44,11 +44,11 @@ function insertAttach(id) {
 	var ext = path.lastIndexOf('.') == -1 ? '' : path.substr(path.lastIndexOf('.') + 1, path.length).toLowerCase();
 	var re = new RegExp("(^|\\s|,)" + ext + "($|\\s|,)", "ig");
 	if(extensions != '' && (re.exec(extensions) == null || ext == '')) {
-		alert('ขออภัย รูปแบบไฟล์ไม่สนับสนุนการอัปโหลดนี้');
+		alert('Xin lỗi, tải lên các tệp như vậy không được hỗ trợ');
 		return;
 	}
 	var localfile = $('attach_' + id).value.substr($('attach_' + id).value.replace(/\\/g, '/').lastIndexOf('/') + 1);
-	$('localfile_' + id).innerHTML = localfile + ' กำลังอัปโหลด...';
+	$('localfile_' + id).innerHTML = localfile + ' Đang tải lên...';
 	$('attach_' + id).style.display = 'none';
 	$('upload_' + id).action += '&attach_target_id=' + id;
 	$('upload_' + id).submit();

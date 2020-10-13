@@ -1184,13 +1184,13 @@ $lang = array
 	'setting_home_base_showallfriendnum_comment' => 'Không hiển thị nhiều nguồn cấp dữ liệu bạn bè hơn giới hạn này. Khi một số nguồn cấp dữ liệu vượt quá giới hạn này, hãy hiển thị liên kết cho tất cả nguồn cấp dữ liệu của bạn bè.<br>Thông số này có cùng tác dụng trong blog và album.',
 	'setting_home_base_feedhiddenicon' => 'Bật/tắt nguồn cấp tin tức',
 	'setting_home_base_feedhiddenicon_comment' => 'Nhập nguồn cấp tin tức mà bạn muốn hiển thị biểu tượng (icon) bật/tắt. Nếu bạn có nhiều nguồn cấp tin tức, bạn có thể sử dụng "," để phân tách các tin nhắn.<br>
-			Việc thu gọn các nguồn cấp dữ liệu nhất định có thể làm giảm nhiễu trang.<br>
-			Nguồn cấp dữ liệu các loại phương thức truy cập: <br>
-			Để xem nguồn cấp dữ liệu của bạn bè tại thời điểm đó, hãy nhấp vào biểu tượng nhỏ phía trước mỗi động (e.g. <img src="static/image/feed/blog.gif" align="absmiddle">),<br>
-			Url của trình duyệt sẽ tương tự như liên kết sau:<br>
-			http://xxx.com/home.php?mod=space&uid=&do=feed&view=we&appid=3&<b>icon=blog</b>,<br>
-			Trong đó <b>icon=blog</b> nói rằng đó là một nguồn cấp dữ liệu của loại blog.<br>
-			Đối với ứng dụng MYOP được sử dụng các biểu tượng có tối đa 7 chữ số. Bạn có thể sử dụng từ tiếng anh <b> myop </b> để diễn đạt kiểu động của tất cả các ứng dụng MYOP.',
+			将某些动态折叠后，可以适当减少首页的动态噪音。<br>
+			动态类型的获取方法：<br>
+			在查看好友动态的时候，点击每条动态前面的小图标(例如 <img src="static/image/feed/blog.gif" align="absmiddle">)，<br>
+			浏览器的网址会变为类似如下的链接：<br>
+			http://xxx.com/home.php?mod=space&uid=&do=feed&view=we&appid=3&<b>icon=blog</b>，<br>
+			其中，icon=blog，就表示该动态类型为 blog<br>
+			MYOP应用的icon为 7位数字。您可以用英文单词 <b>myop</b> 来表示所有MYOP应用的动态类型',
 	'setting_home_base_feedhotnum' => 'Số lượng nguồn cấp tin tức phổ biến trên trang chủ.',
 	'setting_home_base_feedhotnum_comment' => '(Mặc định là 3) để 0, sau đó trang không hiển thị điểm nóng được đề nghị. Không vượt quá tối đa 10.<br>Hệ thống tự động sẽ nhận được 10 điểm nóng, mà sẽ được cố định số một nóng hiển thị, và số còn lại các điểm nóng sẽ được hiển thị ngẫu nhiên.',
 	'setting_home_base_newspacenum' => 'Sự lựa chọn cho thành viên mới',
@@ -1331,8 +1331,7 @@ $lang = array
 	'setting_home_hotuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, một tên trên mỗi dòng.<br>Ví dụ:<br>admin<br>webmaster<br/>những người dùng này sẽ được hiển thị ngẫu nhiên trong cột "Email quản trị trang web".',
 	'setting_home_hotuser_defaultuser' => 'Người dùng mặc định',
 	'setting_home_hotuser_defaultuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, mỗi tên một dòng.
-<br>Ví dụ:<br>admin<br>webmaster<br>Những người dùng này sẽ tự động được thêm vào người dùng mới với tư cách là bạn bè và gửi lời chào.
-							Lưu ý: Số lượng lớn bạn bè mặc định có thể làm tăng tải máy chủ.',
+							注意，指定的这几位用户浏览自己的首页时，可能会因其好友数众多而增加服务器负载',
 	'setting_home_hotuser_defaultpoke' => 'Nội dung lời chào mặc định',
 	'setting_home_hotuser_defaultpoke_comment' => 'Nội dung lời chào tự động gửi đến bạn mới, không quá 25 ký tự.',
 
@@ -1343,6 +1342,7 @@ $lang = array
 	'setting_domain_app_domain' => 'Tên miền',
 	'setting_domain_app_tips' => '<li>Các tên miền liên kết với các miền tương ứng không được giống nhau. Tên miền không cần thêm "<strong> http://</strong>" hoặc kết thúc bằng "<strong>/</strong>", ví dụ: portal.comsenz.com </li><li>Mọi thao tác mở tên miền đều cần phải định cấu hình tên miền mặc định, nếu không sẽ gây ra nhiều sự cố nhập cảnh </li><li>Khi mở nhiều tên miền, vui lòng sửa đổi giá trị cookiedomain trong config/config_global.php, đặt phạm vi cookie </li>',
 	'setting_domain_app_mobile_tips' => 'Khi tên miền điện thoại di động được định cấu hình, quyền truy cập trình duyệt không dành cho thiết bị di động sẽ tự động chuyển hướng đến tên miền mặc định',
+	'setting_domain_root' => '根域名设置',
 	'setting_domain_root_tips' => "<li>Bạn có thể đặt tên miền gốc của tên miền cấp hai cho <strong>không gian cá nhân, {$_G[setting][navs][3][navname]}, diễn đàn, chủ đề, kênh </strong>.Ví dụ: Người dùng đăng ký XXX.comsenz.com, hãy điền vào tên miền gốc: comsenz.com</li><li><strong>Không gian cá nhân, {$_G[setting][navs][3][navname]}</strong>Sau khi đặt gốc của tên miền cấp hai, bạn cũng cần bật khóa chuyển đổi tên miền cấp hai tương ứng trong <strong>Cài đặt cơ bản </strong> để người dùng có thể đăng ký ràng buộc tên miền cấp hai ở vị trí tương ứng và được giới hạn cho nhóm người dùng Độ dài của tên miền cấp hai</li><li><strong>Kênh</strong> Nếu bạn bật tên miền cấp hai để liên kết thư mục, bạn cần tự định cấu hình các hoạt động liên kết có liên quan trong môi trường</li><li>Không nên Thay đổi các miền gốc khác nhau thành cùng một miền gốc giữa chừng</li>",
 	'setting_domain_allow_space' => 'Mở miền cấp hai không gian cá nhân',
 	'setting_domain_allow_space_comment' => 'Sau khi mở, bạn cần đặt tên miền gốc và độ dài của tên miền nhóm người dùng trước khi có thể mở ứng dụng tên miền',
@@ -1414,6 +1414,7 @@ $lang = array
 	'misc_focus_area_title_comment' => 'Mặc định là "Trang web của gia đình", bạn có thể thiết lập mà bạn muốn Tiêu đề',
 	'misc_focus_area_cookie' => 'Thời gian bật lại cửa sổ sau khi đóng (giờ)',
 	'misc_focus_area_cookie_comment' => 'Nếu 0 thì làm mới trang bật lên. Đặt thành 1 để làm mới trang xuất hiện sau 1 giờ. Mặc định là 1, bạn có thể đặt thời gian bạn muốn bật lên.',
+
 	'misc_focus_position' => 'Quản trị trang web khuyên bạn nên chạy khu vực',
 	'misc_focus_position_portal' => 'Tin tức',
 	'misc_focus_position_home' => 'Trang chủ',
@@ -2489,8 +2490,8 @@ $lang = array
 	'settings_sphinx_sphinxlimit_comment' => 'Enter a maximum number of matches to return, must be non-negative integer, the default value of 10000.',//'填写最大返回匹配项数目，必须是非负整数，默认值10000.',
 	'settings_sphinx_sphinxrank' => 'Full-text index rank mode',//'设置全文索引评分模式',
 	'settings_sphinx_sphinxrank_comment' => '(1) SPH_RANK_PROXIMITY_BM, the default mode, using phrases rank and BM25 rank, and will be a combination of both. [Default]
-<br />(2) SPH_RANK_BM25, statistical correlation calculation mode, use only the BM25 rank calculation (full text search engine with most of the same). This mode is faster, but may contain more than the result of a query term decline in the quality.
-<br />(3) SPH_RANK_NONE, Disable ranking mode, which is the fastest mode. Fact that the same model as a Boolean search. All the matches are given weight 1.',
+<br />(2)SPH_RANK_BM25，统计相关度计算模式，仅使用 BM25 评分计算(与大多数全文检索引擎相同)。这个模式比较快，但是可能使包含多个词的查询的结果质量下降。
+<br />(3)SPH_RANK_NONE，禁用评分的模式，这是最快的模式。实际上这种模式与布尔搜索相同。所有的匹配项都被赋予权重1',
 
 	'setting_ranklist' => 'Bảng xếp hạng',//'排行榜设置',
 	'setting_ranklist_all' => 'Tất cả',
@@ -2584,12 +2585,12 @@ $lang = array
 	'setting_mobile_status_tips' => '<li>Cung cấp tính năng thuận tiện để duyệt forum qua di động</li><li>Chỉ hỗ trợ WAP2.0 (XHTML)</li><li>Mobile browser width of 200 pixels within the image thumbnail. Browser access.</li>',
 	'setting_mobile_allowmobile' => 'Mở chế độ duyệt web di động',
 	'setting_mobile_allowmobile_comment' => 'Mở tính năng này người dùng truy cập vào diễn đàn bằng di động sẽ được tự chuyển sang giao diện Mobile<br />Cấu hình tên miền cho trang WAP Mobile: <a href="?action=domain&operation=app">Tổng thể - Tên miền - Ứng dụng tên miền</a><br />Chỉnh sửa thiết lập, chuyển hướng：<a href="?action=nav&operation=footernav">Sửa tên dưới Footer</a>',
+	'setting_mobile_allowmnew' => '启用新触屏版',
+	'setting_mobile_allowmnew_comment' => '使用新触屏版，新触屏版的 URL 为“' . $_G['siteurl'] . 'm/”',
 	'setting_mobile_mobileforward' => 'Mở trình duyệt bằng điện thoại web sẽ tự chuyển',
 	'setting_mobile_mobileforward_comment' => 'Khi người dùng mở trình duyệt bằng điện thoại để truy diễn đàn sẽ tự động chuyển đến trang chủ',
 	'setting_mobile_otherindex' => '允许非论坛作为首页',
 	'setting_mobile_otherindex_comment' => '开启后手机版也可以将插件、门户等页面设置为首页',
-	'setting_mobile_allowmnew' => '启用新触屏版',
-	'setting_mobile_allowmnew_comment' => '使用新触屏版，新触屏版的 URL 为“' . $_G['siteurl'] . 'm/”',
 	'setting_mobile_preview' => 'Xem phiên bản Mobile trên máy tính',
 	'setting_mobile_preview_comment' => 'Người dùng có thể xem trước giao diện của phiên bản WAP mobile trên máy tính',
 	'setting_mobile_register' => 'Cho đăng ký thành viên',
@@ -4017,17 +4018,17 @@ $lang = array
 	'founder_patchstatus_error5' => 'Copy files problem. Make sure the source code directories, subdirectories and files are readable and writable, or files may be locked. Please close the site after the operation',//'复制文件出现问题，请确认源代码文件目录及子目录可读可写，或文件可能被锁，请关闭站点后进行操作',
 	'founder_patchstatus_error6' => 'Fix the vulnerability have problems, or rollback have problems. As soon as possible restore files, the file backup can be found in the same directory',//'修复漏洞出现问题，回退时出现问题，请尽快恢复文件，文件备份可在同级目录找到',
 	'founder_patch_tips' => '<li>Bug fix status description：</li>
-					<li>
-						<em class="fixed">&nbsp;2</em> The file is possibe modified, did not find the vulnerability<br />
-						<em class="fixed">&nbsp;1</em> Fixed<br />
-						<em class="unfixed">&nbsp;0</em> Not fixed<br />
-						<em class="unfixed">-1</em> Security patch code is empty, your local patch information and data possible have a problem<br />
-						<em class="unfixed">-2</em> Vulnerability patched file does not exist or can not be modified, check and modify the file permissions to read/write (777)<br />
-						<em class="unfixed">-3</em> Write to the temporary file failed, check the data directory is writable<br />
-						<em class="unfixed">-4</em> FTP mode can not be used, Make sure the FTP account information is correct<br />
-						<em class="unfixed">-5</em> Copy files problem. Make sure the source code directories, subdirectories and files are readable and writable, or files may be locked. Please close the site after the operation<br />
-						<em class="unfixed">-6</em> Fix the vulnerability have problems, or rollback have problems. As soon as possible restore files, the file backup can be found in the same directory
-					</li>',
+							<li>
+								<em class="fixed">&nbsp;2</em> 文件可能已经修改过，未发现漏洞<br />
+								<em class="fixed">&nbsp;1</em> 完成修复<br />
+								<em class="unfixed">&nbsp;0</em> 未修复<br />
+								<em class="unfixed">-1</em> 漏洞编码为空，您本地的漏洞信息数据可能出现问题<br />
+								<em class="unfixed">-2</em> 漏洞修补文件不存在或文件不可修改，请检查并修改权限为可读可写(777)<br />
+								<em class="unfixed">-3</em> 写入临时文件出错，请查看data目录是否可写<br />
+								<em class="unfixed">-4</em> ftp方式无法使用，请确认ftp账号等相关信息填写正确<br />
+								<em class="unfixed">-5</em> 复制文件出现问题，请确认源代码文件目录及子目录可读可写，或文件可能被锁，请关闭站点后进行操作<br />
+								<em class="unfixed">-6</em> 修复漏洞出现问题，回退时出现问题，请尽快恢复文件，文件备份可在同级目录找到
+							</li>',
 
 	'usergroups' => 'User Groups',//'用户组',
 	'usergroups_system_0' => 'Ordinary user',//'普通用户',
@@ -4516,9 +4517,9 @@ $lang = array
 
 	'threads_postposition' => 'Tối ưu hóa bài viết',
 	'threads_postposition_tips' => '<li>This function is mainly used for optimization of large number of responses. Usually, when a expected number of responses more than 5,000 posts, you can use an optimization.</li>
-					<li>When the topic is into the optimization queue, we do not recommend to delete posts in this topic. If the content is illegal, we recommend just lock the post.</li>
-					<li>When you launch any events that change a thread position, the system will automatically grab the thread into the optimization queue. You can also return any thread from optimization queue.</li>
-					',
+					<li>当主题进入优化队列后，我们不建议对该主题的某个帖子进行删除操作，如果该内容确实违规，我们建议您屏蔽它即可</li>
+					<li>当您发起抢楼活动的时候，系统会自动将抢楼的主题放入优化队列。您也可以在这里将任意一个回复较多的主题放入优化队列</li>
+				',
 
 	'threads_postposition_replies' => 'Số Trả lời lớn hơn quy định',
 	'delandadd' => 'Tối ưu hóa',
@@ -5004,7 +5005,7 @@ $lang = array
 	'misc_link' => 'Liên kết',
 	'misc_link_add' => 'Thêm Liên kết',
 	'misc_link_tips' => '<li>If you do not want to display links at the page, you can disable it in the "<a href="'.ADMINSCRIPT.'?action=setting&operation=styles&anchor=index">Style settings</a>".</li>
-					    <li>Link without description will be displayed in a compact form.</li>',
+						<li>友情链接分组只供 DIY 的展示类模块使用。</li>',
 	'misc_link_edit' => 'Sửa Liên kết',
 	'misc_link_edit_name' => 'Tên diễn đàn',
 	'misc_link_edit_url' => 'Diễn đàn URL',
@@ -5301,7 +5302,7 @@ $lang = array
 	'plugins_edit_modules_include' => 'Bao gồm các hoạt động',
 	'plugins_edit_vars' => 'Cấu hình Plug-in',
 	'plugins_edit_vars_title' => 'Tên cấu hình',
-	'plugins_edit_vars_title_comment' => 'Can be used to display the menu in the plug-in configuration, up to 100 bytes. You can use here the language definitions, such as: lang_admincp.php define \'myaction\'	=> \'My ations\',  If the \'myaction\' filled out, so a multi-language version of the plug-in will be supported.',
+	'plugins_edit_vars_title_comment' => '中英文均可，用于显示在插件配置的菜单中，最多 100 个字节。此处支持语言定义，例如：lang_admincp.php 定义了 \'myaction\'=>\'我的操作\' ，则此处填写 myaction 即可，这样有利于多语言版本插件的制作',
 	'plugins_edit_vars_description' => 'Variable Description:',
 	'plugins_edit_vars_description_comment' => 'Descprition of this variable, 255 chars max.',
 	'plugins_edit_vars_type' => 'Loại biến',
@@ -5546,10 +5547,10 @@ $lang = array
 	'tasks_add_endtime_comment' => 'Kết thúc nhiệm vụ, sau khi thành viên sẽ không thể áp dụng cho nhiệm vụ này, hãy để trống có nghĩa là không có giới hạnt',
 	'tasks_add_periodtype' => 'Task interval cycle units',
 	'tasks_add_periodtype_comment' => 'Set the task interval cycle unit<br />
-		Hours: the task can be applied again after the specified hours after the task completed.<br />
-		Days: the task can be applied again after the specified days after the task completed.<br />
-		Weeks: the task can be applied again at a specified day of week (from Monday to Sunday). Enter the day of week number in interval from 1 (Monday) to 7 (Sunday)<br />
-		Months: the task can be applied again after a specified date of each month. Enter the day number in interval of 1 to 29,30,31<br />',
+		小时：表示指定小时后可再次申请，间隔周期填写间隔的小时数<br />
+		天：表示指定天后可再次申请，间隔周期填写间隔的天数<br />
+		周：表示在每周指定时间(周一到周日)后才可再次申请，间隔周期填写数字 1 (周一) 到 7 (周日)<br />
+		月：表示在每月指定日期后才可再次申请，间隔周期填写数字 1 到 29、30、31<br />',
 	'tasks_add_periodtype_hour' => 'Giờ',
 	'tasks_add_periodtype_day' => 'Ngày',
 	'tasks_add_periodtype_week' => 'Tuần',
@@ -5643,7 +5644,7 @@ $lang = array
 	'ec_tenpay_checklink_virtualgoods' => 'Virtual product order test',//'虚拟商品订单测试',
 	'ec_tenpay_checklink_goods' => 'Real product order test',//'实物商品订单测试',
 	'ec_tenpay_tips' => '<li>"TenPay" (<a href="http://www.tenpay.com" target="_blank">http://www.tenpay.com</a>) is a leading online payment platform in China founded by Tencent. Discuz! users can use an integration with this platform for make transactions.</li>
-<li>For enable real-time recharge points into the user account, you have to use the payments through <b>Enterprise Edition</b> and enable <b>Immediately credited into account transactions</b>. Otherwise, you can just enable the "<b>Intermediary secure transactions</b>".</li> <li><b>If the cash transaction are enabled, in order to avoid improper operation resulting to the financial losses, please start using only the points payment general functionality (not include the TenPay button function). Be sure to carefully read the e-commerce section of the "User Manual", as confirmed fully understand and accept the processes and the related settings after use.</b></li><li>You can set to allow users to pay by online cash, recharge their account points for the purchase of post content, to buy the user group permissions, transfer points to users or groups, to upgrade and so on. TenPay integral transaction capabilities are required to enable the trade integration in the "Points Settings", and also set the corresponding points strategy to meet the needs of different occasions. Be sure to set correctly your TenPay account, otherwise payment will result to the user points can not be credited into account in real-time, and as a result cause a large number of orders that require manual processing.</li><li>In addition Discuz! Official website provide payment services through financial payment fee of 1% per transaction. Please read the official information and notices concerning this service at the Discuz! Official website or official forum.</li><li>If you use TenPay service built entirely on a voluntary basis, it can cause of financial losses caused by factors outside the Tencent Cloud and in such case the Comsenz ltd. is not responsible for your errors or financial problems</li><li>TenPay Service Hotline: 0755-83762288-2 (24-hour online service)</li>',
+<li><b>由于涉及现金交易，为避免因操作不当而造成的资金损失，请在开始使用财付通积分交易功能(不包含财付通按钮功能)前，务必仔细阅读《用户使用说明书》中有关电子商务的部分，当确认完全理解和接受相关流程及使用方法后再进行相关设置。</b></li><li>您可以设置允许用户通过现金在线支付的方式，为其交易积分账户充值，用于购买帖子内容、购买用户组权限、积分转账或用户组升级等功能。财付通积分交易功能，需在“积分设置”中启用交易积分，并同时设置相应的积分策略以满足不同场合的需要。请务必正确设置您的收款财付通账号，否则将造成用户付款后积分无法实时到账，造成大量需要人工处理的订单信息。</li><li>除 Discuz! 官方网站或官方论坛另行通知以外，Discuz! 提供的财付通支付服务每笔交易收取 1% 的手续费。请及时关注相关业务的最新通知，各项政策或流程的变更、调整，以 Discuz! 官方网站或官方论坛提供的信息为准。</li><li>您使用财付通服务是建立在完全自愿的基础上，除 Discuz! 因主观恶意的因素造成的资金损失以外，腾讯云不对因使用此功能造成的任何损失承担责任。</li><li>财付通服务热线：0755-83762288-2(全天24小时服务热线)</li>',
 
 	'ec_orders' => 'Maximum order points',//'积分充值订单',
 	'ec_orders_tips' => '<li>You are at the starting points of using the transaction order management functionality (not included Alipay button function). Be sure to carefully read the "User Manual" in the part of electronic commerce, as confirmed fully understand and accept the processes and use then to delete.</li><li>If your users complained that after online payment their points can not be automatically recharge accounts, it is may be due to your Alipay account interface settings are wrong, or your website is not enabled to use regular paiments. You can log in to Alipay transaction management interface, and look for details of the transaction confirmed the relevant orders.</li><li>Order information retained for 60 days, so you can check and manage orders information within 60 days. After the 60 days the information will be automatically deleted.</li>',//'<li>请在开始使用支付宝积分交易订单管理功能(不包含支付宝按钮功能)前，务必仔细阅读《用户使用说明书》中有关电子商务的部分，当确认完全理解和接受相关流程及使用方法后再进行相关操作。</li><li>如果您的用户反映在线支付后无法自动为其积分账户充值，可能是由于您的支付宝账户的通知接口设置有误，或您的网站无法被支付宝通知系统正常访问所致。您可以登录支付宝交易管理界面，通过比对交易详情人工确认相关订单。</li><li>订单信息保留 60 天，因此您只能查询和管理 60 天之内的订单信息，超过 60 天的信息将被自动删除。</li>',
@@ -5908,9 +5909,9 @@ $lang = array
 
 	'tools_updatecache' => 'Cập nhật bộ đệm',//'更新缓存',
 	'tools_updatecache_tips' => '<liBạn thêm biến hàm, hay sửa đổi thông tin gì cho trang của bạn, hãy cập nhật cache..</li>
-				<li>แคชข้อมูล: อัปเดตแคชข้อมูลของเว็บไซต์ทั้งหมด</li>
-				<li>แคชเทมเพลท: อัปเดตแคชเทมเพลทของเว็บไซต์ ไฟล์แคชของสกิน/สไตล์  เมื่อคุณปรับเปลี่ยนเทมเพลทหรือสกิน อาจจะยังไม่เห็นผลทันทีจนกว่าจะอัปเดตไฟล์แคช</li>
-				<li>แคชหมวดหมู่โมดูล DIY: อัปเดตแคชหมวดหมู่โมดูล DIY เมื่อคุณติดตั้งหรือปรับเปลี่ยนหมวดหมู่ในโมดูล DIY อาจจะยังไม่เห็นผลทันทีจนกว่าจะอัปเดตไฟล์แคช</li>
+				<li>数据缓存：更新站点的全部数据缓存</li>
+				<li>模板缓存：更新论坛模板、风格等缓存文件，当您修改了模板或者风格，但是没有立即生效的时候使用</li>
+				<li>DIY 模块分类缓存：更新 DIY 模块分类，当您安装或修改了 DIY 模块分类，但是没有立即生效的时候使用</li>
 				',
 
 	'tools_updatecache_data' => 'Data Cache',
@@ -5997,7 +5998,7 @@ $lang = array
 	'counter_forumid' => 'ID diễn đàn',
 	'counter_have_cover' => 'Bao gồm cả chủ đề hiện tại',
 	'counter_tips' => '<li>Khi dữ liệu không bình thường, bạn có thể sử dụng tính năng này để cập nhật dữ liệu chính xác. Hãy cố gắng tránh thời gian cao điểm để truy cập thành viên</li>
-				<li>Each cycle update the number: Set the value in a reasonable range. Must be not too large, Otherwise it increase the server load pressure</li>
+				<li>每个循环更新数量：数值请在一个合理范围，不要过大，否则会给服务器带来负载压力</li>
 				',
 
 	'db' => 'Database',
@@ -6533,7 +6534,7 @@ $lang = array
 	'article_clear_trash_confirm' => 'Are you sure you want to clean the Recycle Bin?',//'确定要清空回收站吗',
 
 	'diytemplate' => 'Trang quản lý',
-	'diytemplate_perm_tips' => '<li>Here you can set user permissions to the role of this page to add all the DIY modules (module does not inherit permissions, except where the page).</li><li>Module inheritance rights permissions may be set in the individual module settings page: &quot;Module Management&quot; =&gt; &quot;Manage Permissions&quot;</li><li>Permission determine rules: 1. From small to large (where the page permissions are greater than the module permissions); 2, the authority "allow management" that can manage the module properties and can manage the module data;<br />3. permission to "Allow Push" and not "needs push to be reviewed" to manage module data; 4. The permissions "Allow Push" and "needs push to be reviewed" to push it data management module can not</li>',
+	'diytemplate_perm_tips' => '<li>此处设置的用户权限将作用于此页面所有 DIY 添加的模块(模块不继承所在页面权限除外)</li><li>模块是否继承所在页面权限和单个模块的权限的设置在“模块管理”=>“管理权限”中设置</li><li>1、权限由小到大(模块的权限大于所在页面的权限)；2、权限"允许管理"即可以管理模块属性又可以管理模块数据；<br />3、权限"允许推送"且非"推送需要审核"可以管理模块数据； 4、权限"允许推送"且"推送需要审核"可以推送但不可以管理模块数据</li>',
 	'diytemplate_name' => 'Page name',
 	'diytemplate_name_comment' => 'Page with some template name',
 	'diytemplate_targettplname' => 'Generate Template name',
@@ -6978,9 +6979,9 @@ $lang = array
 
 	'setting_manyou' => 'Cài đặt Manyou',
 	'setting_manyou_tips' => '<li>Sau khi nền tảng ứng dụng mở, Người dùng có thể lựa chọn tại máy chủ một loạt các ứng dụng (Như Happy farm, Happy manor, Texas hold-em, GloryhHospital, v.v ...).</li>
-		<li>If Applicatipn search feature enabled, users can use the search function in applicationsg.</li>
-		<li>If you change the site address, site name and other information, Please select "Sync Application Platform information" for submit.</li>
-		<li>Application features provided by <a target="_blank" href="http://www.manyou.com/www/">MYOP Open platform</a>, Manyou Open Platform (MYOP) is a Service of Comsenz Company that provide an open application development platform <a href="http://wiki.developer.manyou.com/wiki/index.php?title=MYOP%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE&printable=yes" target="_blank">Please read MYOP Website Services Agreement</a></li>',
+		<li>开启漫游搜索功能后，用户可以使用基于漫游的搜索功能。</li>
+		<li>如果您更改了站点地址、站点名称等信息，请选择"同步漫游信息"提交即可。</li>
+		<li>漫游功能由 <a target="_blank" href="http://www.manyou.com/www/">MYOP开放平台</a> 提供， Manyou Open Platform(Manyou开放平台/MYOP)服务是由 Comsenz 公司为应用开发者提供的开放平台，启用漫游服务前，<a href="http://wiki.developer.manyou.com/wiki/index.php?title=MYOP%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE&printable=yes" target="_blank">请先阅读MYOP网站服务协议</a></li>',
 	'setting_manyou_base' => 'Cài đặt cơ bản',
 	'setting_manyou_base_status' => 'Enable application platform',
 	'setting_manyou_base_status_comment' => 'Select whether to enable the applications. If you turn off applications, your users will not use any application based on this platform',
@@ -7059,19 +7060,19 @@ $lang = array
 {apache1}&lt;/IfModule&gt;
 </pre>
 
-<h1>Apache Web Server(สำหรับผู้ใช้โฮสต์ธรรมดาทั่วไป)</h1>
+<h1>Apache Web Server(虚拟主机用户)</h1>
 <pre class="colorbox">
-# เปิดโหมด RewriteEngine
+# 将 RewriteEngine 模式打开
 RewriteEngine On
 
-# ถ้าไฟล์ดิสคัสไม่ได้เก็บไว้ในซับโฟลเดอร์ กรุณาลบ /discuz แต่ถ้าไฟล์ดิสคัสถูกเก็บไว้ในซับโฟลเดอร์ ให้แก้ไขค่า /discuz เป็นชื่อโฟลเดอร์ที่เก็บไฟล์ดิสคัส และหากดิสคัสถูกต้องตั้งใน Root ให้เปลี่ยนค่าเป็น "/"
+# 修改以下语句中的 /discuz 为您的论坛目录地址，如果程序放在根目录中，请将 /discuz 修改为 /
 RewriteBase /discuz
 
-# เงื่อนไข Rewrite ไม่ควรแก้ไขค่าระบบ
+# Rewrite 系统规则请勿修改
 {apache2}
 </pre>
 
-<h1>IIS Web Server(สำหรับผู้ใช้โฮสต์ VPS)</h1>
+<h1>IIS Web Server(独立主机用户)</h1>
 <pre class="colorbox">
 [ISAPI_Rewrite]
 
@@ -7085,7 +7086,7 @@ RepeatLimit 32
 {iis}
 </pre>
 
-<h1>IIS7 Web Server(สำหรับผู้ใช้โฮสต์ VPS)</h1>
+<h1>IIS7 Web Server(独立主机用户)</h1>
 <pre class="colorbox">
 &lt;rewrite&gt;
 	&lt;rules&gt;

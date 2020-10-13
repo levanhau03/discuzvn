@@ -76,8 +76,8 @@ $lang = array
 	'reason_ban_post' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
 
 	'reason_warn_post' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ {actor} {modaction}<br />
-ห้ามโพสต์เป็นเวลา {warningexpiration} วัน เนื่องจากถูกเตือนต่อเนื่องทั้งหมด {warninglimit} ครั้ง คุณจะถูกห้ามโพสต์โดยอัตโนมัติเป็นเวลา {warningexpiration} วัน<br />
-ถึงตอนนี้ คุณถูกตักเตือน {authorwarnings} ครั้ง <div class="quote"><blockquote>{reason}</blockquote></div>',
+连续 {warningexpiration} 天内累计 {warninglimit} 次警告，您将被自动禁止发言 {warningexpiration} 天。<br />
+截止至目前，您已被警告 {authorwarnings} 次，请注意！<div class="quote"><blockquote>{reason}</blockquote></div>',
 
 	'reason_move' => '{actor} ย้ายกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณไปที่ <a href="forum.php?mod=forumdisplay&fid={tofid}" target="_blank">{toname}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
@@ -112,10 +112,10 @@ $lang = array
 	'modreplies_validate' => 'การโพสต์ตอบกลับของคุณผ่านการตรวจสอบแล้ว! &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">ดูเนื้อหา &rsaquo;</a> <p class="summary">เนื้อหา: <span>{post}</span></p>',
 
 	'transfer' => 'คุณได้รับจากเครดิตจาก {actor} ผ่านการโอนเป็นจำนวน {credit} &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=log&suboperation=creditslog" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>
-<p class="summary">{actor} ฝากข้อความถึงคุณว่า: <span>{transfermessage}</span></p>',
+<p class="summary">{actor} 说：<span>{transfermessage}</span></p>',
 
 	'addfunds' => 'การร้องขอแลกเปลี่ยนเครดิตของคุณเรียบร้อย ระบบได้ส่งรายงานการแลกเปลี่ยนมายังข้อความส่าวนตัวของคุณ &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>
-<p class="summary">หมายเลข: <span>{orderid}</span></p><p class="summary">ค่าใช้จ่าย: <span>฿ {price}  บาท</span></p><p class="summary">รายได้: <span>{value}</span></p>',
+<p class="summary">订单号：<span>{orderid}</span></p><p class="summary">支出：<span>人民币 {price} 元</span></p><p class="summary">收入：<span>{value}</span></p>',
 
 	'rate_reason' => '{actor} ให้คะแนนกระทู้ <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> ของคุณ {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
@@ -217,8 +217,8 @@ $lang = array
 	'new_report' => 'มีการรายงานเข้ามาใหม่ <a href="admin.php?action=report" target="_blank">คลิกที่นี่เพื่อดูและดำเนินการรายงานนี้</a>',
 	'new_post_report' => 'มีการรายงานใหม่ที่รอการตรวจสอบ <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">คลิกที่นี่เพื่อเข้าสู่ศูนย์จัดการระบบ</a>',
 	'magics_receive' => '{actor} ได้มอบไอเท็ม {magicname} ให้กับคุณ
-<p class="summary">และ {actor} ได้ฝากข้อความถึงคุณ: <span>{msg}</span></p>
-<p class="mbn"><a href="home.php?mod=magic" target="_blank">กลับไปยังรายการไอเท็ม</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">ดูกล่องไอเท็มของฉัน</a></p>',
+<p class="summary">{actor} 说：<span>{msg}</span></p>
+<p class="mbn"><a href="home.php?mod=magic" target="_blank">回赠道具</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">查看我的道具箱</a></p>',
 	'invite_collection' => '{actor} เชิญคุณเข้าร่วมในคลังกระทู้  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a><br /> <a href="forum.php?mod=collection&action=edit&op=acceptinvite&ctid={ctid}&dateline={dateline}">ยอมรับคำเชิญ</a>',
 	'collection_removed' => 'คลังกระทู้ที่คุณเข้าร่วมตอนนี้  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> ได้ถูกลบออกโดย {actor}',
 	'exit_collection' => 'คุณได้เข้าร่วมคลังกระทู้ก่อนหน้านี้อยู่แล้ว  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>',

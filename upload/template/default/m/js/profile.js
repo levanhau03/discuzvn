@@ -2,9 +2,9 @@ var ucenterurl = '';
 var discuzversion = '';
 var formhash = '';
 var infoDatas = {
-	'threads': ['กระทู้'],
-	'posts': ['ความเห็น'],
-	'credits': ['เครดิต']
+	'threads': ['主题数'],
+	'posts': ['回帖数'],
+	'credits': ['积分']
 };
 var dataLoaded = function (data) {
 	var headerHtml = '';
@@ -41,7 +41,7 @@ var dataLoaded = function (data) {
 		}
 	}
 	if (data.Variables.space.upgradecredit) {
-		infoDatas['upgradecredit'] = ['จำเป็นต้องอัปเกรดเครดิต'];
+		infoDatas['upgradecredit'] = ['离升级还需'];
 		data.Variables.space.upgradecredit = '<span class="upgradecredit"><span>' + data.Variables.space.upgradecredit + '</span>' +
 			'<em class="box"><em class="percent" style="width:' + (data.Variables.space.upgradeprogress / 2) + 'px"></em></em></span>';
 	}
@@ -62,11 +62,11 @@ var dataLoaded = function (data) {
 	}
 
 	groupHtml = '';
-	groupHtml += template.render('groupTpl', {'name': 'กลุ่มผู้ใช้', 'value': data.Variables.space.group.grouptitle});
+	groupHtml += template.render('groupTpl', {'name': '用户组', 'value': data.Variables.space.group.grouptitle});
 	if (data.Variables.space.admingroup.grouptitle) {
-		groupHtml += template.render('groupTpl', {'name': 'กลุ่มผู้ดูแล', 'value': data.Variables.space.admingroup.grouptitle});
+		groupHtml += template.render('groupTpl', {'name': '管理组', 'value': data.Variables.space.admingroup.grouptitle});
 	}
-	groupHtml += template.render('groupTpl', {'name': 'เวลาลงทะเบียน', 'value': data.Variables.space.regdate});
+	groupHtml += template.render('groupTpl', {'name': '注册时间', 'value': data.Variables.space.regdate});
 	$('#groupnav').html(groupHtml);
 
 	infoHtml = '';
@@ -79,12 +79,12 @@ var dataLoaded = function (data) {
 };
 
 var bindEvent = function (data) {
-	$("#forumlist").append('ฟอรั่ม');
+	$("#forumlist").append('版块');
 	if (data.Variables.member_uid == data.Variables.space.uid) {
 		$('#switchMember').on('click', function () {
 			TOOLS.dget(API_URL + "module=login&mlogout=yes&version=4&hash=" + data.Variables.formhash, null, function() {
-				TOOLS.openNewPage('?a=index');	
-			}, null, 'text/plain', false, false);			
+				TOOLS.openNewPage('?a=index');
+			}, null, 'text/plain', false, false);
 		});
 		$('#switchNav').show();
 	} else {

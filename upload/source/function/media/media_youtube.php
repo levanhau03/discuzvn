@@ -6,9 +6,9 @@ if(!defined('IN_DISCUZ')) {
 
 $checkurl = array('www.youtube.com/watch?');
 
-function media_youtube($url, $width, $height) { 
+function media_youtube($url, $width, $height) {
 	if(preg_match("/^https?:\/\/www.youtube.com\/watch\?v=([^\/&]+)&?/i", $url, $matches)) {
-		$flv = 'https://www.youtube.com/v/'.$matches[1].'&hl=th_TH&fs=1';
+		$flv = 'https://www.youtube.com/v/'.$matches[1].'&hl=zh_CN&fs=1';
 		$iframe = 'https://www.youtube.com/embed/'.$matches[1];
 		if(!$width && !$height) {
 			$str = file_get_contents($url, false, $ctx);

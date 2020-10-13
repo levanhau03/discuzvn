@@ -24,8 +24,13 @@ function convertip($ip) {
 		} elseif($iparray[0] > 255 || $iparray[1] > 255 || $iparray[2] > 255 || $iparray[3] > 255) {
 			$return = '- Invalid IP Address';
 		} else {
-/*jaideejung007*/			include_once(DISCUZ_ROOT.'./data/ipdata/geoiploc.php');
-/*jaideejung007*/			$return = getCountryFromIP($ip, " NamE ");
+			$tinyipfile = DISCUZ_ROOT.'./data/ipdata/tinyipdata.dat';
+			$fullipfile = DISCUZ_ROOT.'./data/ipdata/wry.dat';
+			if(@file_exists($tinyipfile)) {
+				$return = convertip_tiny($ip, $tinyipfile);
+			} elseif(@file_exists($fullipfile)) {
+				$return = convertip_full($ip, $fullipfile);
+			}
 		}
 	}
 
@@ -507,14 +512,14 @@ function process_ipnotice($ipconverted) {
 		return '';
 	}
 
-/*jaideejung007*/	/*$ipconverted = substr($ipconverted, 1);*/
+	$ipconverted = substr($ipconverted, 1);
 	if(strpos($ipconverted, '-') !== false) {
 		$ipconverted = substr($ipconverted, 0, strpos($ipconverted, '-'));
 	}
 
 	$ipconverted = trim($ipconverted);
 
-/*jaideejung007*/	return !$ipconverted ? '': '- '.$ipconverted ;
+	return '- '.$ipconverted ;
 }
 
 ?>

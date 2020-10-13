@@ -3,7 +3,7 @@ var index = {
 	dropDown: false,
 	dropUp: false,
 	ucenterurl: '',
-	titleName: 'แจ้งเตือนของฉัน',
+	titleName: '我的提醒',
 	discuzversion: '',
 	backToTop: function (offset) {
 		if (document.body.scrollTop <= 0 || offset.y > 2) {

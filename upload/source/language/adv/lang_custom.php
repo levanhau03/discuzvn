@@ -15,8 +15,8 @@ $lang = array
 (
 	'custom_name' => 'โฆษณาแบบกำหนดเอง',
 	'custom_desc' => 'Add custom adv code in templates or HTML file.<br /><br />
-		<a href="javascript:;" onclick="prompt(\'Please copy (CTRL+C) the content below to templates\', \'<!--{ad/custom_'.$_GET['customid'].'}-->\')" />Internal js call</a>&nbsp;
-		<a href="javascript:;" onclick="prompt(\'Please copy (CTRL+C) the content below to HTML files\', \'&lt;script type=\\\'text/javascript\\\' src=\\\''.$_G['siteurl'].'api.php?mod=ad&adid=custom_'.$_GET['customid'].'\\\'&gt;&lt;/script&gt;\')" />External js call</a>',
+		<a href="javascript:;" onclick="prompt(\'请复制(CTRL+C)以下内容并添加到模板中，添加此广告位\', \'<!--{ad/custom_'.$_GET['customid'].'}-->\')" />内部调用</a>&nbsp;
+		<a href="javascript:;" onclick="prompt(\'请复制(CTRL+C)以下内容并添加到 HTML 文件中，添加此广告位\', \'&lt;script type=\\\'text/javascript\\\' src=\\\''.$_G['siteurl'].'api.php?mod=ad&adid=custom_'.$_GET['customid'].'\\\'&gt;&lt;/script&gt;\')" />外部调用</a>',
 	'custom_id_notfound' => 'Custom adv does not exist',
 	'custom_codelink' => 'Internal js call',
 	'custom_text' => 'Custom advertising',

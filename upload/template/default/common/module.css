@@ -339,7 +339,7 @@ Created & Modified by Alice, Monkey, Lushnis, Pony, Dfox & DragonLee.
 
 /** forum::viewthread,forum::forumdisplay,forum::post,group **/
 /* 主题图标 by michael */
-#newspecial_menu { width: 125px; } /*jaideejung007*/
+#newspecial_menu { width: 90px; }
 	#newspecial_menu li, #sti .wx { display: block; background: url({IMGDIR}/folder_new.gif) no-repeat 8px 50%; zoom: 1; }
 		#newspecial_menu .poll, #sti .poll { background-image: url({IMGDIR}/pollsmall.gif); }
 		#newspecial_menu .trade, #sti .trade { background-image: url({IMGDIR}/tradesmall.gif); }
@@ -970,8 +970,6 @@ a.thread_mod { background: url({IMGDIR}/bigimg.png) no-repeat 0 -38px; padding-l
 		.psta { float: left; width: 120px; line-height:24px; overflow:hidden; }
 			.psta img { width: 24px; height: 24px; vertical-align:midden; }
 		.psti { margin-left: 120px; line-height:24px; }
-/*jaideejung007*/		.psta { width: auto !important; margin-right: 10px !important; line-height:20px !important; } /*แก้ไขช่อง แสดงความคิดเห็น โดย popiazaza*/
-/*jaideejung007*/		.psti { margin-left: 0px !important; } /*แก้ไขช่อง แสดงความคิดเห็น โดย popiazaza*/
 
 /* 点评 by monkeye */
 	.f_c .cm { overflow: hidden; }

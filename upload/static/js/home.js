@@ -51,7 +51,7 @@ function blogAddOption(sid, aid) {
 		obj.value="new:" + newOption;
 		return true;
 	} else {
-		alert('ชื่อหมวดหมู่ต้องไม่ว่างเปล่า!');
+		alert('Tên danh mục không thể để trống!');
 		return false;
 	}
 }
@@ -93,7 +93,7 @@ function resizeImg(id,size) {
 					zoomDiv.style.position = 'relative';
 					zoomDiv.style.cursor = 'pointer';
 
-					this.title = 'คลิกที่รูปภาพ เพื่อแสดงขนาดต้นฉบับในหน้าต่างใหม่';
+					this.title = 'Bấm vào hình để hiển thị kích thước ban đầu trong một cửa sổ mới';
 
 					var zoom = document.createElement('img');
 					zoom.src = 'image/zoom.gif';
@@ -131,14 +131,14 @@ function ischeck(id, prefix) {
 	for(var i = 0; i < form.elements.length; i++) {
 		var e = form.elements[i];
 		if(e.name.match(prefix) && e.checked) {
-			if(confirm("คุณแน่ใจหรือว่าต้องการดำเนินการนี้?")) {
+			if(confirm("Bạn có chắc chắn muốn thực hiện thao tác này?")) {
 				return true;
 			} else {
 				return false;
 			}
 		}
 	}
-	alert('เลือกสิ่งที่คุณต้องการดำเนินการ');
+	alert('Vui lòng chọn đối tượng để hoạt động');
 	return false;
 }
 
@@ -183,7 +183,7 @@ function insertWebImg(obj) {
 		insertImage(obj.value);
 		obj.value = 'http://';
 	} else {
-		alert('ที่อยู่รูปภาพไม่ถูกต้อง');
+		alert('Địa chỉ hình ảnh không chính xác');
 	}
 }
 
@@ -288,7 +288,7 @@ function showFlash(host, flashvar, obj, shareid) {
 	var flashHtml = videoFlash;
 	var videoMp3 = true;
 	if('' == flashvar) {
-		alert('ที่อยู่เพลงไม่ถูกต้อง หรือยังไม่ได้กรอก');
+		alert('Địa chỉ nhạc bị sai và không thể để trống');
 		return false;
 	}
 	if('music' == host) {
@@ -329,7 +329,7 @@ function showFlash(host, flashvar, obj, shareid) {
 		obj.style.display = 'none';
 		var hideObj = document.createElement('div');
 		hideObj.id = 'flash_hide_' + shareid;
-		var nodetxt = document.createTextNode("ปิด");
+		var nodetxt = document.createTextNode("Thu gọn");
 		hideObj.appendChild(nodetxt);
 		obj.parentNode.insertBefore(hideObj, obj);
 		hideObj.style.cursor = 'pointer';
@@ -352,7 +352,7 @@ function userapp_open() {
 	x.get('home.php?mod=spacecp&ac=common&op=getuserapp&inajax=1', function(s){
 		$('my_userapp').innerHTML = s;
 		$('a_app_more').className = 'fold';
-		$('a_app_more').innerHTML = 'ปิด';
+		$('a_app_more').innerHTML = 'Thu gọn';
 		$('a_app_more').onclick = function() {
 			userapp_close();
 		};
@@ -364,7 +364,7 @@ function userapp_close() {
 	x.get('home.php?mod=spacecp&ac=common&op=getuserapp&subop=off&inajax=1', function(s){
 		$('my_userapp').innerHTML = s;
 		$('a_app_more').className = 'unfold';
-		$('a_app_more').innerHTML = 'เปิด';
+		$('a_app_more').innerHTML = 'Mở ra';
 		$('a_app_more').onclick = function() {
 			userapp_open();
 		};
@@ -759,7 +759,7 @@ function poke_send(id, result) {
 }
 function myfriend_post(uid) {
 	if($('friend_'+uid)) {
-		$('friend_'+uid).innerHTML = '<p>ขณะนี้คุณทั้งสองเป็นเพื่อนกันแล้ว หลังจากนี้คุณสามารถ: <a href="home.php?mod=space&do=wall&uid='+uid+'" class="xi2" target="_blank">ฝากข้อความทิ้งไว้</a> หรือ <a href="home.php?mod=spacecp&ac=poke&op=send&uid='+uid+'&handlekey=propokehk_'+uid+'" id="a_poke_'+uid+'" class="xi2" onclick="showWindow(this.id, this.href, \'get\', 0, {\'ctrlid\':this.id,\'pos\':\'13\'});">ส่งคำทักทาย</a> เพื่อแสดงความเป็นเพื่อนที่ดี</p>';
+		$('friend_'+uid).innerHTML = '<p>Bây giờ bạn là bạn bè. Tiếp theo, bạn cũng có thể:<a href="home.php?mod=space&do=wall&uid='+uid+'" class="xi2" target="_blank">Để lại tin nhắn cho TA</a> , hoặc <a href="home.php?mod=spacecp&ac=poke&op=send&uid='+uid+'&handlekey=propokehk_'+uid+'" id="a_poke_'+uid+'" class="xi2" onclick="showWindow(this.id, this.href, \'get\', 0, {\'ctrlid\':this.id,\'pos\':\'13\'});">Nói xin chào</a></p>';
 	}
 	showCreditPrompt();
 }
@@ -797,7 +797,7 @@ function docomment_get(doid, key) {
 	$(showid).className = 'cmt brm';
 	ajaxget('home.php?mod=spacecp&ac=doing&op=getcomment&handlekey=msg_'+doid+'&doid='+doid+'&key='+key, showid);
 	if($(opid)) {
-		$(opid).innerHTML = 'ปิด';
+		$(opid).innerHTML = 'Thu gọn';
 		$(opid).onclick = function() {
 			docomment_colse(doid, key);
 		}
@@ -812,7 +812,7 @@ function docomment_colse(doid, key) {
 	$(showid).style.display = 'none';
 	$(showid).style.className = '';
 
-	$(opid).innerHTML = 'ตอบกลับ';
+	$(opid).innerHTML = 'Trả lời';
 	$(opid).onclick = function() {
 		docomment_get(doid, key);
 	}
@@ -841,7 +841,7 @@ function docomment_form_close(doid, id, key) {
 	if(!liObj.length) {
 		$(key+'_'+doid).style.display = 'none';
 		if($(opid)) {
-			$(opid).innerHTML = 'ตอบกลับ';
+			$(opid).innerHTML = 'Trả lời';
 			$(opid).onclick = function () {
 				docomment_get(doid, key);
 			}
@@ -856,7 +856,7 @@ function feedcomment_get(feedid) {
 	$(showid).style.display = '';
 	ajaxget('home.php?mod=spacecp&ac=feed&op=getcomment&feedid='+feedid+'&handlekey=feedhk_'+feedid, showid);
 	if($(opid) != null) {
-		$(opid).innerHTML = 'ปิด';
+		$(opid).innerHTML = 'Thu gọn';
 		$(opid).onclick = function() {
 			feedcomment_close(feedid);
 		}
@@ -885,7 +885,7 @@ function feedcomment_close(feedid) {
 	$(showid).style.display = 'none';
 	$(showid).style.className = '';
 
-	$(opid).innerHTML = 'ความคิดเห็น';
+	$(opid).innerHTML = 'Nhận xét';
 	$(opid).onclick = function() {
 		feedcomment_get(feedid);
 	}
@@ -904,7 +904,7 @@ function feed_more_show(feedid) {
 	$(showid).style.display = '';
 	$(showid).className = 'sub_doing';
 
-	$(opid).innerHTML = '&laquo; ปิดรายการ';
+	$(opid).innerHTML = '&laquo; Thu gọn danh sách';
 	$(opid).onclick = function() {
 		feed_more_close(feedid);
 	}
@@ -916,7 +916,7 @@ function feed_more_close(feedid) {
 
 	$(showid).style.display = 'none';
 
-	$(opid).innerHTML = '&raquo; ฟีดข่าวอื่นๆ';
+	$(opid).innerHTML = '&raquo; Thêm tin tức';
 	$(opid).onclick = function() {
 		feed_more_show(feedid);
 	}
@@ -957,7 +957,7 @@ function showbirthday(){
 	var el = $('birthday');
 	var birthday = el.value;
 	el.length=0;
-	el.options.add(new Option('วัน', ''));
+	el.options.add(new Option('日', ''));
 	for(var i=0;i<28;i++){
 		el.options.add(new Option(i+1, i+1));
 	}

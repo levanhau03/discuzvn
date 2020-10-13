@@ -44,7 +44,7 @@ var bindCommentEvent = function () {
 	$('a.replyByPid').unbind("click").click(function () {
 		var pId = $(this).attr("pid");
 		var first = $(this).attr("first");
-		var author = 'เจ้าของโพสต์';
+		var author = '楼主';
 		if (!first) {
 			dom = $("#aut_" + $(this).attr("pid"));
 			author = dom[0].innerHTML;
@@ -74,21 +74,11 @@ var bindEvent = function () {
 			dom = $("#aut_" + $(this).attr("pid"));
 			author = dom[0].innerHTML;
 		}
-		//if (member_uid != "0") {
-		//	replyComment(formhash, $(this).attr("tid"), pId, author, '', 0, isshow ? 7 : 0, 0);
-		//} else {
-		//	FUNCS.replyCommentPage(tId, 'viewthread', pId, author);
-		//}
 		replyComment(formhash, $(this).attr("tid"), pId, author, '', 0, isshow ? 7 : 0, 0);
 	});
 
 	if (!$("a.replyBtn").attr('bind')) {
 		$("a.replyBtn").click(function () {
-			//if (member_uid !== "0") {
-			//	replyComment(formhash, tId, 0, '', '', 0, isshow ? 7 : 0, 0);
-			//} else {
-			//	FUNCS.replyCommentPage(tId, 'viewthread');
-			//}
 			replyComment(formhash, tId, 0, '', '', 0, isshow ? 7 : 0, 0);
 		});
 		$("a.replyBtn").attr('bind', 1);
@@ -167,7 +157,7 @@ var dataLoaded = function (json, isInit) {
 
 	if (SITE_INFO.blocktids && TOOLS.in_array(json.Variables.thread.tid, SITE_INFO.blocktids)) {
 		TOOLS.hideLoading();
-		TOOLS.dialog({content: "กระทู้ถูกปิด", noMask: true, autoClose: 1});
+		TOOLS.dialog({content: "帖子已关闭", noMask: true, autoClose: 1});
 		return;
 	}
 	if (isInit) {
@@ -352,7 +342,7 @@ var dataLoaded = function (json, isInit) {
 			TOOLS.openNewPage(returnurl);
 		});
 
-		threadTitle = json.Variables.thread.subject ? json.Variables.thread.subject : 'ลองดูที่กระทู้นี้';
+		threadTitle = json.Variables.thread.subject ? json.Variables.thread.subject : '快来看看这个话题';
 		threadContent = postItem.message;
 
 		var imgUrl = SITE_INFO.siteLogo;
@@ -469,7 +459,7 @@ var dataLoaded = function (json, isInit) {
 						}
 						digSpan.html(digNum + 1);
 					} else {
-						TOOLS.showTips('คุณถูกใจโพสต์นี้แล้ว', 1);
+						TOOLS.showTips('您已经赞过', 1);
 					}
 				},
 					function (error) {
@@ -491,7 +481,7 @@ var dataLoaded = function (json, isInit) {
 					$('.incoA.db').removeClass('iBtnOn1');
 				}
 			});
-			$('.replyBtn').html('<i class="incoR"></i> ความเห็น');
+			$('.replyBtn').html('<i class="incoR"></i>参与');
 			$('.replyBtn').addClass('joinBtn');
 			if (json.Variables.special_activity.closed && json.Variables.special_activity.closed != '0') {
 				$('a.replyByPid').hide();
@@ -645,7 +635,7 @@ var viewThreadInit = function () {
 	var index = TOOLS.getQuery('page');
 
 	if (tId == undefined || tId <= 0) {
-		TOOLS.showTips('ID กระทู้ไม่ถูกต้อง', true, '');
+		TOOLS.showTips('不正确的主题ID', true, '');
 		return;
 	}
 
@@ -704,15 +694,14 @@ var viewThreadGetMore = function () {
 
 var recommend = function (obj) {
 	if (member_uid == "0") {
-		//FUNCS.jumpToLoginPage('a=viewthread&tid=' + tId);
-		TOOLS.showTips('คุณไม่ได้เข้าสู่ระบบ ไม่สามารถกดถูกใจได้', true);
+		TOOLS.showTips('您尚未登录，没有权限点赞', true);
 		TOOLS.openLoginPage(location.href, 1000);
 		return;
 	}
 	var btn = $(obj);
 	var status = btn.find('i').attr('class');
 	if (status == 'praise') {
-		TOOLS.showTips('คุณได้ถูกใจโพสต์นี้', true);
+		TOOLS.showTips('您已经赞过该帖', true);
 		return;
 	}
 

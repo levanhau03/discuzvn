@@ -52,7 +52,7 @@ var topicAdmin = {
 					TOOLS.dpost(url, post,
 						function (re) {
 							$(obj).hide();
-							$('.topicadminMsg[tid=' + topicAdmin.opts.tid + '][pid=' + topicAdmin.opts.pid + ']').html(!topicAdmin.opts.ban ? 'บล็อก' : '');
+							$('.topicadminMsg[tid=' + topicAdmin.opts.tid + '][pid=' + topicAdmin.opts.pid + ']').html(!topicAdmin.opts.ban ? '已屏蔽' : '');
 							TOOLS.showTips(re.Message.messagestr, true);
 							TOOLS.setcookie('refreshindex', '1', 86400);
 						},
@@ -103,9 +103,9 @@ var topicAdmin = {
 						function (re) {
 							$(obj).hide();
 							if (topicAdmin.opts.isfirst) {
-								$('.topicadminMsg[tid=' + topicAdmin.opts.tid + ']').html('ถูกลบแล้ว');
+								$('.topicadminMsg[tid=' + topicAdmin.opts.tid + ']').html('已删除');
 							} else {
-								$('.topicadminMsg[tid=' + topicAdmin.opts.tid + '][pid=' + topicAdmin.opts.pid + ']').html('ถูกลบแล้ว');
+								$('.topicadminMsg[tid=' + topicAdmin.opts.tid + '][pid=' + topicAdmin.opts.pid + ']').html('已删除');
 							}
 							TOOLS.showTips(re.Message.messagestr, true);
 							TOOLS.setcookie('refreshindex', '1', 86400);

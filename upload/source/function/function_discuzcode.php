@@ -129,9 +129,7 @@ function discuzcode($message, $smileyoff = false, $bbcodeoff = false, $htmlon = 
 		if(strpos($msglower, '[/email]') !== FALSE) {
 			$message = preg_replace_callback("/\[email(=([A-Za-z0-9\-_.+]+)@([A-Za-z0-9\-_]+[.][A-Za-z0-9\-_.]+))?\](.+?)\[\/email\]/is", 'discuzcode_callback_parseemail_14', $message);
 		}
-/*jaideejung007*/	if(strpos($msglower, '[/spoil]') !== FALSE) {
-/*jaideejung007*/		$message = str_replace(array('[spoil]','[/spoil]'), array("<div style=\"display: inline;\"><div style=\"display: inline;\"><span onClick=\"if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') {  this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerHTML = '<a href=\'javascript:void(0);\' onClick=\'return false;\' style=\'color: #FF0000;\'>[Spoil] คลิกเพื่อซ่อนข้อความ</a>'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerHTML = '<a href=\'javascript:void(0);\' onClick=\'return false;\' style=\'color: #FF0000;\'>[Spoil] คลิกเพื่อดูข้อความที่ซ่อนไว้</a>'; }\" /><a href=\"javascript:void(0);\" onClick=\"return false;\" style=\"color: #FF0000;\">[Spoil] คลิกเพื่อดูข้อความที่ซ่อนไว้</a></span></div><div style=\"display: inline;\"><div style=\"border: dashed 1px #FF0000;padding: 10px 0px 10px 20px;margin: 10px 0px;display: none;\">","</div></div></div>"), $message);
-/*jaideejung007*/	}
+
 		$nest = 0;
 		while(strpos($msglower, '[table') !== FALSE && strpos($msglower, '[/table]') !== FALSE){
 			$message = preg_replace_callback("/\[table(?:=(\d{1,4}%?)(?:,([\(\)%,#\w ]+))?)?\]\s*(.+?)\s*\[\/table\]/is", 'discuzcode_callback_parsetable_123', $message);

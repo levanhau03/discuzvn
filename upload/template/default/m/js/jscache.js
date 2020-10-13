@@ -26,7 +26,7 @@ var JC = {
 		} catch (err) {
 			if (err.name == 'SecurityError') {
 				jQuery(function () {
-					jQuery('.warp').html('<div class="errorInfo"><i class="eInco db spr"></i><p>กรุณาเปิดการตั้งค่าการเข้าถึงคุกกี้</p></div>');
+					jQuery('.warp').html('<div class="errorInfo"><i class="eInco db spr"></i><p>请开启 Cookie 访问设置</p></div>');
 				});
 			}
 			return;

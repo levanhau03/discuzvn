@@ -85,12 +85,12 @@ var newReply = {
 					try {
 						uploadBase64 = ImageCompresser.getImageBase64(this, conf);
 					} catch (e) {
-						TOOLS.dialog({content: 'บีบอัดภาพไม่สำเร็จ', autoClose: true});
+						TOOLS.dialog({content: '压缩图片失败', autoClose: true});
 						jq('#li' + id).remove();
 						return false;
 					}
 					if (uploadBase64.indexOf('data:image') < 0) {
-						TOOLS.dialog({content: 'ไม่รองรับรูปภาพฟอร์แมตนี้', autoClose: true});
+						TOOLS.dialog({content: '上传照片格式不支持', autoClose: true});
 						jq('#li' + id).remove();
 						return false;
 					}
@@ -104,7 +104,7 @@ var newReply = {
 			} else {
 				uploadBase64 = result;
 				if (uploadBase64.indexOf('data:image') < 0) {
-					TOOLS.dialog({content: 'ไม่รองรับรูปภาพฟอร์แมตนี้', autoClose: true});
+					TOOLS.dialog({content: '上传照片格式不支持', autoClose: true});
 					jq('#li' + id).remove();
 					return false;
 				}
@@ -170,7 +170,7 @@ var newReply = {
 			if (e.target.response) {
 				var result = jq.parseJSON(e.target.response);
 				if (result.errCode != 0) {
-					TOOLS.dialog({content: 'เครือข่ายไม่เสถียร เริ่มใหม่อีกครั้งในภายหลัง', autoClose: true});
+					TOOLS.dialog({content: '网络不稳定，请稍后重新操作', autoClose: true});
 					removePic(id);
 				}
 			}
@@ -213,9 +213,9 @@ var newReply = {
 				jq('#li' + id).find('.progress').remove();
 			} else {
 				if (parseInt(attach[1]) == 3) {
-					TOOLS.dialog({content: 'รูปภาพนี้มีขนาดใหญ่เกินไป ควรมีขนาดไม่เกิน ' + attach[4] / 1024 + ' KB', autoClose: true});
+					TOOLS.dialog({content: '图片过大, 应小于 ' + attach[4] / 1024 + ' KB', autoClose: true});
 				} else {
-					TOOLS.dialog({content: 'เครือข่ายไม่เสถียร กรุณาดำเนินการใหม่อีกครั้งภายหลัง', autoClose: true});
+					TOOLS.dialog({content: '网络不稳定，请稍后重新操作', autoClose: true});
 				}
 				removePic(id);
 			}
@@ -224,14 +224,14 @@ var newReply = {
 		var failed = function () {
 			newReply.isBusy = false;
 			newReply.uploadInfo[id].isDone = true;
-			TOOLS.dialog({content: 'เครือข่ายถูกตัดการเชื่อมต่อ กรุณาดำเนินการใหม่อีกครั้งภายหลัง', autoClose: true});
+			TOOLS.dialog({content: '网络断开，请稍后重新操作', autoClose: true});
 			removePic(id);
 		};
 
 		var abort = function () {
 			newReply.isBusy = false;
 			newReply.uploadInfo[id].isDone = true;
-			TOOLS.dialog({content: 'การอัปโหลดถูกยกเลิก', autoClose: true});
+			TOOLS.dialog({content: '上传已取消', autoClose: true});
 			removePic(id);
 		};
 
@@ -282,16 +282,16 @@ var newReply = {
 				if (!newReply.isBusy) {
 					jq('#uploadFile').click();
 				} else {
-					TOOLS.dialog({content: 'รูปภาพที่อัปโหลด สามารถเพิ่มเติมได้ภายหลัง', autoClose: true});
+					TOOLS.dialog({content: '图片上传中，请稍后添加', autoClose: true});
 					return false;
 				}
 			});
 			jq('#message').focus();
 		} else {
 			jq('#addPic').on('click', function () {
-				TOOLS.dialog({content: 'ฟอรั่มนี้ไม่สนับสนุนการอัปโหลดรูปภาพ', autoClose: true});
+				TOOLS.dialog({content: '当前版块不支持图片上传', autoClose: true});
 			});
-			jq('#uploadnotice').html('ฟอรั่มนี้ไม่สนับสนุนการอัปโหลดรูปภาพ');
+			jq('#uploadnotice').html('当前版块不支持图片上传');
 		}
 
 		jq('.popLayer').on('change', '#uploadFile', function (e) {
@@ -304,18 +304,18 @@ var newReply = {
 
 			for (var i = 0; i < fileList.length; i++) {
 				if (newReply.countUpload() >= newReply.maxUpload) {
-					TOOLS.dialog({content: 'คุณสามารถอัปโหลดได้ถึง 8 รูปภาพ', autoClose: true});
+					TOOLS.dialog({content: '你最多只能上传8张照片', autoClose: true});
 					break;
 				}
 
 				var file = fileList[i];
 
 				if (!newReply.checkPicSize(file)) {
-					TOOLS.dialog({content: 'รูปภาพมีขนาดใหญ่เกินไป', autoClose: true});
+					TOOLS.dialog({content: '图片体积过大', autoClose: true});
 					continue;
 				}
 				if (!newReply.checkPicType(file)) {
-					TOOLS.dialog({content: 'ไม่รองรับรูปภาพฟอร์แมตนี้', autoClose: true});
+					TOOLS.dialog({content: '上传照片格式不支持', autoClose: true});
 					continue;
 				}
 
@@ -328,7 +328,7 @@ var newReply = {
 
 				var html = '<li id="li' + id + '"><div class="photoCut"><img src="' + DATA_DIR + '/images/defaultImg.jpg" class="attchImg" alt="photo"></div>' +
 					'<div class="maskLay"></div>' +
-					'<a href="javascript:;" class="cBtn cBtnOn pa db" title="" _id="' + id + '">ปิด</a></li>';
+					'<a href="javascript:;" class="cBtn cBtnOn pa db" title="" _id="' + id + '">关闭</a></li>';
 				jq('#addPic').before(html);
 
 				newReply.previewQueue.push(id);
@@ -430,9 +430,9 @@ var newReply = {
 				} else {
 					TOOLS.dialog({
 						isMask: true,
-						content: 'บัญชีปัจจุบันไม่มีสิทธิ์อัปโหลดรูปภาพ',
+						content: '当前账户暂无发帖权限',
 						isShowMask: true,
-						cancelValue: 'ตกลง',
+						cancelValue: '确定',
 						cancel: function () {
 							newReply.goBack();
 						}
@@ -450,7 +450,7 @@ var newReply = {
 			}
 
 			jq('#submitButton').bind('click', function () {
-				TOOLS.showTips('ไม่สามารถส่งข้อความได้ กรุณาตรวจสอบเครือข่ายของคุณ และส่งใหม่อีกครั้ง', true);
+				TOOLS.showTips('无法发送,请取消并检查网络后重进', true);
 				return false;
 			});
 
@@ -470,7 +470,7 @@ var newReply = {
 		jQuery(".photoSelect").click(function () {
 			emotion.hide();
 		});
-		
+
 		jQuery("#message").focus(function () {
 			jQuery('.photoList').hide();
 			jQuery('.expreBox').hide();
@@ -493,7 +493,7 @@ var newReply = {
 			success: function (re) {
 				var message = re.Message.messageval;
 				TOOLS.hideLoading();
-				TOOLS.showTips("โพสต์เรียบร้อยแล้ว", true);
+				TOOLS.showTips("发帖成功", true);
 				jq('#submitButton').disabled = false;
 				clearInterval(timer);
 				localStorage.removeItem(newReply.storageContentKey);
@@ -513,7 +513,7 @@ var newReply = {
 			}
 		);
 		jq('#submitButton').disabled = true;
-		TOOLS.showLoading(null, 'กำลังโพสต์...', false);
+		TOOLS.showLoading(null, '正在发帖中...', false);
 	},
 	initForm: function () {
 		var storageContentKey = uid + "thread_content";
@@ -575,7 +575,7 @@ var newReply = {
 
 		jq('.cancelBtn').bind('click', function () {
 			if (jq('.photoList .attchImg').length > 0) {
-				var result = confirm('คุณต้องการยกเลิกเนื้อหาปัจจุบันหรือไม่');
+				var result = confirm('是否放弃当前内容?');
 			} else {
 				var result = true;
 			}
@@ -603,24 +603,24 @@ var newReply = {
 
 		jq.each(newReply.uploadInfo, function (i, n) {
 			if (n && !n.isDone) {
-				TOOLS.dialog({content: 'กำลังอัปโหลดรูปภาพ กรุณารอสักครู่', autoClose: true});
+				TOOLS.dialog({content: '图片上传中，请等待', autoClose: true});
 				return false;
 			}
 		});
 		var length = TOOLS.mb_strlen(TOOLS.trim(jq('#subject').val()));
 		if (length < 1) {
-			TOOLS.dialog({content: 'กรุณากรอกชื่อ', autoClose: true});
+			TOOLS.dialog({content: '请输入标题', autoClose: true});
 			return false;
 		}
 
 		length = TOOLS.mb_strlen(TOOLS.trim(jq('#message').val()));
 		if (length < 15) {
-			TOOLS.dialog({content: 'สั้นเกินไป', autoClose: true});
+			TOOLS.dialog({content: '内容过短', autoClose: true});
 			return false;
 		}
 
 		if (threadtypes && parseInt(threadtypes.required) == 1 && jq('#typeid').val() == '0') {
-			TOOLS.dialog({content: 'กรุณาเลือกหมวดหมู่กระทู้', autoClose: true});
+			TOOLS.dialog({content: '请选择主题分类', autoClose: true});
 			return false;
 		}
 

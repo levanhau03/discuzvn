@@ -20,7 +20,7 @@ var dataLoaded = function (np, checkWarp) {
 			renderPage(json);
 			var no_data = !json.Variables.messageList || json.Variables.messageList.length == 0;
 			if (checkWarp && no_data) {
-				TOOLS.showError('.warp', "ยังไม่มีเนื้อหาใหม่", null);
+				TOOLS.showError('.warp', "没有消息", null);
 				return;
 			}
 			nextStart = json.Variables.nextStart;
@@ -34,7 +34,7 @@ var dataLoaded = function (np, checkWarp) {
 			}
 		},
 		function (error) {
-			TOOLS.showError('.warp', "เครือข่ายไม่เสถียร แตะหน้าเว็บเพื่อโหลดใหม่~", function () {
+			TOOLS.showError('.warp', "网络不稳定,单击页面重新加载~", function () {
 				location.reload();
 			});
 			TOOLS.hideLoading();

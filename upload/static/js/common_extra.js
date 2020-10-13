@@ -116,9 +116,9 @@ function _checksec(type, idhash, showmsg, recall, modid) {
 			obj.innerHTML = '<img src="'+ IMGDIR + '/check_error.gif" width="16" height="16" class="vm" />';
 			if(showmsg) {
 				if(type == 'code') {
-					showError('กรอกรหัสไม่ถูกต้องหรือยังไม่ได้กรอก กรุณาตรวจสอบอีกครั้ง');
+					showError('Mã xác minh sai, vui lòng điền lại');
 				} else if(type == 'qaa') {
-					showError('ตอบคำถามไม่ถูกต้องหรือยังไม่ได้กรอก กรุณาตรวจสอบอีกครั้ง');
+					showError('Câu hỏi xác nhận và trả lời lỗi, xin vui lòng nạp lại');
 				}
 				recall(0);
 			}
@@ -182,7 +182,7 @@ function _copycode(obj) {
 		rng.moveToElementText(obj);
 		rng.select();
 	}
-	setCopy(BROWSER.ie ? obj.innerText.replace(/\r\n\r\n/g, '\r\n') : obj.textContent, 'ข้อความถูกคัดลอกไปยังคลิปบอร์ดแล้ว');
+	setCopy(BROWSER.ie ? obj.innerText.replace(/\r\n\r\n/g, '\r\n') : obj.textContent, 'Mã được sao chép vào clipboard');
 }
 
 function _showselect(obj, inpid, t, rettype) {
@@ -224,27 +224,27 @@ function _showselect(obj, inpid, t, rettype) {
 		$('append_parent').appendChild(div);
 		s = '';
 		if(!t) {
-			s += showselect_row(inpid, '1 วัน', 1, 0, rettype);
-			s += showselect_row(inpid, '1 สัปดาห์', 7, 0, rettype);
-			s += showselect_row(inpid, '1 เดือน', 30, 0, rettype);
-			s += showselect_row(inpid, '3 เดือน', 90, 0, rettype);
-			s += showselect_row(inpid, 'กำหนดเอง', -2);
+			s += showselect_row(inpid, 'Một ngày', 1, 0, rettype);
+			s += showselect_row(inpid, 'Một tuần', 7, 0, rettype);
+			s += showselect_row(inpid, 'Một tháng', 30, 0, rettype);
+			s += showselect_row(inpid, 'Ba tháng', 90, 0, rettype);
+			s += showselect_row(inpid, 'Tùy chỉnh', -2);
 		} else {
 			if($(t)) {
 				var lis = $(t).getElementsByTagName('LI');
 				for(i = 0;i < lis.length;i++) {
 					s += '<a href="javascript:;" onclick="$(\'' + inpid + '\').value = this.innerHTML;$(\''+obj.id+'_menu\').style.display=\'none\'">' + lis[i].innerHTML + '</a>';
 				}
-				s += showselect_row(inpid, 'กำหนดเอง', -1);
+				s += showselect_row(inpid, 'Tùy chỉnh', -1);
 			} else {
-				s += '<a href="javascript:;" onclick="$(\'' + inpid + '\').value = \'0\'">ถาวร</a>';
-				s += showselect_row(inpid, '7 วัน', 7, 1, rettype);
-				s += showselect_row(inpid, '14 วัน', 14, 1, rettype);
-				s += showselect_row(inpid, '1 เดือน', 30, 1, rettype);
-				s += showselect_row(inpid, '3 เดือน', 90, 1, rettype);
-				s += showselect_row(inpid, 'ครึ่งปี', 182, 1, rettype);
-				s += showselect_row(inpid, '1 ปี', 365, 1, rettype);
-				s += showselect_row(inpid, 'กำหนดเอง', -1);
+				s += '<a href="javascript:;" onclick="$(\'' + inpid + '\').value = \'0\'">Vĩnh viễn</a>';
+				s += showselect_row(inpid, '7 ngày', 7, 1, rettype);
+				s += showselect_row(inpid, '14 ngày', 14, 1, rettype);
+				s += showselect_row(inpid, 'Một tháng', 30, 1, rettype);
+				s += showselect_row(inpid, 'Ba tháng', 90, 1, rettype);
+				s += showselect_row(inpid, 'Nửa năm', 182, 1, rettype);
+				s += showselect_row(inpid, 'Một năm', 365, 1, rettype);
+				s += showselect_row(inpid, 'Tùy chỉnh', -1);
 			}
 		}
 		$(div.id).innerHTML = s;
@@ -466,11 +466,11 @@ function _zoom(obj, zimg, nocover, pn, showexif) {
 		menu = document.createElement('div');
 		menu.id = menuid;
 		if(cover) {
-			menu.innerHTML = '<div class="zoominner" id="' + menuid + '_zoomlayer" style="display:none"><p><span class="y"><a id="' + menuid + '_imglink" class="imglink" target="_blank" title="เปิดในหน้าต่างใหม่">หน้าต่างใหม่</a><a id="' + menuid + '_adjust" href="javascipt:;" class="imgadjust" title="ขนาดตามต้นฉบับ">ขนาดเดิม</a>' +
-				'<a href="javascript:;" onclick="hideMenu()" class="imgclose" title="ปิด">ปิด</a></span>สกอลเมาส์เพื่อย่อหรือขยายรูปภาพ</p>' +
+			menu.innerHTML = '<div class="zoominner" id="' + menuid + '_zoomlayer" style="display:none"><p><span class="y"><a id="' + menuid + '_imglink" class="imglink" target="_blank" title="Mở trong cửa sổ mới">Mở trong cửa sổ mới</a><a id="' + menuid + '_adjust" href="javascipt:;" class="imgadjust" title="Kích thước thực tế">Kích thước thực tế</a>' +
+				'<a href="javascript:;" onclick="hideMenu()" class="imgclose" title="Đóng">Đóng</a></span>Chuột phóng to hình ảnh</p>' +
 				'<div class="zimg_p" id="' + menuid + '_picpage"></div><div class="hm" id="' + menuid + '_img"></div></div>';
 		} else {
-			menu.innerHTML = '<div class="popupmenu_popup" id="' + menuid + '_zoomlayer" style="width:auto"><span class="right y"><a href="javascript:;" onclick="hideMenu()" class="flbc" style="width:20px;margin:0 0 2px 0">ปิด</a></span>สกอลเมาส์เพื่อย่อหรือขยายรูปภาพ<div class="zimg_p" id="' + menuid + '_picpage"></div><div class="hm" id="' + menuid + '_img"></div></div>';
+			menu.innerHTML = '<div class="popupmenu_popup" id="' + menuid + '_zoomlayer" style="width:auto"><span class="right y"><a href="javascript:;" onclick="hideMenu()" class="flbc" style="width:20px;margin:0 0 2px 0">Đóng</a></span>Chuột phóng to hình ảnh<div class="zimg_p" id="' + menuid + '_picpage"></div><div class="hm" id="' + menuid + '_img"></div></div>';
 		}
 		if(BROWSER.ie || BROWSER.chrome){
 			menu.onmousewheel = adjust;
@@ -496,9 +496,9 @@ function _zoom(obj, zimg, nocover, pn, showexif) {
 			}
 			if(authorcurrent !== '') {
 				paid = authorcurrent > 0 ? authorimgs[authorcurrent - 1] : authorimgs[authorlength - 1];
-				picpage += ' <div id="zimg_prev" onmouseover="dragMenuDisabled=true;this.style.backgroundPosition=\'0 50px\'" onmouseout="dragMenuDisabled=false;this.style.backgroundPosition=\'0 -100px\';" onclick="_zoom_page(\'' + paid + '\', ' + (showexif ? 1 : 0) + ')" class="zimg_prev"><strong>ก่อนหน้า</strong></div> ';
+				picpage += ' <div id="zimg_prev" onmouseover="dragMenuDisabled=true;this.style.backgroundPosition=\'0 50px\'" onmouseout="dragMenuDisabled=false;this.style.backgroundPosition=\'0 -100px\';" onclick="_zoom_page(\'' + paid + '\', ' + (showexif ? 1 : 0) + ')" class="zimg_prev"><strong>Trước đó</strong></div> ';
 				paid = authorcurrent < authorlength - 1 ? authorimgs[authorcurrent + 1] : authorimgs[0];
-				picpage += ' <div id="zimg_next" onmouseover="dragMenuDisabled=true;this.style.backgroundPosition=\'100% 50px\'" onmouseout="dragMenuDisabled=false;this.style.backgroundPosition=\'100% -100px\';" onclick="_zoom_page(\'' + paid + '\', ' + (showexif ? 1 : 0) + ')" class="zimg_next"><strong>ถัดไป</strong></div> ';
+				picpage += ' <div id="zimg_next" onmouseover="dragMenuDisabled=true;this.style.backgroundPosition=\'100% 50px\'" onmouseout="dragMenuDisabled=false;this.style.backgroundPosition=\'100% -100px\';" onclick="_zoom_page(\'' + paid + '\', ' + (showexif ? 1 : 0) + ')" class="zimg_next"><strong>Hình ảnh tiếp theo</strong></div> ';
 			}
 			if(picpage) {
 				$(menuid + '_picpage').innerHTML = picpage;
@@ -1035,7 +1035,7 @@ function _showColorBox(ctrlid, layer, k, bgcolor) {
 		menu.unselectable = true;
 		menu.style.display = 'none';
 		var coloroptions = ['Black', 'Sienna', 'DarkOliveGreen', 'DarkGreen', 'DarkSlateBlue', 'Navy', 'Indigo', 'DarkSlateGray', 'DarkRed', 'DarkOrange', 'Olive', 'Green', 'Teal', 'Blue', 'SlateGray', 'DimGray', 'Red', 'SandyBrown', 'YellowGreen', 'SeaGreen', 'MediumTurquoise', 'RoyalBlue', 'Purple', 'Gray', 'Magenta', 'Orange', 'Yellow', 'Lime', 'Cyan', 'DeepSkyBlue', 'DarkOrchid', 'Silver', 'Pink', 'Wheat', 'LemonChiffon', 'PaleGreen', 'PaleTurquoise', 'LightBlue', 'Plum', 'White'];
-		var colortexts = ['สีดำ', 'สีน้ำตาล', 'สีเขียวมะกอก', 'สีเขียวเข้ม', 'สีน้ำเงินนวล', 'สีกรมท่า', 'สีคราม', 'สีเทานวล', 'สีแดงเข้ม', 'สีส้มเข้ม', 'สีมะกอก', 'สีเขียว', 'สีนกเป็ดน้ำ', 'สีน้ำเงิน', 'สีเทา', 'สีเทาเข้ม', 'สีแดง', 'สีน้ำตาลทราย', 'สีเหลืองเขียว', 'สีเขียวน้ำทะเล', 'สีเขียวฟ้า', 'สีน้ำเงินเข้ม', 'สีม่วง', 'สีเทา', 'สีม่วงแดง', 'สีส้ม', 'สีเหลือง', 'สีมะนาว', 'สีน้ำเงินเขียว', 'สีน้ำเงินเข้ม', 'สีม่วงเข้ม', 'สีเงิน', 'สีชมพู', 'สีเหลืองอ่อน', 'สีครีม', 'สีเขียวซีด', 'สีฟ้าซีด', 'สีฟ้าสดใส', 'สีม่วงอ่อน', 'สีขาว'];
+		var colortexts = ['Đen', 'Sienna', 'Xanh ô liu', 'Xanh lá', 'Xanh phiến đen', 'Hải quân', 'Chàm', 'Xanh phiến xám', 'Đỏ đậm', 'Cam đậm', 'Ô liu', 'Xanh lá', 'Teal', 'Xanh da trời', 'Đá tro', 'Xám đậm', 'Đỏ', 'Nâu cát', 'Xanh vàng', 'Xanh biển', 'Lam ngọc', 'Xanh đậm', 'Tím', 'Xám', 'Đỏ tươi', 'Cam', 'Vàng', 'Lime', 'Cyan', 'Xanh thẫm', 'Tím đậm', 'Bạc', 'Hồng', 'Wheat', 'Chanh lụa', 'Xanh nhạt', 'Lam nhạt', 'Xanh sáng', 'Mận', 'Trắng'];
 		var str = '';
 		for(var i = 0; i < 40; i++) {
 			str += '<input type="button" style="background-color: ' + coloroptions[i] + '"' + (typeof setEditorTip == 'function' ? ' onmouseover="setEditorTip(\'' + colortexts[i] + '\')" onmouseout="setEditorTip(\'\')"' : '') + ' onclick="'
@@ -1094,7 +1094,7 @@ function _extstyle(css) {
 }
 
 function _widthauto(obj) {
-	var strs = ['สลับไปยังหน้าจอแบบกว้าง', 'สลับไปยังหน้าจอแบบแคบ'];
+	var strs = ['Chuyển sang phiên bản rộng', 'Chuyển sang phiên bản hẹp'];
 	if($('css_widthauto')) {
 		CSSLOADED['widthauto'] = 1;
 	}
@@ -1124,7 +1124,7 @@ function _showCreditmenu() {
 		menu.id = 'extcreditmenu_menu';
 		menu.style.display = 'none';
 		menu.className = 'p_pop';
-		menu.innerHTML = '<div class="p_opt"><img src="'+ IMGDIR + '/loading.gif" width="16" height="16" class="vm" /> รอสักครู่...</div>';
+		menu.innerHTML = '<div class="p_opt"><img src="'+ IMGDIR + '/loading.gif" width="16" height="16" class="vm" /> Xin vui lòng chờ...</div>';
 		$('append_parent').appendChild(menu);
 		ajaxget($('extcreditmenu').href, 'extcreditmenu_menu', 'ajaxwaitid');
 	}
@@ -1137,7 +1137,7 @@ function _showUpgradeinfo() {
 		menu.id = 'g_upmine_menu';
 		menu.style.display = 'none';
 		menu.className = 'p_pop';
-		menu.innerHTML = '<div class="p_opt"><img src="'+ IMGDIR + '/loading.gif" width="16" height="16" class="vm" /> รอสักครู่...</div>';
+		menu.innerHTML = '<div class="p_opt"><img src="'+ IMGDIR + '/loading.gif" width="16" height="16" class="vm" /> Xin vui lòng chờ...</div>';
 		$('append_parent').appendChild(menu);
 		ajaxget('home.php?mod=spacecp&ac=usergroup&showextgroups=1', 'g_upmine_menu', 'ajaxwaitid');
 	}
@@ -1231,12 +1231,12 @@ function _createPalette(colorid, id, func) {
 
 function _setShortcut() {
 	$('shortcuttip').onclick = function() {
-		var msg = '1. คลิก"' + '<a href="javascript:;" class="xi2 xw1" ';
+		var msg = '1.Nhấp"' + '<a href="javascript:;" class="xi2 xw1" ';
 		msg += 'onclick="this.href = \'forum.php?mod=misc&action=shortcut\';this.click();saveUserdata(\'setshortcut\', 1);"';
-		msg += '>ดาวน์โหลดทางลัดบนเดสก์ทอป</a>' + '" เมื่อดาวน์โหลดเสร็จแล้ว คุณสามารถย้ายไฟล์ไปยังเดสก์ทอปได้<br />';
-		msg += '2. คลิก"' + '<a href="forum.php?mod=misc&action=shortcut&type=ico" class="xi2 xw1">';
-		msg += 'ดาวน์โหลดไอคอน ICO</a>' + '" หลังจากดาวน์โหลดเสร็จแล้ว ให้คลิกขวาที่แฟ้มทางลัดบนเดสก์ทอป -> คุณสมบัติ -> เปลี่ยนไอคอน และเลือกไอคอน ICO ที่ดาวน์โหลดมา';
-		showDialog(msg, 'notice', 'เพิ่มทางลัดบนเดสก์ทอป');
+		msg += '>Tải xuống lối tắt trên màn hình</a>' + '"，Sau khi tải xuống, bạn có thể di chuyển tệp đến màn hình hệ thống<br />';
+		msg += '2.Nhấp"' + '<a href="forum.php?mod=misc&action=shortcut&type=ico" class="xi2 xw1">';
+		msg += 'Tải xuống biểu tượng ICO</a>' + '"，Sau khi quá trình tải xuống hoàn tất, nhấp chuột phải vào tệp lối tắt trên màn hình-> Thuộc tính-> Thay đổi Biểu tượng và chọn biểu tượng ICO đã tải xuống';
+		showDialog(msg, 'notice', 'Thêm lối tắt trên màn hình');
 	};
 
 	$('shortcutcloseid').onclick = function() {

@@ -15,19 +15,19 @@ function make_html(url, obj) {
 		if(ret && (ret=ret['data']) && ret['status'] == 'html_ok') {
 			if(obj) {
 				obj.style.color = 'blue';
-				obj.innerHTML = '<a href="'+ret['path']+'" target="_blank">'+title+'สร้างสำเร็จ</a>';
+				obj.innerHTML = '<a href="'+ret['path']+'" target="_blank">'+title+' tạo thành công</a>';
 			}
 			if(ret['nexturl']) {
 				if(obj) {
 					obj.style.color = 'green';
-					obj.innerHTML = 'สร้าง '+title+(Math.round((ret['current']/ret['count'])*100))+'%';
+					obj.innerHTML = 'Tạo '+title+(Math.round((ret['current']/ret['count'])*100))+'%';
 				}
 				make_html(ret['nexturl'], obj);
 			}
 		} else {
 			if(obj) {
 				obj.style.color = 'red';
-				obj.innerHTML = title+' สร้างล้มเหลว';
+				obj.innerHTML = title+' xây dựng thất bại';
 			}
 		}
 	});
@@ -52,13 +52,13 @@ function make_html_batch(url, ids, callback, dom, single) {
 		child.style.color = 'green';
 		var cent = ((1/this.count)*100).toFixed(2);
 		progress_bar(cent);
-		child.innerHTML = 'เริ่มต้นสร้าง '+this.dom.getAttribute('mktitle');
+		child.innerHTML = 'Bắt đầu tạo '+this.dom.getAttribute('mktitle');
 		this.dom.innerHTML = '';
 		this.dom.appendChild(child);
 		this.make(id, child);
 		this.child = child;
 		var child2 = document.createElement('div');
-		child2.innerHTML = '<a href="javascript:void(0);" id="mk_goon">ถ้าเบราว์เซอร์ของคุณไม่ตอบสนอง คลิกที่นี่เพื่อดำเนินการต่อไป...</a>';
+		child2.innerHTML = '<a href="javascript:void(0);" id="mk_goon">Nếu trình duyệt của bạn không phản hồi, vui lòng nhấp vào tiếp tục...</a>';
 		this.dom.appendChild(child2);
 		var obj = this;
 		$('mk_goon').onclick = function (e) {make_html_batch.prototype.make_goon.call(obj, e)};
@@ -96,7 +96,7 @@ make_html_batch.prototype = {
 					makehtml_error.style.height = '200px';
 					makehtml_error.style.overflow = 'scroll';
 					makehtml_error.id = 'makehtml_error';
-					makehtml_error.innerHTML = 'ข้อผิดพลาด';
+					makehtml_error.innerHTML = 'Thông báo lỗi';
 					obj.dom.appendChild(makehtml_error);
 				}
 				makehtml_error.innerHTML += '<br>[id:' + id + ']' + ret['message'];
@@ -105,7 +105,7 @@ make_html_batch.prototype = {
 
 			if(obj.single) {
 				child.style.color = 'blue';
-				child.innerHTML = '<div class="mk_msg">'+'<a href="'+data['path']+'" target="_blank">'+obj.dom.getAttribute('mktitle')+'</a> สร้างสำเร็จ'+'</div>';
+				child.innerHTML = '<div class="mk_msg">'+'<a href="'+data['path']+'" target="_blank">'+obj.dom.getAttribute('mktitle')+'</a>Thế hệ hoàn thành'+'</div>';
 				if(obj.callback) {
 					setTimeout(function(){(obj.callback)();}, 2000);
 				}
@@ -113,12 +113,12 @@ make_html_batch.prototype = {
 				var current = obj.count - obj.ids.length;
 				var cent = ((current/obj.count)*100).toFixed(2);
 				progress_bar(cent);
-				var str = 'จำนวนทั้งหมดที่จะต้องสร้าง '+obj.count+' ไฟล์ '+obj.dom.getAttribute('mktitle')+' สร้างเสร็จแล้วทั้งหมด '+obj.makedcount+' ไฟล์,';
+				var str = 'Tổng cộng '+obj.count+'tệp'+obj.dom.getAttribute('mktitle')+' cần được tạo lần này và '+obj.makedcount+'mảnh được tạo thành công';
 				if(cent != 100) {
-					child.innerHTML = str+'กำลังสร้างไฟล์ '+current+' ไฟล์และเสร็จไปแล้ว '+cent+'%';
+					child.innerHTML = str+' đang tạo '+current+' đã hoàn thành '+cent+'%';
 				} else {
 					child.style.color = 'blue';
-					child.innerHTML = str+obj.dom.getAttribute('mktitle')+' สร้างเสร็จเรียบร้อย';
+					child.innerHTML = str+obj.dom.getAttribute('mktitle')+'Thế hệ hoàn thành';
 				}
 				if(id) {
 					obj.make(id, child);

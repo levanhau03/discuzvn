@@ -73,7 +73,7 @@ function edit_insert(html) {
 	var obj = p.window.frames['HtmlEditor'];
 	var status = p.document.getElementById('uchome-editstatus').value;
 	if(status != 'html') {
-		alert('การทำงานนี้จะมีผลเฉพาะในโหมดแก้ไขมัลติมีเดียเท่านั้น');
+		alert('本操作只在多媒体编辑模式下才有效');
 		return;
 	}
 	obj.focus();

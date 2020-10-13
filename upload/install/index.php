@@ -58,9 +58,9 @@ timezone_set();
 $uchidden = getgpc('uchidden');
 
 if(in_array($method, array('app_reg', 'ext_info'))) {
-	$isHTTPS = ($_SERVER['HTTPS'] && strtolower($_SERVER['HTTPS']) != 'off') ? true : false;
+	$isHTTPS = is_https();
 	$PHP_SELF = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
-	# The port used by $bbserver cannot come from SERVER_PORT, because the server port of dz is not necessarily the port accessed by the user (for example, behind load balancing)
+	# $bbserver使用的端口，不能来自于SERVER_PORT，因为dz的服务器端口不一定是用户访问的端口(比如在负载均衡后面)
 	$bbserver = 'http'.($isHTTPS ? 's' : '').'://'.$_SERVER['HTTP_HOST'];
 	$default_ucapi = $bbserver.'/ucenter';
 	$default_appurl = $bbserver.substr($PHP_SELF, 0, strrpos($PHP_SELF, '/') - 8);
@@ -483,7 +483,7 @@ if($method == 'show_license') {
 	} else {
 		show_header();
 		echo '</div><div class="main" style="margin-top: -123px;padding-left:30px"><span id="platformIntro"></span>';
-/*jaideejung007*/		echo '<iframe frameborder="0" width="700" height="550" allowTransparency="true" src="https://log.1080ip.com/outer.php?id=installed&siteurl='.urlencode($default_appurl).'&platform=Discuz&version='.DISCUZ_VERSION.'&release='.DISCUZ_RELEASE.'&threvision='.DISCUZ_TH_REVISION.'"></iframe>';
+		echo '<iframe frameborder="0" width="700" height="550" allowTransparency="true" src="https://addon.dismall.com/api/outer.php?id=installed&siteurl='.urlencode($default_appurl).'&version='.DISCUZ_VERSION.'"></iframe>';
 		echo '<p align="right"><a href="'.$default_appurl.'">'.$lang['install_finish'].'</a></p><br />';
 		echo '</div>';
 		show_footer();

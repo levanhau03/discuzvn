@@ -81,72 +81,6 @@ var bindEvent = function () {
 
 };
 
-/*var initWXShare = function (opts) {
-	WeixinJSBridge.on('menu:share:timeline', function (argv) {
-		var url = window.location.href + '&source=pyq&siteid=' + SITE_ID;
-		if (member_uid) {
-			url += '&fromuid=' + member_uid;
-		}
-		setTimeout(
-			function () {
-				WeixinJSBridge.invoke('shareTimeline', {
-					'img_url': opts.img,
-					'img_width': '120',
-					'img_height': '120',
-					'link': url,
-					'desc': opts.desc,
-					'title': opts.title
-				}, function (res) {
-					$('.tipInfo').hide();
-					$('.maskLayer').hide();
-				});
-			}
-		, 300
-			);
-	});
-	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-		var url = window.location.href + '&source=wxhy&siteid=' + SITE_ID;
-		setTimeout(
-			function () {
-				WeixinJSBridge.invoke('sendAppMessage', {
-					'appid': 'wx9324b266aa4818d0',
-					'img_url': opts.img,
-					'img_width': '120',
-					'img_height': '120',
-					'link': url,
-					'desc': opts.desc,
-					'title': opts.title
-				}, function (res) {
-					$('.tipInfo').hide();
-					$('.maskLayer').hide();
-				});
-			}
-		, 300
-			);
-	});
-
-	WeixinJSBridge.on('menu:share:weibo', function (argv) {
-		var url = window.location.href + '&source=wb&siteid=' + SITE_ID;
-		setTimeout(
-			function () {
-				WeixinJSBridge.invoke('shareWeibo', {
-					'img_url': opts.img,
-					'img_width': '120',
-					'img_height': '120',
-					'link': url,
-					'desc': opts.desc,
-					'title': opts.title,
-					'url': url,
-					'content': opts.desc
-				}, function (res) {
-					$('.tipInfo').hide();
-					$('.maskLayer').hide();
-				});
-			}
-		, 300
-			);
-	});
-};*/
 
 var imageListInit = function (post) {
 	var ret = '';
@@ -240,9 +174,9 @@ var dataLoaded = function (json, isInit) {
 		threadContent = '我参加了#' + SITE_INFO.siteName + '#举办的晒图活动，快来帮我点赞吧';
 
 		if (postItem.authorid == member_uid) {
-			$('.tipBor').html('หวังว่าผู้คนจะชื่นชอบรูปภาพของคุณมากยิ่งขึ้น โดยคลิกที่มุมขวาบนไอคอนแชร์<span class="arrLeft"></span>');
+			$('.tipBor').html('希望更多人喜欢你的照片，点击右上角图标分享<span class="arrLeft"></span>');
 		} else {
-			$('.tipBor').html('ถ้าคุณชื่นชอบรูปภาพของฉัน กรุณาคลิกที่ไอคอนมุมขวาบนเพื่อแชร์<span class="arrLeft"></span>');
+			$('.tipBor').html('如果喜欢我的照片，请点击右上角图标分享<span class="arrLeft"></span>');
 		}
 
 		var imgUrl = SITE_INFO.siteLogo;
@@ -334,7 +268,7 @@ var viewThreadInit = function () {
 	var index = TOOLS.getQuery('page');
 
 	if (tId == undefined || tId <= 0) {
-		TOOLS.showTips('ID กระทู้ไม่ถูกต้อง', true, '');
+		TOOLS.showTips('不正确的主题ID', true, '');
 		return;
 	}
 	if (OS.length == 0) {
@@ -397,7 +331,7 @@ var recommend = function (obj) {
 	var btn = $(obj);
 	var status = btn.find('i').attr('class');
 	if (status == 'praise') {
-		TOOLS.showTips('คุณได้ถูกใจโพสต์นี้', true);
+		TOOLS.showTips('您已经赞过该帖', true);
 		return;
 	}
 
@@ -413,7 +347,7 @@ var recommend = function (obj) {
 				}
 				digSpan.html(digNum + 1);
 			} else {
-				TOOLS.showTips('คุณถูกใจโพสต์นี้แล้ว', 1);
+				TOOLS.showTips('您已经赞过', 1);
 			}
 		},
 		function (error) {

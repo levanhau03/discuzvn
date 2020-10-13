@@ -1,6 +1,6 @@
 
 jQuery.noConflict();
-	
+
 var getBasePath = function() {
 	var els = document.getElementsByTagName('script'),
 	src;
@@ -447,7 +447,7 @@ function fileQueued(file) {
 
 		}
 		if(createQueue) {
-			progress.setStatus("กำลังรอการอัปโหลด...");
+			progress.setStatus("Đang chờ tải lên...");
 			this.uploader.upload(file);
 		} else {
 			this.uploader.cancelFile(file);
@@ -467,22 +467,22 @@ function fileQueueError(errorCode) {
 		var err = '';
 		switch (errorCode) {
 		case 'F_EXCEED_SIZE':
-			err = 'ขนาดไฟล์แต่ละไฟล์ต้องไม่เกิน ' + WebUploader.Base.formatSize(this.uploader.option('fileSingleSizeLimit')) + '';
+			err = 'Kích thước tệp cá nhân không thể vượt quá' + WebUploader.Base.formatSize(this.uploader.option('fileSingleSizeLimit')) + '！';
 			break;
 		case 'Q_EXCEED_NUM_LIMIT':
-			err = 'สามารถอัปโหลดได้สูงสุดไม่เกิน ' + this.settings.fileNumLimit + ' ไฟล์';
+			err = 'Chỉ có thể tải lên tối đa' + this.settings.fileNumLimit + ' tệp!';
 			break;
 		case 'Q_EXCEED_SIZE_LIMIT':
-			err = 'ขนาดไฟล์อัพโหลดทั้งหมดเกิน ' + WebUploader.Base.formatSize(this.uploader.option('fileSizeLimit')) + '';
+			err = 'Tổng kích thước tệp tải lên vượt quá' + WebUploader.Base.formatSize(this.uploader.option('fileSizeLimit')) + '！';
 			break;
 		case 'Q_TYPE_DENIED':
-			err = 'รูปแบบไฟล์ไม่ถูกต้อง กรุณาอัปโหลดไฟล์ใหม่';
+			err = 'Loại tệp không hợp lệ, vui lòng tải lên định dạng tệp chính xác!';
 			break;
 		case 'F_DUPLICATE':
-			err = 'กรุณาอย่าอัปโหลดไฟล์เดียวกันซ้ำสองครั้ง';
+			err = 'Vui lòng không tải lên cùng một tệp hai lần!';
 			break;
 		default:
-			err = 'พบข้อผิดพลาดในการอัปโหลด กรุณารีเฟรชและลองใหม่อีกครั้ง' + code;
+			err = 'Lỗi tải lên, vui lòng làm mới và thử lại!' + code;
 			break;
 		}
 		showDialog(err, 'notice', null, null, 0, null, null, null, null, sdCloseTime);
@@ -499,10 +499,8 @@ function fileDialogComplete() {
 					switchAttachbutton('attachlist');
 				}
 				try {
-					//if(this.uploader.getStats().queueNum) {
 						$('attach_tblheader').style.display = '';
 						$('attach_notice').style.display = '';
-					//}
 				} catch (ex) {}
 			} else if(this.customSettings.uploadType == 'image') {
 				if(typeof switchImagebutton == "function") {
@@ -536,7 +534,7 @@ function uploadStart(file) {
 			preObj.innerHTML = '';
 		}
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
-		progress.setStatus("กำลังอัปโหลด...");
+		progress.setStatus("Đang tải lên...");
 		progress.toggleCancel(true, this);
 		if(this.customSettings.uploadSource == 'forum') {
 			var objId = this.customSettings.uploadType == 'attach' ? 'attachlist' : 'imgattachlist';
@@ -551,7 +549,7 @@ function uploadProgress(file, percentage) {
 	try {
 		var percent = Math.ceil((bytesLoaded / bytesTotal) * 100);
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
-		progress.setStatus("กำลังอัปโหลด (" + Math.round(percentage * 100) + "%)...");
+		progress.setStatus("Đang tải lên (" + Math.round(percentage * 100) + "%)...");
 	} catch (ex) {
 		this.debug(ex);
 	}
@@ -562,7 +560,6 @@ function uploadSuccess(file, serverData) {
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
 		if(this.customSettings.uploadSource == 'forum') {
 			if(this.customSettings.uploadType == 'poll') {
-				//var data = eval('('+serverData+')');
 				var data = serverData;
 				if(parseInt(data.aid)) {
 					var preObj = $(this.customSettings.progressTarget);
@@ -608,18 +605,14 @@ function uploadSuccess(file, serverData) {
 						progress.setStatus(STATUSMSG[aid]);
 						showDialog(STATUSMSG[aid], 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 					} else {
-						progress.setStatus("ยกเลิกอัปโหลด");
+						progress.setStatus("Hủy tải lên");
 					}
 					this.uploader.cancelFile(file);
 					progress.setCancelled();
 					progress.toggleCancel(true, this.uploader);
-					//var stats = this.uploader.getStats();
-					//var obj = {'successNum':--stats.successNum, 'cancelNum':++stats.cancelNum};
-					//this.setStats(obj);
 				}
 			}
 		} else if(this.customSettings.uploadType == 'album') {
-			//var data = eval('('+serverData+')');
 			var data = serverData;
 			if(parseInt(data.picid)) {
 				var newTr = document.createElement("TR");
@@ -636,15 +629,14 @@ function uploadSuccess(file, serverData) {
 				newTr.appendChild(newTd);
 				newTd = document.createElement("TD");
 				newTd.className = 'd';
-				newTd.innerHTML = 'คำอธิบายรูปภาพ<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
+				newTd.innerHTML = 'Mô tả hình ảnh<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
 				newTr.appendChild(newTd);
 				this.customSettings.imgBoxObj.appendChild(newTr);
 			} else {
-				showDialog('อัปโหลดภาพไม่สำเร็จ', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải hình ảnh không thành công', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 			}
 			$(file.id).style.display = 'none';
 		} else if(this.customSettings.uploadType == 'blog') {
-			//var data = eval('('+serverData+')');
 			var data = serverData;
 			if(parseInt(data.picid)) {
 				var tdObj = getInsertTdId(this.customSettings.imgBoxObj, 'image_td_'+data.picid);
@@ -661,11 +653,10 @@ function uploadSuccess(file, serverData) {
 				inputObj.value= data.picid;
 				tdObj.appendChild(inputObj);
 			} else {
-				showDialog('อัปโหลดภาพไม่สำเร็จ', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải hình ảnh không thành công', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 			}
 			$(file.id).style.display = 'none';
 		} else if(this.customSettings.uploadSource == 'portal') {
-			//var data = eval('('+serverData+')');
 			var data = serverData;
 			if(data.aid) {
 				if(this.customSettings.uploadType == 'attach') {
@@ -679,7 +670,7 @@ function uploadSuccess(file, serverData) {
 					$(file.id).style.display = 'none';
 				}
 			} else {
-				showDialog('อัปโหลดไม่สำเร็จ', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
+				showDialog('Tải lên thất bại', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 				progress.setStatus("Cancelled");
 				this.uploader.cancelFile(file);
 				progress.setCancelled();
@@ -687,7 +678,7 @@ function uploadSuccess(file, serverData) {
 			}
 		} else {
 			progress.setComplete();
-			progress.setStatus("อัปโหลดเรียบร้อยแล้ว.");
+			progress.setStatus("Tải lên hoàn tất.");
 			progress.toggleCancel(false);
 		}
 	} catch (ex) {
