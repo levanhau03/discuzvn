@@ -22,11 +22,11 @@ $lang = array
 	'google_lang_zh-CN' => 'Tiếng Trung giản thể',
 	'google_lang_zh-TW' => 'Tiếng Trung',
 	'google_default' => 'Tìm kiếm tùy chọn mặc định',
-	'google_default_comment' => 'Hộp tùy chọn tìm kiếm mặc định',//'搜索框默认选择的项目',
+	'google_default_comment' => 'Hộp tùy chọn tìm kiếm mặc định',
 	'google_default_0' => 'Tìm trang web',
 	'google_default_1' => 'Tìm forum',
 	'google_client' => 'Nếu bạn đã gia nhập Google Adsense, bạn có thể điền vào ID của bạn ở đây',
-	'google_client_comment' => 'Tiếng Nga',
+	'google_client_comment' => 'Tiếng Việt',
 );
 
 ?>
