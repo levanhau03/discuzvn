@@ -17,9 +17,9 @@ $lang = array
 	'friend_desc' => 'Có 5 người bạn để nhận phần thưởng tương ứng',
 	'friend_view' => '<strong>Hãy làm theo các hướng dẫn dưới đây để tham gia vào nhiệm vụ này：</strong>
 		<ul>
-		<li>1. <a href="home.php?mod=spacecp&ac=friend&op=find" target="_blank">新窗口打开寻找好友页面</a></li>
-		<li>2. 在新打开的页面中，可以将系统自动给您找到的推荐用户加为好友，也可以自己设置条件寻找并添加为好友</li>
-		<li>3. 接下来，您还需要等待对方批准您的好友申请</li>
+		<li>1. <a href="home.php?mod=spacecp&ac=friend&op=find" target="_blank">Một cửa sổ mới mở ra để tìm trang bạn bè</a></li>
+		<li>2. Trong trang mới mở, bạn có thể thêm những người dùng được đề xuất mà hệ thống tự động tìm bạn làm bạn bè hoặc bạn có thể đặt điều kiện của riêng mình để tìm và thêm làm bạn</li>
+		<li>3. Tiếp theo, bạn cần đợi bên kia chấp thuận yêu cầu kết bạn của mình</li>
 		</ul>',
 );
 
