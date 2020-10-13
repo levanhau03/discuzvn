@@ -1414,7 +1414,7 @@ $lang = array
 	'misc_focus_area_title_comment' => 'Mặc định là "Trang web của gia đình", bạn có thể thiết lập mà bạn muốn Tiêu đề',
 	'misc_focus_area_cookie' => 'Thời gian bật lại cửa sổ sau khi đóng (giờ)',
 	'misc_focus_area_cookie_comment' => 'Nếu 0 thì làm mới trang bật lên. Đặt thành 1 để làm mới trang xuất hiện sau 1 giờ. Mặc định là 1, bạn có thể đặt thời gian bạn muốn bật lên.',
-',
+
 	'misc_focus_position' => 'Quản trị trang web khuyên bạn nên chạy khu vực',
 	'misc_focus_position_portal' => 'Tin tức',
 	'misc_focus_position_home' => 'Trang chủ',
