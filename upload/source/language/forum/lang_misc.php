@@ -321,12 +321,12 @@ $lang = array
 	'plugin_memo' => 'Bạn có <span class="xi1">{number}</span> nâng cấp ứng dụng',
 	'plugin_link' => 'Cập nhật',
 
-	'seccode' => 'Mã xác nhận',//'验证码',
-	'seccode_update' => 'Mã khác',//'换一个',
-	'seccode_player' => '<span style="padding:2px"><img border="0" style="vertical-align:middle" src="static/image/common/seccodeplayer.gif" /> <a href="javascript:;" onclick="window.document.seccodeplayer_{idhash}.SetVariable(\'isPlay\', 1)">Đọc mã xác nhận</a></span>',//'<span style="padding:2px"><img border="0" style="vertical-align:middle" src="static/image/common/seccodeplayer.gif" /> <a href="javascript:;" onclick="window.document.seccodeplayer_{idhash}.SetVariable(\'isPlay\', 1)">播放验证码</a></span>',
-	'secqaa' => 'Câu hỏi an toàn',//'验证问答',
+	'seccode' => 'Mã xác nhận',
+	'seccode_update' => 'Mã khác',
+	'seccode_player' => '<span style="padding:2px"><img border="0" style="vertical-align:middle" src="static/image/common/seccodeplayer.gif" /> <a href="javascript:;" onclick="window.document.seccodeplayer_{idhash}.SetVariable(\'isPlay\', 1)">Đọc mã xác nhận</a></span>',
+	'secqaa' => 'Câu hỏi an toàn',
 
-	'mobileoem_creditrule' => 'Mobile Forum Registration',//'掌上论坛签到',
+	'mobileoem_creditrule' => 'Đăng ký diễn đàn di động',
 
 );
 
