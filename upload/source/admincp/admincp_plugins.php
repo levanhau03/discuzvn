@@ -339,7 +339,7 @@ if(!$operation) {
 } elseif($operation == 'import') {
 
 	if(submitcheck('importsubmit') || isset($_GET['dir'])) {
-		cloudaddons_validator($_GET['dir'].'.plugin');
+		//cloudaddons_validator($_GET['dir'].'.plugin');
 
 		if(!isset($_GET['installtype'])) {
 			$pdir = DISCUZ_ROOT.'./source/plugin/'.$_GET['dir'];
