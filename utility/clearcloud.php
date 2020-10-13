@@ -37,6 +37,6 @@ foreach($plugins as $pluginid) {
 	}
 }
 
-echo "云平台插件已降为非系统级插件，请删除本工具";
+echo "Plugin nền tảng đám mây đã được giảm thành plugin cấp độ hệ thống, vui lòng xóa công cụ này";
 
 ?>
