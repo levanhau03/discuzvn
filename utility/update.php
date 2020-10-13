@@ -656,7 +656,7 @@ if($_GET['step'] == 'start') {
 		DB::query("REPLACE INTO ".DB::table('common_setting')." VALUES ('regname', 'register')");
 		$newsettings['regname'] = 'register';
 		if(empty($settings['reglinkname'])) {
-			$newsettings['reglinkname'] = '注册';
+			$newsettings['reglinkname'] = 'Đã đăng ký';
 		}
 
 		if(empty($settings['domain'])) {
@@ -706,7 +706,7 @@ if($_GET['step'] == 'start') {
 			$newsettings['allowviewuserthread'] = $allowviewuserthread;
 		}
 		if(!isset($settings['focus'])) {
-			$focusnew = array('title' => '站长推荐', 'cookie' => 1);
+			$focusnew = array('title' => 'Quản trị viên web được đề xuất', 'cookie' => 1);
 			$newsettings['focus'] = $focusnew;
 		} else {
 			$focus = dunserialize($settings['focus']);
@@ -736,17 +736,17 @@ if($_GET['step'] == 'start') {
 			$newsettings['targetblank'] = $targetblanknew;
 		}
 		if(!isset($settings['article_tags'])) {
-			$article_tagsnew = array(1 => '原创', 2 => '热点', 3 => '组图', 4 => '爆料', 5 => '头条', 6 => '幻灯', 7 => '滚动', 8 => '推荐');
+			$article_tagsnew = array(1 => 'Original', 2 => 'Điểm nóng', 3 => 'Nhóm hình ảnh', 4 => 'Bản tin mới', 5 => 'Tiêu đề', 6 => 'Trình chiếu', 7 => 'Cuộn', 8 => 'Giới thiệu');
 			$newsettings['article_tags'] = $article_tagsnew;
 		}
 		if(empty($settings['anonymoustext'])) {
-			$newsettings['anonymoustext'] = '匿名';
+			$newsettings['anonymoustext'] = 'Vô danh';
 		}
 		if(!$word_type_count = DB::result_first("SELECT count(*) FROM ".DB::table('common_word_type')."")) {
-			DB::query("INSERT INTO ".DB::table('common_word_type')." VALUES('1', '政治'),('2', '广告')");
+			DB::query("INSERT INTO ".DB::table('common_word_type')." VALUES('1', 'Chính trị'),('2', 'Quảng cáo')");
 		}
 		if(!isset($settings['userreasons'])) {
-			$newsettings['userreasons'] = '很给力!\r\n神马都是浮云\r\n赞一个!\r\n山寨\r\n淡定';
+			$newsettings['userreasons'] = 'Tuyệt vời!\r\nMọi thứ không là gì cả\r\nCho nó một like!\r\nSao chép\r\nĐiềm tĩnh';
 		}
 		if(!$forum_typevar_search = C::t('forum_typevar')->count_by_search(2)) {
 			C::t('forum_typevar')->update_by_search(1, array('search' => 3));
@@ -861,7 +861,7 @@ if($_GET['step'] == 'start') {
 		if(!DB::result_first("SELECT allowreplycredit FROM ".DB::table('common_usergroup_field')." WHERE groupid = 1")) {
 			DB::query("UPDATE ".DB::table('common_usergroup_field')." SET allowreplycredit = '1' WHERE groupid = 1");
 		}
-		show_msg("配置项升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp mục cấu hình", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'admingroup') {
 		$nextop = 'updatethreadtype';
 		if(!DB::result_first("SELECT allowclearrecycle FROM ".DB::table('common_admingroup')." WHERE allowclearrecycle='1'")) {
@@ -892,7 +892,7 @@ if($_GET['step'] == 'start') {
 			DB::query('UPDATE '.DB::table('common_admingroup')." SET allowmanagecollection='1' WHERE admingid='1' OR admingid='2'");
 		}
 		DB::query('UPDATE '.DB::table('common_admingroup')." SET allowmakehtml='1' WHERE admingid=1");
-		show_msg("管理组设置升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp cài đặt nhóm quản lý", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'updatethreadtype') {
 		$nextop = 'updatecron';
 		$selectoption = array();
@@ -920,52 +920,52 @@ if($_GET['step'] == 'start') {
 				DB::query("ALTER TABLE ".DB::table('forum_optionvalue')."$threadtypearr[typeid] ".implode(',', $varnames));
 			}
 		}
-		show_msg("分类信息升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp thông tin phân loại", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'updatecron') {
 		$nextop = 'updatemagic';
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_cleanfeed.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','清理过期动态','cron_cleanfeed.php','1269746634','1269792000','-1','-1','0','0')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','Dọn dẹp các động lực đã hết hạn','cron_cleanfeed.php','1269746634','1269792000','-1','-1','0','0')");
 		}
 
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_checkpatch_daily.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','每日获取安全补丁','cron_checkpatch_daily.php','1269746639','1269792000','-1','-1','2','22')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','Nhận các bản vá bảo mật hàng ngày','cron_checkpatch_daily.php','1269746639','1269792000','-1','-1','2','22')");
 		}
 
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_publish_halfhourly.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','定时发布主题','cron_publish_halfhourly.php','1269746639','1269792000','-1','-1','-1','0	30')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('', '1','system','Xuất bản chủ đề thường xuyên','cron_publish_halfhourly.php','1269746639','1269792000','-1','-1','-1','0	30')");
 		}
 
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_follow_daily.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','每周广播归档','cron_follow_daily.php','1269746639','1269792000','-1','-1','02','0')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','Kho lưu trữ chương trình phát sóng hàng tuần','cron_follow_daily.php','1269746639','1269792000','-1','-1','02','0')");
 		}
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_todayviews_daily.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','更新每日查看数','cron_todayviews_daily.php','1321500558','1321556400','-1','-1','3','0	5	10	15	20	25	30	35	40	45	50	55')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','Cập nhật lượt xem hàng ngày','cron_todayviews_daily.php','1321500558','1321556400','-1','-1','3','0	5	10	15	20	25	30	35	40	45	50	55')");
 		}
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_member_optimize_daily.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','0','system','每日用户表优化','cron_member_optimize_daily.php','1321500558','1321556400','-1','-1','2','0	5	10	15	20	25	30	35	40	45	50	55')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','0','system','Tối ưu hóa bảng người dùng hàng ngày','cron_member_optimize_daily.php','1321500558','1321556400','-1','-1','2','0	5	10	15	20	25	30	35	40	45	50	55')");
 		}
 		if(DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_cron')." WHERE filename='cron_birthday_daily.php'")) {
 			DB::query("DELETE FROM ".DB::table('common_cron')." WHERE filename='cron_birthday_daily.php'");
 		}
 
 		if(!DB::result_first("SELECT filename FROM ".DB::table('common_cron')." WHERE filename='cron_todayheats_daily.php'")) {
-			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','统计今日热帖','cron_todayheats_daily.php','1269746623','1269792000','-1','-1','0','0')");
+			DB::query("INSERT INTO ".DB::table('common_cron')." VALUES ('','1','system','Thống kê các bài viết hot hôm nay','cron_todayheats_daily.php','1269746623','1269792000','-1','-1','0','0')");
 		}
 
-		show_msg("计划任务升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp nhiệm vụ theo kế hoạch", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'updatemagic') {
 		$nextop = 'updatereport';
 		if(DB::result_first("SELECT name FROM ".DB::table('common_magic')." WHERE identifier='highlight'")) {
-			DB::query("UPDATE ".DB::table('common_magic')." SET name='变色卡', description='可以将帖子或日志的标题高亮，变更颜色' WHERE identifier='highlight'");
+			DB::query("UPDATE ".DB::table('common_magic')." SET name='Thẻ đổi màu', description='Bạn có thể đánh dấu tiêu đề của bài đăng hoặc nhật ký và thay đổi màu sắc' WHERE identifier='highlight'");
 		}
 		if(DB::result_first("SELECT name FROM ".DB::table('common_magic')." WHERE identifier='namepost'")) {
-			DB::query("UPDATE ".DB::table('common_magic')." SET name='显身卡', description='可以查看一次匿名用户的真实身份。' WHERE identifier='namepost'");
+			DB::query("UPDATE ".DB::table('common_magic')." SET name='Card màn hình', description='Bạn có thể xem danh tính thực của những người dùng ẩn danh một lần.' WHERE identifier='namepost'");
 		}
 		if(DB::result_first("SELECT name FROM ".DB::table('common_magic')." WHERE identifier='anonymouspost'")) {
-			DB::query("UPDATE ".DB::table('common_magic')." SET name='匿名卡', description='在指定的地方，让自己的名字显示为匿名。' WHERE identifier='anonymouspost'");
+			DB::query("UPDATE ".DB::table('common_magic')." SET name='Thẻ ẩn danh', description='Ở những nơi được chỉ định, hãy làm cho tên của bạn có vẻ ẩn danh.' WHERE identifier='anonymouspost'");
 		}
 
-		show_msg("道具升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp mặt hàng", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'updatereport') {
 		$nextop = 'myappcount';
 		if(!C::t('common_setting')->skey_exists('report_reward')) {
@@ -1002,7 +1002,7 @@ if($_GET['step'] == 'start') {
 			C::t('common_setting')->update('report_reward', $report_receive);
 		}
 
-		show_msg("举报升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Báo cáo nâng cấp đã hoàn thành", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'myappcount') {
 
 		$nextop = 'nav';
@@ -1011,7 +1011,7 @@ if($_GET['step'] == 'start') {
 			DB::query("DROP TABLE `".DB::table('common_myapp_count')."`");
 			DB::query("DROP TABLE `".DB::table('home_userapp_stat')."`");
 		}
-		show_msg("漫游应用统计升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp thống kê ứng dụng chuyển vùng", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'nav') {
 
@@ -1068,7 +1068,7 @@ if($_GET['step'] == 'start') {
 			}
 		}
 
-		show_msg("导航数据升级完成", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp dữ liệu điều hướng", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'forumstatus') {
 
@@ -1081,7 +1081,7 @@ if($_GET['step'] == 'start') {
 			DB::update('forum_forum', array('status' => 1), "status='2'");
 		}
 
-		show_msg("版块状态升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Trạng thái phần được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'usergroup') {
 		$nextop = 'creditrule';
@@ -1091,7 +1091,7 @@ if($_GET['step'] == 'start') {
 			!DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_usergroup_field')." WHERE allowmediacode>'0'")) {
 			DB::update('common_usergroup_field', array('allowmediacode' => 1), "groupid<'4' OR groupid>'9'");
 		}
-		show_msg("用户升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp người dùng", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'creditrule') {
 		$nextop = 'bbcode';
 		$delrule = array('register', 'realname', 'invitefriend', 'report', 'uploadimage', 'editrealname', 'editrealemail', 'delavatar');
@@ -1099,17 +1099,17 @@ if($_GET['step'] == 'start') {
 		if($count) {
 			DB::query("DELETE FROM ".DB::table('common_credit_rule')." WHERE action IN(".dimplode($delrule).")");
 		}
-		DB::update('common_credit_rule', array('rulename' => '每天登录'), "rulename='每天登陆'");
+		DB::update('common_credit_rule', array('rulename' => 'Đăng nhập hàng ngày'), "rulename='Đăng nhập mỗi ngày'");
 		$count = DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_credit_rule')." WHERE action='portalcomment'");
 		if(!$count) {
-			DB::query("INSERT INTO ".DB::table('common_credit_rule')." (`rulename`, `action`, `cycletype`, `cycletime`, `rewardnum`, `norepeat`, `extcredits1`, `extcredits2`, `extcredits3`, `extcredits4`, `extcredits5`, `extcredits6`, `extcredits7`, `extcredits8`, `fids`) VALUES ('文章评论','portalcomment','1','0','40','1','0','1','0','0','0','0','0','0','')");
+			DB::query("INSERT INTO ".DB::table('common_credit_rule')." (`rulename`, `action`, `cycletype`, `cycletime`, `rewardnum`, `norepeat`, `extcredits1`, `extcredits2`, `extcredits3`, `extcredits4`, `extcredits5`, `extcredits6`, `extcredits7`, `extcredits8`, `fids`) VALUES ('Bình luận bài viết','portalcomment','1','0','40','1','0','1','0','0','0','0','0','0','')");
 		}
 		$count = DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_credit_rule')." WHERE action='followedcollection'");
 		if(!$count) {
-			DB::query("INSERT INTO ".DB::table('common_credit_rule')." (`rulename`, `action`, `cycletype`, `cycletime`, `rewardnum`, `norepeat`, `extcredits1`, `extcredits2`, `extcredits3`, `extcredits4`, `extcredits5`, `extcredits6`, `extcredits7`, `extcredits8`, `fids`) VALUES ('淘专辑被订阅','followedcollection','1','0','3','0','0','1','0','0','0','0','0','0','')");
+			DB::query("INSERT INTO ".DB::table('common_credit_rule')." (`rulename`, `action`, `cycletype`, `cycletime`, `rewardnum`, `norepeat`, `extcredits1`, `extcredits2`, `extcredits3`, `extcredits4`, `extcredits5`, `extcredits6`, `extcredits7`, `extcredits8`, `fids`) VALUES ('Amoy đã được đăng ký','followedcollection','1','0','3','0','0','1','0','0','0','0','0','0','')");
 		}
 
-		show_msg("积分规则升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Các quy tắc về điểm đã được nâng cấp", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'bbcode') {
 		$nextop = 'stamp';
 		$allowcusbbcodes = array();
@@ -1122,7 +1122,7 @@ if($_GET['step'] == 'start') {
 		if($allowcusbbcodes) {
 			DB::query("UPDATE ".DB::table('forum_bbcode')." SET perm='".implode("\t", $allowcusbbcodes)."' WHERE perm=''");
 		}
-		show_msg("自定义代码权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp quyền mã tùy chỉnh", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'stamp') {
 		$nextop = 'block_item';
 		$stampnew = DB::result_first("SELECT COUNT(*) FROM ".DB::table('forum_thread')." WHERE stamp>'0'");
@@ -1135,13 +1135,13 @@ if($_GET['step'] == 'start') {
 			}
 		}
 		if(!DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_smiley')." WHERE url='010.gif'")) {
-			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('4','19','stamp','编辑采用','010.gif')");
+			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('4','19','stamp','Biên tập viên thông qua','010.gif')");
 		}
 		if(!DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_smiley')." WHERE url='010.small.gif'")) {
-			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('0','18','stamplist','编辑采用','010.small.gif')");
+			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('0','18','stamplist','Biên tập viên thông qua','010.small.gif')");
 		}
 		if(!DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_smiley')." WHERE url='011.small.gif'")) {
-			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('0','20','stamplist','新人帖','011.small.gif')");
+			DB::query("REPLACE INTO ".DB::table('common_smiley')." (typeid, displayorder, type, code, url) VALUES ('0','20','stamplist','Bản tin mới','011.small.gif')");
 			$setnewbie = true;
 		}
 		require_once libfile('function/cache');
@@ -1151,7 +1151,7 @@ if($_GET['step'] == 'start') {
 			$id = DB::result_first("SELECT displayorder FROM ".DB::table('common_smiley')." WHERE url='011.small.gif'");
 			DB::query("REPLACE INTO ".DB::table('common_setting')." VALUES ('newbie', '$id')");
 		}
-		show_msg("鉴定图章升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp tem thẩm định", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'block_item') {
 		$nextop = 'block_permission';
 		$bids = $items = $blocks = array();
@@ -1174,7 +1174,7 @@ if($_GET['step'] == 'start') {
 				DB::update('common_block_item', array('thumbpath' => $thumbpath), "itemid='$item[itemid]'");
 			}
 		}
-		show_msg("模块缩略图权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp quyền đối với hình thu nhỏ của mô-đun", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'block_permission') {
 		$nextop = 'portalcategory_permission';
@@ -1195,7 +1195,7 @@ if($_GET['step'] == 'start') {
 				}
 			}
 		}
-		show_msg("模块权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp quyền mô-đun", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'portalcategory_permission') {
 		$nextop = 'portal_comment';
 		if(!DB::result_first('SELECT inheritedcatid FROM '.DB::table('portal_category_permission')." WHERE inheritedcatid > '0' LIMIT 1")) {
@@ -1212,14 +1212,14 @@ if($_GET['step'] == 'start') {
 				}
 			}
 		}
-		show_msg("门户频道权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp quyền kênh cổng thông tin", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'portal_comment') {
 		$nextop = 'portal_article_cover_img';
 		$one = DB::fetch_first('SELECT * FROM '.DB::table('portal_comment')." WHERE id=0 AND idtype='' LIMIT 1");
 		if($one && isset($one['aid'])) {
 			DB::query("UPDATE ".DB::table('portal_comment')." SET id=aid,idtype='aid' WHERE aid>0");
 		}
-		show_msg("文章评论升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp nhận xét", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'portal_article_cover_img') {
 		$nextop = 'block_style';
@@ -1227,7 +1227,7 @@ if($_GET['step'] == 'start') {
 		if($pic && is_numeric(substr($pic, 0, strpos($pic,'/')))) {
 			DB::query("UPDATE ".DB::table('portal_article_title')." SET pic=CONCAT('portal/',pic) WHERE LENGTH(pic)>6");
 		}
-		show_msg("文章封面图升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Ảnh bìa bài viết đã được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'block_style') {
 		$nextop = 'block_script';
@@ -1249,10 +1249,10 @@ if($_GET['step'] == 'start') {
 				$sql = implode("\r\n", $data);
 				runquery($sql);
 			}
-			DB::query("UPDATE ".DB::table('common_block_style')." SET name = replace(`name`, 'X1.5', '内置')");
-			DB::query("UPDATE ".DB::table('common_block_style')." SET name = replace(`name`, 'X2.0', '内置')");
+			DB::query("UPDATE ".DB::table('common_block_style')." SET name = replace(`name`, 'X1.5', 'Built-in')");
+			DB::query("UPDATE ".DB::table('common_block_style')." SET name = replace(`name`, 'X2.0', 'Built-in')");
 		}
-		show_msg("模块模板升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp mẫu mô-đun", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'block_script') {
 		$nextop = 'common_usergroup_field';
 		include_once libfile('function/block');
@@ -1287,7 +1287,7 @@ if($_GET['step'] == 'start') {
 			block_updatecache($bid, true);
 		}
 
-		show_msg("模块脚本升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn thành nâng cấp tập lệnh mô-đun", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'common_usergroup_field') {
 		$nextop = 'group_index';
 		if(!C::t('common_setting')->skey_exists('group_recommend')) {
@@ -1315,7 +1315,7 @@ if($_GET['step'] == 'start') {
 			DB::query('UPDATE '.DB::table('common_usergroup_field')." SET allowcreatecollection='5',allowcommentcollection='1',allowfollowcollection='30' WHERE groupid<'4' OR groupid>'9'");
 		}
 
-		show_msg("用户组权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Quyền của nhóm người dùng đã được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'group_index') {
 		$nextop = 'domain';
@@ -1327,7 +1327,7 @@ if($_GET['step'] == 'start') {
 				import_diy($v['importfile'], $v['primaltplname'], $v['targettplname']);
 			}
 		}
-		show_msg("群组首页升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Trang chủ của nhóm đã được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'domain') {
 		$nextop = 'pm';
@@ -1365,12 +1365,12 @@ if($_GET['step'] == 'start') {
 		if(!empty($newsettings)) {
 			C::t('common_setting')->update_batch($newsettings);
 		}
-		show_msg("域名设置升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Cài đặt tên miền được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'pm') {
 		$nextop = 'allowgetimage';
 			DB::query("UPDATE ".DB::table('common_member')." SET newpm='0', newprompt='0'");
-		show_msg("新短消息状态重置完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất đặt lại trạng thái SMS mới", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'allowgetimage') {
 		$nextop = 'verify';
 		if(!DB::result_first("SELECT COUNT(*) FROM ".DB::table('common_usergroup_field')." WHERE allowgetimage='1'")) {
@@ -1383,7 +1383,7 @@ if($_GET['step'] == 'start') {
 				DB::query('UPDATE '.DB::table('forum_access')." SET allowgetimage='".intval($row['allowgetattach'])."' WHERE uid='$row[uid]'");
 			}
 		}
-		show_msg("查看图片权限升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Quyền xem ảnh được nâng cấp", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'verify') {
 		$nextop = 'threadimage';
@@ -1394,7 +1394,7 @@ if($_GET['step'] == 'start') {
 		$updateverify = $_GET['updateverify'] ? true : false;
 		if(!isset($verifys[6])) {
 			$verifys[6] = array(
-					'title' => '实名认证',
+					'title' => 'Đã xác minh',
 					'available' => $settings['realname'],
 					'showicon' => 0,
 					'viewrealname' => 0,
@@ -1402,7 +1402,7 @@ if($_GET['step'] == 'start') {
 					'icon' => ''
 				);
 			$verifys[7] = array(
-					'title' => '视频认证',
+					'title' => 'Chứng nhận video',
 					'available' => $settings['videophoto'],
 					'showicon' => 0,
 					'viewvideophoto' => $settings['video_allowviewspace'],
@@ -1437,11 +1437,11 @@ if($_GET['step'] == 'start') {
 
 				}
 				if($n) {
-					show_msg("实名认证升级中[$n/$t]", "$theurl?step=data&op=verify&i=$n&updateverify=true");
+					show_msg("Xác thực tên thật đang được nâng cấp[$n/$t]", "$theurl?step=data&op=verify&i=$n&updateverify=true");
 				}
 			}
 		}
-		show_msg("认证数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp dữ liệu chứng nhận", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'forumattach') {
 		$nextop = 'forumstatlog';
 		$limit = 10000;
@@ -1482,7 +1482,7 @@ if($_GET['step'] == 'start') {
 					));
 				}
 				$start += $limit;
-				show_msg("论坛附件表升级中 ... $start/$count", "$theurl?step=data&op=forumattach&start=$start");
+				show_msg("Bảng đính kèm diễn đàn đang được nâng cấp ... $start/$count", "$theurl?step=data&op=forumattach&start=$start");
 			}
 			DB::query("DROP TABLE `".DB::table('forum_attachmentfield')."`");
 			$dropsql = array();
@@ -1497,11 +1497,11 @@ if($_GET['step'] == 'start') {
 				DB::query("ALTER TABLE ".DB::table('forum_attachment').' '.implode(', ', $dropsql));
 			}
 		}
-		show_msg("论坛附件表升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Bảng đính kèm diễn đàn đã được nâng cấp", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'forumstatlog') {
 		$nextop = 'moderate';
 		DB::query('DELETE FROM '.DB::table('forum_statlog')." WHERE logdate='0000-00-00'");
-		show_msg("论坛版块统计数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Dữ liệu thống kê phần diễn đàn đã được nâng cấp", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'threadimage') {
 		$nextop = 'forumattach';
 		$defaultmonth = 10;
@@ -1521,19 +1521,19 @@ if($_GET['step'] == 'start') {
 					fwrite($fp, implode('|', $data));
 					fclose($fp);
 				} else {
-					show_msg("主题图片表无法处理，跳过", "$theurl?step=data&op=$nextop");
+					show_msg("Không xử lý được bảng ảnh chủ đề, bỏ qua", "$theurl?step=data&op=$nextop");
 				}
 			} else {
 				$data = @file($cachefile);
 				if(!$data) {
-					show_msg("主题图片表无法处理，跳过", "$theurl?step=data&op=$nextop");
+					show_msg("Không xử lý được bảng ảnh chủ đề, bỏ qua", "$theurl?step=data&op=$nextop");
 				}
 				$data = explode('|', $data[0]);
 			}
 			$tids = array_slice($data, $start, $limit);
 			if(!$tids) {
 				@unlink($cachefile);
-				show_msg("主题图片表处理完毕", "$theurl?step=data&op=$nextop");
+				show_msg("Bảng ảnh chủ đề đã được xử lý", "$theurl?step=data&op=$nextop");
 			}
 			$insertsql = array();
 			foreach(C::t('forum_post')->fetch_all_by_tid(0, $tids, false, '', 0, 0, 1) as $row) {
@@ -1547,9 +1547,9 @@ if($_GET['step'] == 'start') {
 				DB::query("INSERT INTO ".DB::table('forum_threadimage')." (`tid`, `attachment`, `remote`) VALUES ".implode(',', $insertsql));
 			}
 			$start += $limit;
-			show_msg("主题图片表处理中 ... $start ", "$theurl?step=data&op=threadimage&start=$start");
+			show_msg("Xử lý bảng ảnh chủ đề ... $start ", "$theurl?step=data&op=threadimage&start=$start");
 		} else {
-			show_msg("主题图片表无法处理，跳过", "$theurl?step=data&op=$nextop");
+			show_msg("Không xử lý được bảng ảnh chủ đề, bỏ qua", "$theurl?step=data&op=$nextop");
 		}
 	} elseif($_GET['op'] == 'moderate') {
 
@@ -1613,7 +1613,7 @@ if($_GET['step'] == 'start') {
 				updatemoderate('topicid_cid', $row['cid']);
 			}
 		}
-		show_msg("审核数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp dữ liệu kiểm tra", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'moderate_update') {
 		$nextop = 'founder';
@@ -1647,7 +1647,7 @@ if($_GET['step'] == 'start') {
 				}
 			}
 		}
-		show_msg("审核数据转换完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất chuyển đổi dữ liệu kiểm tra", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'founder') {
 
@@ -1671,18 +1671,18 @@ if($_GET['step'] == 'start') {
 			}
 		}
 
-		show_msg("创始人数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp dữ liệu người sáng lập", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'threadprofile') {
 
 		$nextop = 'plugin';
 		if(!DB::result_first("SELECT COUNT(*) FROM ".DB::table("forum_threadprofile")." WHERE global=1")) {
 			DB::query("INSERT INTO ".DB::table("forum_threadprofile")." (`id`, `name`, `template`, `global`) VALUES
-				  (1, '默认方案', 'a:2:{s:4:\"left\";s:399:\"{numbercard}\r\n{groupicon}<p>{*}</p>{/groupicon}\r\n{authortitle}<p><em>{*}</em></p>{/authortitle}\r\n{customstatus}<p class=\"xg1\">{*}</p>{/customstatus}\r\n{star}<p>{*}</p>{/star}\r\n{upgradeprogress}<p>{*}</p>{/upgradeprogress}\r\n<dl class=\"pil cl\">\r\n\t<dt>{baseinfo=credits,1}</dt><dd>{baseinfo=credits,0}</dd>\r\n</dl>\r\n{medal}<p class=\"md_ctrl\">{*}</p>{/medal}\r\n<dl class=\"pil cl\">{baseinfo=field_qq,0}</dl>\";s:3:\"top\";s:82:\"<dl class=\"cl\">\r\n<dt>{baseinfo=credits,1}</dt><dd>{baseinfo=credits,0}</dd>\r\n</dl>\";}', 1);");
-			DB::query("REPLACE INTO ".DB::table("forum_bbcode")." VALUES ('2','2','qq','bb_qq.gif','<a href=\"http://wpa.qq.com/msgrd?v=3&uin={1}&amp;site=[Discuz!]&amp;from=discuz&amp;menu=yes\" target=\"_blank\"><img src=\"static/image/common/qq_big.gif\" border=\"0\"></a>','[qq]688888[/qq]','显示 QQ 在线状态，点这个图标可以和他（她）聊天','1','请输入 QQ 号码:<a href=\"\" class=\"xi2\" onclick=\"this.href=\'http://wp.qq.com/set.html?from=discuz&uin=\'+$(\'e_cst1_qq_param_1\').value\" target=\"_blank\" style=\"float:right;\">设置QQ在线状态&nbsp;&nbsp;</a>','1','21','1	2	3	10	11	12	13	14	15	16	17	18	19');");
+				  (1, 'Lược đồ mặc định', 'a:2:{s:4:\"left\";s:399:\"{numbercard}\r\n{groupicon}<p>{*}</p>{/groupicon}\r\n{authortitle}<p><em>{*}</em></p>{/authortitle}\r\n{customstatus}<p class=\"xg1\">{*}</p>{/customstatus}\r\n{star}<p>{*}</p>{/star}\r\n{upgradeprogress}<p>{*}</p>{/upgradeprogress}\r\n<dl class=\"pil cl\">\r\n\t<dt>{baseinfo=credits,1}</dt><dd>{baseinfo=credits,0}</dd>\r\n</dl>\r\n{medal}<p class=\"md_ctrl\">{*}</p>{/medal}\r\n<dl class=\"pil cl\">{baseinfo=field_qq,0}</dl>\";s:3:\"top\";s:82:\"<dl class=\"cl\">\r\n<dt>{baseinfo=credits,1}</dt><dd>{baseinfo=credits,0}</dd>\r\n</dl>\";}', 1);");
+			DB::query("REPLACE INTO ".DB::table("forum_bbcode")." VALUES ('2','2','qq','bb_qq.gif','<a href=\"http://wpa.qq.com/msgrd?v=3&uin={1}&amp;site=[Discuz!]&amp;from=discuz&amp;menu=yes\" target=\"_blank\"><img src=\"static/image/common/qq_big.gif\" border=\"0\"></a>','[qq]688888[/qq]','Hiển thị trạng thái trực tuyến QQ, nhấp vào biểu tượng này để trò chuyện với anh ấy (cô ấy)','1','Vui lòng nhập số QQ:<a href=\"\" class=\"xi2\" onclick=\"this.href=\'http://wp.qq.com/set.html?from=discuz&uin=\'+$(\'e_cst1_qq_param_1\').value\" target=\"_blank\" style=\"float:right;\">Đặt trạng thái trực tuyến QQ&nbsp;&nbsp;</a>','1','21','1	2	3	10	11	12	13	14	15	16	17	18	19');");
 		}
 
-		show_msg("布局方案设置升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp cài đặt kế hoạch bố trí", "$theurl?step=data&op=$nextop");
 
 	} elseif($_GET['op'] == 'plugin') {
 
@@ -1713,7 +1713,7 @@ if($_GET['step'] == 'start') {
 			savecache('pluginlanguage_install', $_G['cache']['pluginlanguage_install']);
 		}
 
-		show_msg("插件语言包数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Dữ liệu gói ngôn ngữ trình cắm đã được nâng cấp", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'notification') {
 		$nextop = 'medal';
 		if(!DB::result_first("SELECT id FROM ".DB::table('home_notification')." WHERE category>0")) {
@@ -1736,7 +1736,7 @@ if($_GET['step'] == 'start') {
 			DB::query("UPDATE ".DB::table('home_notification')." SET category=2,type='comment' WHERE type IN('piccomment','blogcomment','sharecomment','doing')");
 			DB::query("UPDATE ".DB::table('home_notification')." SET category=3,type='click' WHERE type IN('clickblog','clickarticle','clickpic')");
 		}
-		show_msg("提醒数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Nhắc nhở rằng quá trình nâng cấp dữ liệu đã hoàn tất", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'medal') {
 
 		$nextop = 'closeswitch';
@@ -1755,7 +1755,7 @@ if($_GET['step'] == 'start') {
 				}
 			}
 		}
-		show_msg("用户勋章数据升级完毕", "$theurl?step=data&op=$nextop");
+		show_msg("Đã hoàn tất nâng cấp dữ liệu huy chương của người dùng", "$theurl?step=data&op=$nextop");
 	} elseif($_GET['op'] == 'closeswitch') {
 		$nextop = 'end';
 		if($first_to_2_5) {
@@ -1764,10 +1764,10 @@ if($_GET['step'] == 'start') {
 			$newsettings['pwlength'] = 0;
 			C::t('common_setting')->update_batch($newsettings);
 		}
-		show_msg("数据升级结束", "$theurl?step=data&op=$nextop");
+		show_msg("Nâng cấp dữ liệu đã kết thúc", "$theurl?step=data&op=$nextop");
 	} else {
 
-		$deletevar = array('app', 'home');//config中需要删除的项目
+		$deletevar = array('app', 'home');
 		$default_config = $_config = array();
 		$default_configfile = DISCUZ_ROOT.'./config/config_global_default.php';
 		if(!file_exists($default_configfile)) {
@@ -1780,16 +1780,16 @@ if($_GET['step'] == 'start') {
 		include $configfile;
 		DB::query("UPDATE ".DB::table('common_plugin')." SET available='0' WHERE modules NOT LIKE '%s:6:\"system\";i:2;%'");
 		if(save_config_file($configfile, $_config, $default_config, $deletevar)) {
-			show_msg("数据处理完成", "$theurl?step=delete");
+			show_msg("Xử lý dữ liệu hoàn thành", "$theurl?step=delete");
 		} else {
-			show_msg('"config/config_global.php" 文件已更新，由于 "config/" 目录不可写入，我们已将更新的文件保存到 "data/" 目录下，请通过 FTP 软件将其转移到 "config/" 目录下覆盖源文件。<br /><br /><a href="'.$theurl.'?step=delete">当您完成上述操作后点击这里继续</a>');
+			show_msg('"Tệp "config/config_global.php" đã được cập nhật. Vì thư mục "config/" không thể ghi được nên chúng tôi đã lưu tệp cập nhật trong thư mục "data/". Vui lòng chuyển tệp đó vào thư mục "config/" thông qua phần mềm FTP để ghi đè Tệp Nguồn.<br /><br /><a href="'.$theurl.'?step=delete">Bấm vào đây để tiếp tục khi bạn đã hoàn thành các thao tác trên</a>');
 		}
 	}
 
 }elseif ($_GET['step'] == 'delete') {
 
 	if(!$devmode) {
-		show_msg("数据删除不处理，进入下一步", "$theurl?step=style");
+		show_msg("Quá trình xóa dữ liệu không được xử lý, hãy chuyển sang bước tiếp theo", "$theurl?step=style");
 	}
 
 	$oldtables = array();
