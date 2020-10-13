@@ -15,7 +15,7 @@ $lang = array
 (
 	'forumlist_fids' => 'Thiết lập diễn đàn',
 	'forumlist_fids_comment' => 'Điền vào các diễn đàn chỉ định ID (id), nhiều hơn một diễn đàn với một dấu phẩy (,) để ngăn cách nhiều ID.',
-	'forumlist_fups' => 'Diễn đàn lớn',
+	'forumlist_fups' => 'Khu vực chung',
 	'forumlist_fups_comment' => 'Hiển thị một số chuyên mục hoặc diễn đàn con',
 	'forumlist_titlelength' => 'Tiêu đề diễn đàn',
 	'forumlist_titlelength_comment' => 'Thiết lập độ dài tối đa tiêu đề.',
