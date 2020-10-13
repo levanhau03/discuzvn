@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'forumtree_name' => 'เมนูรายการบอร์ด',
-	'forumtree_desc' => 'แสดงเมนูรายการบอร์ด',
-	'forumtree_fids' => 'แสดงบอร์ด',
-	'forumtree_fids_comment' => 'เลือกบอร์ดที่ต้องการให้แสดง, ปล่อยว่างไว้เพื่อแสดงบอร์ดทั้งหมด',
+	'forumtree_name' => 'Cấu trúc cây diễn đàn',
+	'forumtree_desc' => 'Hiển thị danh sách diễn đàn trong một cây thư mục',
+	'forumtree_fids' => 'Id diễn đàn',
+	'forumtree_fids_comment' => 'Chọn diễn đàn để hiển thị, để trống nếu muốn hiển thị tất cả diễn đàn',//'设置允许显示的版块，留空为显示所有版块',
 );
 
 ?>

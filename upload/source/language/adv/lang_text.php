@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'text_name' => 'ตารางด้านบนใต้เมนูหลัก',
-	'text_desc' => 'Display the Adv at page of forum or group with table style. In general, it is a text, also you can use small image and Flash.',
-	'text_index' => 'Home',
-	'text_fids' => 'Target Forums',
-	'text_fids_comment' => 'Set forums to diplay the Adv',
-	'text_groups' => 'Target Groups',
-	'text_groups_comment' => 'Set the groups to show advertising. Take effect only when ads included in the scope of &quot;group&quot;.',
-	'text_category' => 'Target Category',
-	'text_category_comment' => 'Set the category to show the Adv',
+	'text_name' => 'Khung trên diễn đàn',
+	'text_desc' => 'Hiển thị: Trang bảng trong các hình thức quảng cáo văn bản để hiển thị của diễn đàn này, các nhóm trên cùng của trang, thường ở dạng văn bản, hình ảnh nhỏ cũng có thể được sử dụng, và Flash. Các trang hiện có quảng cáo văn bản nhiều, hệ thống sẽ được theo hình thức của một bảng thiết lập để hiển thị theo quy định hiển thị tất cả các, trong khi số lượng các cột vào bảng phạm vi từ 3 đến 5 trong sự sắp xếp năng động, tự động đạt được hiệu quả tốt nhất của việc bố trí quảng cáo .',
+	'text_index' => 'Trang chủ',
+	'text_fids' => 'Diễn đàn',
+	'text_fids_comment' => 'Chọn diễn đàn cho quảng cáo hiển thị',
+	'text_groups' => 'Nhóm thành viên',
+	'text_groups_comment' => 'Chọn chuyên mục nhóm cho quảng cáo hiển thị',
+	'text_category' => 'Chuyên mục',
+	'text_category_comment' => 'Chọn chuyên mục cho quảng cáo hiển thị',
 );
 
 ?>

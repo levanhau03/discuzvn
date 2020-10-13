@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'headerbanner_name' => 'ส่วนหัวด้านบนสุด',
-	'headerbanner_desc' => 'Display Adv at the page header. In general, it is 960x60 images or Flashs. When there are multipe header advs, they will be displayed in random.',
-	'headerbanner_index' => 'Home',
-	'headerbanner_fids' => 'Target Forums',
-	'headerbanner_fids_comment' => 'Set forums to diplay the Adv',
-	'headerbanner_groups' => 'Target Groups',
-	'headerbanner_groups_comment' => 'Set the groups to show advertising. Take effect only when ads included in the scope of &quot;group&quot;.',
-	'headerbanner_category' => 'Portal Category',
-	'headerbanner_category_comment' => 'Set a portal category for show the Header Banner. This take effect only when Ads is assigned to the Portal',
+	'headerbanner_name' => 'Đầu trang',
+	'headerbanner_desc' => 'Hiển thị: Hiển thị bên phải phía trên cùng của diễn đàn. Thường là ảnh 468x60 hoặc flash.',
+	'headerbanner_index' => 'Trang chủ',
+	'headerbanner_fids' => 'Diễn đàn',
+	'headerbanner_fids_comment' => 'Chọn diễn đàn để quảng cáo hiển thị',
+	'headerbanner_groups' => 'Nhóm thành viên',
+	'headerbanner_groups_comment' => 'Chọn mục nhóm để quảng cáo hiển thị',
+	'headerbanner_category' => 'Đặt các kênh cổng thông tin',
+	'headerbanner_category_comment' => 'Thiết lập các kênh quảng cáo phân loại, khi quảng cáo bao gồm trong phạm vi của các “cổng” hợp lệ',
 );
 
 ?>

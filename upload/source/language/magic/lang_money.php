@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'money_name' => 'สุ่มเพิ่มเงิน',
-	'money_desc' => 'เพิ่มเงินของคุณ',
-	'money_info' => 'กฎของการเพิ่มจำนวนเงิน: มากกว่า 1 และน้อยกว่า 150% ของราคาซื้อของตัวเลขที่สุ่ม',
+	'money_name' => 'Thẻ tiền tài',
+	'money_desc' => 'Ngẫu nhiên có thể nhận được một số điểm',
+	'money_info' => 'Quy định nhận tiền: Lớn hơn 1 và nhỏ hơn 150% số tiền ban đang có.',
 );
 
 ?>

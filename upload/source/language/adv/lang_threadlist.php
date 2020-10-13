@@ -13,21 +13,21 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'threadlist_name' => 'ระหว่างกระทู้หน้ารายการกระทู้',
-	'threadlist_desc' => 'Show method: Place Adv at the first post position at a post list page. This type Adv looks like a first post to attract the attention of visitors.',
-	'threadlist_fids' => 'Target Forums',
-	'threadlist_fids_comment' => 'Set forums to diplay the Adv',
-	'threadlist_groups' => 'Target Groups',
-	'threadlist_groups_comment' => 'Set the groups to show advertising. Take effect only when ads included in the scope of &quot;group&quot;.',
-	'threadlist_pos' => 'Ads Position',
-	'threadlist_pos_comment' => 'Set the post number where to place the Ads. If you did not specified this position, the Adv will be diaplayed at random position.',
-	'threadlist_mode' => 'Display mode',
-	'threadlist_mode_comment' => 'Free mode, occupy the full column width of a topis list for show the ads.<br />This thread mode, the Ad placed into a topic, click on your Ad will jump to a specific thread',
-	'threadlist_mode_0' => 'Free mode',
-	'threadlist_mode_1' => 'This Thread',
-	'threadlist_tid' => 'Target threads ID',
-	'threadlist_threadurl' => 'Custom thread URL',
-	'threadlist_threadurl_comment' => 'Leave blank for use the specified thread URL',
+	'threadlist_name' => 'Danh sách bài',
+	'threadlist_desc' => 'Hiển thị: Nằm giữa các danh sách các bài viết.',
+	'threadlist_fids' => 'Diễn đàn',
+	'threadlist_fids_comment' => 'Chọn diễn đàn cho quảng cáo hiển thị',
+	'threadlist_groups' => 'Nhóm thành viên',
+	'threadlist_groups_comment' => 'Chọn chuyên mục nhóm cho quảng cáo hiển thị',
+	'threadlist_pos' => 'Vị trí',
+	'threadlist_pos_comment' => 'Đặt ở vị trí chủ đề của danh mục đầu tiên của một số chủ đề hiển thị quảng cáo này, nếu bạn không xác định vị trí sẽ được hiển thị ngẫu nhiên',
+	'threadlist_mode' => 'Chế độ hiển thị',
+	'threadlist_mode_comment' => 'Chế độ miễn phí, lấy danh sách đầy đủ các chủ đề thể hiện chiều rộng cột quảng cáo<br />Chủ đề, các quảng cáo được thực hiện vào một chủ đề, nhấp chuột vào quảng cáo của bạn để chuyển đến một chủ đề cụ thể',
+	'threadlist_mode_0' => 'Chế độ miễn phí',
+	'threadlist_mode_1' => 'Chế độ chủ đề',
+	'threadlist_tid' => 'Số tid của chủ để chỉ định',
+	'threadlist_threadurl' => 'URL chủ đề đích',
+	'threadlist_threadurl_comment' => 'URL của chủ để khi bấm vào quảng cáo',
 );
 
 ?>

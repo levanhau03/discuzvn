@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'adv_title' => 'ใส่ชื่อ',
-	'adv_adv' => 'เลือกโฆษณา',
+	'adv_title' => 'Nhập tiêu đề quảng cáo',//'或者输入名称',
+	'adv_adv' => 'Chọn quảng cáo',//'选择广告',
 );
 ?>

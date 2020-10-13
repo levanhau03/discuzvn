@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'vedio_url' => 'ที่อยู่ URL วิดีโอ',
-	'vedio_width' => 'ความกว้างของวิดีโอ',
-	'vedio_height' => 'ความสูงของวิดีโอ',
+	'vedio_url' => 'Link video',//'视频地址',
+	'vedio_width' => 'Chiều rộng video',//'视频宽度',
+	'vedio_height' => 'Chiều dài video',//'视频高度',
 );
 ?>

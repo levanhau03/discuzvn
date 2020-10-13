@@ -13,19 +13,19 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'jack_name' => 'เลื่อนกระทู้ให้อยู่ที่ 1',
-	'jack_desc' => 'Thread from the top can be a period of time, re-use may be extended from the top post by the time',
-	'jack_expiration' => 'Duration',
-	'jack_expiration_comment' => 'Set the thread can be long from the top, default is 1 hour',
-	'jack_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'jack_info' => '<p class="mtn xw0 mbn">Top the specified thread for <span class="xi1 xw1 xs2">{expiration}</span> hours.</p><p class="mtn xw0 mbn">You now have <span class="xi1 xw1 xs2">{magicnum}</span> jacks can be used.</p>',
-	'jack_num' => 'Use this number:',
-	'jack_num_not_enough' => 'Insufficient number or do not fill in the number of props to use.',
-	'jack_info_nonexistence' => 'Please specify the thread for top',
-	'jack_succeed' => 'The thread successfully jacked to the top',
-	'jack_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
+	'jack_name' => 'Đóng đinh',
+	'jack_desc' => 'Dùng để kéo dài thời gian Đặt chú ý 1 chủ đề',
+	'jack_expiration' => 'Thời gian',
+	'jack_expiration_comment' => 'Chủ đề có thể ở TOP, mặc định là 1 giờ',
+	'jack_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'jack_info' => '<p class="mtn xw0 mbn">Chủ đề còn có thể ở trên TOP <span class="xi1 xw1 xs2"> {expiration} </span>giờ</p> <p class="mtn xw0 mbn">Bây giờ bạn có<span class="xi1 xw1 xs2"> {magicnum} </span>Đinh sử dụng</p>',
+	'jack_num' => 'Số lượng sử dụng:',
+	'jack_num_not_enough' => 'Thiếu hoặc không điền số đạo cụ sử dụng',
+	'jack_info_nonexistence' => 'Xác định chủ đề cần đính',
+	'jack_succeed' => 'Đính lên thành công',
+	'jack_info_noperm' => 'Có lỗi, không được phép dùng thẻ này ở đây!',
 
-	'jack_notification' => '{actor} ใช้ไอเท็ม{magicname} กับกระทู้ {subject} ของคุณ <a href="forum.php?mod=viewthread&tid={tid}">ไปดูกระทู้!</a>',
+	'jack_notification' => 'Chủ đề {subject} của bạn được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'namepost_name' => 'เป็นคนโพสต์ล่าสุด',
-	'namepost_desc' => 'แสดงชื่อสมาชิกที่โพสต์/ตอบกลับในกระทู้เป็นชื่อคุณเองหรือสมาชิกที่คุณเลือก',
-	'namepost_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'namepost_num' => 'มีจำนวน: {magicnum}',
-	'namepost_info' => 'แสดงชื่อคนโพสต์ล่าสุด กรุณากรอก ID กระทู้',
-	'namepost_info_nonexistence' => 'เกิดข้อผิดพลาด ไม่สามารถใช้ไอเท็มนี้ได้',
-	'namepost_succeed' => 'ผู้ไม่ประสงค์ออกนาม <a title="{username}" href="space.php?uid={uid}" target="_blank"><b>{username}</b></a>',
-	'namepost_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
-	'namepost_info_user_noperm' => 'ขออภัย! คุณไม่สามารถใช้ไอเท็มนี้ได้',
-	'magic_namepost_succeed' => 'ผู้ไม่ประสงค์ออกนาม',
+	'namepost_name' => 'Thẻ Kính lúp',
+	'namepost_desc' => 'Bạn có thể xem tác giả của chủ đề ẩn danh',
+	'namepost_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'namepost_num' => 'Có: {magicnum} thẻ',
+	'namepost_info' => 'Nhập ID chủ đề cần xem tác giả',
+	'namepost_info_nonexistence' => 'Hãy xác định bài viết cần xem',
+	'namepost_succeed' => 'Sử dụng thành công',
+	'namepost_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây.',
+	'namepost_info_user_noperm' => 'Có lỗi, bạn không thể sử dụng đạo cụ cho người này',
+	'magic_namepost_succeed' => 'Chưa xác định người sử dụng',
 );
 
 ?>

@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'call_name' => 'บอกเพื่อน',
-	'call_desc' => 'บอกกับเพื่อนๆของคุณ บอกให้พวกเขาเข้ามาชมบล็อกของคุณ',
-	'call_info' => 'บอกกับเพื่อนๆของคุณ บอกให้พวกเขาเข้ามาชมบล็อกของคุณ',
+	'call_name' => 'Danh thiếp',
+	'call_desc' => 'Dùng để mời bạn bè ghé thăng Blog của mình',
+	'call_info' => 'Gửi thông báo cho bạn bè của bạn mời họ xem Blog của mình',
 );
 
 ?>

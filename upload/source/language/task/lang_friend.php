@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'friend_name' => 'ค้นหาและเพิ่มเป็นเพื่อน',
-	'friend_desc' => 'ค้นหาและเพิ่มเป็นเพื่อนให้ได้ 5 คน',
-	'friend_view' => '<strong>คำแนะนำในการเข้าร่วมกิจกรรมนี้: </strong>
+	'friend_name' => 'Thêm nhiệm vụ bạn bè',
+	'friend_desc' => 'Có 5 người bạn để nhận phần thưởng tương ứng',
+	'friend_view' => '<strong>Hãy làm theo các hướng dẫn dưới đây để tham gia vào nhiệm vụ này：</strong>
 		<ul>
 		<li>1. <a href="home.php?mod=spacecp&ac=friend&op=find" target="_blank">新窗口打开寻找好友页面</a></li>
 		<li>2. 在新打开的页面中，可以将系统自动给您找到的推荐用户加为好友，也可以自己设置条件寻找并添加为好友</li>

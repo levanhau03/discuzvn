@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'blog_name' => 'ด้านขวาหน้าเนื้อบล็อก',
-	'blog_desc' => 'Display mode: Ads displayed on the blog right side.',
+	'blog_name' => 'Trang Blog',
+	'blog_desc' => 'Hiển thị: Hiển thị bên phải Blog.',
 );
 
 ?>

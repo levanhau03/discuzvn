@@ -13,18 +13,18 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'close_name' => 'ปิดกระทู้',
-	'close_desc' => 'คุณสามารถปิดกระทู้ ห้ามตอบกลับหรือแสดงความคิดเห็น',
-	'close_expiration' => 'ระยะเวลาที่จะปิดกระทู้',
-	'close_expiration_comment' => 'การปิดกระทู้สามารถตั้งค่าให้ปิดแค่ชั่วคราวหรือปิดเป็นเวลานาน ค่าเริ่มต้นคือ 24 ชั่วโมง',
-	'close_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'close_info' => 'ปิดกระทู้เป็นระยะเวลา {expiration} ชั่วโมง กรุณากรอก ID กระทู้',
-	'close_info_nonexistence' => 'กรุณาระบุกระทู้ที่คุณต้องการปิด',
-	'close_succeed' => 'กระทู้ของคุถูกปิดเรียบร้อย',
-	'close_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
-	'close_info_user_noperm' => 'ขออภัย! คุณไม่สามารถใช้ไอเท็มนี้ได้',
+	'close_name' => 'Thẻ im lặng',
+	'close_desc' => 'Dùng để khóa Chủ đề',
+	'close_expiration' => 'Thời gian đóng',
+	'close_expiration_comment' => 'Thiết lập đóng cửa bao lâu, mặc định là 24 giờ',
+	'close_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'close_info' => 'Đóng các chủ đề trong {expiration} giờ, nhập ID chủ đề vào',
+	'close_info_nonexistence' => 'Hãy xác định đối tượng để đóng',
+	'close_succeed' => 'Chủ đề đã được đóng cửa.',
+	'close_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây.',
+	'close_info_user_noperm' => 'Có lỗi, bạn không thể sử dụng đạo cụ với người này',
 
-	'close_notification' => '{actor} ใช้ไอเท็ม{magicname} กับกระทู้ {subject} ของคุณ <a href="forum.php?mod=viewthread&tid={tid}">ไปดูกระทู้!</a>',
+	'close_notification' => 'Chủ đề của bạn {subject} được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

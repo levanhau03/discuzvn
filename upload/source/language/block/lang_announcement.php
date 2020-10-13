@@ -13,11 +13,11 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'announcement_type' => 'ประเภทประกาศ',
-	'announcement_type_text' => 'ข้อความ',
-	'announcement_type_link' => 'ลิงก์เว็บไซต์',
-	'announcement_titlelength' => 'ความยาวชื่อประกาศ',
-	'announcement_summarylength' => 'ความยาวเนื้อหา',
-	'announcement_startrow' => 'ตำแหน่งเริ่มต้น',
+	'announcement_type' => 'Phân loại thông báo',
+	'announcement_type_text' => 'Văn bản thông báo',//'文字公告',
+	'announcement_type_link' => 'Link',//'网站链接',
+	'announcement_titlelength' => 'Tiêu đề',//'标题长度',
+	'announcement_summarylength' => 'Nội dung',//'内容长度',
+	'announcement_startrow' => 'Hàng đầu tiên',
 );
 ?>

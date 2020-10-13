@@ -12,14 +12,14 @@ if(!defined('IN_DISCUZ')) {
 }
 
 $lang = array (
-	'forum_archive' => 'Archive',
-	'source' => 'ที่มา',
+	'forum_archive' => 'Lưu trữ',
+	'source' => 'Source',
 
 	't_question' => '?',
-	't_comma' => ', ',
+	't_comma' => ',',
 	't_exclamatory' => '!',
 	't_period' => '.',
-	't_suspension' => '…',
+	't_suspension' => '...',
 
 );
 ?>

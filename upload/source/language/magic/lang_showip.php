@@ -13,14 +13,14 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'showip_name' => 'ดู IP ของสมาชิก',
-	'showip_desc' => 'ดู IP ของสมาชิกที่ต้องการ',
-	'showip_targetuser' => 'คุณต้องการดู IP ของใคร',
-	'showip_info_nonexistence' => 'กรุณากรอกชื่อสมาชิก',
-	'showip_ip_message' => '{username} ใช้ IP {ip}',
-	'showip_info_noperm' => 'ขออภัย! คุณไม่มีสิทธิ์ในการดู IP ของสมาชิก',
+	'showip_name' => 'Thẻ IP',
+	'showip_desc' => 'Có thể xem IP của thành viên khác',
+	'showip_targetuser' => 'Xem IP của ai',
+	'showip_info_nonexistence' => 'Vui lòng nhập tên người dùng cần xem',
+	'showip_ip_message' => 'IP của {username} là {ip}',
+	'showip_info_noperm' => 'Có lỗi, bạn không có quyền xem IP của người này',
 
-	'showip_notification' => 'มีสมาชิกบางคนใช้ไอเท็ม {magicname} เพื่อดู IP ของคุณ',
+	'showip_notification' => 'Bạn đã được người khác sử dụng {magicname} để xem IP',
 );
 
 ?>

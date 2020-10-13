@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'doinglist_uids' => 'UID สมาชิก',
-	'doinglist_uids_comment' => 'กำหนด  ID(uid) สมาชิก, หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'doinglist_startrow' => 'จำนวนแถวเริ่มต้นของข้อมูล',
-	'doinglist_startrow_comment' => 'ถ้าจำเป็นต้องตั้งค่าจำนวนแถวของข้อมูลเริ่มต้น, กรุณาใส่ค่าที่ต้องการ, 0 คือจะการเริ่มการทำงานจากแถวแรก, เป็นต้น',
-	'doinglist_titlelength' => 'ความยาวของข้อความทักทาย',
-	'doinglist_titlelength_comment' => 'กำหนดความยาวสูงสุดของข้อความทักทาย',
-	'doinglist_orderby' => 'การจัดเรียงลำดับข้อความทักทาย',
-	'doinglist_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับข้อความทักทาย',
-	'doinglist_orderby_dateline' => 'จัดเรียงตามวันที่เผยแพร่',
-	'doinglist_orderby_replynum' => 'จัดเรียงตามจำนวนความคิดเห็น'
+	'doinglist_uids' => 'ID người dùng',
+	'doinglist_uids_comment' => 'Thiết lập người dùng mà bạn muốn hiển thị.Sử dụng ","  ngăn cách nhiều UIDs',//'填入指定用户的ID(uid)，多个用户之间用逗号(,)分隔',
+	'doinglist_startrow' => 'Hàng đầu tiên',
+	'doinglist_startrow_comment' => 'Điền số 0 nếu muốn là hàng đầu tiên.',//'如需设定起始的数据行数，请输入具体数值，0 为从第一行开始，以此类推',
+	'doinglist_titlelength' => 'Tiêu đề hoạt động',
+	'doinglist_titlelength_comment' => 'Thiết lập độ dài tối đa của tiêu đề.',//'指定记录的最大长度',
+	'doinglist_orderby' => 'Sắp xếp',
+	'doinglist_orderby_comment' => 'Thiết lập sắp xếp theo nguồn dữ liệu',//'设置以哪一字段或方式对动态进行排序',
+	'doinglist_orderby_dateline' => 'Theo thời gian đăng',//'按发布时间倒序',
+	'doinglist_orderby_replynum' => 'Trả lời',//'按回复数倒序'
 );
 
 ?>

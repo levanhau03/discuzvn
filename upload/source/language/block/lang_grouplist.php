@@ -13,27 +13,27 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'grouplist_gtids' => 'หมวดหมู่ของคลับ',
-	'grouplist_gtids_comment' => 'กำหนดหมวดหมู่ของคลับ',
-	'grouplist_fids' => 'กำหนดคลับ',
-	'grouplist_fids_comment' => 'กำหนด ID ของคลับ หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'grouplist_startrow' => 'จำนวนแถวเริ่มต้นของข้อมูล',
-	'grouplist_startrow_comment' => 'ถ้าจำเป็นต้องตั้งค่าจำนวนแถวของข้อมูลเริ่มต้น กรุณาใส่ค่าที่ต้องการ 0 คือจะการเริ่มการทำงานจากแถวแรก เป็นต้น',
-	'grouplist_titlelength' => 'ความยาวของชื่อคลับ',
-	'grouplist_titlelength' => 'ความยาวของชื่อคลับ',
-	'grouplist_summarylength' => 'ความยาวรายละเอียด',
-	'grouplist_summarylength_comment' => 'กำหนดความยาวรายละเอียดของคลับ',
-	'grouplist_orderby' => 'การจัดเรียงลำดับคลับ',
-	'grouplist_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับคลับ',
-	'grouplist_orderby_dateline' => 'จัดเรียงตามเวลาที่สร้าง',
-	'grouplist_orderby_posts' => 'จัดเรียงตามจำนวนโพสต์',
-	'grouplist_orderby_todayposts' => 'จัดเรียงตามจำนวนโพสต์วันนี้',
-	'grouplist_orderby_threads' => 'จัดเรียงตามจำนวนหัวข้อ',
-	'grouplist_orderby_level' => 'จัดเรียงตามระดับของคลับ',
-	'grouplist_orderby_membernum' => 'จัดเรียงตามจำนวนสมาชิก',
-	'grouplist_orderby_activity' => 'จัดเรียงตามจำนวนกิจกรรม',
-	'grouplist_orderby_commoncredits' => 'จัดเรียงตามจำนวนคะแนนทั่วไป',
-	'grouplist_orderby_displayorder' => 'จัดเรียงตามค่าเริ่มต้น'
+	'grouplist_gtids' => 'Danh mục nhóm',
+	'grouplist_gtids_comment' => 'Chọn danh mục nhóm',
+	'grouplist_fids' => 'Thiết lập nhóm',
+	'grouplist_fids_comment' => 'Thiết lập hiện thị nhóm.Bạn hãy nhấm giữ phím CTRL để chọn các nhóm',
+	'grouplist_startrow' => 'Hàng đầu tiên',
+	'grouplist_startrow_comment' => 'Nếu bạn cần phải thiết lập hàng đầu, vui lòng nhập một số, 0 là hàng đầu tiên.',
+	'grouplist_titlelength' => 'Chiều dài tiêu đề',
+	'grouplist_titlelength' => 'Chiều dài tiêu đề',
+	'grouplist_summarylength' => 'Mô tả danh mục nhóm',
+	'grouplist_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả',//'设置群组介绍最大长度',
+	'grouplist_orderby' => 'Sắp xếp',
+	'grouplist_orderby_comment' => 'Thiết lập sắp xếp các nhóm',
+	'grouplist_orderby_dateline' => 'Ngày tạo',
+	'grouplist_orderby_posts' => 'Đăng bài',
+	'grouplist_orderby_todayposts' => 'Đăng trong ngày',
+	'grouplist_orderby_threads' => 'Chủ đề',
+	'grouplist_orderby_level' => 'Cấp độ',
+	'grouplist_orderby_membernum' => 'Thành viên',
+	'grouplist_orderby_activity' => 'Sôi nổi',
+	'grouplist_orderby_commoncredits' => 'Điểm',//'按共同积分倒序',
+	'grouplist_orderby_displayorder' => 'Sắp xếp theo mặc định',//'按默认顺序'
 );
 
 ?>

@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'updateline_name' => 'อัปเดตวันเวลา',
-	'updateline_desc' => 'อัปเดตวันเวลาในบันทึกของคุณเป็นเวลาปัจจุบัน',
-	'updateline_info' => 'อัปเดตวันเวลาในบันทึกของคุณเป็นเวลาปัจจุบัน',
+	'updateline_name' => 'Thẻ Phao',
+	'updateline_desc' => 'Điều chỉnh thời gian phát hành các cập nhập so với thời gian hiện thời',
+	'updateline_info' => 'Điều chỉnh thời gian phát hành các cập nhập so với thời gian hiện thời',
 );
 
 ?>

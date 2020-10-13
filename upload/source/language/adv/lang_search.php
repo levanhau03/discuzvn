@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'search_name' => 'ด้านขวาหน้าค้นหา',
-	'search_desc' => 'Show method: searching the right ads to appear in the search results page on the right.',
+	'search_name' => 'Trang tìm kiếm',
+	'search_desc' => 'Hiển thị theo cách này : tìm kiếm các quảng cáo phải xuất hiện trong trang kết quả tìm kiếm ở bên phải',
 );
 
 ?>

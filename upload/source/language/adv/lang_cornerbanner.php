@@ -13,21 +13,21 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'cornerbanner_name' => 'มุมขวาล่างในทุกๆหน้า',
-	'cornerbanner_desc' => 'Display mode: Display the bottom right corner of the page. A number of the current page header banner ads, the system will randomly select one of the display. <br /> Value Analysis: The ability to demonstrate a clear position on the page, the page become the highest price and most suitable for commercial advertising or brand advertising types.',
-	'cornerbanner_index' => 'Home',
-	'cornerbanner_fids' => 'Running forum',
-	'cornerbanner_fids_comment' => 'Forum set up a forum for advertising, when ads included in the scope of "Forum" effective',
-	'cornerbanner_groups' => 'Running group classification',
-	'cornerbanner_groups_comment' => 'Set the group classified advertising, when ads included in the scope of "Group" valid',
-	'cornerbanner_animator' => 'Animation',
-	'cornerbanner_animator_comment' => 'Set whether to display animation show',
-	'cornerbanner_category' => 'Put the portal channels',
-	'cornerbanner_category_comment' => 'Set the channel classified advertising, when ads included in the scope of "Portal" valid',
-	'cornerbanner_disableclose' => 'Close advertising link',
-	'cornerbanner_disableclose_comment' => 'If the ad code has built-in shut down the operating, disable the link to close the System Preferences',
-	'cornerbanner_show' => 'Show',
-	'cornerbanner_hidden' => 'Hide',
+	'cornerbanner_name' => 'Góc phải',
+	'cornerbanner_desc' => 'Chế độ hiển thi : Hiển thị ở góc dưới bên phải của trang. Một số trang quảng cáo banner tiêu đề hiện tại, hệ thống sẽ chọn ngẫu nhiên một trong những màn hình<br />Phân tích giá trị : Khả năng thể hiện một vị trí rõ ràng trên trang web, các trang trở thành giá cao nhất và phù hợp nhất với quảng cáo thương mại hoặc các loại quảng cáo thương hiệu',
+	'cornerbanner_index' => 'Trang chủ',
+	'cornerbanner_fids' => 'Chạy diễn đàn',
+	'cornerbanner_fids_comment' => 'Diễn đàn thiết lập một diễn đàn cho các quảng cáo, khi quảng cáo bao gồm trong phạm vị của “Diễn đàn” hiệu quả',
+	'cornerbanner_groups' => 'Chạy nhóm phân loại',
+	'cornerbanner_groups_comment' => 'Thiết lập các nhóm phân loại quảng cáo, khi quảng cáo bao gồm trong phạm vi của “nhóm” hợp lệ',
+	'cornerbanner_animator' => 'Hoạt hình',
+	'cornerbanner_animator_comment' => 'Thiết lập để hiển thị hình ảnh động',
+	'cornerbanner_category' => 'Đặt các kênh cổng thông tin',
+	'cornerbanner_category_comment' => 'Thiết lập các kênh quảng cáo phân loại, khi quảng cáo bao gồm trong phạm vi của “cổng” hợp lệ',
+	'cornerbanner_disableclose' => 'Liên kết quảng cáo',
+	'cornerbanner_disableclose_comment' => 'Đóng liên kết quảng cáo.',
+	'cornerbanner_show' => 'Hiện',
+	'cornerbanner_hidden' => 'Ẩn',
 );
 
 ?>

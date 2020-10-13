@@ -13,20 +13,20 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'forumlist_fids' => 'Specified forum',
-	'forumlist_fids_comment' => 'Fill in specified forum ID (fid), separate multiple forums with a comma (,)',
-	'forumlist_fups' => 'รายการบอร์ด',
-	'forumlist_fups_comment' => 'กำหนดบอร์ดที่ต้องการให้แสดงข้อมูล',
-	'forumlist_titlelength' => 'ความยาวชื่อบอร์ด',
-	'forumlist_titlelength_comment' => 'กำหนดความยาวชื่อบอร์ด',
-	'forumlist_summarylength' => 'ความยาวรายละเอียด',
-	'forumlist_summarylength_comment' => 'กำหนดความยาวของรายละเอียด',
-	'forumlist_orderby' => 'การจัดเรียงลำดับบอร์ด',
-	'forumlist_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับบอร์ด',
-	'forumlist_orderby_displayorder' => 'จัดเรียงตามจำนวนค่าเริ่มต้น',
-	'forumlist_orderby_threads' => 'จัดเรียงตามจำนวนหัวข้อ',
-	'forumlist_orderby_todayposts' => 'จัดเรียงตามจำนวนโพสต์วันนี้',
-	'forumlist_orderby_posts' => 'จัดเรียงตามจำนวนโพสต์',
+	'forumlist_fids' => 'Thiết lập diễn đàn',
+	'forumlist_fids_comment' => 'Điền vào các diễn đàn chỉ định ID (id), nhiều hơn một diễn đàn với một dấu phẩy (,) để ngăn cách nhiều ID.',
+	'forumlist_fups' => 'Diễn đàn lớn',
+	'forumlist_fups_comment' => 'Hiển thị một số chuyên mục hoặc diễn đàn con',
+	'forumlist_titlelength' => 'Tiêu đề diễn đàn',
+	'forumlist_titlelength_comment' => 'Thiết lập độ dài tối đa tiêu đề.',
+	'forumlist_summarylength' => 'Mô tả diễn đàn',
+	'forumlist_summarylength_comment' => 'Thiết lập độ dài tối đa cho phần mô tả',
+	'forumlist_orderby' => 'Sắp xếp',
+	'forumlist_orderby_comment' => 'Thiết lập các chủ đề diễn đàn',
+	'forumlist_orderby_displayorder' => 'Hiển thị theo thứ tự',
+	'forumlist_orderby_threads' => 'Chủ đề',
+	'forumlist_orderby_todayposts' => 'Đăng trong ngày',
+	'forumlist_orderby_posts' => 'Lượt đăng',
 );
 
 ?>

@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'subnavbanner_name' => 'ด้านบนใต้เมนูหลัก',
-	'subnavbanner_desc' => 'Display the Adv at sub navigation of a page. In general, it is 960x60 or other size images and Flash.',
-	'subnavbanner_index' => 'Home',
-	'subnavbanner_fids' => 'Target Forums',
-	'subnavbanner_fids_comment' => 'Set forums to diplay the Adv',
-	'subnavbanner_groups' => 'Target Groups',
-	'subnavbanner_groups_comment' => 'Set the groups to show advertising. Take effect only when ads included in the scope of &quot;group&quot;.',
-	'subnavbanner_category' => 'Portal Category',
-	'subnavbanner_category_comment' => 'Set a portal category for show the SubNav Banner. This take effect only when Ads is assigned to the Portal',
+	'subnavbanner_name' => 'Dưới Menu',
+	'subnavbanner_desc' => 'Hiển thị: Hiển thị dưới thanh Menu NAV, thường là 468x60 hoặc flash.',
+	'subnavbanner_index' => 'Trang chủ',
+	'subnavbanner_fids' => 'Diễn đàn',
+	'subnavbanner_fids_comment' => 'Chọn diễn đàn để quảng cáo hiển thị',
+	'subnavbanner_groups' => 'Nhóm thành viên',
+	'subnavbanner_groups_comment' => 'Chọn chuyên mục nhóm để quảng cáo hiển thị',
+	'subnavbanner_category' => 'Đặt các kênh cổng thông tin',
+	'subnavbanner_category_comment' => 'Thiết lập các kênh quảng cáo phân loại, khi quảng cáo bao gồm trong phạm vi của các “cổng” hợp lệ',
 );
 
 ?>

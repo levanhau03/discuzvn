@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'doodle_name' => 'วาดภาพ',
-	'doodle_desc' => 'วาดภาพลงในบล็อกหรือกระทู้',
-	'doodle_info' => 'วาดภาพลงในบล็อกหรือกระทู้',
+	'doodle_name' => 'Thẻ bảng vẽ',
+	'doodle_desc' => 'Dùng để vẽ tranh trong Blog',
+	'doodle_info' => 'Trong blog hãy sử dụng thẻ này để tùy hứng vẽ một bức tranh.',
 );
 
 ?>

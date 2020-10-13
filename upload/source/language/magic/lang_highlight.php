@@ -13,23 +13,23 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'highlight_name' => 'เน้นสีกระทู้และบล๊อก',
-	'highlight_desc' => 'เน้นสีกระทู้และบล๊อกของคุณ เปลี่ยนสีให้น่าสนใจ',
-	'highlight_expiration' => 'ระยะเวลาเน้นสี',
-	'highlight_expiration_comment' => 'ตั้งค่าระยะเวลาการเน้นสีกระทู้ ค่าเริ่มต้นคือ 24 ชั่วโมง',
-	'highlight_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'highlight_info_tid' => 'เน้นสีกระทู้เป็นระยะเวลา {expiration} ชั่วโมง',
-	'highlight_info_blogid' => 'เน้นสี เปลี่ยนสี ชื่อบล๊อก',
-	'highlight_color' => 'สี',
-	'highlight_info_nonexistence_tid' => 'กรุณาระบุกระทู้ที่คุณต้องการเน้นสี',
-	'highlight_info_nonexistence_blogid' => 'กรุณาระบุบล๊อกที่คุณต้องการเน้นสี',
-	'highlight_succeed_tid' => 'กระทู้ที่คุณต้องการถูกเน้นสีเรียบร้อยแล้ว',
-	'highlight_succeed_blogid' => 'บล๊อกที่คุณต้องการถูกเน้นสีเรียบร้อยแล้ว',
-	'highlight_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
-	'highlight_info_notype' => 'เกิดข้อผิดพลาด คุณไม่ได้ระบุประเภทของการดำเนินการ',
+	'highlight_name' => 'Thẻ đổi màu',
+	'highlight_desc' => 'Dùng để đổi màu tiêu đề chủ đề, blog được đánh dấu',
+	'highlight_expiration' => 'Thời gian đổi màu',
+	'highlight_expiration_comment' => 'Thiết lập thời gian hiệu quả, mặc định 24 giờ',
+	'highlight_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'highlight_info_tid' => 'Làm nổi bật tiêu đề của chủ đề, còn {expiration} h hết hạn',
+	'highlight_info_blogid' => 'có thể đánh dấu các bản ghi hoặc tiêu đề bài thay đổi màu',
+	'highlight_color' => 'Màu sắc',
+	'highlight_info_nonexistence_tid' => 'Hãy xác định chủ đề cần đổi màu tiêu đề',
+	'highlight_info_nonexistence_blogid' => 'Hãy xác định blog cần đổi màu tiêu đề',
+	'highlight_succeed_tid' => 'Chủ đề của bạn đã được làm nổi bật',
+	'highlight_succeed_blogid' => 'Blog của bạn đã được làm nổi bật',
+	'highlight_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây',
+	'highlight_info_notype' => 'Lỗi tham số, không chỉ định loại hoạt động',
 
-	'highlight_notification' => '{actor} ใช้ไอเท็ม{magicname} กับกระทู้ {subject} ของคุณ <a href="forum.php?mod=viewthread&tid={tid}">ไปดูกระทู้!</a>',
-	'highlight_notification_blogid' => '{actor} ใช้ไอเท็ม{magicname} กับบล๊อก {subject} ของคุณ <a href="home.php?mod=space&do=blog&id={blogid}">ไปดูบล๊อก!</a>',
+	'highlight_notification' => 'Chủ đề {subject} của bạn được {actor} dùng {magicname} <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
+	'highlight_notification_blogid' => 'Blog {subject} của bạn được {actor} dùng {magicname} <a href="home.php?mod=space&do=blog&id={blogid}">Xem</a>',
 );
 
 ?>

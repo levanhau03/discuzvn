@@ -13,30 +13,30 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'login_title' => 'ระบบบริหารจัดการเว็บบอร์ด',
-	'login_username' => 'USER',
-	'login_password' => 'PASS',
+	'login_title' => 'Đăng nhập trung tâm quản lý',
+	'login_username' => 'Tài khoản',
+	'login_password' => 'Mật khẩu',
 
-	'submit' => 'ลงชื่อเข้าใช้',
-	'forcesecques' => 'ต้องระบุ',
-	'security_question' => 'คำถาม',
-	'security_answer' => 'คำตอบ',
-	'security_question_0' => 'เลือกคำถาม (ถ้ากำหนด)',
-	'security_question_1' => 'ชื่อแม่ของฉัน',
-	'security_question_2' => 'ชื่อปู่ของฉัน',
-	'security_question_3' => 'สถานที่เกิดพ่อของฉัน',
-	'security_question_4' => 'ชื่อดาราคนโปรดของฉัน',
-	'security_question_5' => 'ยี่ห้อคอมพิวเตอร์ของฉัน',
-	'security_question_6' => 'อาหารจานโปรดของฉัน',
-	'security_question_7' => 'เลขบัตรประชาชน',
+	'submit' => 'Đăng Nhập',
+	'forcesecques' => 'Bắt buộc',
+	'security_question' => 'Câu hỏi',
+	'security_answer' => 'Trả lời',
+	'security_question_0' => 'Không có câu hỏi bảo mật',
+	'security_question_1' => 'Con cún nhà bạn tên gì',
+	'security_question_2' => 'Tên người yêu cũ của bạn',
+	'security_question_3' => 'Tên trường cấp 3 của bạn',
+	'security_question_4' => 'Biển số xe máy của bạn',
+	'security_question_5' => 'Bạn biết diễn đàn này qua đâu',
+	'security_question_6' => 'Bạn thích ca sĩ nào nhất',
+	'security_question_7' => 'Sinh nhật của bạn',
 
-	'login_tips' => 'Discuz! ใช้ภาษา PHP และ MySQL รวมไปถึงโซลูชันอื่นๆ ในการพัฒนา เพื่อให้ระบบคอมมูนิวตี้ของคุณทรงประสิทธิภาพ พร้อมเป็นตัวเลือกอันดับแรกในการสร้างแบรนด์ให้กับเว็บไซต์ของคุณได้',
-	'login_nosecques' => 'คุณยังไม่ได้ตั้งค่าคำถามความปลอดภัยในการลงชื่อเข้าใช้ คุณสามารถตั้งค่าคำถามความปลอดภัยได้ที่ข้อมูลส่วนตัวหรือเมนูสมาชิก หรือ <a href="forum.php?mod=memcp&action=profile&typeid=1" target="_blank">คลิกที่นี่เพื่อ</a> เพื่อตั้งค่าคำถามความปลอดภัยของคุณ',
+	'login_tips' => 'Khu vực quản lý trang web',
+	'login_nosecques' => 'Bạn chưa thiết đặt câu hỏi an toàn. Vui lòng vào <a href="forum.php?mod=memcp&action=profile&typeid=1" target="_blank">Trung tâm cá nhân</a> cài đặt câu hỏi an toàn.',
 
-	'login_cplock' => 'การลงชื่อเข้าใช้การจัดการของคุณถูกล็อก! <br>กรุณารอ อีก<b> {ltime} </b>วินาที แล้วค่อยลองใหม่อีกครั้ง',
-	'login_user_lock' => 'คุณใส่รหัสผ่านผิดหลายครั้งเกินไป การร้องขอการลงชื่อเข้าใช้นี้ถูกปฏิเสธ กรุณาลองอีกครั้งหลังจาก 15 นาที',
-	'login_cp_noaccess' => '<b>คุณไม่ได้รับอนุญาตให้เข้าใช้งาน</b><br><br>ระบบได้บันทึกการกระทำของคุณไว้แล้ว ดังนั้นอย่าพยายามทำผิดกฎ',
-	'noaccess' => 'คุณไม่ได้รับอนุญาตให้เข้าถึงการตั้งค่าระบบ กรุณาติดต่อผู้ดูแลเว็บไซต์',
+	'login_cplock' => 'Trang quản lý đã bị khóa <br>Vui lòng đợi<b> {ltime} </b>giây nữa để thử lại',
+	'login_user_lock' => 'Bạn nhập sai mật khẩu quá nhiều, vui lòng đợi 15 phút nữa và thử lại',
+	'login_cp_noaccess' => '<b>Bạn không có quyền vào trang này.</b><br><br>Vui lòng không vượt quá quyền hạn.',
+	'noaccess' => 'Bạn không có quyền quản trị.',
 
 
 );

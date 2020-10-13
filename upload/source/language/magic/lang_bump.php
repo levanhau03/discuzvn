@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'bump_name' => 'ดันกระทู้',
-	'bump_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'bump_desc' => 'คุณสามารถเพิ่มกระทู้',
-	'bump_info' => 'กระทู้ของคุณจะถูกดันให้ไปอยู่กระทู้แรกโดยที่ไม่ต้องตอบลับ กรุณากรอก ID กระทู้',
-	'bump_info_nonexistence' => 'ระบุกระทู้ที่ต้องการดัน',
-	'bump_succeed' => 'กระทู้ของคุณถูกดันเรียบร้อย',
-	'bump_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
+	'bump_name' => 'Thẻ làm mới',
+	'bump_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'bump_desc' => 'Có thể làm mới chủ đề lên đầu DS bài viết',
+	'bump_info' => 'Nhập ID chủ đề làm mới',
+	'bump_info_nonexistence' => 'Hãy xác định Chủ đề cần làm mới',
+	'bump_succeed' => 'Chủ đề được làm mới thành công',
+	'bump_info_noperm' => 'Có lỗi, không được phép dùng thẻ này ở đây!',
 
-	'bump_notification' => '{actor} ใช้ไอเท็ม{magicname} กับกระทู้ {subject} ของคุณ <a href="forum.php?mod=viewthread&tid={tid}">ไปดูกระทู้!</a>',
+	'bump_notification' => 'Chủ đề {subject} của bạn được {actor} sử dụng {magicname} <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

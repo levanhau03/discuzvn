@@ -13,17 +13,17 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'anonymouspost_name' => 'ไม่แสดงชื่อ',
-	'anonymouspost_desc' => 'โพสต์ของคุณจะไม่ระบุชื่อผู้โพสต์',
-	'anonymouspost_num' => 'มีจำนวน: {magicnum}',
-	'anonymouspost_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'anonymouspost_info' => 'โพสต์ของคุณจะถูกตั้งค่าให้ไม่ระบุชื่อ กรุณากรอก ID โพสต์',
-	'anonymouspost_info_nonexistence' => 'กรุณาระบุข้อความที่ไม่ระบุชื่อ',
-	'anonymouspost_succeed' => 'โพสต์ของคุณถูกตั้งค่าให้ไม่ระบุชื่อเรียบร้อย',
-	'anonymouspost_use_error' => 'เกิดข้อผิดพลาด คุณไม่สามารถใช้ไอเท็มนี้ได้',
-	'anonymouspost_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
-	'anonymouspost_info_user_noperm' => 'ขออภัย! คุณไม่สามารถใช้ไอเท็มนี้ได้',
-	'anonymouspost_once_limit' => 'ไม่สามารถใช้ไอเท็ม ไม่แสดงชื่อ อีกครั้ง',
+	'anonymouspost_name' => 'Thẻ ẩn danh',
+	'anonymouspost_desc' => 'Dùng để ẩn danh tính khi viết bài.',
+	'anonymouspost_num' => 'Hiện có: {magicnum}',
+	'anonymouspost_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'anonymouspost_info' => 'Nhập ID chủ đề cần ẩn danh',
+	'anonymouspost_info_nonexistence' => 'Hãy xác định bài viết ẩn danh',
+	'anonymouspost_succeed' => 'Thiết lập ẩn danh thành công',
+	'anonymouspost_use_error' => 'Bạn không thể sử dụng đạo cụ này',
+	'anonymouspost_info_noperm' => 'Có lỗi, không được phép sử dụng diễn đàn, nơi các chủ đề đạo cụ',
+	'anonymouspost_info_user_noperm' => 'Có lỗi, bạn không thể sử dụng đạo cụ cho người này',
+	'anonymouspost_once_limit' => 'Đã được ẩn danh, và có thể tái sử dụng đạo cụ này',
 );
 
 ?>

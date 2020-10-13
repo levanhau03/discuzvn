@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'checkonline_name' => 'ดูสถานะออนไลน์',
-	'checkonline_desc' => 'ดูสมาชิกที่อยู่ในสถานะออนไลน์',
-	'checkonline_targetuser' => 'หากคุณต้องการดูว่ามีใครออนไลน์',
-	'checkonline_info_nonexistence' => 'กรุณากรอกชื่อสมาชิก',
-	'checkonline_hidden_message' => '{username} ใช้สถานะออฟไลน์ ครั้งล่าสุดเมื่อ {time}',
-	'checkonline_online_message' => '{username} ออนไลน์อยู่ในขณะนี้ ครั้งล่าสุดเมื่อ {time}',
-	'checkonline_offline_message' => '{username} ออฟไลน์',
-	'checkonline_info_noperm' => 'ขออภัย! คุณไม่มีสิทธิ์ดู IP ของสมาชิกนี้',
+	'checkonline_name' => 'Thẻ dò tìm',
+	'checkonline_desc' => 'Xem người dùng đang Online hay không',
+	'checkonline_targetuser' => 'Bạn muốn xem ai đang Online',
+	'checkonline_info_nonexistence' => 'Vui lòng nhập tên người dùng cần tìm',
+	'checkonline_hidden_message' => '{username} đang ẩn danh, thời gian online cuối cùng là {time}',
+	'checkonline_online_message' => '{username} đang trực tuyến, thời gian sự kiện cuối cùng là {time}',
+	'checkonline_offline_message' => '{username} không trực tuyến',
+	'checkonline_info_noperm' => 'Có lỗi, bạn không có quyền xem IP của người này',
 
-	'checkonline_notification' => 'มีสมาชิกบางคนใช้ไอเท็ม {magicname} ตรวจสอบว่าคุณออนไลน์อยู่หรือไม่',
+	'checkonline_notification' => 'Có người sử dụng {magicname} để kiểm tra trạng thái của bạn',
 );
 
 ?>

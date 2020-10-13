@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'attachsize_name' => 'เพิ่มพื้นที่เก็บไฟล์',
-	'attachsize_desc' => 'เพิ่มความจุพื้นที่สำหรับจัดเก็บไฟล์แนบ',
-	'attachsize_info' => 'เพิ่มพื้นที่เก็บไฟล์แนบ {num} M',
-	'attachsize_addsize' => 'เพิ่มความจุพื้นที่',
+	'attachsize_name' => 'Tăng dung lượng',
+	'attachsize_desc' => 'Tăng giới hạn kích thước tập tin đính kèm',
+	'attachsize_info' => 'Có thể tăng tối đa {num} MB',
+	'attachsize_addsize' => 'Tăng dung lượng',
 );
 
 ?>

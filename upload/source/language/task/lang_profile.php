@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'profile_name' => 'จัดการรายละเอียดข้อมูลส่วนตัว',
-	'profile_desc' => 'จัดการรายละเอียดข้อมูลส่วนตัวของคุณให้สมบูรณ์มากที่สุด',
+	'profile_name' => 'Cải thiện nhiệm vụ hồ sơ người dùng',
+	'profile_desc' => 'Cải thiện hồ sơ người dùng được chỉ định và nhận phần thưởng tương ứng',
 
-	'profile_view' => '<strong>รายการข้อมูลส่วนตัวต่อไปนี้คุณต้องจัดการให้สมบูรณ์:</strong><br>
+	'profile_view' => '<strong>Bạn cũng cần hoàn thành các mục dữ liệu cá nhân sau:</strong><br>
 		<span style="color:red;">{profiles}</span><br><br>
 		<strong>请按照以下的说明来完成本任务：</strong>
 		<ul>

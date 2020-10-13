@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'downdateline_name' => 'ย้อนวันเวลา',
-	'downdateline_desc' => 'เปลี่ยนแปลงวันเวลาในการบันทึกของคุณเป็นเวลาที่ผ่านมา',
-	'downdateline_info' => 'เปลี่ยนแปลงวันเวลาในการบันทึกของคุณเป็นเวลาที่ผ่านมา',
+	'downdateline_name' => 'Máy thời gian',
+	'downdateline_desc' => 'Thay đổi thời gian đăng bài của 1 chủ đề đã đăng trước đó',
+	'downdateline_info' => 'Thay đổi thời gian đăng bài của 1 chủ đề đã đăng trước đó',
 );
 
 ?>

@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'friendnum_name' => 'เพิ่มจำนวนเพื่อน',
-	'friendnum_desc' => 'เพิ่มจำนวนเพื่อนให้มากขึ้น',
-	'friendnum_info' => 'เพิ่มเพื่อนได้อีก {num} คน',
-	'friendnum_addnum' => 'เพิ่มจำนวนเพื่อน',
+	'friendnum_name' => 'Tăng bạn bè',
+	'friendnum_desc' => 'Dùng để tăng giới hạn kết bạn',
+	'friendnum_info' => 'Tối đa thêm được {num} người bạn',
+	'friendnum_addnum' => 'Gia tăng giới hạn kết bạn',
 );
 
 ?>

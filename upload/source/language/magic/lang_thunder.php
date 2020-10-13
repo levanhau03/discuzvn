@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'thunder_name' => 'โปรโมทโปรไฟล์',
-	'thunder_desc' => 'ส่งข้อความถึงสมาชิกทั้งหมด โปรโมทโปรไฟล์ของคุณให้พวกเขารู้จัก',
-	'thunder_info' => 'ส่งข้อความถึงสมาชิกทั้งหมด โปรโมทโปรไฟล์ของคุณให้พวกเขารู้จัก',
+	'thunder_name' => 'Thẻ sấm sét',
+	'thunder_desc' => 'Sử dụng để nhanh chóng thông báo cho bạn bè của bạn các tin tức mới nhất',
+	'thunder_info' => 'Sử dụng để nhanh chóng thông báo cho bạn bè của bạn các tin tức mới nhất',
 );
 
 ?>

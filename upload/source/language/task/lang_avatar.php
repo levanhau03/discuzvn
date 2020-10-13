@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'avatar_name' => 'เปลี่ยนรูปโปรไฟล์',
-	'avatar_desc' => 'กิจกรรมนี้สำหรับสมาชิกที่ยังไม่ได้อัปโหลดรูปโปรไฟล์ ทำการอัปโหลดรูปโปรไฟล์ เข้าร่วมกิจกรรมนี้ แล้วคุณจะได้รับรางวัล สำหรับสมาชิกที่อัปโหลดรูปโปรไฟล์ไว้ก่อนแล้ว สามารถเข้าร่วมและรับรางวัลได้ทันที',
-	'avatar_view' => '<strong>คำแนะนำในการเข้าร่วมกิจกรรมนี้: </strong>
+	'avatar_name' => 'Nhiệm vụ Avatar',
+	'avatar_desc' => 'Nhiệm vụ này chỉ áp dụng cho các thành viên chưa tải hình đại diện. Sau khi đăng ký, chỉ cần tải lên hình đại diện để hoàn thành nhiệm vụ và nhận phần thưởng tương ứng',
+	'avatar_view' => '<strong>Thực hiện theo các hướng dẫn để tham gia vào nhiệm vụ này:</strong>
 		<ul>
 		<li>1. <a href="home.php?mod=spacecp&ac=avatar" target="_blank">新窗口打开上传头像页面</a></li>
 		<li>2. 上传一个自己的头像照片</li>

@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'hot_name' => 'ทำให้ได้รับความนิยม',
-	'hot_desc' => 'เปลี่ยนแปลงบล็อกของคุณ จากบล็อกธรรมดาเป็นบล็อกยอดนิยม',
-	'hot_info' => 'สามาถเพิ่มบล็อกธรรมดาเป็นบล็อกยอดนิยมได้ {num} บล็อก',
+	'hot_name' => 'Thẻ năng động',
+	'hot_desc' => 'Tăng sự nổi bật trang web của bạn, nhập giá trị độ Hot',
+	'hot_info' => 'Có thể tăng tối đa {num} điểm',
 );
 
 ?>

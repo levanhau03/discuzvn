@@ -13,18 +13,18 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'gift_name' => 'แจกเครดิต',
-	'gift_desc' => 'มอบเครดิตให้กับผู้ที่มาเยี่ยมชมโปรไฟล์ของคุณ',
-	'gift_info' => 'มอบเครดิต (สามารถแบ่งออกเป็นหลาบส่วน) ให้กับผู้ที่มาเยี่ยมชมโปรไฟล์ของคุณ<br />แต่ละผู้เยี่ยมชมจะได้รับ 1 เครดิต',
-	'gift_succeed' => 'แจกเครดิตเรียบร้อย',
-	'gift_bad_credits_input' => 'ใส่ยอดรวมจำนวนเครดิตไม่ถูกต้อง',
-	'gift_bad_percredit_input' => 'ใส่จำนวนเครดิตไม่ถูกต้อง',
-	'gift_bad_credittype_input' => 'ระบุชนิดของเครดิตไม่ถูกต้อง',
-	'gift_credits_out_of_own' => 'ใส่เครดิตเกินจำนวนที่คุณมี',
-	'gift_gc' => 'ขอเครดิตคืน',
-	'gift_use' => 'แจกเครดิต',
+	'gift_name' => 'Thẻ Lì Xì',
+	'gift_desc' => 'Treo phong bao lì xì ở Blog của bạn, khách ghé thăm nhấn vào có thể nhận được phần thưởng.',
+	'gift_info' => 'Một phong bì mầu đỏ (có thể được chia thành nhiều phần) treo trong Blog của bạn, <br /> Mỗi khách truy cập có thể nhận được một phần tiền đặt trước',
+	'gift_succeed' => 'Đặt phong bì thành công',
+	'gift_bad_credits_input' => 'Nhập tổng số điểm không chính xác',
+	'gift_bad_percredit_input' => 'Nhập số điểm cho từng người không chính xác ',
+	'gift_bad_credittype_input' => 'Nhập sai quy định tính điểm',
+	'gift_credits_out_of_own' => 'Điền số Tiền vượt quá số Tiền bạn có rồi',
+	'gift_gc' => 'Treo lại phong bì đỏ',
+	'gift_use' => 'Treo phong bì đỏ',
 
-	'gift_receive_gift' => 'ได้รับ {percredit} {credittype}',
+	'gift_receive_gift' => 'Mở lì xì nhận được {percredit} {credittype}',
 );
 
 ?>

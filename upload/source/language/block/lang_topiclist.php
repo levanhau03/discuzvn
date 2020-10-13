@@ -13,22 +13,22 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'topiclist_topicids' => 'กำหนดหัวข้อ',
-	'topiclist_topicids_comment' => 'กำหนด ID(topicid) ของหัวข้อที่ต้องการ, หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'topiclist_uids' => 'UID ผู้สร้าง',
-	'topiclist_uids_comment' => 'กำหนด  ID(uid) ผู้สร้าง, หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'topiclist_startrow' => 'จำนวนแถวเริ่มต้นของข้อมูล',
-	'topiclist_startrow_comment' => 'ถ้าจำเป็นต้องตั้งค่าจำนวนแถวของข้อมูลเริ่มต้น, กรุณาใส่ค่าที่ต้องการ, 0 คือจะการเริ่มการทำงานจากแถวแรก, เป็นต้น',
-	'topiclist_titlelength' => 'ความยาวของชื่อหัวข้อ',
-	'topiclist_titlelength_comment' => 'กำหนดความยาวของชื่อหัวข้อ',
-	'topiclist_summarylength' => 'ความยาวของเนื้อหา',
-	'topiclist_summarylength_comment' => 'กำหนดความยาวของเนื้อหา',
-	'topiclist_picrequired' => 'จะต้องมีไฟล์แบบรูปภาพ',
-	'topiclist_picrequired_comment' => 'กำหนดให้แสดงเฉพาะที่มีไฟล์แบบรูปภาพ',
-	'topiclist_orderby' => 'การจัดเรียงลำดับหัวข้อ',
-	'topiclist_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับของหัวข้อ',
-	'topiclist_orderby_dateline' => 'จัดเรียงตามวันที่เผยแพร่',
-	'topiclist_orderby_viewnum' => 'จัดเรียงตามจำนวนการเข้าชม/ดู',
+	'topiclist_topicids' => 'Quy định chủ đề',
+	'topiclist_topicids_comment' => 'Nhập ID chủ đề cụ thể (topicid), sử dụng "," để tách các chủ đề',//'填入指定专题的ID(topicid)，多个专题之间用逗号(,)分隔',
+	'topiclist_uids' => 'UID tác giả',
+	'topiclist_uids_comment' => 'Thiết lập người dùng mà bạn muốn hiển thị, sử dụng "," để tách UIDs',//'填入指定专题创建者的ID(uid)，多个用户之间用逗号(,)分隔',
+	'topiclist_startrow' => 'Hàng đầu tiên',
+	'topiclist_startrow_comment' => 'Nếu bạn cần phải thiết lập hàng đầu, vui lòng nhập một số, 0 là hàng đầu tiên',//'如需设定起始的数据行数，请输入具体数值，0 为从第一行开始，以此类推',
+	'topiclist_titlelength' => 'Chiều dài tiêu đề',
+	'topiclist_titlelength_comment' => 'Thiết lập độ dài tối đa của tiêu đề',//'指定专题标题最大长度',
+	'topiclist_summarylength' => 'Chiều dài mô tả',//'介绍长度',
+	'topiclist_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả',//'指定专题介绍最大长度',
+	'topiclist_picrequired' => 'Chọn lọc hình ảnh',
+	'topiclist_picrequired_comment' => 'Lọc chủ đề mà không ảnh bìa',//'是否过滤没有封面图片的专题',
+	'topiclist_orderby' => 'Sắp xếp',
+	'topiclist_orderby_comment' => 'Thiết lập thứ tự của chủ đề',//'设置以哪一字段或方式对专题进行排序',
+	'topiclist_orderby_dateline' => 'Thời gian đăng',//'按发布时间倒序',
+	'topiclist_orderby_viewnum' => 'Lượt xem',//'按查看数倒序',
 );
 
 ?>

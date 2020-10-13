@@ -13,20 +13,20 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'thread_name' => 'ด้านขวาโพสต์หน้าเนื้อหากระทู้',
-	'thread_desc' => 'Display the Adv at top, bottom, or right of post content. In general, you can use a text or suitable images. In global settings you can modify the other settings such as a number of ads per quote.',
-	'thread_fids' => 'Target Forums',
-	'thread_fids_comment' => 'Set forums to diplay the Adv',
-	'thread_groups' => 'Target Groups',
-	'thread_groups_comment' => 'Set the groups to show advertising. Take effect only when ads included in the scope of &quot;group&quot;.',
-	'thread_position' => 'Ads Position',
-	'thread_position_comment' => 'The textual ads suitable for use in above and below the post content, and image or Flash format ads usefull for the right of post. It is possible to display more than one text ads',
-	'thread_position_bottom' => 'Bottom',
-	'thread_position_top' => 'Top',
-	'thread_position_right' => 'Right',
-	'thread_pnumber' => 'Target Post number',
-	'thread_pnumber_comment' => 'Select #1 #2 #3 ... Use CTRL key fo multiple choice.',
-	'thread_pnumber_all' => 'All',
+	'thread_name' => 'Trong bài viết',
+	'thread_desc' => 'Hiển thị: Hiển thị bên trên, dưới hoặc bên phải của bài viết.',
+	'thread_fids' => 'Trang chủ',
+	'thread_fids_comment' => 'Chọn diễn đàn cho quảng cáo hiển thị',
+	'thread_groups' => 'Nhóm thành viên',
+	'thread_groups_comment' => 'Chọn chuyên mục nhóm cho quảng cáo hiển thị',
+	'thread_position' => 'Vị trí',
+	'thread_position_comment' => 'Nội dung của bài viết ở trên và bên dưới văn bản quảng cáo trong các hình thức thích hợp để sử dụng, và quảng cáo bài cho quyền sử dụng hình ảnh hoặc hình thức Flash, bạn đồng thời có thể hiển thị nhiều hơn quảng cáo văn bản',
+	'thread_position_bottom' => 'Dưới',
+	'thread_position_top' => 'Trên',
+	'thread_position_right' => 'Phải',
+	'thread_pnumber' => 'Tầng quảng cáo',
+	'thread_pnumber_comment' => 'Tùy chọn #1 #2 #3 ... có thể chọn nhiều bằng nhấn nút CTR',
+	'thread_pnumber_all' => 'Tất cả',
 );
 
 ?>

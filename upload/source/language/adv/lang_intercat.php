@@ -13,13 +13,13 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'intercat_name' => 'ระว่างหมวดหมู่บอร์ด',
-	'intercat_desc' => 'Display Adv between two forums in a category. In general, it is 960x60 images or Flash. If there are multipe category advs, they will be displayed in random.',
-	'intercat_fids' => 'Target forums category',
-	'intercat_fids_comment' => 'Set the target forum categories where  to show the Adv',
-	'intercat_position' => 'Ads Position',
-	'intercat_position_comment' => 'Set the adv positon below which area',
-	'intercat_position_random' => 'Radom position',
+	'intercat_name' => 'Giữa các Box',
+	'intercat_desc' => 'Hiển thị: Hiển thị giữa các diễn đàn ( Box ), thường là ảnh 468x60 hoặc flash.',
+	'intercat_fids' => 'Diễn đàn',
+	'intercat_fids_comment' => 'Thiết lập phân vùng đặt quảng cáo',
+	'intercat_position' => 'Vị trí',
+	'intercat_position_comment' => 'Thiết lập phân vùng, trong đó quảng cáo được hiển thị dưới đây',
+	'intercat_position_random' => 'Tự động',
 	'intercat_position_fav' => 'Favorites bar',
 );
 

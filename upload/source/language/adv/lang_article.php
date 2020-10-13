@@ -13,15 +13,15 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'article_name' => 'ด้านซ้ายหน้าเนื้อหาบทความ',
-	'article_desc' => 'Show method: the article page ads in the paper is divided into content area reading around the top of ads and related advertising 2.',
-	'article_position' => 'Ads Position',
-	'article_position_comment' => 'Is divided into 3 positions, of which the readings near the top of the advertisement display location 2',
-	'article_position_float' => 'Floating (content area flow around the Ads)',
-	'article_position_up' => 'At the top of content (I)',
-	'article_position_down' => 'Below the content (II)',
-	'article_category' => 'Show in the Category',
-	'article_category_comment' => 'Set the category to display Ads in',
+	'article_name' => 'Trang Portal',
+	'article_desc' => 'Hiển thị: Hiển thị trong bài viết.',
+	'article_position' => 'Vị trí',
+	'article_position_comment' => 'Chia thành 3 vị trí, trong đó có các bài đọc gần đầu của các vị trí hiển thị quảng cáo 2',
+	'article_position_float' => 'Xung quanh khu vực nội dung',
+	'article_position_up' => 'Phía trên',
+	'article_position_down' => 'Phía dưới',
+	'article_category' => 'Đặt kênh',
+	'article_category_comment' => 'Phân loại các kênh quảng cáo',
 );
 
 ?>

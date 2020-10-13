@@ -13,18 +13,18 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'target_tid' => 'กระทู้เป้าหมาย tid',
-	'target_pid' => 'โพสต์เป้าหมาย pid',
-	'target_username' => 'สมาชิกเป้าหมาย',
-	'magics_type_1' => 'ประเภทโพสต์',
-	'magics_type_2' => 'ระดับสมาชิก',
-	'magics_type_3' => 'อื่น ๆ',
+	'target_tid' => 'TID Chủ đề',
+	'target_pid' => 'PID Bài viết',
+	'target_username' => 'Thành viên',
+	'magics_type_1' => 'Đăng chuyên mục',
+	'magics_type_2' => 'Cấp thành viên',
+	'magics_type_3' => 'Loại khác',
 
-	'CCK_color' => 'สี',
-	'MOK_info' => 'กฎของการเพิ่มจำนวนเงิน: มากกว่า 1 และน้อยกว่า 150% ของราคาซื้อของตัวเลขที่สุ่ม',
-	'CODE_info' => 'เชิญทดสอบโค้ดดิสคัส!',
-	'MVK_target' => 'ย้ายไปยังรูปแบบ',
-	'SOFA_message' => 'ฉันจองกระทู้นี้ไว้แล้ว ฉันจะตอบกลับเป็นคนแรก! ฮา ฮา!',
+	'CCK_color' => 'Màu',
+	'MOK_info' => 'Quy tắc: Lớn hơn 1 và nhỏ hơn 150% giá gốc',
+	'CODE_info' => 'Nhận mã để gửi lời mời tham gia!',
+	'MVK_target' => 'Di chuyển đến',
+	'SOFA_message' => 'Nhanh như chớp, bạn đã bị tôi cướp mất Tem bài viết ^^!',
 );
 
 ?>

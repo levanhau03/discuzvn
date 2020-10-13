@@ -11,8 +11,8 @@ if(!defined('IN_DISCUZ')) {
 }
 $lang = array
 (
-	'flicker_name' => 'ทำให้น่าสนใจ',
-	'flicker_desc' => 'เมื่อแสดงความคิดเห็นใน บล็อก อัลบั้ม ฯลฯ ข้อความของคุณจะกระพริบและเปลี่ยนสีไปเรื่อยๆ',
-	'flicker_info' => 'เมื่อแสดงความคิดเห็นใน บล็อก อัลบั้ม ฯลฯ ข้อความของคุณจะกระพริบและเปลี่ยนสีไปเรื่อยๆ',
-	'flicker_succeed' => 'ทำให้น่าสนใจเรียบร้อย',
+	'flicker_name' => 'Thẻ cầu vồng',
+	'flicker_desc' => 'Trong Blog sử dụng thẻ này để đổi màu Comment',
+	'flicker_info' => 'Trong Blog sử dụng thẻ này để đổi màu Comment',
+	'flicker_succeed' => 'Sử dụng thành công.',
 );

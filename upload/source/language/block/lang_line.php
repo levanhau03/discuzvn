@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'line_style' => 'ลักษณะเส้นคั่น',
-	'line_style_line' => 'เส้นทึบ',
-	'line_style_dash' => 'เส้นประ',
+	'line_style' => 'Đường kẻ ngang dòng',
+	'line_style_line' => 'Dòng nhìn thấy rõ',//'实线',
+	'line_style_dash' => 'Dòng không nhìn thấy rõ',//'虚线',
 );
 ?>

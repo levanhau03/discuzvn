@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'email_name' => 'ยืนยันและเปิดใช้งานอีเมล',
-	'email_desc' => 'ยืนยันและเปิดใช้งานอีเมลของคุณเพื่อรับรางวัล',
-	'email_view' => '<strong>คำแนะนำในการเข้าร่วมกิจกรรมนี้: </strong>
+	'email_name' => 'Xác minh tác vụ hộp thư',
+	'email_desc' => 'Xác nhận email để nhận phần thưởng tương ứng。',
+	'email_view' => '<strong>Thực hiện theo các hướng dẫn để tham gia vào nhiệm vụ này:</strong>
 		<ul>
 		<li><a href="home.php?mod=spacecp&ac=profile&op=password" target="_blank">新窗口打开账号设置页面</a></li>
 		<li>在新打开的设置页面中，将自己的邮箱真实填写(新填写的邮箱需要先保存)，并点击“重新接收验证邮件”链接</li>

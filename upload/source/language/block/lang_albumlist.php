@@ -13,21 +13,21 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'albumlist_aids' => 'กำหนดอัลบั้ม',
-	'albumlist_aids_comment' => 'กำหนด ID(aid) ของอัลบั้มที่ต้องการแสดงข้อมูล, หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'albumlist_uids' => 'UID สมาชิก',
-	'albumlist_uids_comment' => 'กำหนด ID(uid) สมาชิก, หากมีมากกว่าหนึ่ง ID กรุณาใช้เครื่องหมายคอมม่า “,” เพื่อเป็นตัวคั่นหรือแยกแต่ละ ID',
-	'albumlist_catid' => 'เลือกหมวดหมู่',
-	'albumlist_catid_comment' => 'เลือกหมวดหมู่อัลบั้ม',
-	'albumlist_startrow' => 'จำนวนแถวเริ่มต้นของข้อมูล',
-	'albumlist_startrow_comment' => 'ถ้าจำเป็นต้องตั้งค่าจำนวนแถวของข้อมูลเริ่มต้น, กรุณาใส่ค่าที่ต้องการ, 0 คือจะการเริ่มการทำงานจากแถวแรก, เป็นต้น',
-	'albumlist_titlelength' => 'ความยาวของชื่ออัลบั้ม',
-	'albumlist_titlelength' => 'ความยาวของชื่ออัลบั้ม',
-	'albumlist_orderby' => 'การจัดเรียงลำดับรูปภาพ',
-	'albumlist_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับรูปภาพ',
-	'albumlist_orderby_dateline' => 'จัดเรียงตามวันที่เผยแพร่',
-	'albumlist_orderby_picnum' => 'จัดเรียงตามจำนวนรูปภาพ',
-	'albumlist_orderby_updatetime' => 'จัดเรียงตามเวลาที่อัปเดตล่าสุด'
+	'albumlist_aids' => 'Thiất lập album',
+	'albumlist_aids_comment' => 'Xin vui lòng điền vào ID album cụ thể (aid), sử dụng dấu phẩy (,) để ngăn cách nhiều album.',
+	'albumlist_uids' => 'ID thành viên',
+	'albumlist_uids_comment' => 'Xin vui lòng điền vào ID người dùng cụ thể (uid), sử dụng dấu phẩy (,) để ngăn cách nhiều thành viên.',
+	'albumlist_catid' => 'Chọn thể loại',
+	'albumlist_catid_comment' => 'Chọn thể loại album',
+	'albumlist_startrow' => 'Hàng đầu tiên',
+	'albumlist_startrow_comment' => 'Điền số 0 nếu muốn là hàng đầu tiên.',
+	'albumlist_titlelength' => 'Tiêu đề Album',
+	'albumlist_titlelength' => 'Tiêu đề Album',
+	'albumlist_orderby' => 'Sắp xếp',
+	'albumlist_orderby_comment' => 'Thiết lập trật tự kết quả',
+	'albumlist_orderby_dateline' => 'Theo thời gian',
+	'albumlist_orderby_picnum' => 'Theo số lượng ảnh',
+	'albumlist_orderby_updatetime' => 'Theo thời gian cập nhập'
 );
 
 ?>

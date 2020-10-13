@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'detector_name' => 'ค้นหาโปรไฟล์ที่แจกเครดิต',
-	'detector_desc' => 'ค้นหาและตรวจสอบโปรไฟล์ของสมาชิกที่แจกเครดิต',
-	'detector_num' => 'จำนวนสูงสุดของการค้นหา',
-	'detector_info' => 'ค้นหาและตรวจสอบ(สูงสุด {num})โปรไฟล์ของสมาชิกที่แจกเครดิต',
+	'detector_name' => 'Thẻ đánh hơi',
+	'detector_desc' => 'Phát hiện các Blog có treo Phong bao lì xì',
+	'detector_num' => 'Tối đa',
+	'detector_info' => 'Phát hiện (lên đến {num}) Blog có treo Phong bao lì xì.',
 );
 
 ?>

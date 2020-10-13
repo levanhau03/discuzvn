@@ -13,9 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'blog_name' => 'เขียนบล็อก',
-	'blog_desc' => 'เขียนบทความลงในบล็อกของคุณ และแชร์บล็อกให้เพื่อนๆ',
-	'blog_view' => '<strong>คำแนะนำในการเข้าร่วมกิจกรรมนี้: </strong>
+	'blog_name' => 'Nhiệm vụ bài',
+	'blog_desc' => 'Đăng nhật ký để hoàn thành nhiệm vụ và nhận phần thưởng tương ứng',
+	'blog_view' => '<strong>Thực hiện theo các hướng dẫn để tham gia vào nhiệm vụ này:</strong>
 		<ul>
 		<li>1. <a href="home.php?mod=spacecp&ac=blog" target="_blank">新窗口打开发表日志页面</a></li>
 		<li>2. 在新打开的页面中，书写自己的第一篇日志，并进行发布</li>

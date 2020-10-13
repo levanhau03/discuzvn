@@ -12,15 +12,15 @@ if(!defined('IN_DISCUZ')) {
 }
 
 $lang = array(
-	'friend_group_default' => 'อื่น ๆ',
-	'friend_group_1' => 'เพื่อนในเว็บนี้',
-	'friend_group_2' => 'เพื่อนร่วมกิจกรรม',
-	'friend_group_3' => 'เพื่อนของเพื่อน',
-	'friend_group_4' => 'ญาติพี่น้อง',
-	'friend_group_5' => 'เพื่อนร่วมงาน',
-	'friend_group_6' => 'เพื่อนร่วมเรียน',
-	'friend_group_7' => 'เพื่อนสนิท',
-	'friend_group_more' => 'กำหนดเอง{num}'
+	'friend_group_default' => 'Khác',
+	'friend_group_1' => 'Quen tại đây',
+	'friend_group_2' => 'Quen qua hoạt động',
+	'friend_group_3' => 'Quen qua bạn bè',
+	'friend_group_4' => 'Người thân',
+	'friend_group_5' => 'Đồng nghiệp',
+	'friend_group_6' => 'Bạn học',
+	'friend_group_7' => 'Không quen biết',
+	'friend_group_more' => 'Tùy chỉnh {num}'
 );
 
 ?>

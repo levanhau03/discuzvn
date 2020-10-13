@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'feed_name' => 'ระหว่างรายการหน้าข้อมูลอัปเดต',
-	'feed_desc' => 'Display Adv at the top of feeds.',
+	'feed_name' => 'Quảng cáo tại trang Feed',
+	'feed_desc' => 'Hiển thị: Hiện trên đầu phần danh sách Feed',
 );
 
 ?>

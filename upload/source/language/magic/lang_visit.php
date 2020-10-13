@@ -13,10 +13,10 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'visit_name' => 'สุ่มเลือกเพื่อน',
-	'visit_desc' => 'สุ่มเลือกเพื่อนของคุณ ทักทาย ฝากข้อความหรือเยี่ยมชมโปรไฟล์',
-	'visit_num' => 'จำนวนเพื่อนเข้าชม',
-	'visit_info' => 'สุ่มเลือกเพื่อน(สูงสุด {num} คน)ทักทาย ฝากข้อความหรือเยี่ยมชมโปรไฟล์',
+	'visit_name' => 'Thẻ ghé thăm',
+	'visit_desc' => 'Truy cập ngẫu nhiên vào Blog/Chào hỏi/Trêu chọc',
+	'visit_num' => 'Lượt ghé thăm',
+	'visit_info' => 'Truy cập ngẫu nhiên (lên đến {num} lần)',
 );
 
 ?>

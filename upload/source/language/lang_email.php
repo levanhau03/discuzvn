@@ -14,13 +14,13 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'hello' => 'สวัสดีจ้า',
-	'moderate_member_invalidate' => 'ปฏิเสธ',
-	'moderate_member_delete' => 'ลบ',
-	'moderate_member_validate' => 'อนุมัติ',
+	'hello' => 'Xin chào',
+	'moderate_member_invalidate' => 'Thư mời',
+	'moderate_member_delete' => 'Xóa',
+	'moderate_member_validate' => 'Chấp nhận',
 
 
-	'get_passwd_subject' => 'ร้องขอเปลี่ยนรหัสผ่านใหม่',
+	'get_passwd_subject' => 'Quên mật khẩu',
 	'get_passwd_message' => '
 <p>{username}，
 这封信是由 {bbname} 发送的。</p>
@@ -58,7 +58,7 @@ $lang = array
 {siteurl}</p>',
 
 
-	'email_verify_subject' => 'อีเมลยืนยันการลงทะเบียน',
+	'email_verify_subject' => 'Xác minh địa chỉ Email',
 	'email_verify_message' => '<br />
 <p>{username}，<br />
 这封信是由 {bbname} 发送的。</p>
@@ -89,7 +89,7 @@ $lang = array
 {bbname} 管理团队.<br />
 {siteurl}</p>',
 
-	'email_register_subject' => 'ลิงก์ลงทะเบียนจากเว็บบอร์ด',
+	'email_register_subject' => 'Đăng ký mail mới',
 	'email_register_message' => '<br />
 <p>这封信是由 {bbname} 发送的。</p>
 
@@ -120,7 +120,7 @@ $lang = array
 {siteurl}</p>',
 
 
-	'add_member_subject' => 'คุณได้เป็นสมาชิกกับเว็บไซต์เราแล้ว',
+	'add_member_subject' => 'Thêm 1 thành viên mới',
 	'add_member_message' => '
 {newusername} ，
 这封信是由 {bbname} 发送的。<br />
@@ -154,7 +154,7 @@ $lang = array
 {siteurl}',
 
 
-	'birthday_subject' => 'แฮปปี้เบิร์ดเดย์ สุขสันต์วันคล้ายวันเกิดจ้า',
+	'birthday_subject' => 'Chúc mừng sinh nhật bạn!',
 	'birthday_message' => '<br />
 {username}，<br />
 这封信是由 {bbname} 发送的。<br />
@@ -172,7 +172,7 @@ $lang = array
 {bbname} 管理团队.<br />
 {siteurl}',
 
-	'email_to_friend_subject' => '{$_G[member][username]} แนะนำ: $thread[subject] ให้กับคุณ',
+	'email_to_friend_subject' => '{$_G[member][username]} giới thiệu cho bạn chủ đề: $thread[subject]',
 	'email_to_friend_message' => '<br />
 这封信是由 {$_G[setting][bbname]} 的 {$_G[member][username]} 发送的。<br />
 <br />
@@ -195,7 +195,7 @@ $message<br />
 欢迎您访问 {$_G[setting][bbname]}<br />
 $_G[siteurl]',
 
-	'email_to_invite_subject' => 'เพื่อนของคุณ {$_G[member][username]} ส่งโค้ดเชิญสำหรับการลงทะเบียนกับทางเว็บไซต์ {$_G[setting][bbname]} ให้กับคุณ',
+	'email_to_invite_subject' => 'Bạn của bạn: {$_G[member][username]} gửi một mã mời tham gia {$_G[setting][bbname]} đến bạn',
 	'email_to_invite_message' => '<br />
 $sendtoname,<br />
 这封信是由 {$_G[setting][bbname]} 的 {$_G[member][username]} 发送的。<br />
@@ -221,7 +221,7 @@ $message<br />
 $_G[siteurl]',
 
 
-	'moderate_member_subject' => 'แจ้งผลการตรวจสอบสมาชิก',
+	'moderate_member_subject' => 'Thông báo cho người sử dụng kết quả kiểm duyệt',
 	'moderate_member_message' => '<br />
 <p>{username},
 这封信是由 {bbname} 发送的。</p>
@@ -265,8 +265,8 @@ $_G[siteurl]',
 {bbname} 管理团队.<br />
 {siteurl}',
 
-	'adv_expiration_subject' => 'โฆษณาเว็บไซต์ของคุณจะหมดอายุภายใน {day} วัน, โปรดรีบดำเนินการ',
-	'adv_expiration_message' => 'โฆษณาเว็บไซต์ของคุณจะหมดอายุภายใน {day} วัน, โปรดรีบดำเนินการเพื่อโฆษณาจะได้แสดงผลอย่างต่อเนื่อง: <br /><br />{advs}',
+	'adv_expiration_subject' => 'Quảng cáo của bạn sẽ hết hạn ngày {day},vui lòng kiểm tra lại',
+	'adv_expiration_message' => 'Các Quảng cáo của bạn trên trang web sẽ hết hạn ngày {day},xin vui lòng giải quyết:<br /><br />{advs}',
 	'invite_payment_email_message' => '
 欢迎您光临{bbname}（{siteurl}），您的订单{orderid}已经支付完成，订单已确认有效。<br />
 <br />----------------------------------------------------------------------<br />

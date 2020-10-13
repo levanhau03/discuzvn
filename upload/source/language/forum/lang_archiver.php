@@ -14,13 +14,13 @@ if(!defined('IN_DISCUZ')) {
 $lang = array
 (
 
-	'page' => 'หน้า',
-	'replies' => 'ตอบกลับ',
-	'anonymous' => 'ไม่ระบุชื่อ',
-	'full_version' => 'ดูในรูปแบบกติ',
-	'forum_nonexistence' => 'ขออภัย! สถานะของคุณไม่สามารถเข้าใช้งานบอร์ดนี้ได้ หรือบอร์ดนี้อาจไม่มีอยู่ในระบบ',
-	'thread_nonexistence' => 'ขออภัย! คุณไม่ได้รับอนุญาตให้ดูกระทู้นี้หรือกระทู้นี้ไม่มีอยู่ในระบบ',
-	'post_time' => 'โพสต์',
+	'page' => 'trang',
+	'replies' => 'Trả lời',
+	'anonymous' => 'Khách',
+	'full_version' => 'Phiên bản đầy đủ',
+	'forum_nonexistence' => 'Bạn không có quyền truy cập diễn đàn này hoặc file không tồn tại.',
+	'thread_nonexistence' => 'Bạn không có quyền để xem chủ đề hoặc chủ đề không tồn tại.',
+	'post_time' => 'Tại',
 
 );
 

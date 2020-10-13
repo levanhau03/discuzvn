@@ -13,16 +13,16 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'articlelist_name' => 'หน้ารายการบทความ',
-	'articlelist_desc' => 'Show method: the ads shown at the article list page, divided into two placements: top or bottom.',
-	'articlelist_position' => 'Position',
-	'articlelist_position_comment' => 'is divided into four locations, each of two adjacent upper and lower display position',
-	'articlelist_position_up1' => 'Top part (top)',
-	'articlelist_position_up2' => 'Top part (below)',
-	'articlelist_position_down1' => 'Bottom part (top)',
-	'articlelist_position_down2' => 'Bottom part (below)',
-	'articlelist_category' => 'Portal Category',
-	'articlelist_category_comment' => 'Set the portal category to show the ads',
+	'articlelist_name' => 'Giữa danh sách bài Portal',
+	'articlelist_desc' => 'Hiển thị: Chia làm 2 vị trí trên và dưới.',
+	'articlelist_position' => 'Vị trí',
+	'articlelist_position_comment' => 'Chia thành bốn vị trí, mỗi vị trí tiếp giáp của hai màn hình hiển thị trên và dưới',
+	'articlelist_position_up1' => 'Trên(trên)',
+	'articlelist_position_up2' => 'Trên(dưới)',
+	'articlelist_position_down1' => 'Dưới(trên)',
+	'articlelist_position_down2' => 'Dưới(dưới)',
+	'articlelist_category' => 'Đặt kênh',
+	'articlelist_category_comment' => 'Phân loại các kênh quảng cáo',
 );
 
 ?>

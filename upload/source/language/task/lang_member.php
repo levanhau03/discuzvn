@@ -13,22 +13,22 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'member_name' => 'ทำหน้าที่ของสมาชิก',
-	'member_desc' => 'กิจกรรมนี้สนับสนุนให้สมาชิกใช้งานส่วนต่างๆของเว็บไซต์ ไม่ว่าจะเป็น เพิ่มบุ๊คมาร์ก ใช้ไอเท็ม ฯลฯ',
-	'member_complete_var_act' => 'การกระทำ',
-	'member_complete_var_act_favorite' => 'บุ๊คมาร์ก',
-	'member_complete_var_act_magic' => 'ไอเท็ม',
-	'member_complete_var_act_userapp' => 'เพิ่มแอพลิเคชัน',
-	'member_complete_var_num' => 'จำกัดจำนวนการดำเนินการ',
-	'member_complete_var_num_comment' => 'จะต้องจำกัดจำนวนการดำเนินการขั้นต่ำที่สมาชิกจะต้องดำเนินการ',
-	'member_complete_var_time' => 'จำกัดเวลา (ชั่วโมง)',
-	'member_complete_var_time_comment' => 'การตั้งค่าขีดจำกัดเวลาสำหรับกิจกรรมให้กับสมาชิก สมาชิกที่ทำกิจกรรมไม่สำเร็จหรือล้มเหลวจะไม่ได้รับรางวัล และทำเครื่องหมายกิจกรรมล้มเหลว 0 หรือปล่อยว่างไว้เพื่อไม่จำกัด',
+	'member_name' => 'Nhiệm vụ thành viên',
+	'member_desc' => 'Các chủ đề yêu thích, sử dụng đạo cụ và thêm các ứng dụng chuyển vùng. Các tác vụ như vậy được sử dụng để khuyến khích và hướng dẫn các thành viên sử dụng một chức năng nhất định của diễn đàn và kích hoạt không khí của diễn đàn',
+	'member_complete_var_act' => 'Hành động',
+	'member_complete_var_act_favorite' => 'Chủ đề yêu thích',
+	'member_complete_var_act_magic' => 'Sử dụng đạo cụ',
+	'member_complete_var_act_userapp' => 'Thêm ứng dụng chuyển vùng',
+	'member_complete_var_num' => 'Giới hạn thời gian thực hiện thấp hơn',
+	'member_complete_var_num_comment' => 'Số lần tối thiểu thành viên cần để thực hiện hành động tương ứng',
+	'member_complete_var_time' => 'Giới hạn thời gian (giờ)',
+	'member_complete_var_time_comment' => 'Đặt giới hạn thời gian để thành viên áp dụng cho nhiệm vụ để hoàn thành nhiệm vụ. Nếu thành viên không hoàn thành nhiệm vụ trong thời gian này, họ không thể nhận phần thưởng và đánh dấu lỗi nhiệm vụ. 0 hoặc để trống không giới hạn',
 
-	'task_complete_time_start' => 'เวลาเริ่มกิจกรรม',
-	'task_complete_time_limit' => '{value} ชั่วโมง',
-	'task_complete_act_favorite' => '{value} บุ๊คมาร์ก',
-	'task_complete_act_magic' => 'ใช้ {value} ไอเท็ม<br />สามารถใช้ได้ใน หน้ากระทู้ หน้าบล็อก หน้ารูปภาพ',
-	'task_complete_act_userapp' => 'เพิ่มแอพลิเคชัน {value}',
+	'task_complete_time_start' => 'Trong vòng，',
+	'task_complete_time_limit' => '{value} giờ kể từ khi yêu cầu，',
+	'task_complete_act_favorite' => 'Chủ đề {value} yêu thích',
+	'task_complete_act_magic' => 'Sử dụng các mục {value} .<br />Bạn có thể sử dụng đạo cụ trên các trang bài đăng, trang nhật ký, trang hình ảnh, v.v.',
+	'task_complete_act_userapp' => 'Thêm ứng dụng chuyển vùng {value}',
 );
 
 ?>

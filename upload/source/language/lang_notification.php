@@ -14,221 +14,221 @@ if(!defined('IN_DISCUZ')) {
 $lang = array
 (
 
-	'type_wall' => 'ฝากข้อความ',
-	'type_piccomment' => 'ความคิดเห็นในรูปภาพ',
-	'type_blogcomment' => 'ความคิดเห็นในบล็อก',
-	'type_clickblog' => 'ความรู้สึกในบล็อก',
-	'type_clickarticle' => 'ความรู้สึกในบทความ',
-	'type_clickpic' => 'ความรู้สึกในรูปภาพ',
-	'type_sharecomment' => 'ความคิดเห็นในข้อมูลที่นำมาแชร์',
-	'type_doing' => 'ทักทาย',
-	'type_friend' => 'เพื่อน',
-	'type_credit' => 'เครดิต',
-	'type_bbs' => 'เว็บบอร์ด',
-	'type_system' => 'ระบบ',
-	'type_thread' => 'กระทู้',
-	'type_task' => 'กิจกรรม',
-	'type_group' => 'คลับ',
+	'type_wall' => 'Lời nhắn',
+	'type_piccomment' => 'Bình luận ảnh',
+	'type_blogcomment' => 'Bình luận nhật ký',
+	'type_clickblog' => 'Trạng thái nhật ký',
+	'type_clickarticle' => 'Trạng thái tác phẩm',
+	'type_clickpic' => 'Trạng thái hình ảnh',
+	'type_sharecomment' => 'Chia sẻ bình luận',
+	'type_doing' => 'Status',
+	'type_friend' => 'Bạn bè',
+	'type_credit' => 'Điểm',
+	'type_bbs' => 'Diễn đàn',
+	'type_system' => 'Hệ thống',
+	'type_thread' => 'Chủ đề',
+	'type_task' => 'Nhiệm vụ',
+	'type_group' => 'Nhóm',
 
-	'mail_to_user' => 'ข้อความใหม่',
-	'showcredit' => '{actor} เสนอ {credit} เครดิต เพื่อจัดอันดับให้กับคุณ สนับสนุนการจัดอันดับได้ที่ <a href="misc.php?mod=ranklist&type=member" target="_blank">รายการจัดอันดับ</a>',
-	'share_space' => '{actor} แชร์โปรไฟล์ของคุณ',
-	'share_blog' => '{actor} แชร์บล็อก <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'share_album' => '{actor} แชร์อัลบั้ม <a href="{url}" target="_blank">{albumname}</a> ของคุณ',
-	'share_pic' => '{actor} แชร์<a href="{url}" target="_blank"> รูปภาพ</a>ในอัลบั้ม {albumname} ของคุณ',
-	'share_thread' => '{actor} แชร์กระทู้ <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'share_article' => '{actor} แชร์บทความ <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'magic_present_note' => 'มอบไอเท็ม <a href="{url}" target="_blank">{name}</a> ให้กับคุณ',
-	'friend_add' => '{actor} ได้เพิ่มคุณเป็นเพื่อนเรียบร้อยแล้ว',
-	'friend_request' => '{actor} ขอเพิ่มคุณเป็นเพื่อน {note}&nbsp;&nbsp;<a onclick="showWindow(this.id, this.href, \'get\', 0);" class="xw1" id="afr_{uid}" href="{url}">รับเป็นเพื่อน</a>',
-	'doing_reply' => '{actor} ตอบกลับ <a href="{url}" target="_blank">ข้อความทักทาย</a> ของคุณ',
-	'wall_reply' => '{actor} ตอบกลับ <a href="{url}" target="_blank">ข้อความ</a> ของคุณ',
-	'pic_comment_reply' => '{actor} ตอบกลับ <a href="{url}" target="_blank">ความคิดเห็นในรูปภาพ</a> ของคุณ',
-	'blog_comment_reply' => '{actor} ตอบกลับ <a href="{url}" target="_blank">ความคิดเห็นในบล็อก</a> ของคุณ',
-	'share_comment_reply' => '{actor} ตอบกลับ <a href="{url}" target="_blank">ความคิดเห็นในการแชร์</a> ของคุณ',
-	'wall' => '{actor} ฝากข้อความถึงคุณ <a href="{url}" target="_blank">อ่านข้อความ</a>',
-	'pic_comment' => '{actor} แสดงความคิดเห็นใน <a href="{url}" target="_blank">รูปภาพ</a> ของคุณ',
-	'blog_comment' => '{actor} แสดงความคิดเห็นใน <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'share_comment' => '{actor} แสดงความคิดเห็นใน <a href="{url}" target="_blank">แชร์</a> ของคุณ',
-	'click_blog' => '{actor} แสดงความรู้สึกในบล็อก <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'click_pic' => '{actor} แสดงความรู้สึกใน <a href="{url}" target="_blank">รูปภาพ</a> ของคุณ',
-	'click_article' => '{actor} แสดงความรู้สึกในบทความ <a href="{url}" target="_blank">{subject}</a> ของคุณ',
-	'show_out' => '{actor} เยี่ยมชมโปรไฟล์ของคุณ และได้รับเครดิตสุดท้ายไปแล้ว',
-	'puse_article' => 'ขอแสดงความยินดี กระทู้<a href="{url}" target="_blank">{subject}</a>ของคุณถูกนำไปเป็นบทความ <a href="{newurl}" target="_blank">คลิกเพื่อดู</a>',
+	'mail_to_user' => 'Có thông báo mới',
+	'showcredit' => '{actor} tặng bạn {credit} điểm, để giúp bạn lên hạng ở <a href="home.php?mod=space&do=top" target="_blank"> bảng xếp hạng</a> thành viên',
+	'share_space' => '{actor} đã chia sẻ blog của bạn',
+	'share_blog' => '{actor} đã chia sẻ nhật ký của bạn <a href="{url}" target="_blank">{subject}</a>',
+	'share_album' => '{actor} đã chia sẻ album của bạn <a href="{url}" target="_blank">{albumname}</a>',
+	'share_pic' => '{actor} đã chia sẻ <a href="{url}" target="_blank"> hình ảnh </a> trong album {albumname} ',
+	'share_thread' => '{actor} đã chia sẻ bài viết <a href="{url}" target="_blank">{subject}</a> của bạn',
+	'share_article' => '{actor} đã chia sẻ tác phẩm <a href="{url}" target="_blank">{subject}</a> của bạn ',
+	'magic_present_note' => 'đã tặng cho bạn công cụ <a href="{url}" target="_blank">{name}</a>',
+	'friend_add' => '{actor} và bạn đã trở thành bạn bè',
+	'friend_request' => '{actor} muốn kết bạn {note}&nbsp;&nbsp;<a onclick="showWindow(this.id, this.href, \'get\', 0);" class="xw1" id="afr_{uid}" href="{url}">Chấp nhận</a>',
+	'doing_reply' => '{actor} đã trả lời <a href="{url}" target="_blank">Status</a> của bạn',
+	'wall_reply' => '{actor} đã trả lời <a href="{url}" target="_blank"> lời nhắn của bạn</a>',
+	'pic_comment_reply' => '{actor} đã trả lời <a href="{url}" target="_blank"> bình luận hình ảnh</a> của bạn',
+	'blog_comment_reply' => '{actor} đã trả lời <a href="{url}" target="_blank"> bình luận nhật ký</a> của bạn',
+	'share_comment_reply' => '{actor} đã trả lời <a href="{url}" target="_blank"> bình luận chia sẻ </a> của bạn',
+	'wall' => '{actor} để lại lời nhắn tại <a href="{url}&fchannel=nwall" target="_blank">Tường</a>của bạn',
+	'pic_comment' => '{actor} đã bình luận <a href="{url}" target="_blank"> hình ảnh </a>của bạn',
+	'blog_comment' => '{actor} đã bình luận nhật ký của bạn <a href="{url}" target="_blank">{subject}</a>',
+	'share_comment' => '{actor} đã bình luận <a href="{url}" target="_blank">chia sẻ</a> của bạn',
+	'click_blog' => '{actor} đã biểu cảm với blog <a href="{url}" target="_blank">{subject}</a> của bạn',
+	'click_pic' => '{actor} đã biểu cảm với <a href="{url}" target="_blank">hình ảnh</a> của bạn',
+	'click_article' => '{actor} đã gửi biểu cảm với <a href="{url}" target="_blank">tác phẩm </a>của bạn',
+	'show_out' => '{actor} đã ghé thăm Blog của bạn làm tăng lượt truy cập và thứ hạng',
+	'puse_article' => 'Chúc mừng bạn, chủ đề <a href="{url}" target="_blank">{subject}</a>của bạn đã được đề cử đến portal, <a href="{newurl}" target="_blank">click để xem</a>',
 
-	'myinvite_request' => 'ข้อความแอพลิเคชันใหม่<a href="home.php?mod=space&do=notice&view=userapp">คลิกที่นี่เพื่อดูหน้าข้อมูลแอพลิเคชันที่เกี่ยวข้อง</a>',
+	'myinvite_request' => 'Tin ứng dụng mới<a href="home.php?mod=space&do=notice&view=userapp"> Click vào đây để vào các hoạt động ứng dụng liên quan</a>',
 
 
-	'group_member_join' => '{actor} ได้เข้าร่วมคลับ <a href="forum.php?mod=group&fid={fid}" target="_blank">{groupname}</a> ของคุณ ขณะนี้อยู่ในระหว่างรอการตรวจสอบ โปรดไปที่<a href="{url}" target="_blank">การจัดการคลับ</a> เพื่อดำเนินการตรวจสอบ',
-	'group_member_invite' => '{actor} เชิญคุณเข้าร่วมคลับ <a href="forum.php?mod=group&fid={fid}" target="_blank">{groupname}</a> <a href="{url}" target="_blank">คลิกที่นี่เพื่อเข้าร่วม</a>',
-	'group_member_check' => 'คุณได้ผ่านการตรวจสอบและสามารถเข้าร่วมคลับ <a href="{url}" target="_blank">{groupname}</a> ได้แล้ว กรุณา <a href="{url}" target="_blank">คลิกเพื่อเข้าชม</a>',
-	'group_member_check_failed' => 'คุณไม่ผ่านการตรวจสอบไม่สามารถเข้าร่วมคลับ <a href="{url}" target="_blank">{groupname}</a>',
-	'group_mod_check' => 'สร้างกลุ่มของคุณ <a href="{url}" target="_blank">{groupname}</a> อนุมัติแล้ว กรุณา<a href="{url}" target="_blank">คลิกที่นี่เพื่อเยี่ยมชม</a>',
+	'group_member_join' => '{actor} muốn gia nhập nhóm - CLB của bạn, hãy <a href="{url}" target="_blank"> vào quản lý</a> để duyệt',
+	'group_member_invite' => '{actor} đã mời bạn gia nhập nhóm -CLB <a href="forum.php?mod=group&fid={fid}" target="_blank">{groupname}</a>,<a href="{url}" target="_blank">click vào đây để gia nhập</a>',
+	'group_member_check' => 'Bạn đã được chấp nhận vào nhóm CLB <a href="{url}" target="_blank">{groupname}</a>, hãy <a href="{url}" target="_blank">click vào đây để xem</a>',
+	'group_member_check_failed' => 'Bạn đã không được nhóm <a href="{url}" target="_blank">{groupname}</a> thông qua.',
+	'group_mod_check' => 'Nhóm <a href="{url}" target="_blank">{groupname}</a>bạn tạo đã được phê duyệt, bấm vào <a href="{url}" target="_blank">đây</a> để truy cập.',
 
-	'reason_moderate' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_moderate' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_merge' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_merge' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_delete_post' => '{actor} ลบกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_delete_post' => 'Bài viết của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> đã bị {actor} xóa <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_delete_comment' => '{actor} ลบตอบกลับของคุณในกระทู้ <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_delete_comment' => 'Trả lời của bạn <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> đã bị {actor} xóa <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_ban_post' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_ban_post' => 'Bài viết của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_warn_post' => '{actor} {modaction} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ {actor} {modaction}<br />
+	'reason_warn_post' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction}<br />Với {warningexpiration} cảnh báo được tích lũy trong {warninglimit} ngày liên tiếp, bạn sẽ tự động bị cấm nói trong {warningexpiration} ngày.<br />Cho đến nay, bạn đã được cảnh báo {authorwarnings} lần, xin hãy chú ý!<div class="quote"><blockquote>{reason}</blockquote></div>',
 连续 {warningexpiration} 天内累计 {warninglimit} 次警告，您将被自动禁止发言 {warningexpiration} 天。<br />
 截止至目前，您已被警告 {authorwarnings} 次，请注意！<div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_move' => '{actor} ย้ายกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณไปที่ <a href="forum.php?mod=forumdisplay&fid={tofid}" target="_blank">{toname}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_move' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} di chuyển tới <a href="forum.php?mod=forumdisplay&fid={tofid}" target="_blank">{toname}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_copy' => '{actor} คัดลอกกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณไปที่ <a href="forum.php?mod=viewthread&tid={threadid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_copy' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} sao chép tới <a href="forum.php?mod=viewthread&tid={threadid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_remove_reward' => '{actor} เพิกถอนกระทู้รางวัล <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_remove_reward' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} thu hồi điểm <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stamp_update' => '{actor} ติดแสตมป์ {stamp} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stamp_update' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} cập nhật {stamp} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stamp_delete' => '{actor} ลอกแสตมปออกจากกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stamp_delete' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} xóa <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stamplist_update' => '{actor} ใส่ไอคอน {stamp} กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stamplist_update' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} thêm biểu tượng {stamp} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stamplist_delete' => '{actor} ลบไอคอนออกจากกระทู้  <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ของคุณ <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stamplist_delete' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} hủy bỏ biểu tượng <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stickreply' => '{actor} ปักหมุดตอบกลับของคุณในกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stickreply' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} đính lên <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_stickdeletereply' => '{actor} ถอดหมุดตอบกลับของคุณในกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_stickdeletereply' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} hủy bỏ đính <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_quickclear' => '{actor} ได้ลบ {cleartype} ออก <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_quickclear' => '{cleartype} hãy xóa {actor} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_live_update' => '{actor} ได้แนะนำกระทู้ของคุณใน <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
-	'reason_live_cancle' => '{actor} ได้ยกเลิกแนะนำกระทู้ของคุณใน <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_live_update' => 'Chủ đề <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> bởi {actor} được thiết lập live <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_live_cancle' => 'Chủ đề <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> bởi {actor} hủy live <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'modthreads_delete' => 'กระทู้ {threadsubject} ของคุณ ไม่ผ่านการตรวจสอบและตอนนี้ได้ถูกลบออกไปแล้ว!',
+	'modthreads_delete' => 'Chủ đề {threadsubject} không được chấp thuận, đã bị xóa !<div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'modthreads_delete_reason' => 'กระทู้ {threadsubject} ของคุณ ไม่ผ่านการตรวจสอบและตอนนี้ได้ถูกลบออกไปแล้ว! <div class="quote"><blockquote>{reason}</blockquote></div>',
-	'modthreads_validate' => 'กระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{threadsubject}</a> ของคุณ ผ่านการตรวจสอบและตอนนี้ถูกโพสต์ลงไปแล้ว! &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูกระทู้ &rsaquo;</a>',
+	'modthreads_delete_reason' => 'Chủ đề {threadsubject} mà bạn viết không được đồng ý, đã bị xóa!<div class="quote"><blockquote>{reason}</blockquote></div>',
+	'modthreads_validate' => 'Chủ đề <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{threadsubject}</a> đã được phê duyệt! &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'modreplies_delete' => 'การโพสต์ตอบกลับของคุณไม่ผ่านการตรวจสอบ และได้ถูกลบออกไปแล้ว! <p class="summary">เนื้อหา: <span>{post}</span></p>',
+	'modreplies_delete' => 'Trả lời của bạn đã không được thông qua, hiện đã bị xóa! <p class="summary">Nội dung:<span>{post}</span></p> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'modreplies_validate' => 'การโพสต์ตอบกลับของคุณผ่านการตรวจสอบแล้ว! &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">ดูเนื้อหา &rsaquo;</a> <p class="summary">เนื้อหา: <span>{post}</span></p>',
+	'modreplies_validate' => 'Trả lời của bạn đã được thông qua và công bố ! &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <p class="summary">Nội dung:<span>{post}</span></p> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'transfer' => 'คุณได้รับจากเครดิตจาก {actor} ผ่านการโอนเป็นจำนวน {credit} &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=log&suboperation=creditslog" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>
+	'transfer' => 'Bạn nhận được từ {actor} số điểm là {credit} &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=log&suboperation=creditslog" target="_blank" class="lit">Xem &rsaquo;</a><p class="summary">{actor} Nói:<span>{transfermessage}</span></p>',
 <p class="summary">{actor} 说：<span>{transfermessage}</span></p>',
 
-	'addfunds' => 'การร้องขอแลกเปลี่ยนเครดิตของคุณเรียบร้อย ระบบได้ส่งรายงานการแลกเปลี่ยนมายังข้อความส่าวนตัวของคุณ &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>
+	'addfunds' => 'Bạn đã nạp điểm thành công, số tiền tương ứng đã được chuyển vào tài khoản của bạn ! &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">Xem &rsaquo;</a><p class="summary">Số thứ tự:<span>{orderid}</span></p><p class="summary">Chi phí:<span>{price} VNĐ</span></p><p class="summary">Doanh thu:<span>{value}</span></p>',
 <p class="summary">订单号：<span>{orderid}</span></p><p class="summary">支出：<span>人民币 {price} 元</span></p><p class="summary">收入：<span>{value}</span></p>',
 
-	'rate_reason' => '{actor} ให้คะแนนกระทู้ <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> ของคุณ {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'rate_reason' => 'Chủ đề <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> đăng bởi {actor} đánh giá {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'recommend_note_post' => 'ขอแสดงความยินดี ข้อความของคุณ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ได้ถูกตั้งให้เป็นโพสต์แนะนำแล้ว',
+	'recommend_note_post' => 'Chúc mừng, bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của bạn đã được chỉnh sửa.',
 
-	'rate_removereason' => '{actor} ลบคะแนนกระทู้ <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> ของคุณ {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'rate_removereason' => '{actor} thu hồi chủ đề <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> số điểm trong bài viết {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'trade_seller_send' => '<a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> ซื้อสินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> ของคุณ ผู้ซื้อได้ชำระเงินแล้ว กำลังรอการจัดส่งสินค้าของคุณ &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_seller_send' => '<a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> mua sản phẩm của bạn <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a>, thanh toán đã được thực hiện, đang chờ bạn giao hàng &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'trade_buyer_confirm' => 'คุณได้ซื้อสินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a>, <a href="home.php?mod=space&uid={sellerid}" target="_blank">{seller}</a> ผู้ขายได้ส่งสินค้าไปแล้ว กำลังรอยืนยันการรับสินค้า &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_buyer_confirm' => 'Bạn mua <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a>,<a href="home.php?mod=space&uid={sellerid}" target="_blank">{seller}</a> đã được chuyển đi, đang chờ bạn xác nhận &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">Xemư &rsaquo;</a>',
 
-	'trade_fefund_success' => 'สินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> มีการคืนเงินเรียบร้อยแล้ว &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_fefund_success' => 'Hàng hóa <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> đã được trả lại &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">đánh giá &rsaquo;</a>',
 
-	'trade_success' => 'สินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> มีการซื้อขายประสบความสำเร็จ &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_success' => 'Hàng hóa <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> đã được giao dịch thành công &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">đánh giá &rsaquo;</a>',
 
-	'trade_order_update_sellerid' => 'ผู้ขาย <a href="home.php?mod=space&uid={sellerid}" target="_blank">{seller}</a> ปรับเปลี่ยนสินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> และรายละเอียดต่างๆ โปรดตรวจสอบ &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_order_update_sellerid' => 'Người bán <a href="home.php?mod=space&uid={sellerid}" target="_blank">{seller}</a> sửa đổi <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> đơn giao dịch, vui lòng xác nhận &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">xem &rsaquo;</a>',
 
-	'trade_order_update_buyerid' => 'ผู้ซื้อ <a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> ปรับเปลี่ยนสินค้า <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> และรายละเอียดต่างๆ โปรดตรวจสอบ &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'trade_order_update_buyerid' => 'Người mua <a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> sửa đổi sản phẩm <a href="forum.php?mod=trade&orderid={orderid}" target="_blank">{subject}</a> đơn giao dịch, vui lòng xác nhận &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">xem &rsaquo;</a>',
 
-	'eccredit' => '{actor} การประเมินสินค้าของคุณ &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'eccredit' => 'Người giao dịch với bạn {actor} đã được đánh giá dành cho bạn &nbsp; <a href="forum.php?mod=trade&orderid={orderid}" target="_blank" class="lit">quay lại &rsaquo;</a>',
 
-	'activity_notice' => '{actor} สมัครเข้าร่วมกิจกรรมของคุณ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> โปรดตรวจสอบ &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'activity_notice' => '{actor} áp dụng để tham gia sự kiện của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a>, vui lòng xem lại &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">xem &rsaquo;</a>',
 
-	'activity_apply' => '{actor} สปอนเซอร์กิจกรรม <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> อนุญาตให้คุณเข้าร่วมในกิจกรรมนี้ &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'activity_apply' => 'Hoạt động <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> do {actor} tài trợ đã được phê duyệt để tham gia sự kiện &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'activity_replenish' => '{actor} สปอนเซอร์กิจกรรม <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> แจ้งข้อมูลที่คุณต้องใช้ดำเนินการในการสมัครเข้าร่วม &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'activity_replenish' => 'Sự kiện <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> do {actor} tài trợ thông báo các thông tin cần thiết để hoàn tất &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'activity_delete' => '{actor} สปอนเซอร์กิจกรรม <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ปฏิเสธการขอเข้าร่วมกิจกรรมของคุณ &nbsp; <a href="forum.php?mod=viewthread&tid={tid}"  target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'activity_delete' => 'Sự kiện <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của {actor} từ chối đơn xin tham gia của bạn &nbsp; <a href="forum.php?mod=viewthread&tid={tid}"  target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'activity_cancel' => '{actor} ยกเลิกการมีส่วนร่วมใน <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> กิจกรรม &nbsp; <a href="forum.php?mod=viewthread&tid={tid}"  target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
+	'activity_cancel' => '{actor} thoát khỏi sự kiện <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> &nbsp; <a href="forum.php?mod=viewthread&tid={tid}"  target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'activity_notification' => '{actor} สปอนเซอร์กิจกรรม <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a>ส่งการแจ้งเตือน&nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียดกิจกรรม &rsaquo;</a> <div class="quote"><blockquote>{msg}</blockquote></div>',
+	'activity_notification' => 'Sự kiện <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của {actor} gửi tin nhắn tới bạn&nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <div class="quote"><blockquote>{msg}</blockquote></div>',
 
-	'reward_question' => 'คุณได้รับรางวัลใน <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a>เนื่องจาก {actor} เลือกคำตอบ ของคุณ &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'reward_question' => 'Bạn đã trả lời tại bài <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của {actor} được nhận phần thưởng cho câu trả lời đúng nhất &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'reward_bestanswer' => '{actor} เลือกข้อความตอบกลับของคุณใน <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> เป็นคำตอบที่ถูกต้อง &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'reward_bestanswer' => 'Bạn đã trả lời tại bài <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của {actor} được nhận phần thưởng cho câu trả lời đúng nhất &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'reward_bestanswer_moderator' => 'คำตอบของคุณในกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ได้รับเลือกเป็นคำตอบที่ดีที่สุด &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'reward_bestanswer_moderator' => 'Chủ đề phần thưởng của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> Câu trả lời hay nhất được chọn &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'comment_add' => '{actor} แสดงความคิดเห็นโพสต์ของคุณในกระทู้ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'comment_add' => '{actor} bình luận trong chủ đề <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> của bạn&nbsp;<a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'reppost_noticeauthor' => '{actor} ตอบกระทู้ <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">{subject}</a> &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">ดูรายละเอียด</a>',
+	'reppost_noticeauthor' => '{actor} trả lời bài viết: <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">{subject}</a> của bạn&nbsp; <a class="lit" href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">Xem</a>',
 
-	'task_reward_credit' => 'ขอแสดงความยินดีคุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a> สำเร็จ คุณได้รับเครดิต {creditbonus} &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">ดูเครดิตของฉัน &rsaquo;</a></p>',
+	'task_reward_credit' => 'Chúc mừng hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, phần thưởng {creditbonus} điểm &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">Điểm của tôi &rsaquo;</a></p>',
 
-	'task_reward_magic' => 'ขอแสดงความยินดีคุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>สำเร็จ คุณได้รับไอเท็ม <a href="home.php?mod=magic&action=mybox" target="_blank">{rewardtext}</a> {bonus} ชิน',
+	'task_reward_magic' => 'Chúc mừng hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, phần thưởng <a href="home.php?mod=magic&action=mybox" target="_blank">đạo cụ {rewardtext}</a> {bonus} cái',
 
-	'task_reward_medal' => 'ขอแสดงความยินดีคุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>สำเร็จ คุณได้รับเหรียญรางวัล <a href="home.php?mod=medal" target="_blank">{rewardtext}</a> สามารถใช้ได้เป็นเวลา {bonus} วัน',
+	'task_reward_medal' => 'Chúc mừng hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, phần thưởng <a href="forum.php?mod=medal" target="_blank"> là huân chương {rewardtext}</a> trong {bonus} ngày',
 
-	'task_reward_medal_forever' => 'ขอแสดงความยินดี คุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a> เสร็จสมบูรณ์ คุณได้รับเหรียญ <a href="home.php?mod=medal" target="_blank">{rewardtext}</a> เป็นรางวัลแบบถาวร',
+	'task_reward_medal_forever' => 'Chúc mừng bạn đã hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, nhận được huy chương <a href="home.php?mod=medal" target="_blank">{rewardtext}</a> vĩnh viễn',
 
-	'task_reward_invite' => 'ขอแสดงความยินดีคุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>สำเร็จ คุณได้รับโค้ดเชิญชวน<a href="home.php?mod=spacecp&ac=invite" target="_blank">โค้ดเชิญชวน {rewardtext}</a> สามารถใช้ได้เป็นเวลา {bonus} วัน',
+	'task_reward_invite' => 'Chúc mừng hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, phần thưởng <a href="home.php?mod=spacecp&ac=invite" target="_blank">mã mời {rewardtext} cái</a> có hiệu lực {bonus} ngày',
 
-	'task_reward_group' => 'ขอแสดงความยินดีคุณได้ทำกิจกรรม: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>สำเร็จ คุณได้เข้าร่วมกลุ่ม {rewardtext} เป็นเวลา {bonus} วัน &nbsp; <a href="home.php?mod=spacecp&ac=usergroup" target="_blank" class="lit">ดูระดับการใช้งานของกลุ่มนี้ &rsaquo;</a>',
+	'task_reward_group' => 'Chúc mừng hoàn thành nhiệm vụ: <a href="home.php?mod=task&do=view&id={taskid}" target="_blank">{name}</a>, phần thưởng ngày sử dụng trong nhóm {rewardtext} trong {bonus} ngày &nbsp; <a href="home.php?mod=spacecp&ac=usergroup" target="_blank" class="lit">Xem &rsaquo;</a>',
 
-	'user_usergroup' => 'กลุ่มสมาชิกของคุณได้อัปเกรดเป็น {usergroup} &nbsp; <a href="home.php?mod=spacecp&ac=usergroup" target="_blank" class="lit">ดูระดับการใช้งานของกลุ่มนี้ &rsaquo;</a>',
+	'user_usergroup' => 'Bạn đã thăng đến cấp  {usergroup} &nbsp; <a href="home.php?mod=spacecp&ac=usergroup" target="_blank" class="lit"> xem quyền hạn &rsaquo;</a>',
 
-	'grouplevel_update' => 'ขอแสดงความยินดี กลุ่มของคุณ {groupname} ได้รับการอัปเกรดไปยัง {newlevel}',
+	'grouplevel_update' => 'Chúc mừng bạn, nhóm dùng của bạn đã được nâng cấp lên {groupname} {newlevel}',
 
-	'thread_invite' => '{actor} เชิญชวนคุณ {invitename} <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
-	'blog_invite' => '{actor} เชิญคุณให้ดูบล็อก <a href="home.php?mod=space&uid={uid}&do=blog&id={blogid}" target="_blank">{subject}</a> &nbsp; <a href="home.php?mod=space&uid={uid}&do=blog&id={blogid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
-	'article_invite' => '{actor} เชิญคุณให้ดูบทความ <a href="portal.php?mod=view&aid={aid}" target="_blank">{subject}</a> &nbsp; <a href="portal.php?mod=view&aid={aid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
-	'invite_friend' => 'ขอแสดงความยินดีชวนเพื่อนสำเร็จ {actor} และคุณเป็นเพื่อนกันแล้ว',
+	'thread_invite' => '{actor} mời bạn {invitename} <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
+	'blog_invite' => '{actor} mời bạn xem blog <a href="home.php?mod=space&uid={uid}&do=blog&id={blogid}" target="_blank">{subject}</a> &nbsp; <a href="home.php?mod=space&uid={uid}&do=blog&id={blogid}" target="_blank" class="lit"> Xem &rsaquo;</a>',
+	'article_invite' => '{actor} mời bạn xem chủ đề <a href="portal.php?mod=view&aid={aid}" target="_blank">{subject}</a> &nbsp; <a href="portal.php?mod=view&aid={aid}" target="_blank" class="lit">Xem &rsaquo;</a>',
+	'invite_friend' => 'Chúc mừng bạn đã mời kết bạn thành công với {actor}',
 
-	'poke_request' => '<a href="{fromurl}" class="xi2">{fromusername}</a>: <span class="xw0">{pokemsg}&nbsp;</span><a href="home.php?mod=spacecp&ac=poke&op=reply&uid={fromuid}&from=notice" id="a_p_r_{fromuid}" class="xw1" onclick="showWindow(this.id, this.href, \'get\', 0);">ตอบกลับการสะกิด</a><span class="pipe">|</span><a href="home.php?mod=spacecp&ac=poke&op=ignore&uid={fromuid}&from=notice" id="a_p_i_{fromuid}" onclick="showWindow(\'pokeignore\', this.href, \'get\', 0);">ไม่สนใจ</a>',
+	'poke_request' => '<a href="{fromurl}" class="xi2">{fromusername}</a>: <span class="xw0">{pokemsg}&nbsp;</span><a href="home.php?mod=spacecp&ac=poke&op=reply&uid={fromuid}&from=notice" id="a_p_r_{fromuid}" class="xw1" onclick="showWindow(this.id, this.href, \'get\', 0);">Quay lại chào hỏi</a><span class="pipe">|</span><a href="home.php?mod=spacecp&ac=poke&op=ignore&uid={fromuid}&from=notice" id="a_p_i_{fromuid}" onclick="showWindow(\'pokeignore\', this.href, \'get\', 0);">Phớt lờ</a>',
 
-	'profile_verify_error' => '{verify} ปฏิเสธข้อมูลของคุณ ต้องกรอกข้อมูลต่อไปนี้:<br/>{profile}<br/>สาเหตุของการปฏิเสธ:{reason}',
-	'profile_verify_pass' => 'ขอแสดงความยินดี ข้อมูลที่คุณกรอกผ่านการตรวจสอบ ตรวจสอบข้อมูลโดย {verify}',
-	'profile_verify_pass_refusal' => 'ขออภัย, {verify} ปฏิเสธข้อมูลที่คุณกรอก',
-	'member_ban_speak' => '{user} ถูกแบนห้ามโพสต์ เป็นเวลา: {day} วัน (ถ้าเป็น 0 คือถูกแบนถาวร) เหตุผล: {reason}',
-	'member_ban_visit' => '{user} ถูกแบนห้ามเข้าชม เป็นเวลา: {day} วัน (ถ้าเป็น 0 คือถูกแบนถาวร) เหตุผล: {reason}',
-	'member_ban_status' => '{user} ถูกแบนห้ามการเข้าถึง: {reason}',
-	'member_follow' => 'มีสมาชิกได้แสดงความเห็นในติดตามจำนวน {count} ข้อความ <a href="home.php?mod=follow">คลิกที่นี่เพื่อดูรายละเอียด</a>',
-	'member_follow_add' => '{actor} เพิ่มการติดตามของคุณ <a href="home.php?mod=follow&do=follower">คลิกที่นี่เพื่อดูรายละเอียด</a>',
+	'profile_verify_error' => 'Thông tin {verify} đã bị từ chối, yêu cầu nhập lại: <br/>{profile}<br/> Lý do: {reason}',
+	'profile_verify_pass' => 'Chúc mừng bạn! Thông tin {verify} đã được thông qua',
+	'profile_verify_pass_refusal' => 'Chia buồn nhé, thông tin {verify} bạn điền bị từ chối',
+	'member_ban_speak' => 'Bạn đã bị {user} cấm phát ngôn, thời hạn:{day} ngày(0: cấm vĩnh viễn), lý do: {reason}',
+	'member_ban_visit' => 'Bạn đã bị {user} cấm truy cập trong thời gian {day} ngày (0 là cấm vĩnh viễn)Với lý do: {reason}.',
+	'member_ban_status' => 'Bạn có thể bị cấm truy cập bởi {user}, với lý do: {reason}.',
+	'member_follow' => 'Thần tượng của bạn mới đăng {count} bài viết, bạn hãy xem <a href="home.php?mod=follow">tại đây</a>',
+	'member_follow_add' => '{actor} đã hâm mộ bạn và đăng ký theo dõi hoạt động của bạn, xem <a href="home.php?mod=follow&do=follower">tại đây</a>',
 
-	'member_moderate_invalidate' => 'การตรวจสอบข้อมูลของคุณล้มเหลว กรุณา<a href="home.php?mod=spacecp&ac=profile">ส่งข้อมูลการลงทะเบียนเพื่อตรวจสอบอีกครั้ง</a><br />ข้อความของผู้ดูแล: <b>{remark}</b>',
-	'member_moderate_validate' => 'บัญชีสมาชิกของคุณผ่านการตรวจสอบได้รับการอนุมัติแล้ว<br />ข้อความของผู้ดูแล: <b>{remark}</b>',
-	'member_moderate_invalidate_no_remark' => 'การตรวจสอบข้อมูลของคุณล้มเหลว กรุณา<a href="home.php?mod=spacecp&ac=profile">ส่งข้อมูลการลงทะเบียนเพื่อตรวจสอบอีกครั้ง</a>',
-	'member_moderate_validate_no_remark' => 'บัญชีสมาชิกของคุณผ่านการตรวจสอบได้รับการอนุมัติแล้ว',
-	'manage_verifythread' => 'มีกระทู้ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=threads&dateline=all">ตรวจสอบตอนนี้</a>',
-	'manage_verifypost' => 'มีโพสต์ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=replies&dateline=all">ตรวจสอบตอนนี้</a>',
-	'manage_verifyuser' => 'มีสมาชิกใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=members">ตรวจสอบตอนนี้</a>',
-	'manage_verifyblog' => 'มีบล็อกใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=blogs">ตรวจสอบตอนนี้</a>',
-	'manage_verifydoing' => 'มีคำทักทายใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=doings">ตรวจสอบตอนนี้</a>',
-	'manage_verifypic' => 'มีรูปภาพใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=pictures">ตรวจสอบตอนนี้</a>',
-	'manage_verifyshare' => 'มีการแชร์ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=shares">ตรวจสอบตอนนี้</a>',
-	'manage_verifycommontes' => 'มีข้อความ/ความเห็นใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=comments">ตรวจสอบตอนนี้</a>',
-	'manage_verifyrecycle' => 'ถังขยะมีกระทู้ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=recyclebin">จัดการตอนนี้</a>',
-	'manage_verifyrecyclepost' => 'ถังขยะมีโพสต์ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=recyclebinpost">จัดการตอนนี้</a>',
-	'manage_verifyarticle' => 'มีบทความใหม่ที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=articles">ตรวจสอบตอนนี้</a>',
-	'manage_verifymedal' => 'มีเหรียญรางวัลใหม่ที่รอการตรวจสอบ <a href="admin.php?action=medals&operation=mod">ตรวจสอบตอนนี้</a>',
-	'manage_verifyacommont' => 'มีความคิดเห็นใหม่ในบทความที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=articlecomments">ตรวจสอบตอนนี้</a>',
-	'manage_verifytopiccommont' => 'มีความคิดเห็นใหม่ในหัวข้อที่รอการตรวจสอบ <a href="admin.php?action=moderate&operation=topiccomments">ตรวจสอบตอนนี้</a>',
-	'manage_verify_field' => 'มีการกรอก {verifyname} ใหม่ที่รอการตรวจสอบ <a href="admin.php?action=verify&operation=verify&do={doid}">จัดการตอนนี้</a>',
+	'member_moderate_invalidate' => 'Tài khoản của bạn đã bị từ chối, vui lòng <a href="home.php?mod=spacecp&ac=profile">gửi lại thông tin đăng ký</a>.<br />BQT: <b>{remark}</b>',
+	'member_moderate_validate' => 'Tài khoản của bạn đã được chấp thuận.<br />BQT: <b>{remark}</b>',
+	'member_moderate_invalidate_no_remark' => 'Tài khoản của bạn đã bị từ chối, vui lòng <a href="home.php?mod=spacecp&ac=profile">gửi lại thông tin đăng ký</a>.',
+	'member_moderate_validate_no_remark' => 'Tài khoản của bạn đã được chấp thuận.',
+	'manage_verifythread' => 'Có bài viết mới đang chờ duyệt trong box quản lý. <a href="admin.php?action=moderate&operation=threads&dateline=all">Xem xét ngay</a>',
+	'manage_verifypost' => 'Có trả lời mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=replies&dateline=all">Xem xét ngay</a>',
+	'manage_verifyuser' => 'Có thành viên mới chờ duyệt. <a href="admin.php?action=moderate&operation=members">Xem xét ngay</a>',
+	'manage_verifyblog' => 'Có Blog mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=blogs">Xem xét ngay</a>',
+	'manage_verifydoing' => 'Có Hoạt động mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=doings">Xem xét ngay</a>',
+	'manage_verifypic' => 'Có hình ảnh mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=pictures">Xem xét ngay</a>',
+	'manage_verifyshare' => 'Có chia sẻ mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=shares">Xem xét ngay</a>',
+	'manage_verifycommontes' => 'Có Tin nhắn/nhận xét mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=comments">Xem xét ngay</a>',
+	'manage_verifyrecycle' => 'Có bài viết mới được chuyển vào trong thùng rác. <a href="admin.php?action=recyclebin">Xử lý ngay</a>',
+	'manage_verifyrecyclepost' => 'Có bài trả lời mới được chuyển vào trong thùng rác.. <a href="admin.php?action=recyclebinpost">Xử lý ngay</a>',
+	'manage_verifyarticle' => 'Có bài mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=articles">Xem xét ngay</a>',
+	'manage_verifymedal' => 'Có ứng dụng huy chương đang chờ duyệt. <a href="admin.php?action=medals&operation=mod">Xem xét ngay</a>',
+	'manage_verifyacommont' => 'Có nhận xét bài mới đang chờ duyệt. <a href="admin.php?action=moderate&operation=articlecomments">Xem xét ngay</a>',
+	'manage_verifytopiccommont' => 'Có nhận xét chủ đề mới đang chờ duyệt<a href="admin.php?action=moderate&operation=topiccomments">Xem xét ngay</a>',
+	'manage_verify_field' => 'Chờ duyệt lĩnh vực {verifyname}.<a href="admin.php?action=verify&operation=verify&do={doid}">Xử lý ngay</a>',
 	'system_notice' => '{subject}<p class="summary">{message}</p>',
-	'system_adv_expiration' => 'โฆษณาเว็บไซต์ของคุณจะหมดอายุภายใน {day} วัน, โปรดรีบดำเนินการ: <br />{advs}',
-	'report_change_credits' => '{actor} จัดการกับการรายงานของคุณ {creditchange} {msg}',
-	'at_message' => '<a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> ได้กล่าวถึงคุณในโพสต์ของ <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">{subject}</a> ว่า: <div class="quote"><blockquote>{message}</blockquote></div><a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">คลิกที่นี่เพื่อดูรายละเอียด</a>',
-	'new_report' => 'มีการรายงานเข้ามาใหม่ <a href="admin.php?action=report" target="_blank">คลิกที่นี่เพื่อดูและดำเนินการรายงานนี้</a>',
-	'new_post_report' => 'มีการรายงานใหม่ที่รอการตรวจสอบ <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">คลิกที่นี่เพื่อเข้าสู่ศูนย์จัดการระบบ</a>',
-	'magics_receive' => '{actor} ได้มอบไอเท็ม {magicname} ให้กับคุณ
+	'system_adv_expiration' => 'Các quảng cáo trang web của bạn sẽ hết hạn sau {day} ngày, Vui lòng giải quyết ngay<br />{advs}',
+	'report_change_credits' => '{actor} đã xử lý báo của bạn, {creditchange} của bạn',
+	'at_message' => '<a href="home.php?mod=space&uid={buyerid}" target="_blank">{buyer}</a> trích dẫn bạn trong chủ đề <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">{subject}</a>. Nội dung <div class="quote"><blockquote>{message}</blockquote></div> <a href="forum.php?mod=redirect&goto=findpost&ptid={tid}&pid={pid}" target="_blank">Bấm vào để xem</a>.',
+	'new_report' => 'Có báo cáo đang chờ xử lý, <a href="admin.php?action=report" target="_blank">bấm vào đây để xem</a>.',
+	'new_post_report' => 'Có báo cáo mới chở xử lý, <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">Click vào đây để vào quản lý</a>. ',
+	'magics_receive' => 'Bạn nhận được công cụ do {actor} tặng cho bạn {magicname}<p class="summary">{actor} Nói:<span>{msg}</span></p><p class="mbn"><a href="home.php?mod=magic" target="_blank">Đạo cụ giảm giá</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">Xem hộp vật phẩm của tôi</a></p>',
 <p class="summary">{actor} 说：<span>{msg}</span></p>
 <p class="mbn"><a href="home.php?mod=magic" target="_blank">回赠道具</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">查看我的道具箱</a></p>',
-	'invite_collection' => '{actor} เชิญคุณเข้าร่วมในคลังกระทู้  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a><br /> <a href="forum.php?mod=collection&action=edit&op=acceptinvite&ctid={ctid}&dateline={dateline}">ยอมรับคำเชิญ</a>',
-	'collection_removed' => 'คลังกระทู้ที่คุณเข้าร่วมตอนนี้  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> ได้ถูกลบออกโดย {actor}',
-	'exit_collection' => 'คุณได้เข้าร่วมคลังกระทู้ก่อนหน้านี้อยู่แล้ว  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>',
-	'collection_becommented' => 'คุณได้เข้าแสดงความเห็นจากคลังกระทู้นี้  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> จากการแสดงความคิดเห็นใหม่',
-	'collection_befollowed' => 'มีสมาชิกได้ติดตามคลังกระทู้ <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> ของคุณ',
-	'collection_becollected' => 'ขอแสดงความยินดี! กระทู้ <a href="forum.php?mod=viewthread&tid={tid}">{threadname}</a> ของคุณได้รับการจัดเก็บในคลังกระทู้แล้ว  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>',
+	'invite_collection' => '{actor} mời bạn xem Bộ sưu tập  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>.<br /> <a href="forum.php?mod=collection&action=edit&op=acceptinvite&ctid={ctid}&dateline={dateline}">Bấm vào đây để chấp nhận.</a>',
+	'collection_removed' => 'Quản lý của bạn trong <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> đã bị {actor} đóng.',
+	'exit_collection' => 'Bạn đã không được tham gia Bộ sưu tập: <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>',
+	'collection_becommented' => 'Bộ sưu tập  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> có comment mới.',
+	'collection_befollowed' => 'Bộ sưu tập <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> có người theo dõi mới.',
+	'collection_becollected' => 'Chúc mừng chủ đề <a href="forum.php?mod=viewthread&tid={tid}">{threadname}</a> đã được thêm vào <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>!',
 
 	'pmreportcontent' => '{pmreportcontent}',
 
-	'thread_hidden' => 'กระทู้ของคุณ <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> ถูกตั้งสถานะว่าเป็นสแปมจากสมาชิกหลายคน ทำให้กระทู้ถูกซ่อนไว้ &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">ดูรายละเอียด &rsaquo;</a>',
+	'thread_hidden' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a>đã bị nhiều người báo cáo là spam &nbsp; <a href="forum.php?mod=viewthread&tid={tid}" target="_blank" class="lit">Xem &rsaquo;</a>',
 
 );
 

@@ -13,19 +13,19 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'friendlink_content' => 'ลักษณะการแสดงผล',
-	'friendlink_content_both' => 'โลโก้และข้อความ',
-	'friendlink_content_logo' => 'โลโก้เท่านั้น',
-	'friendlink_content_text' => 'ข้อความเท่านั้น',
-	'friendlink_type' => 'กลุ่มของลิงก์',
-	'friendlink_type_group1' => 'กลุ่ม 1',
-	'friendlink_type_group2' => 'กลุ่ม 2',
-	'friendlink_type_group3' => 'กลุ่ม 3',
-	'friendlink_type_group4' => 'กลุ่ม 4',
-	'friendlink_titlelength' => 'ความยาวชื่อของเว็บไซต์',
-	'friendlink_titlelength_comment' => 'การตั้งค่า ความยาวสูงสุดของ ชื่อเว็บไซต์',
-	'friendlink_summarylength' => 'ความยาวของข้อมูลส่วนตัว',
-	'friendlink_summarylength_comment' => 'การตั้งค่า ความยาวสูงสุดของ รายละเอียด เว็บไซต์',
+	'friendlink_content' => 'Phong cách hiển thị',
+	'friendlink_content_both' => 'Logo và quảng cáo',//'logo和文字',
+	'friendlink_content_logo' => 'Chỉ có logo',//'仅logo',
+	'friendlink_content_text' => 'Chỉ có quảng cáo',//'仅文字',
+	'friendlink_type' => 'Link nhóm',
+	'friendlink_type_group1' => 'Nhóm 1',//'分组1',
+	'friendlink_type_group2' => 'Nhóm 2',//'分组2',
+	'friendlink_type_group3' => 'Nhóm 3',//'分组3',
+	'friendlink_type_group4' => 'Nhóm 4',//'分组4',
+	'friendlink_titlelength' => 'Chiều dài trang web',
+	'friendlink_titlelength_comment' => 'Thiết lập độ dài tối đa của tên trang web',
+	'friendlink_summarylength' => 'Mô tả',
+	'friendlink_summarylength_comment' => 'Thiết lập độ dài tối đa của mô tả trang web',
 );
 
 ?>

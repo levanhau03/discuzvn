@@ -13,8 +13,8 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'invite_message' => '<p style="color:red;">ว้าวๆ! คุณได้รับอินไวท์ {count}!</p><br>',
-	'invite_guide' => '<strong>คำแนะนำในการเข้าร่วมกิจกรรมนี้: </strong>
+	'invite_message' => '<p style="color:red;">Wow, thật tuyệt vời! Bây giờ bạn đã mời {count} bạn bè, hãy tiếp tục làm việc!</p><br>',
+	'invite_guide' => '<strong>Thực hiện theo các hướng dẫn để hoàn thành nhiệm vụ này:</strong>
 		<ul class="task">
 		<li>在新窗口中打开<a href="home.php?mod=spacecp&ac=invite" target="_blank">好友邀请页面</a></li>
 		<li>通过 QQ、MSN 等 IM 工具，或者发送邮件，把邀请链接告诉您的好友，邀请他们加入进来吧</li>

@@ -13,17 +13,17 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'stick_name' => 'ปักหมุดกระทู้',
-	'stick_desc' => 'ปักหมุดกระทู้ของคุณเอง',
-	'stick_expiration' => 'ระยะเวลาปักหมุด',
-	'stick_expiration_comment' => 'ตั้งค่าระยะเวลาการปักหมุดกระทู้ ค่าเริ่มต้นคือ 24 ชั่วโมง',
-	'stick_forum' => 'สามารถใช้งานได้ในเว็บบอร์ด',
-	'stick_info' => 'ปักหมุดกระทู้เป็นระยะเวลา {expiration} ชั่วโมง กรุณากรอก ID กระทู้',
-	'stick_info_nonexistence' => 'กรุณาระบุกระทู้ที่คุณต้องการปักหมุด',
-	'stick_succeed' => 'ปักหมุดกระทู้เรียบร้อยแล้ว',
-	'stick_info_noperm' => 'ขออภัย! บอร์ดนี้ไม่อนุญาตให้ใช้ไอเท็มนี้',
+	'stick_name' => 'Thẻ Đính',
+	'stick_desc' => 'Dùng để đặt Chú ý chủ đề',
+	'stick_expiration' => 'Thời hạn',
+	'stick_expiration_comment' => 'Thiết lập thời gian đính chủ đề, mặc định 24 giờ',
+	'stick_forum' => 'Cho phép sử dụng các đạo cụ của Diễn đàn',
+	'stick_info' => 'Đính chủ đề trong {expiration}giờ, nhập ID chủ đề',
+	'stick_info_nonexistence' => 'Hãy xác định đối tượng để đính',
+	'stick_succeed' => 'Bạn đã đính chủ đề thành công',
+	'stick_info_noperm' => 'Có lỗi, không được phép sử dụng đạo cụ ở đây.',
 
-	'stick_notification' => '{actor} ใช้ไอเท็ม{magicname} กับกระทู้ {subject} ของคุณ <a href="forum.php?mod=viewthread&tid={tid}">ไปดูกระทู้!</a>',
+	'stick_notification' => 'Chủ đề của bạn {subject} được {actor} sử dụng {magicname}, <a href="forum.php?mod=viewthread&tid={tid}">Xem</a>',
 );
 
 ?>

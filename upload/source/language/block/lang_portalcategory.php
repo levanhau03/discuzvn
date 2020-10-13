@@ -13,14 +13,14 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'portalcategory_thecatid' => 'คอลัมน์ที่ระบุ',
-	'portalcategory_thecatid_comment' => 'ID ของคอลัมน์ที่ระบุ ถ้ามีหลาย ID ให้ใช้เครื่องหมายคอมม่า（,） เป็นตัวคั่นระหว่าง ID',
-	'portalcategory_catid' => 'หมวดหมู่หลัก',
-	'portalcategory_catid_comment' => 'เลือกหมวดหมู่หลัก',
-	'portalcategory_orderby' => 'การจัดเรียงลำดับหมวดหมู่',
-	'portalcategory_orderby_comment' => 'ตั้งค่าการจัดเรียงลำดับของหมวดหมู่หลัก',
-	'portalcategory_orderby_displayorder' => 'เรียงลำดับตามค่าเริ่มต้น',
-	'portalcategory_orderby_articles' => 'เรียงลำดับตามจำนวนของบทความ',
+	'portalcategory_thecatid' => 'Loại Portal',
+	'portalcategory_thecatid_comment' => 'Thiết lập ID thể loại riêng biệt, nếu nhiều ID thì ngăn cách bằng dấu phẩy (,)',//'指定栏目的ID，多个ID之间用半角逗号（,）分割',
+	'portalcategory_catid' => 'Loại chuyên mục nguồn',
+	'portalcategory_catid_comment' => 'Chọn chuyên mục nguồn',
+	'portalcategory_orderby' => 'Sắp xếp',
+	'portalcategory_orderby_comment' => 'Thiết lập thứ tự của danh mục',//'设置以哪一字段或方式对分类进行排序',
+	'portalcategory_orderby_displayorder' => 'Mặc định',//'按默认顺序排序',
+	'portalcategory_orderby_articles' => 'Các bài viết',//'按文章数倒序',
 );
 
 ?>
