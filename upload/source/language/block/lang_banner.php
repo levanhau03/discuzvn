@@ -18,10 +18,10 @@ $lang = array
 	'banner_height' => 'Chiều dài ảnh',
 	'banner_url' => 'Link quảng cáo',
 	'banner_text' => 'Mô tả hình ảnh',
-	'banner_atarget' => 'Mở nhiều liên kết',//'链接打开方式',
-	'banner_atarget_top' => 'Mở trong cửa sổ này (_top)',//'本页面打开(跳出框架)',
-	'banner_atarget_blank' => 'Mở trong cửa sổ này (_blank)',//'新窗口打开',
-	'banner_atarget_self' => 'Mở trong cửa sổ này (_self)',//'本页面打开',
+	'banner_atarget' => 'Mở nhiều liên kết',
+	'banner_atarget_top' => 'Mở trong cửa sổ này (_top)',
+	'banner_atarget_blank' => 'Mở trong cửa sổ này (_blank)',
+	'banner_atarget_self' => 'Mở trong cửa sổ này (_self)',
 );
 
 ?>
