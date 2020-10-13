@@ -1850,7 +1850,7 @@ if($_GET['step'] == 'start') {
 			$deltablehtml .= "<tr><td><input type=\"checkbox\" name=\"deltables[$tablename]\" value=\"1\"></td><td>{$config['tablepre']}$tablename</td></tr>";
 		}
 		$deltablehtml .= '</table>';
-		echo "<p>以下 <strong>数据表</strong> 与标准数据库相比是多余的:<br>您可以根据需要自行决定是否删除</p>$deltablehtml";
+		echo "<p>Các <strong>bảng dữ liệu</strong> sau là dư thừa so với cơ sở dữ liệu chuẩn:<br>Bạn có thể quyết định xóa tùy theo nhu cầu của mình</p>$deltablehtml";
 	}
 
 	$delcolumnhtml = '';
@@ -1860,22 +1860,22 @@ if($_GET['step'] == 'start') {
 			foreach ($cols as $coltype => $col) {
 				if (is_array($col)) {
 					foreach ($col as $index => $indexvalue) {
-						$delcolumnhtml .= "<tr><td><input type=\"checkbox\" name=\"delcols[$tablename][$coltype][$index]\" value=\"1\"></td><td>{$config['tablepre']}$tablename</td><td>索引($coltype) $index $indexvalue</td></tr>";
+						$delcolumnhtml .= "<tr><td><input type=\"checkbox\" name=\"delcols[$tablename][$coltype][$index]\" value=\"1\"></td><td>{$config['tablepre']}$tablename</td><td>index($coltype) $index $indexvalue</td></tr>";
 					}
 				} else {
-					$delcolumnhtml .= "<tr><td><input type=\"checkbox\" name=\"delcols[$tablename][$col]\" value=\"1\"></td><td>{$config['tablepre']}$tablename</td><td>字段 $col</td></tr>";
+					$delcolumnhtml .= "<tr><td><input type=\"checkbox\" name=\"delcols[$tablename][$col]\" value=\"1\"></td><td>{$config['tablepre']}$tablename</td><td>Field $col</td></tr>";
 				}
 			}
 		}
 		$delcolumnhtml .= '</table>';
 
-		echo "<p>以下 <strong>字段</strong> 与标准数据库相比是多余的:<br>您可以根据需要自行决定是否删除</p>$delcolumnhtml";
+		echo "<p>Các <strong>trường</strong> sau là dư thừa so với cơ sở dữ liệu chuẩn:<br>Bạn có thể quyết định xóa tùy theo nhu cầu của mình</p>$delcolumnhtml";
 	}
 
 	if(empty($deltables) && empty($delcolumns)) {
-		echo "<p>与标准数据库相比，没有需要删除的数据表和字段</p><a href=\"$theurl?step=style".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">请点击进入下一步</a></p>";
+		echo "<p>So với cơ sở dữ liệu chuẩn, không có bảng và trường dữ liệu nào cần phải xóa</p><a href=\"$theurl?step=style".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">Vui lòng nhấp để vào bước tiếp theo</a></p>";
 	} else {
-		echo "<p><input type=\"submit\" name=\"delsubmit\" value=\"提交删除\"></p><p>您也可以忽略多余的表和字段<br><a href=\"$theurl?step=style".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">直接进入下一步</a></p>";
+		echo "<p><input type=\"submit\" name=\"delsubmit\" value=\"Gửi để xóa\"></p><p>Bạn cũng có thể bỏ qua các bảng và trường thừa<br><a href=\"$theurl?step=style".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">Đi thẳng đến bước tiếp theo</a></p>";
 	}
 	echo '</form>';
 
@@ -1884,7 +1884,7 @@ if($_GET['step'] == 'start') {
 
 } elseif ($_GET['step'] == 'style') {
 	if(empty($_GET['confirm'])) {
-		show_msg("请确认是否要恢复默认风格？<br /><br /><a href=\"$theurl?step=style&confirm=yes".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">[ 是 ]</a>&nbsp;&nbsp;<a href=\"$theurl?step=cache".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">[ 否 ]</a>", '');
+		show_msg("Vui lòng xác nhận xem bạn có muốn khôi phục kiểu mặc định không?<br /><br /><a href=\"$theurl?step=style&confirm=yes".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">[ Có ]</a>&nbsp;&nbsp;<a href=\"$theurl?step=cache".($_GET['from'] ? '&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : '')."\">[ Không ]</a>", '');
 	}
 
 	define('IN_ADMINCP', true);
@@ -1894,7 +1894,7 @@ if($_GET['step'] == 'start') {
 	import_styles(1, $dir, 1, 0, 0);
 	C::t('common_setting')->update('styleid', 1);
 
-	show_msg("默认风格已恢复，进入下一步", "$theurl?step=cache");
+	show_msg("Kiểu mặc định đã được khôi phục, hãy chuyển sang bước tiếp theo", "$theurl?step=cache");
 
 } elseif ($_GET['step'] == 'cache') {
 
@@ -1905,7 +1905,7 @@ if($_GET['step'] == 'start') {
 	dir_clear(ROOT_PATH.'./uc_client/data/cache');
 	savecache('setting', '');
 
-	show_msg('<span id="finalmsg">缓存更新中，请稍候 ...</span><iframe src="../misc.php?mod=initsys" style="display:none;" onload="window.location.href=\''.$theurl.'?lock=true\'"></iframe>');
+	show_msg('<span id="finalmsg">Đang cập nhật bộ nhớ cache, vui lòng đợi ...</span><iframe src="../misc.php?mod=initsys" style="display:none;" onload="window.location.href=\''.$theurl.'?lock=true\'"></iframe>');
 
 }
 
@@ -1994,7 +1994,7 @@ function show_msg($message, $url_forward='', $time = 1, $noexit = 0, $notice = '
 
 	if($url_forward) {
 		$url_forward = $_GET['from'] ? $url_forward.'&from='.rawurlencode($_GET['from']).'&frommd5='.rawurlencode($_GET['frommd5']) : $url_forward;
-		$message = "<a href=\"$url_forward\">$message (跳转中...)</a><br>$notice<script>setTimeout(\"window.location.href ='$url_forward';\", $time);</script>";
+		$message = "<a href=\"$url_forward\">$message (Nhảy...)</a><br>$notice<script>setTimeout(\"window.location.href ='$url_forward';\", $time);</script>";
 	}
 
 	show_header();
@@ -2020,7 +2020,7 @@ function show_header() {
 	<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=$config[charset]" />
-	<title> 数据库升级程序 </title>
+	<title> Chương trình nâng cấp cơ sở dữ liệu </title>
 	<style type="text/css">
 	* {font-size:12px; font-family: Verdana, Arial, Helvetica, sans-serif; line-height: 1.5em; word-break: break-all; }
 	body { text-align:center; margin: 0; padding: 0; background: #F5FBFF; }
@@ -2035,15 +2035,15 @@ function show_header() {
 	</head>
 	<body>
 	<div class="bodydiv">
-	<h1>数据库升级工具</h1>
+	<h1>Công cụ nâng cấp cơ sở dữ liệu</h1>
 	<div style="width:90%;margin:0 auto;">
 	<table id="menu">
 	<tr>
-	<td{$nowarr[start]}>升级开始</td>
-	<td{$nowarr[sql]}>数据库结构添加与更新</td>
-	<td{$nowarr[data]}>数据更新</td>
-	<td{$nowarr[delete]}>数据库结构删除</td>
-	<td{$nowarr[cache]}>升级完成</td>
+	<td{$nowarr[start]}>Nâng cấp bắt đầu</td>
+	<td{$nowarr[sql]}>Bổ sung và cập nhật cấu trúc cơ sở dữ liệu</td>
+	<td{$nowarr[data]}>Cập nhật dữ liệu</td>
+	<td{$nowarr[delete]}>Xóa cấu trúc cơ sở dữ liệu</td>
+	<td{$nowarr[cache]}>Hoàn thành cập nhật</td>
 	</tr>
 	</table>
 	<br>
