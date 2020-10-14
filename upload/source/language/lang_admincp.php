@@ -7061,7 +7061,7 @@ $lang = array
 # Bật chế độ RewriteEngine
 RewriteEngine On
 
-# Sửa đổi /discuz trong câu lệnh sau thành địa chỉ thư mục diễn đàn của bạn, nếu chương trình được đặt trong thư mục gốc, vui lòng sửa đổi /discuz thành /
+# Sửa đổi /discuz trong câu lệnh sau thành địa chỉ thư mục diễn đàn của bạn, nếu chương trình được đặt trong thư mục root, vui lòng sửa đổi /discuz thành /
 RewriteBase /discuz
 
 # Rewrite Không sửa đổi các quy tắc hệ thống
