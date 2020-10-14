@@ -6979,9 +6979,9 @@ $lang = array
 
 	'setting_manyou' => 'Cài đặt Manyou',
 	'setting_manyou_tips' => '<li>Sau khi nền tảng ứng dụng mở, Người dùng có thể lựa chọn tại máy chủ một loạt các ứng dụng (Như Happy farm, Happy manor, Texas hold-em, GloryhHospital, v.v ...).</li>
-		<li>开启漫游搜索功能后，用户可以使用基于漫游的搜索功能。</li>
-		<li>如果您更改了站点地址、站点名称等信息，请选择"同步漫游信息"提交即可。</li>
-		<li>漫游功能由 <a target="_blank" href="http://www.manyou.com/www/">MYOP开放平台</a> 提供， Manyou Open Platform(Manyou开放平台/MYOP)服务是由 Comsenz 公司为应用开发者提供的开放平台，启用漫游服务前，<a href="http://wiki.developer.manyou.com/wiki/index.php?title=MYOP%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE&printable=yes" target="_blank">请先阅读MYOP网站服务协议</a></li>',
+		<li>Sau khi bật chức năng tìm kiếm chuyển vùng, người dùng có thể sử dụng chức năng tìm kiếm dựa trên chuyển vùng.</li>
+		<li>Nếu bạn đã thay đổi địa chỉ trang web, tên trang web và các thông tin khác, vui lòng chọn "Đồng bộ hóa thông tin chuyển vùng" để gửi.</li>
+		<li>Chức năng chuyển vùng được cung cấp bởi <a target="_blank" href="http://www.manyou.com/www/">nền tảng mở MYOP</a> dịch vụ Nền tảng mở Manyou(Manyou Open Platform / MYOP) do Comsenz cung cấp Công ty cung cấp một nền tảng mở cho các nhà phát triển ứng dụng. Trước khi bật dịch vụ chuyển vùng, hãy <a href="http://wiki.developer.manyou.com/wiki/index.php?title=MYOP%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE&printable=yes" target="_blank">Vui lòng đọc thỏa thuận dịch vụ trang web MYOP trước</a></li>',
 	'setting_manyou_base' => 'Cài đặt cơ bản',
 	'setting_manyou_base_status' => 'Enable application platform',
 	'setting_manyou_base_status_comment' => 'Select whether to enable the applications. If you turn off applications, your users will not use any application based on this platform',
