@@ -1183,14 +1183,14 @@ $lang = array
 	'setting_home_base_showallfriendnum' => 'Tùy chọn nguồn cấp tin tức',
 	'setting_home_base_showallfriendnum_comment' => 'Không hiển thị nhiều nguồn cấp dữ liệu bạn bè hơn giới hạn này. Khi một số nguồn cấp dữ liệu vượt quá giới hạn này, hãy hiển thị liên kết cho tất cả nguồn cấp dữ liệu của bạn bè.<br>Thông số này có cùng tác dụng trong blog và album.',
 	'setting_home_base_feedhiddenicon' => 'Bật/tắt nguồn cấp tin tức',
-	'setting_home_base_feedhiddenicon_comment' => 'Nhập nguồn cấp tin tức mà bạn muốn hiển thị biểu tượng (icon) bật/tắt. Nếu bạn có nhiều nguồn cấp tin tức, bạn có thể sử dụng "," để phân tách các tin nhắn.<br>
-			将某些动态折叠后，可以适当减少首页的动态噪音。<br>
-			动态类型的获取方法：<br>
-			在查看好友动态的时候，点击每条动态前面的小图标(例如 <img src="static/image/feed/blog.gif" align="absmiddle">)，<br>
-			浏览器的网址会变为类似如下的链接：<br>
-			http://xxx.com/home.php?mod=space&uid=&do=feed&view=we&appid=3&<b>icon=blog</b>，<br>
-			其中，icon=blog，就表示该动态类型为 blog<br>
-			MYOP应用的icon为 7位数字。您可以用英文单词 <b>myop</b> 来表示所有MYOP应用的动态类型',
+	'setting_home_base_feedhiddenicon_comment' => 'Vui lòng nhập loại động (biểu tượng) được thu gọn và phân tách bằng dấu ",".<br>
+			Sau khi một số động được gấp lại, tiếng ồn động của trang chủ có thể được giảm một cách thích hợp.<br>
+			Cách lấy loại động:<br>
+			Khi xem bài đăng của bạn bè, hãy nhấp vào biểu tượng nhỏ phía trước mỗi bài đăng(ví dụ: <img src="static/image/feed/blog.gif" align="absmiddle">),<br>
+			URL của trình duyệt sẽ thay đổi thành một liên kết tương tự như sau:<br>
+			http://xxx.com/home.php?mod=space&uid=&do=feed&view=we&appid=3&<b>icon=blog</b>,<br>
+			Trong đó, icon=blog, có nghĩa là loại động là blog<br>
+			Biểu tượng của ứng dụng MYOP có 7 chữ số. <b>myop</b> để chỉ loại động của tất cả các ứng dụng MYOP',
 	'setting_home_base_feedhotnum' => 'Số lượng nguồn cấp tin tức phổ biến trên trang chủ.',
 	'setting_home_base_feedhotnum_comment' => '(Mặc định là 3) để 0, sau đó trang không hiển thị điểm nóng được đề nghị. Không vượt quá tối đa 10.<br>Hệ thống tự động sẽ nhận được 10 điểm nóng, mà sẽ được cố định số một nóng hiển thị, và số còn lại các điểm nóng sẽ được hiển thị ngẫu nhiên.',
 	'setting_home_base_newspacenum' => 'Sự lựa chọn cho thành viên mới',
@@ -1367,7 +1367,7 @@ $lang = array
 	'setting_numbercard_type_threads' => 'Số lượng chủ đề',
 	'setting_numbercard_type_posts' => 'Số bài viết',
 	'setting_numbercard_type_digestposts' => 'Digests',
-	'setting_numbercard_type_credits' => 'Credits',
+	'setting_numbercard_type_credits' => 'Tổng điểm',
 	'setting_numbercard_type_doings' => 'Doings',
 	'setting_numbercard_type_blogs' => 'Blogs',
 	'setting_numbercard_type_albums' => 'Albums',
