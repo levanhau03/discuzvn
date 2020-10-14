@@ -110,11 +110,9 @@ Nếu bạn tích lũy các cảnh báo {warningexpiration} trong {warninglimit}
 
 	'modreplies_validate' => 'Trả lời của bạn đã được thông qua và công bố ! &nbsp; <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank" class="lit">Xem &rsaquo;</a> <p class="summary">Nội dung:<span>{post}</span></p> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'transfer' => 'Bạn nhận được từ {actor} số điểm là {credit} &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=log&suboperation=creditslog" target="_blank" class="lit">Xem &rsaquo;</a><p class="summary">{actor} Nói:<span>{transfermessage}</span></p>',
-<p class="summary">{actor} 说：<span>{transfermessage}</span></p>',
+	'transfer' => 'Bạn nhận được từ {actor} số điểm là {credit} &nbsp;  <a href="home.php?mod=spacecp&ac=credit&op=log&suboperation=creditslog" target="_blank" class="lit">Xem &rsaquo;</a><p class="summary">{actor} Nói:<span>{transfermessage}</span></p>',
 
 	'addfunds' => 'Bạn đã nạp điểm thành công, số tiền tương ứng đã được chuyển vào tài khoản của bạn ! &nbsp; <a href="home.php?mod=spacecp&ac=credit&op=base" target="_blank" class="lit">Xem &rsaquo;</a><p class="summary">Số thứ tự:<span>{orderid}</span></p><p class="summary">Chi phí:<span>{price} VNĐ</span></p><p class="summary">Doanh thu:<span>{value}</span></p>',
-<p class="summary">订单号：<span>{orderid}</span></p><p class="summary">支出：<span>人民币 {price} 元</span></p><p class="summary">收入：<span>{value}</span></p>',
 
 	'rate_reason' => 'Chủ đề <a href="forum.php?mod=redirect&goto=findpost&pid={pid}&ptid={tid}" target="_blank">{subject}</a> đăng bởi {actor} đánh giá {ratescore} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
@@ -216,8 +214,6 @@ Nếu bạn tích lũy các cảnh báo {warningexpiration} trong {warninglimit}
 	'new_report' => 'Có báo cáo đang chờ xử lý, <a href="admin.php?action=report" target="_blank">bấm vào đây để xem</a>.',
 	'new_post_report' => 'Có báo cáo mới chở xử lý, <a href="forum.php?mod=modcp&action=report&fid={fid}" target="_blank">Click vào đây để vào quản lý</a>. ',
 	'magics_receive' => 'Bạn nhận được công cụ do {actor} tặng cho bạn {magicname}<p class="summary">{actor} Nói:<span>{msg}</span></p><p class="mbn"><a href="home.php?mod=magic" target="_blank">Đạo cụ giảm giá</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">Xem hộp vật phẩm của tôi</a></p>',
-<p class="summary">{actor} 说：<span>{msg}</span></p>
-<p class="mbn"><a href="home.php?mod=magic" target="_blank">回赠道具</a><span class="pipe">|</span><a href="home.php?mod=magic&action=mybox" target="_blank">查看我的道具箱</a></p>',
 	'invite_collection' => '{actor} mời bạn xem Bộ sưu tập  <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>.<br /> <a href="forum.php?mod=collection&action=edit&op=acceptinvite&ctid={ctid}&dateline={dateline}">Bấm vào đây để chấp nhận.</a>',
 	'collection_removed' => 'Quản lý của bạn trong <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a> đã bị {actor} đóng.',
 	'exit_collection' => 'Bạn đã không được tham gia Bộ sưu tập: <a href="forum.php?mod=collection&action=view&ctid={ctid}">{collectionname}</a>',
