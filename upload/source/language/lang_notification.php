@@ -75,9 +75,8 @@ $lang = array
 
 	'reason_ban_post' => 'Bài viết của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction} <div class="quote"><blockquote>{reason}</blockquote></div>',
 
-	'reason_warn_post' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} {modaction}<br />Với {warningexpiration} cảnh báo được tích lũy trong {warninglimit} ngày liên tiếp, bạn sẽ tự động bị cấm nói trong {warningexpiration} ngày.<br />Cho đến nay, bạn đã được cảnh báo {authorwarnings} lần, xin hãy chú ý!<div class="quote"><blockquote>{reason}</blockquote></div>',
-连续 {warningexpiration} 天内累计 {warninglimit} 次警告，您将被自动禁止发言 {warningexpiration} 天。<br />
-截止至目前，您已被警告 {authorwarnings} 次，请注意！<div class="quote"><blockquote>{reason}</blockquote></div>',
+	'reason_warn_post' => 'Chủ đề của bạn <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> là {actor} {modaction}<br />
+Nếu bạn tích lũy các cảnh báo {warningexpiration} trong {warninglimit} ngày liên tiếp, bạn sẽ tự động bị cấm phát biểu trong {warningexpiration} ngày.<br />Tính đến thời điểm hiện tại, bạn đã được cảnh báo {authorwarnings} lần, hãy chú ý!<div class="quote"><blockquote>{reason}</blockquote></div>',
 
 	'reason_move' => 'Bài viết <a href="forum.php?mod=viewthread&tid={tid}" target="_blank">{subject}</a> được {actor} di chuyển tới <a href="forum.php?mod=forumdisplay&fid={tofid}" target="_blank">{toname}</a> <div class="quote"><blockquote>{reason}</blockquote></div>',
 
