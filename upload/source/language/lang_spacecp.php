@@ -331,8 +331,8 @@ $lang = array(
 	'spacecp_message_prompt' => '({msg} hỗ trợ, tối đa 1000 kí tự)',
 	'card_update_doing' => ' <a class="xi2" href="###">[Cập nhật Profile]</a>',
 	'email_acitve_message' => '<img src="{imgdir}/mail_inactive.png" alt="Chưa xác minh" class="vm" /> <span class="xi1">({newemail}) chưa xác minh...</span><br />
-								系统已经向该邮箱发送了一封验证激活邮件，请查收邮件，进行验证激活。<br>
-								如果没有收到验证邮件，您可以更换一个邮箱，或者<a href="home.php?mod=spacecp&ac=profile&op=password&resend=1" class="xi2">重新接收验证邮件</a>',
+								Hệ thống đã gửi email kích hoạt xác minh đến hộp thư này. Vui lòng kiểm tra email để kích hoạt xác minh.<br>
+								Nếu không nhận được email xác minh, bạn có thể đổi sang địa chỉ email khác hoặc <a href="home.php?mod=spacecp&ac=profile&op=password&resend=1" class="xi2">nhận email xác minh</a>',
 	'qq_set_status' => 'Thiết lập trạng thái QQ',
 	'qq_dialog' => 'QQ Dialog',
 
