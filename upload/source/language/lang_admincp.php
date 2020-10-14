@@ -1083,7 +1083,7 @@ $lang = array
 	'setting_styles_viewthread_show_signature' => 'Hiện chữ ký',
 	'setting_styles_viewthread_show_signature_comment' => '',
 	'setting_styles_viewthread_show_face' => 'Hiện avatar tác giả',
-	'setting_styles_viewthread_show_face_comment' => 'Hiện hoặc ẩn đi avatar thành viên. chỉ hiện tên thôi.',
+	'setting_styles_viewthread_show_face_comment' => '',
 	'setting_styles_viewthread_show_images' => 'Hiện hình ảnh',
 	'setting_styles_viewthread_show_images_comment' => '',
 	'setting_styles_viewthread_showexif' => 'Hình ảnh đính kèm hiển thị thông tin EXIF',
@@ -1329,7 +1329,8 @@ $lang = array
 
 	'setting_home_hotuser' => 'Thành viên được đề xuất',
 	'setting_home_hotuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, một tên trên mỗi dòng.<br>Ví dụ:<br>admin<br>webmaster<br/>những người dùng này sẽ được hiển thị ngẫu nhiên trong cột "Email quản trị trang web".',
-	'setting_home_hotuser_defaultuser' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, một dòng cho mỗi tên người dùng.<br>Ví dụ:<br>admin<br>webmaster<br>Những người dùng này sẽ tự động thêm người dùng mới đăng ký làm bạn bè và chào đón họ.
+	'setting_home_hotuser_defaultuser' => 'Giới thiệu bạn bè',
+	'setting_home_hotuser_defaultuser_comment' => 'Thêm định dạng:<br />Vui lòng nhập tên người dùng, một dòng cho mỗi tên người dùng.<br>Ví dụ:<br>admin<br>webmaster<br>Những người dùng này sẽ tự động thêm người dùng mới đăng ký làm bạn bè và chào đón họ.
 							Lưu ý rằng khi người dùng được chỉ định duyệt trang chủ của họ, họ có thể tăng tải máy chủ do số lượng bạn bè quá lớn.',
 	'setting_home_hotuser_defaultpoke' => 'Nội dung lời chào mặc định',
 	'setting_home_hotuser_defaultpoke_comment' => 'Nội dung lời chào tự động gửi đến bạn mới, không quá 25 ký tự.',
@@ -2488,7 +2489,9 @@ $lang = array
 	'settings_sphinx_sphinxlimit' => 'Maximum number of search results',
 	'settings_sphinx_sphinxlimit_comment' => 'Enter a maximum number of matches to return, must be non-negative integer, the default value of 10000.',
 	'settings_sphinx_sphinxrank' => 'Full-text index rank mode',
-	'settings_sphinx_sphinxrank_comment' => '(1)SPH_RANK_PROXIMITY_BM25, chế độ mặc định, sử dụng cả điểm cụm từ và điểm BM25 và kết hợp cả hai. [mặc định]<br />(2)SPH_RANK_BM25, chế độ tính toán mức độ liên quan thống kê, chỉ sử dụng tính toán điểm BM25 (giống như hầu hết các công cụ tìm kiếm toàn văn). Chế độ này nhanh hơn, nhưng có thể làm giảm chất lượng kết quả của các truy vấn chứa nhiều từ.<br />(3)SPH_RANK_NONE, chế độ vô hiệu hóa tính điểm, đây là chế độ nhanh nhất. Trên thực tế, chế độ này cũng giống như tìm kiếm Boolean. Tất cả các trận đấu có trọng số là 1',
+	'settings_sphinx_sphinxrank_comment' => '(1)SPH_RANK_PROXIMITY_BM25, chế độ mặc định, sử dụng cả điểm cụm từ và điểm BM25 và kết hợp cả hai. [mặc định]
+<br />(2)SPH_RANK_BM25, chế độ tính toán mức độ liên quan thống kê, chỉ sử dụng tính toán điểm BM25 (giống như hầu hết các công cụ tìm kiếm toàn văn). Chế độ này nhanh hơn, nhưng có thể làm giảm chất lượng kết quả của các truy vấn chứa nhiều từ.
+<br />(3)SPH_RANK_NONE, chế độ vô hiệu hóa tính điểm, đây là chế độ nhanh nhất. Trên thực tế, chế độ này cũng giống như tìm kiếm Boolean. Tất cả các trận đấu có trọng số là 1',
 
 	'setting_ranklist' => 'Bảng xếp hạng',
 	'setting_ranklist_all' => 'Tất cả',
@@ -5618,6 +5621,7 @@ $lang = array
 	'ec_alipay_contract_comment' => 'If you have a subscriber account, you can choose "Yes" for the Forum will using your own merchant service platform. If you have not signed, you can <a href="https://www.alipay.com/himalayas/practicality_customer.htm?customer_external_id=C4335344590036426018&market_type=from_agent_contract&pro_codes=21790F5A8C48B687F7F62F29651356BB" target="_blank">Sign now</a>',
 	'ec_alipay_securitycode' => 'Transaction security check code (key)',
 	'ec_alipay_securitycode_comment' => 'Enter the transaction security check code assigned to you by Alipay. This verification code enable you to pay with official Alipay business services.',
+	'ec_alipay_partner' => 'Danh tính đối tác (PID)',
 	'ec_alipay_partner_comment' => 'Enter assigned to you Alipay partner status ID. The user fees is payed in accordance with the contract you are signing of the official agreement. If you have not signed, you can <a href="https://www.alipay.com/himalayas/practicality_customer.htm?customer_external_id=C4335344590036426018&market_type=from_agent_contract&pro_codes=21790F5A8C48B687F7F62F29651356BB" target="_blank">Sign now</ a>. If the contract cause a conflict, please contact 0571-88158090.',
 	'ec_alipay_creditdirectpay' => 'Use the account interface directly',
 	'ec_alipay_creditdirectpay_comment' => 'If after signing the agreement you allowed to direct use the merchant interface, choose it to allow integration withg real-time payments, such as recharge, product sell, etc.',
@@ -5639,9 +5643,8 @@ $lang = array
 	'ec_tenpay_checklink_credit' => 'Recharge points Order Test',
 	'ec_tenpay_checklink_virtualgoods' => 'Virtual product order test',
 	'ec_tenpay_checklink_goods' => 'Kiểm tra đơn đặt hàng sản phẩm thực tế',
-	'ec_tenpay_tips' => '<li>"Tenpay" (<a href="http://www.tenpay.com" target="_blank"> http://www.tenpay.com </a>) là trang trực tuyến hàng đầu Nền tảng thanh toán cung cấp cho người dùng Discuz! Một nền tảng giao dịch mua điểm.</li>
-<li>Nếu bạn cần kích hoạt tính năng nạp tiền điểm ngay lập tức, vui lòng sử dụng Tenpay <b> Enterprise Edition </b> và bật <b> Giao dịch Thanh toán tức thì </b>; nếu không, bạn chỉ cần bật "<b>Giao dịch trung gian đảm bảo</b> ”.</li><li><b>Vì có liên quan đến giao dịch tiền mặt, để tránh thiệt hại tài chính do thao tác không đúng, vui lòng đọc kỹ thông tin liên quan trong "Hướng dẫn sử dụng" trước khi bắt đầu sử dụng chức năng giao dịch tích hợp Tenpay (không bao gồm chức năng nút Tenpay) Đối với phần thương mại điện tử, hãy thực hiện các cài đặt có liên quan sau khi xác nhận rằng bạn hoàn toàn hiểu và chấp nhận các quy trình và phương pháp sử dụng liên quan.</b></li><li>Bạn có thể thiết lập một phương thức cho phép người dùng thanh toán trực tuyến bằng tiền mặt để nạp tiền vào tài khoản điểm giao dịch của họ, được sử dụng để mua nội dung bài đăng, mua quyền của nhóm người dùng, chuyển điểm hoặc nâng cấp nhóm người dùng và các chức năng khác. Đối với chức năng giao dịch tích hợp Tenpay, bạn cần kích hoạt điểm giao dịch trong "Cài đặt điểm" và thiết lập các chiến lược điểm tương ứng để đáp ứng nhu cầu của các dịp khác nhau. Hãy đảm bảo thiết lập tài khoản Tenpay của bạn để nhận thanh toán một cách chính xác, nếu không điểm sẽ không được ghi có vào tài khoản theo thời gian thực sau khi người dùng thanh toán, dẫn đến lượng lớn thông tin đơn hàng cần được xử lý thủ công.</li><li>Trừ khi được thông báo khác trên trang web chính thức hoặc diễn đàn chính thức của Discuz!, dịch vụ thanh toán Tenpay do Discuz! cung cấp sẽ tính phí xử lý 1% cho mỗi giao dịch. Vui lòng chú ý đến các thông báo mới nhất của các doanh nghiệp liên quan kịp thời, và các thay đổi và điều chỉnh của các chính sách hoặc thủ tục khác nhau tùy thuộc vào thông tin được cung cấp trên trang web chính thức của Discuz !, hoặc diễn đàn chính thức.</li><li>Việc bạn sử dụng dịch vụ Tenpay trên cơ sở hoàn toàn tự nguyện. Ngoại trừ tổn thất tài chính do Discuz gây ra! do các yếu tố chủ quan và độc hại, Tencent Cloud không chịu trách nhiệm về bất kỳ tổn thất nào do sử dụng chức năng này.</li><li>Đường dây nóng Dịch vụ Tenpay: 0755-83762288-2 (Đường dây nóng dịch vụ 24 giờ)</li>
-',
+	'ec_tenpay_tips' => '<li>“财付通”(<a href="http://www.tenpay.com" target="_blank">http://www.tenpay.com</a>)是腾讯公司创办的中国领先的在线支付平台，为 Discuz! 用户提供积分购买交易平台。</li><li>如需启用积分充值即时到账，请使用财付通<b>企业版</b>并开通<b>即时到账交易</b>；否则，只需要开通“<b>中介担保交易</b>”即可。</li>
+<li><b>由于涉及现金交易，为避免因操作不当而造成的资金损失，请在开始使用财付通积分交易功能(不包含财付通按钮功能)前，务必仔细阅读《用户使用说明书》中有关电子商务的部分，当确认完全理解和接受相关流程及使用方法后再进行相关设置。</b></li><li>您可以设置允许用户通过现金在线支付的方式，为其交易积分账户充值，用于购买帖子内容、购买用户组权限、积分转账或用户组升级等功能。财付通积分交易功能，需在“积分设置”中启用交易积分，并同时设置相应的积分策略以满足不同场合的需要。请务必正确设置您的收款财付通账号，否则将造成用户付款后积分无法实时到账，造成大量需要人工处理的订单信息。</li><li>除 Discuz! 官方网站或官方论坛另行通知以外，Discuz! 提供的财付通支付服务每笔交易收取 1% 的手续费。请及时关注相关业务的最新通知，各项政策或流程的变更、调整，以 Discuz! 官方网站或官方论坛提供的信息为准。</li><li>您使用财付通服务是建立在完全自愿的基础上，除 Discuz! 因主观恶意的因素造成的资金损失以外，腾讯云不对因使用此功能造成的任何损失承担责任。</li><li>财付通服务热线：0755-83762288-2(全天24小时服务热线)</li>',
 
 	'ec_orders' => 'Maximum order points',
 	'ec_orders_tips' => '<li>You are at the starting points of using the transaction order management functionality (not included Alipay button function). Be sure to carefully read the "User Manual" in the part of electronic commerce, as confirmed fully understand and accept the processes and use then to delete.</li><li>If your users complained that after online payment their points can not be automatically recharge accounts, it is may be due to your Alipay account interface settings are wrong, or your website is not enabled to use regular paiments. You can log in to Alipay transaction management interface, and look for details of the transaction confirmed the relevant orders.</li><li>Order information retained for 60 days, so you can check and manage orders information within 60 days. After the 60 days the information will be automatically deleted.</li>',
@@ -5925,7 +5928,7 @@ $lang = array
 	'filecheck_start' => 'Bắt đầu',
 	'filecheck_verifying' => 'Đang kiểm tra tập tin xin vui lòng chờ đợi ......',
 	'filecheck_tips_step1' => 'Kiểm tra các tập tin Discuz! Kiểm tra sự sai lệch và thay đổi của file, cảnh báo mức độ nguy hiểm cần kiểm tra lại.',
-	'filecheck_tips' => '<li><em class="edited">Bị sửa đổi</em>	,<em class="del">Bị xoá</em> Danh sách các tài liệu, ngay lập tức thông qua FTP Hoặc các công cụ khác để kiểm tra tính hợp lệ của các tài liệu nhằm bảo đảm sự hoạt động bình thường của Diễn đàn.</li><li><em class="unknown">Không rõ</em> Liệt kê trong tài liệu này, xin vui lòng kiểm tra xem tài liệu của bạn được biết</li><li><em class="unknown">Trong tuần đã được sửa đổi</em> Liệt kê trong tài liệu, hãy chắc chắn rằng việc sửa đổi gần đây.</li>',
+	'filecheck_tips' => '<li>当论坛出现异常或者被非法入侵后，您应当使用本功能校验论坛程序文件，以确保论坛安全运行</li><li>“<font color="red">丢失</font>”的文件您应当通过 FTP 及时将文件补充进来，否则可能论坛运行不正常</li><li>“<font color="red">被修改</font>”、“<font color="red">未知</font>”的文件应当引起您的警惕，必须确认文件是您自己修改或者是某个插件添加的，否则请删除未知文件和恢复被修改的文件</li>',
 	'filecheck_completed' => 'Kết quả kiểm tra',
 	'filecheck_unknown' => 'Không rõ',
 	'filecheck_modify' => 'Bị sửa đổi',
@@ -6589,6 +6592,7 @@ $lang = array
 	'portalcategory_url_comment' => 'Link để chuyển đến',
 	'portalcategory_listprimaltplname' => 'List page template name',
 	'portalcategory_listprimaltplname_comment' => 'Upload template files to the template/default/portalDirectory, file name must be <font color="red">list</font>_*.htm, use * for custom file name<br />If you want to re-select a template, Please ensure that the new templates can be dragged with the original template has the same area ID, Otherwise it will lose some or all of the original DIY data',
+	'portalcategory_viewprimaltplname' => 'Tên mẫu trang bài viết',
 	'portalcategory_viewprimaltplname_comment' => 'Upload template files to the template/default/portal Directory, file name must be <font color="blue">view</font>_*.htm, use * for custom file name<br />If you want to re-select a template, Please ensure that the new templates can be dragged with the original template has the same area ID, Otherwise it will lose some or all of the original DIY data',
 	'portalcategory_domain_duplicate' => 'Category subdomain name can not be repeated',
 	'portalcategory_parentfoldername_empty' => 'Category parent directory name can not be empty, Please set the parent directory of the category',
