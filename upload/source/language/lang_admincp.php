@@ -5928,7 +5928,7 @@ $lang = array
 	'filecheck_start' => 'Bắt đầu',
 	'filecheck_verifying' => 'Đang kiểm tra tập tin xin vui lòng chờ đợi ......',
 	'filecheck_tips_step1' => 'Kiểm tra các tập tin Discuz! Kiểm tra sự sai lệch và thay đổi của file, cảnh báo mức độ nguy hiểm cần kiểm tra lại.',
-	'filecheck_tips' => '<li>当论坛出现异常或者被非法入侵后，您应当使用本功能校验论坛程序文件，以确保论坛安全运行</li><li>“<font color="red">丢失</font>”的文件您应当通过 FTP 及时将文件补充进来，否则可能论坛运行不正常</li><li>“<font color="red">被修改</font>”、“<font color="red">未知</font>”的文件应当引起您的警惕，必须确认文件是您自己修改或者是某个插件添加的，否则请删除未知文件和恢复被修改的文件</li>',
+	'filecheck_tips' => '<li>Khi diễn đàn bất thường hoặc bị xâm nhập trái phép, bạn nên sử dụng chức năng này để xác minh các tệp chương trình diễn đàn nhằm đảm bảo diễn đàn hoạt động an toàn</li><li>Các tệp "<font color="red">bị mất</font>" cần được bổ sung kịp thời qua FTP, nếu không diễn đàn có thể không hoạt động</li><li>Các tệp "<font color="red">đã sửa đổi</font>", "<font color="red">không xác định</font>" nên khơi dậy sự cảnh giác của bạn. Bạn phải đảm bảo rằng các tệp được sửa đổi bởi chính bạn hoặc Được thêm bởi một trình cắm, nếu không, vui lòng xóa các tệp không xác định và khôi phục các tệp đã sửa đổi</li>',
 	'filecheck_completed' => 'Kết quả kiểm tra',
 	'filecheck_unknown' => 'Không rõ',
 	'filecheck_modify' => 'Bị sửa đổi',
