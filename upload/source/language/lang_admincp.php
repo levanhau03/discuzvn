@@ -5464,7 +5464,7 @@ $lang = array
 	'magics_config_discount_comment' => 'Set the return a magic to the system price discount as a percentage value. For example if this value is 85, then the system will offer to user 85% of the original price when returning the magic. For prevent of lose money, it is recommended set the value not more than 100. Leave blank or set to 0 for disable the magic return operation.',
 
 	'magics_market' => 'Magic market',
-	'magics_market_seller' => 'Seller',,
+	'magics_market_seller' => 'Seller',
 
 	'magics_identifier' => 'Identifier',
 	'magic_recommend' => 'Được giới thiệu',
