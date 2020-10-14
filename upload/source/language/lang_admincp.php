@@ -7013,15 +7013,15 @@ $lang = array
 	'connect_setting_t_fids' => 'Allow Push to the forum board',
 	'connect_setting_t_fids_comment' => 'Set in what forum board can be pushed to the subject published Tencent to it, and you can hold down the CTRL multiple choice',
 	'connect_setting_t_group' => 'Groups are allowed to push',
-	'connect_setting_t_group_comment' => 'Set whether the subject published in the group can push Tencent microblogging',
-	'connect_setting_like_allow' => 'Show favorite links in QQ Space',
-	'connect_setting_like_allow_comment' => 'Set whether to display the QQ authentication space, users can listen to at any time to receive certification certification spatial dynamics of space',
-	'connect_setting_like_url' => 'QQ number of certified space',
-	'connect_setting_like_url_comment' => 'QQ space to set certification number, please submit applications for accreditation <a href="http://opensns.qq.com/" target="_blank">Click here</a>',
-	'connect_setting_turl_allow' => 'Official site quickly shows listen button microblogging',
-	'connect_setting_turl_allow_comment' => 'The user clicks the button quick listen, you can now listen to your set Tencent microblogging account',
-	'connect_setting_turl_code' => 'Listen to code fast',
-	'connect_setting_turl_code_comment' => 'Please <a href="http://open.t.qq.com/apps/follow/explain.php" target="_blank">Open microblogging platform Tencent fast listening</a> Paste the code into. <strong>Get the code</strong>, style settings must choose to "listen to the text chain (the most succinct state)"',
+	'connect_setting_t_group_comment' => 'Đặt xem các chủ đề đã xuất bản trong nhóm có thể được đẩy lên Tencent Weibo hay không',
+	'connect_setting_like_allow' => 'Hiển thị favorite links trong không gian QQ',
+	'connect_setting_like_allow_comment' => 'Đặt có hiển thị không gian xác thực QQ hay không, người dùng có thể nhận động lực của không gian xác thực bất kỳ lúc nào bằng cách lắng nghe không gian xác thực',
+	'connect_setting_like_url' => 'Không gian xác thực số QQ',
+	'connect_setting_like_url_comment' => 'Đặt số QQ của không gian chứng nhận, vui lòng <a href="http://opensns.qq.com/" target="_blank">nhấp vào đây</a> để gửi đơn đăng ký chứng nhận',
+	'connect_setting_turl_allow' => 'Hiển thị nút nghe nhanh Weibo chính thức',
+	'connect_setting_turl_allow_comment' => 'Người dùng bấm vào nút nghe nhanh để nghe ngay tài khoản Tencent Weibo mà bạn thiết lập',
+	'connect_setting_turl_code' => 'Nghe mã nhanh chóng',
+	'connect_setting_turl_code_comment' => 'Vui lòng dán mã của <a href="http://open.t.qq.com/apps/follow/explain.php" target="_blank">Nghe nhanh nền tảng mở Tencent Weibo</a> tại đây. <strong> Khi nhận mã</strong>, cài đặt kiểu phải chọn "Nghe liên kết văn bản (trạng thái ngắn gọn nhất)"',
 	'connect_member_info' => 'Thông tin người dùng',
 	'connect_member_bindlog' => 'Bắt buộc đăng nhập QQ',
 	'connect_member_bindlog_type' => 'Hoạt động',
@@ -7043,7 +7043,7 @@ $lang = array
 	'cloudaddons_unwriteabledirs' => 'Theo các thư mục sau đây của trang web {basedir} thư mục là không thể ghi, không thể cài đặt ứng dụng trực tuyến này, xin vui lòng điền vào các trang web thông số kết nối FTP (trong thiết lập này không được lưu ):<br />{unwriteabledirs}',
 	'cloudaddons_plugin_link' => 'Cloud Addons',
 	'cloudaddons_style_link' => 'Cloud Addons',
-	'cloudaddons_linkto' => 'Xem Trung tâm Ứng dụng',
+	'cloudaddons_linkto' => 'Xem Trung tâm ứng dụng',
 	'plugins_validator_nowupgrade' => 'Plugin có thể được cập nhật lên phiên bản mới, click vào cập nhật cài đặt',
 	'plugins_validator_newversion' => 'Plugin phiên bản mới, hãy nhấp vào cài đặt cập nhật',
 	'plugins_validator_error' => 'Plugin sau đây không phải là một plugin chính hãng, bấm vào để cài đặt một chính hãng plugin',
@@ -7056,19 +7056,19 @@ $lang = array
 {apache1}&lt;/IfModule&gt;
 </pre>
 
-<h1>Apache Web Server(虚拟主机用户)</h1>
+<h1>Apache Web Server(Người dùng máy chủ ảo)</h1>
 <pre class="colorbox">
-# 将 RewriteEngine 模式打开
+# Bật chế độ RewriteEngine
 RewriteEngine On
 
-# 修改以下语句中的 /discuz 为您的论坛目录地址，如果程序放在根目录中，请将 /discuz 修改为 /
+# Sửa đổi /discuz trong câu lệnh sau thành địa chỉ thư mục diễn đàn của bạn, nếu chương trình được đặt trong thư mục gốc, vui lòng sửa đổi /discuz thành /
 RewriteBase /discuz
 
-# Rewrite 系统规则请勿修改
+# Rewrite Không sửa đổi các quy tắc hệ thống
 {apache2}
 </pre>
 
-<h1>IIS Web Server(独立主机用户)</h1>
+<h1>IIS Web Server(Người dùng máy chủ độc lập)</h1>
 <pre class="colorbox">
 [ISAPI_Rewrite]
 
@@ -7082,7 +7082,7 @@ RepeatLimit 32
 {iis}
 </pre>
 
-<h1>IIS7 Web Server(独立主机用户)</h1>
+<h1>IIS7 Web Server(Người dùng máy chủ độc lập)</h1>
 <pre class="colorbox">
 &lt;rewrite&gt;
 	&lt;rules&gt;
