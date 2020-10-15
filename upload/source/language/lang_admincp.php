@@ -6423,9 +6423,9 @@ $lang = array
 	'cplog_templates_edit' => 'Edit template',
 	'cplog_templates_copy' => 'Replicate template',
 
-	'cplog_announce' => 'Site Announces',
-	'cplog_announce_add' => 'Add announce',
-	'cplog_announce_edit' => 'Edit announce',
+	'cplog_announce' => 'Thông báo trang web',
+	'cplog_announce_add' => 'Thêm thông báo',
+	'cplog_announce_edit' => 'Sửa thông báo',
 
 	'cplog_misc_link' => 'Links',
 	'cplog_misc_onlinelist' => 'Online List icons',
