@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5]]></item>
+	<item id="Time"><![CDATA[2012-12-17 14:19]]></item>
+	<item id="From"><![CDATA[X25 (http://localhost:777/x25/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[No Addon Hint]]></item>
+			<item id="identifier"><![CDATA[noaddonhint_7ree]]></item>
+			<item id="description"><![CDATA[Tắt thông báo cập nhật plugin]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[noaddonhint_7ree/]]></item>
+			<item id="copyright"><![CDATA[DiscuzVN]]></item>
+			<item id="version"><![CDATA[v1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[noaddonhint_7ree]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[1]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[Chấp nhận các điều khoản sử dụng của plugin này]]></item>
+				<item id="description"><![CDATA[Bạn phải đồng ý với các điều khoản sử dụng của plugin này trước khi sử dụng nó.]]></item>
+				<item id="variable"><![CDATA[agreement_7ree]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[Tắt thông báo cập nhật plugin]]></item>
+				<item id="description"><![CDATA[Nó không ảnh hưởng đến chức năng của bất kỳ plugin nào.]]></item>
+				<item id="variable"><![CDATA[onoff_7ree]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="php_lang_agree_7ree"><![CDATA[Quản trị viên phải đồng ý với các điều khoản sử dụng plugin]]></item>
+				<item id="php_more_lang_production_7ree"><![CDATA[Sản phẩm của 7ree]]></item>
+				<item id="php_more_lang_free_7ree"><![CDATA[Application Center plug-ins]]></item>
+				<item id="php_more_lang_trade_7ree"><![CDATA[Sản phẩm thương mại 2012]]></item>
+				<item id="php_more_lang_shangjia_7ree"><![CDATA[DISCUZ Application Center]]></item>
+				<item id="php_more_lang_baojia_7ree"><![CDATA["breakthrough beyond the value of potential · · take off dream series boutique commercial add-on product]]></item>
+				<item id="php_more_lang_moreinfo_7ree"><![CDATA[[ Learn more ]]]></item>
+				<item id="php_more_lang_service_7ree"><![CDATA[services]]></item>
+				<item id="php_more_lang_logo_7ree"><![CDATA[LOGO]]></item>
+				<item id="php_more_lang_logodetail_7ree"><![CDATA[In recent years, we have been free for thousands of owners produced LOGO]]></item>
+				<item id="php_more_lang_analysis_7ree"><![CDATA[Web site operators analysis]]></item>
+				<item id="php_more_lang_analysisdetail_7ree"><![CDATA[Any confusion in the process of Web site operators can help or exchanges, has been the participation of hundreds of owners]]></item>
+				<item id="php_more_lang_discuz_7ree"><![CDATA[DISCUZ Questions]]></item>
+				<item id="php_more_lang_discuzdetail_7ree"><![CDATA[Discuz plug-in installed, you can use here for help]]></item>
+				<item id="php_more_lang_about_7ree"><![CDATA[7ree]]></item>
+				<item id="php_more_lang_trust_7ree"><![CDATA[Trust and responsibility]]></item>
+				<item id="php_more_lang_trustdetail_7ree"><![CDATA[	Discuz! Open platform certified enterprise developers, Kang Shengguan accredited by a third-party resource providers and long-term loyal partners, the past few years our professional the discuz plug-in products and services has been supported by the the extensive global discuz webmasterhas strong influence and recognition.
+	Our typical customers: the Kaspersky official forum, China Merchants Bank, Shanda, city branch of China Telecom **, ** City Branch of China Mobile, China Unicom ** City branch, ** City Radio and TV, **Municipal Bureau of Tourism, Beijing Union Medical College Hospital, 21CN Forum, the computer reported the official forum, FRANCISCO Forum video bus, CDC automobile Forum, in fewer Forum, Chinese books, the French Open, Donglin College, green Forest Digital Mall, Shenzhen, Jinan forumYY Association Alliance, DOD the immortality bloody unions eternal kingdom union……]]></item>
+				<item id="php_more_lang_detailinfo_7ree"><![CDATA[[More]]]></item>
+				<item id="php_more_lang_siteweibo_7ree"><![CDATA[The official website & Twitter]]></item>
+				<item id="php_more_lang_site_7ree"><![CDATA[Official website：]]></item>
+				<item id="php_more_lang_weibo_7ree"><![CDATA[Official microblogging：]]></item>
+				<item id="php_more_lang_qqweibo_7ree"><![CDATA[Tencent microblogging]]></item>
+				<item id="php_more_lang_sinaweibo_7ree"><![CDATA[Sina microblogging]]></item>
+				<item id="php_more_lang_club_7ree"><![CDATA[QQGroup]]></item>
+				<item id="php_more_lang_qqqun_7ree"><![CDATA[active webmaster super group]]></item>
+				<item id="php_more_lang_qqcopy_7ree"><![CDATA[Click to copy the QQ group number]]></item>
+				<item id="php_more_lang_qqtip_7ree"><![CDATA[QQ group number has been copied to the clipboard]]></item>
+				<item id="php_more_lang_document_7ree"><![CDATA[Các công cụ pháp lý]]></item>
+				<item id="php_more_lang_agreement_7ree"><![CDATA[Điều khoản sử dụng]]></item>
+				<item id="php_more_lang_lawyer_7ree"><![CDATA[Legal adviser]]></item>
+				<item id="php_more_lang_wuxingliang_7ree"><![CDATA[Wuxing Liang]]></item>
+			</item>
+		</item>
+	</item>
+</root>
