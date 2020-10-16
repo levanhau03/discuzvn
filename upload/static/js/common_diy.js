@@ -1224,7 +1224,7 @@ var Util = {
 		setClose : function () {
 			if (!this.isChange) {
 				window.onbeforeunload = function() {
-					return '您的数据已经修改,退出将无法保存您的修改。';
+					return 'Dữ liệu của bạn đã được sửa đổi. Việc thoát sẽ không lưu sửa đổi của bạn.';
 				};
 			}
 			this.isChange = true;
