@@ -257,7 +257,7 @@ $serialize_sql_setting = array (
   'seotitle' =>
   array (
     'portal' => 'Tin tức',
-    'forum' => 'Điễn đàn',
+    'forum' => 'Diễn đàn',
     'group' => 'Nhóm',
     'home' => 'Trang chủ',
     'userapp' => 'Ứng dụng',
