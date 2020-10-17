@@ -35,7 +35,7 @@ $lang = array (
 	'setting_domain_http_error' => 'Fill in the name withour "http://" at beginning and "/" at end, please return amended.',//'填写的域名不要以“http://”、“.”开头或者以“/”、“.”结尾，请返回修改。',
 	'orders_validate_succeed' => 'Đặt hàng được xử lý thành công.',
 	'faq_list_update' => 'FAQ list update',
-	'forums_edit_succeed' => 'Forum settings successfully updated.',
+	'forums_edit_succeed' => 'Đã cập nhật thành công cài đặt diễn đàn.',
 	'forums_copy_source_invalid' => 'You did not choose the source Forum to copy, please return to modify.',//'您没有选择要复制的源版块，请返回修改。',
 	'founder_perm_group_name_duplicate' => 'Administrative group name {name} already exists, please return to change.',//'团队职务 {name} 已经存在，请返回更改。',
 	'founder_perm_member_noexists' => 'Specified user does not exist or disabled.',//'用户不存在或被冻结',
@@ -245,7 +245,7 @@ $lang = array (
 	'sitefeed_error' => 'Please correct the title of added feed and feed content before submit',//'请正确添加动态标题、动态内容再提交发布',
 	'feed_global_add_success' => 'Feed published successfully, please return',//'动态发布成功，请返回',
 
-	'forums_update_succeed' => 'Forum settings successfully updated.',//'版块设置成功更新。',
+	'forums_update_succeed' => 'Đã cập nhật thành công cài đặt diễn đàn.',
 	'forums_moderators_update_succeed' => 'Moderator settings successfully updated.',//'版主设置成功更新。',
 	'forums_merge_source_sub_notnull' => 'Source Sub-Forum is not empty, please return to modify the relevant Sub-Forum settings.',//'源版块下级版块不为空，请先返回修改相关下级版块的上级设置。',
 	'forums_merge_succeed' => 'Forums merged successfully.',//'版块合并成功。',
