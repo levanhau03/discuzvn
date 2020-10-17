@@ -13,7 +13,8 @@ Hệ thống diễn đàn! xuất xứ từ Trung Quốc. Nó được phát tri
 * forked from [Discuz!](https://gitee.com/ComsenzDiscuz) / [DiscuzX](https://gitee.com/ComsenzDiscuz/DiscuzX) 
 
 ## Nhóm phát triển (tiếng Việt)
-* [levanhau03](https://github.com/levanhau03/)
+
+* [Discuzvn](https://discuzvn.net/)
 
 ## Trang web liên quan
 * Trang web thảo luận! Tiếng Trung: https://www.discuz.net/
