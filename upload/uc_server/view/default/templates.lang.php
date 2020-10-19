@@ -19,7 +19,7 @@ $languages = array(
 	'menu' => 'Menu',
 
 	'founder'=>'Người sáng lập',
-	'login_username'=>'Ttài khoản',
+	'login_username'=>'Tài khoản',
 	'login_password'=>'Mật khẩu',
 	'login_submit'=>'Đăng nhập',
 	'login_seccode'=>'Mã xác nhận',
