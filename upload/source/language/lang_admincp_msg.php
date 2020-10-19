@@ -553,7 +553,7 @@ $lang = array (
 	'topic_delete_succeed' => 'Topic removed successfully.',
 	'topic_close_succeed' => 'Topic closed successfully.',
 	'topic_open_succeed' => 'Topic was open successfully.',
-	'topic_choose_at_least_one_optype' => 'Select an action for the topic',,
+	'topic_choose_at_least_one_optype' => 'Select an action for the topic',
 
 	'upgrade_close_site' => 'Before upgrading, please turn OFF the site, and backup all files and database',
 	'upgrade_none' => 'No upgrade information',
